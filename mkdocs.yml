@@ -1,5 +1,10 @@
+# 2个必填配置选项
 site_name: Beni Docs
 site_url: https://pytask.com
-docs_dir: source
-site_dir: docs
 
+docs_dir: source # 源文件（.md）路径
+site_dir: docs # 生成文件（.html/.css/...）路径
+
+nav:
+  - Homexx: index.md
+  - About: about.md

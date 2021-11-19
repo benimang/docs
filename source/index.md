@@ -17,10 +17,18 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
         ...       # Other markdown pages, images and other files.
 
 1. asdf
-2. asfd
-3. asdff
+2. uioo
+3. fieow
 
 ```python
 for i in range(10):
     print(i)
+
+class AClass():
+
+    def __init__(self):
+        pass
+
+    def test(self):
+        pass
 ```
