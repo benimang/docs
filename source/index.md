@@ -20,9 +20,13 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 1. asdf
 2. uioo
-3. fieow
+    1. sadf
+    2. sdf
+    3. fasdfa
+3. fieow `afa`
 
 ```python
+
 for i in range(10):
     print(i)
 
@@ -33,6 +37,7 @@ class AClass():
 
     def test(self):
         pass
+
 ```
 
 ### sadfas
@@ -44,3 +49,9 @@ class AClass():
 ### sadfasfasdf
 
 sadfsdafsadfsa
+
+| Method   | Description                          |
+| -------- | ------------------------------------ |
+| `GET`    | :material-check:     Fetch resource  |
+| `PUT`    | :material-check-all: Update resource |
+| `DELETE` | :material-close:     Delete resource |
