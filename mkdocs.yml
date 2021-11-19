@@ -1,3 +1,5 @@
+title: Lorem ipsum dolor sit amet
+description: Nullam urna elit, malesuada eget finibus ut, ac tortor.
 # 2个必填配置选项
 site_name: Beni Docs
 site_url: https://pytask.com
@@ -10,6 +12,8 @@ theme:
   favicon: img/favicon.svg
   logo: img/favicon.svg
   lang: zh
+  features:
+    - content.tabs.link
   palette:
     - scheme: default
       toggle:
@@ -32,6 +36,7 @@ extra:
 copyright: 粤ICP备17090505号
 
 markdown_extensions:
+  - meta
   - pymdownx.highlight:
       use_pygments: true
       auto_title: true
@@ -47,6 +52,11 @@ markdown_extensions:
       permalink: ⚓︎
       toc_depth: 6
   - tables
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg

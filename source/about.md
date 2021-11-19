@@ -1,3 +1,8 @@
+---
+title: Lorem ipsum dolor sit amet
+description: Nullam urna elit, malesuada eget finibus ut, ac tortor.
+---
+
 # Oscula ictu declinat ignis fluitque
 
 ## Eodem est vicini pastorve qua tuta discedite
