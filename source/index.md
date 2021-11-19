@@ -25,10 +25,13 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     3. fasdfa
 3. fieow `afa`
 
-```python
+```python hl_lines="2 3"
 
 for i in range(10):
     print(i)
+    print(i+1)
+    print(i+2)
+    print(i+3)
 
 class AClass():
 
