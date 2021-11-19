@@ -6,6 +6,8 @@ docs_dir: source # 源文件（.md）路径
 site_dir: docs # 生成文件（.html/.css/...）路径
 
 theme:
+  favicon: img/favicon.ico
+  logo: img/favicon.ico
   name: material
 
 nav:
