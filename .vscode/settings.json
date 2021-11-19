@@ -1,0 +1,31 @@
+{
+    "workbench.editor.enablePreview": false,
+    "breadcrumbs.enabled": false, // 代码顶部导航
+    "explorer.autoReveal": false, // 取消文件自动定位跟踪
+    "files.eol": "\n",
+    "files.exclude": {
+        ".gitignore": true,
+        "**/docs": true,
+    },
+}
+// 自定快捷键
+// 
+// [
+//     {
+//         "key": "alt+/",
+//         "command": "editor.action.triggerSuggest",
+//         "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+//     },
+//     {
+//         "key": "alt+d",
+//         "command": "workbench.action.terminal.kill"
+//     },
+//     {
+//         "key": "ctrl+shift+f",
+//         "command": "workbench.action.findInFiles"
+//     },
+//     {
+//         "key": "ctrl+; c",
+//         "command": "testing.clearTestResults"
+//     }
+// ]
