@@ -15,6 +15,9 @@ theme:
   features:
     - content.tabs.link
     - content.code.annotate
+    - navigation.top
+    # - navigation.instant # 异步加载
+    # - navigation.indexes # 不清楚
   palette:
     - scheme: default
       toggle:
@@ -29,9 +32,9 @@ theme:
 
 extra:
   social:
-    - icon: fontawesome/brands/medium
-      link: mailto:benimang@126.com
-      name: 联系邮箱 benimang@126.com
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:<benimang@126.com>
+      # name: 联系邮箱 benimang@126.com
 #   generator: false
 
 copyright: 粤ICP备17090505号
@@ -40,7 +43,7 @@ markdown_extensions:
   - meta
   - pymdownx.highlight:
       use_pygments: true
-      auto_title: true
+      # auto_title: true
       linenums: true
       linenums_style: pymdownx-inline
   - pymdownx.superfences
@@ -63,5 +66,8 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
 nav:
-  - Homexx: index.md
-  - About: about.md
+  - index.md
+  - xxxx:
+      - about.md
+      - xxxx2:
+          - about2.md
