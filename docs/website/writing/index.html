@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#内容编辑" class="md-skip">
           Skip to content
         </a>
       
@@ -207,7 +207,7 @@
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        Welcome
+        欢迎光临
       </a>
     </li>
   
@@ -272,9 +272,48 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          内容编辑
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         内容编辑
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#标题" class="md-nav__link">
+    标题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#粗体和斜体" class="md-nav__link">
+    粗体和斜体
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -370,6 +409,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#标题" class="md-nav__link">
+    标题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#粗体和斜体" class="md-nav__link">
+    粗体和斜体
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -381,7 +442,28 @@
               
                 
                 
-                <h1 id="_1">内容编辑<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
+                <h1 id="内容编辑">内容编辑<a class="headerlink" href="#内容编辑" title="Permanent link">⚓︎</a></h1>
+<h2 id="标题">标题<a class="headerlink" href="#标题" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li><code># 一级标题</code></li>
+<li><code>## 二级标题</code></li>
+<li><code>### 三级标题</code></li>
+<li><code>#### 四级标题</code></li>
+<li><code>##### 五级标题</code></li>
+<li><code>###### 六级标题</code></li>
+</ul>
+<div class="admonition warning">
+<p>markdown 标准定义中文字底部加 <code>===</code> 用于表示一级标题，文字底部加 <code>---</code> 表示二级标题，不过最好不要这样使用，建议统一使用 <code>#</code> 来表示。</p>
+</div>
+<div class="admonition warning">
+<p>在mkdocs-material的样式中，四级标题有加粗效果，感觉不太好，最好避免使用</p>
+</div>
+<h2 id="粗体和斜体">粗体和斜体<a class="headerlink" href="#粗体和斜体" title="Permanent link">⚓︎</a></h2>
+<p><code>**粗体**</code> <strong>粗体</strong></p>
+<p><code>*斜体*</code> <em>斜体</em></p>
+<div class="admonition warning">
+<p>markdown 标准定义中支持以下划线 <code>_</code> 代替 <code>*</code> 实现粗体和斜体，但并不建议。</p>
+</div>
                 
               
               
@@ -473,7 +555,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "content.code.annotate", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "content.code.annotate", "navigation.top", "navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
