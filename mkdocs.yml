@@ -15,6 +15,7 @@ theme:
     - content.tabs.link
     - content.code.annotate
     - navigation.top
+    - navigation.tracking
     # - navigation.instant # 异步加载
     # - navigation.indexes # 不清楚
   palette:
@@ -38,26 +39,33 @@ extra:
 
 markdown_extensions:
   - meta
+  - abbr
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: ⚓︎
+      toc_depth: 6
+      slugify: !!python/name:pymdownx.slugs.uslugify_cased
   - pymdownx.highlight:
       use_pygments: true
       # auto_title: true
       linenums: true
       linenums_style: pymdownx-inline
-  - pymdownx.superfences
-  - pymdownx.inlinehilite
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
-  - toc:
-      permalink: ⚓︎
-      toc_depth: 6
-  - tables
+  - admonition
   - pymdownx.critic
   - pymdownx.caret
   - pymdownx.keys
+  - pymdownx.snippets
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
