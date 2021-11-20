@@ -1,6 +1,7 @@
 # 2个必填配置选项
 site_name: Beni Docs
 site_url: https://pytask.com
+copyright: 粤ICP备17090505号
 
 docs_dir: source # 源文件（.md）路径
 site_dir: docs # 生成文件（.html/.css/...）路径
@@ -33,9 +34,7 @@ extra:
     - icon: fontawesome/solid/paper-plane
       link: mailto:<benimang@126.com>
       # name: 联系邮箱 benimang@126.com
-#   generator: false
-
-copyright: 粤ICP备17090505号
+#   generator: false # 屏蔽底部（Made with Material for MkDocs）
 
 markdown_extensions:
   - meta
@@ -64,8 +63,10 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
 nav:
-  - index.md
-  - xxxx:
-      - about.md
-      - xxxx2:
-          - about2.md
+  - Welcome: index.md
+  - 网站建设:
+      - website/setup.md
+      - website/writing.md
+  - backup:
+      - Index: bak/index.md
+      - About: bak/about.md
