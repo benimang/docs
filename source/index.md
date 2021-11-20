@@ -6,10 +6,9 @@
 ## 域名出售（pytask.com）
 如果你喜欢这个域名，可以写上你认为合理的价格发邮件给我。
 
-<mailto:benimang@126.com>
-
-
 ## Domain For Sale (pytask.com)
 If you wanna take this domain, give me a email with your acceptable price.
 
-<mailto:benimang@126.com>
+## Contact
+
+[Send :fontawesome-solid-paper-plane:](mailto:benimang@126.com){ .md-button .md-button--primary }
