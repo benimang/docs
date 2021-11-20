@@ -10,7 +10,7 @@ theme:
   name: material
   favicon: img/favicon.svg
   logo: img/favicon.svg
-  lang: zh
+  language: zh
   custom_dir: custom_theme
   features:
     - content.tabs.link
@@ -37,6 +37,10 @@ extra:
       link: mailto:<benimang@126.com>
       # name: 联系邮箱 benimang@126.com
 #   generator: false # 屏蔽底部（Made with Material for MkDocs）
+
+plugins:
+  - search:
+      lang: zh
 
 markdown_extensions:
   - meta
