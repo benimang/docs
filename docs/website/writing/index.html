@@ -305,9 +305,43 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#文字格式化" class="md-nav__link">
+    文字格式化
+  </a>
+  
+    <nav class="md-nav" aria-label="文字格式化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#粗体和斜体" class="md-nav__link">
     粗体和斜体
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Caret-Mark-Tilde" class="md-nav__link">
+    Caret Mark Tilde
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Critic-Markup" class="md-nav__link">
+    Critic Markup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#键盘按键" class="md-nav__link">
+    键盘按键
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -423,9 +457,43 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#文字格式化" class="md-nav__link">
+    文字格式化
+  </a>
+  
+    <nav class="md-nav" aria-label="文字格式化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#粗体和斜体" class="md-nav__link">
     粗体和斜体
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Caret-Mark-Tilde" class="md-nav__link">
+    Caret Mark Tilde
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Critic-Markup" class="md-nav__link">
+    Critic Markup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#键盘按键" class="md-nav__link">
+    键盘按键
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -453,16 +521,120 @@
 <li><code>###### 六级标题</code></li>
 </ul>
 <div class="admonition warning">
-<p>markdown 标准定义中文字底部加 <code>===</code> 用于表示一级标题，文字底部加 <code>---</code> 表示二级标题，不过最好不要这样使用，建议统一使用 <code>#</code> 来表示。</p>
+<p class="admonition-title">Warning</p>
+<p>在 mkdocs-material 的样式中，四级标题有加粗效果，感觉不太好，不建议使用。</p>
 </div>
 <div class="admonition warning">
-<p>在mkdocs-material的样式中，四级标题有加粗效果，感觉不太好，最好避免使用</p>
+<p class="admonition-title">Warning</p>
+<p>markdown 标准定义文字底部加 <code>===</code> 表示一级标题，文字底部加 <code>---</code> 表示二级标题，阅读性很差，不建议使用。</p>
 </div>
-<h2 id="粗体和斜体">粗体和斜体<a class="headerlink" href="#粗体和斜体" title="Permanent link">⚓︎</a></h2>
-<p><code>**粗体**</code> <strong>粗体</strong></p>
-<p><code>*斜体*</code> <em>斜体</em></p>
+<h2 id="文字格式化">文字格式化<a class="headerlink" href="#文字格式化" title="Permanent link">⚓︎</a></h2>
+<h3 id="粗体和斜体">粗体和斜体<a class="headerlink" href="#粗体和斜体" title="Permanent link">⚓︎</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">表现效果</label><label for="__tabbed_1_2">Markdown</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><strong>粗体</strong></li>
+<li><em>斜体</em></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="gs">**粗体**</span>
+<span class="linenos" data-linenos="2 "></span><span class="ge">*斜体*</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 <div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>markdown 标准定义中支持以下划线 <code>_</code> 代替 <code>*</code> 实现粗体和斜体，但并不建议。</p>
+</div>
+<h3 id="Caret-Mark-Tilde">Caret Mark Tilde<a class="headerlink" href="#Caret-Mark-Tilde" title="Permanent link">⚓︎</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">表现效果</label><label for="__tabbed_2_2">Markdown</label><label for="__tabbed_2_3">mkdocs.yml</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><mark>This was marked</mark></li>
+<li><ins>This was inserted</ins></li>
+<li><del>This was deleted</del></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>==This was marked==
+<span class="linenos" data-linenos="2 "></span>^^This was inserted^^
+<span class="linenos" data-linenos="3 "></span><span class="gd">~~This was deleted~~</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">markdown_extensions</span><span class="p">:</span>
+<span class="linenos" data-linenos="2 "></span>  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.mark</span>
+<span class="linenos" data-linenos="3 "></span>  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.caret</span>
+<span class="linenos" data-linenos="4 "></span>  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.tilde</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">参考资料</p>
+<p><a href="https://squidfunk.github.io/mkdocs-material/reference/formatting/#highlighting-text" target="_blank">https://squidfunk.github.io/mkdocs-material/reference/formatting/#highlighting-text</a></p>
+</div>
+<h3 id="Critic-Markup">Critic Markup<a class="headerlink" href="#Critic-Markup" title="Permanent link">⚓︎</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">表现效果</label><label for="__tabbed_3_2">Markdown</label><label for="__tabbed_3_3">mkdocs.yml</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><code><del class="critic">deleted</del></code></li>
+<li><code><ins class="critic">added</ins></code></li>
+<li><code><del class="critic">deleted</del><ins class="critic">added</ins></code></li>
+<li><code><mark class="critic">highlighting</mark></code></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>{--deleted-- }
+<span class="linenos" data-linenos="2 "></span>{++added++ }
+<span class="linenos" data-linenos="3 "></span>{~~deleted~&gt;added~~ }
+<span class="linenos" data-linenos="4 "></span>{==highlighting== }
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">markdown_extensions</span><span class="p">:</span>
+<span class="linenos" data-linenos="2 "></span>  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.critic</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>这个语法在块中也可以使用。</p>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">参考资料</p>
+<p><a href="https://squidfunk.github.io/mkdocs-material/reference/formatting/#highlighting-changes" target="_blank">https://squidfunk.github.io/mkdocs-material/reference/formatting/#highlighting-changes</a></p>
+</div>
+<h3 id="键盘按键">键盘按键<a class="headerlink" href="#键盘按键" title="Permanent link">⚓︎</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">表现效果</label><label for="__tabbed_4_2">Markdown</label><label for="__tabbed_4_3">mkdocs.yml</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-delete">Del</kbd></span></li>
+<li><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-f4">F4</kbd></span></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>++ctrl+alt+del++
+<span class="linenos" data-linenos="2 "></span>++alt+f4++
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">markdown_extensions</span><span class="p">:</span>
+<span class="linenos" data-linenos="2 "></span>  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.keys</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">参考资料</p>
+<p><a href="https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index" target="_blank">https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index</a></p>
 </div>
                 
               
