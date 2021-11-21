@@ -64,10 +64,10 @@ markdown_extensions:
   - admonition
   - pymdownx.critic
   - pymdownx.caret
-  - pymdownx.keys
-  - pymdownx.snippets
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.keys
+  - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.inlinehilite
   - pymdownx.details
