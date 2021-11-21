@@ -70,7 +70,7 @@
       - pymdownx.tilde
     ```
 
-!!! quote "参考资料"
+!!! quote
     <https://squidfunk.github.io/mkdocs-material/reference/formatting/#highlighting-text>{:target="_blank"}
 
 
@@ -102,7 +102,7 @@
 !!! tip    
     这个语法在块中也可以使用。
 
-!!! quote "参考资料"
+!!! quote
     <https://squidfunk.github.io/mkdocs-material/reference/formatting/#highlighting-changes>{:target="_blank"}
 
 
@@ -127,7 +127,7 @@
       - pymdownx.keys
     ```
 
-!!! quote "参考资料"
+!!! quote
     <https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index>{:target="_blank"}
 
 
