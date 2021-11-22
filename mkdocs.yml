@@ -18,6 +18,7 @@ theme:
     - content.tabs.link
     - navigation.top
     - navigation.tracking
+    - search.highlight  # 搜索高亮
     # - content.code.annotate # 要等待 8.0 版本才可以用，现在pip提供的最新版本是 7.3.6
     # - navigation.instant # 异步加载
     # - navigation.indexes # 不清楚
