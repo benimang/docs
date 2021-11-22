@@ -80,17 +80,20 @@
 ### Critic Markup
 
 ===! "表现效果"
-    - `{--deleted--}`
-    - `{++added++}`
-    - `{~~deleted~>added~~}`
-    - `{==highlighting==}`
+    - {--deleted--}
+    - {++added++}
+    - {~~deleted~>added~~}
+    - {==highlighting==}
+    - {>>comments<<}
 
 === "Markdown"
     ```md
+    # 注意：右花括号前面的空白不需要
     {--deleted-- }
     {++added++ }
     {~~deleted~>added~~ }
     {==highlighting== }
+    {>>comments<< }
     ```
 
 === "mkdocs.yml"
@@ -109,7 +112,7 @@
 
 
 
-### 键盘按键
+## 键盘按键
 
 ===! "表现效果"
     - ++ctrl+alt+del++
