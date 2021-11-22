@@ -1,3 +1,5 @@
+INHERIT: ./nav.yml
+
 # 2个必填配置选项
 site_name: Beni Docs
 site_url: https://pytask.com
@@ -74,12 +76,3 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-
-nav:
-  - 欢迎光临: index.md
-  - 网站建设:
-      - website/setup.md
-      - website/writing.md
-  - backup:
-      - Index: bak/index.md
-      - About: bak/about.md
