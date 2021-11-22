@@ -15,9 +15,7 @@ theme:
   language: zh
   custom_dir: custom_theme
   features:
-    - content.tabs.link
-    - navigation.top
-    - navigation.tracking
+    - navigation.top # 返回顶部
     - search.highlight  # 搜索高亮
     # - content.code.annotate # 要等待 8.0 版本才可以用，现在pip提供的最新版本是 7.3.6
     # - navigation.instant # 异步加载
@@ -29,7 +27,7 @@ theme:
         name: Switch to dark mode
     - scheme: slate
       primary: red
-      accent: purple
+      accent: deep purple
       toggle:
         icon: material/lightbulb
         name: Switch to light mode
@@ -41,9 +39,6 @@ extra:
       # name: 联系邮箱 benimang@126.com
 #   generator: false # 屏蔽底部（Made with Material for MkDocs）
 
-plugins:
-  - search:
-      lang: zh
 
 markdown_extensions:
   - meta

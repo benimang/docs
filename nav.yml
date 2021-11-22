@@ -2,5 +2,4 @@ nav:
   - 欢迎光临: index.md
   - 网站建设:
       - website/setup.md
-      - 内容编辑:
-          - website/text.md
+      - website/text.md
