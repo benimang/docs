@@ -23,7 +23,7 @@
 
 
 
-## 文字格式化
+## 文字样式
 
 
 
@@ -48,7 +48,7 @@
 
 
 
-### Mark Caret Tilde
+### 高亮 / 删除 / 下划
 
 ===! "表现效果"
     - ==pymdownx.mark==
@@ -112,7 +112,7 @@
 
 
 
-### 上标和下标
+### 上标 / 下标
 
 ===! "表现效果"
     - A^T^A
@@ -148,6 +148,4 @@
 
 !!! quote
     <https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index>{:target="_blank"}
-
-
 
