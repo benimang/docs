@@ -11,4 +11,4 @@ If you wanna take this domain, give me a email with your acceptable price.
 
 ## Contact
 
-[Send :fontawesome-solid-paper-plane:](mailto:benimang@126.com){ .md-button .md-button--primary }
+[benimang@126.com :fontawesome-solid-paper-plane:](mailto:benimang@126.com){ .md-button .md-button--primary }
