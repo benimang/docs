@@ -36,7 +36,7 @@
     - *斜体*
 
 === "Markdown"
-    ```markdown
+    ``` md
     **粗体**
     *斜体*
     ```
@@ -56,14 +56,14 @@
     - ^^pymdownx.caret^^
 
 === "Markdown"
-    ```md
+    ``` md
     ==pymdownx.mark==
     ~~pymdownx.tilde~~
     ^^pymdownx.caret^^
     ```
 
 === "mkdocs.yml"
-    ```yaml
+    ``` yaml
     markdown_extensions:
       - pymdownx.mark
       - pymdownx.caret
@@ -87,7 +87,7 @@
     - {>>comments<<}
 
 === "Markdown"
-    ```md
+    ``` md
     # 注意：右花括号前面的空白不需要
     {--deleted-- }
     {++added++ }
@@ -97,7 +97,7 @@
     ```
 
 === "mkdocs.yml"
-    ```yaml
+    ``` yaml
     markdown_extensions:
       - pymdownx.critic
     ```
@@ -119,7 +119,7 @@
     - H~2~0
 
 === "Markdown"
-    ```md
+    ``` md
     A^T^A
     H~2~0
     ```
@@ -135,13 +135,13 @@
     - ++alt+f4++
 
 === "Markdown"
-    ```md
+    ``` md
     ++ctrl+alt+del++
     ++alt+f4++
     ```
 
 === "mkdocs.yml"
-    ```yaml
+    ``` yaml
     markdown_extensions:
       - pymdownx.keys
     ```
