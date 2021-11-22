@@ -16,9 +16,9 @@ theme:
   custom_dir: custom_theme
   features:
     - content.tabs.link
-    - content.code.annotate
     - navigation.top
     - navigation.tracking
+    # - content.code.annotate # 要等待 8.0 版本才可以用，现在pip提供的最新版本是 7.3.6
     # - navigation.instant # 异步加载
     # - navigation.indexes # 不清楚
   palette:
