@@ -62,10 +62,10 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - admonition
-  - pymdownx.critic
-  - pymdownx.caret
   - pymdownx.mark
+  - pymdownx.caret
   - pymdownx.tilde
+  - pymdownx.critic
   - pymdownx.keys
   - pymdownx.snippets
   - pymdownx.superfences

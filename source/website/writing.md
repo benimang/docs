@@ -48,18 +48,18 @@
 
 
 
-### Caret Mark Tilde
+### Mark Caret Tilde
 
 ===! "表现效果"
-    - ==This was marked==
-    - ^^This was inserted^^
-    - ~~This was deleted~~
+    - ==pymdownx.mark==
+    - ~~pymdownx.tilde~~
+    - ^^pymdownx.caret^^
 
 === "Markdown"
     ```md
-    ==This was marked==
-    ^^This was inserted^^
-    ~~This was deleted~~
+    ==pymdownx.mark==
+    ~~pymdownx.tilde~~
+    ^^pymdownx.caret^^
     ```
 
 === "mkdocs.yml"
@@ -103,7 +103,7 @@
     ```
 
 !!! tip    
-    这个语法在块中也可以使用。
+    这个插件在块中也可以正常展示。
 
 !!! quote
     <https://squidfunk.github.io/mkdocs-material/reference/formatting/#highlighting-changes>{:target="_blank"}
