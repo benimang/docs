@@ -11,6 +11,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://pytask.com/others/url/</loc>
+         <lastmod>2021-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pytask.com/python/decorator/</loc>
+         <lastmod>2021-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://pytask.com/website/deploy/</loc>
          <lastmod>2021-11-23</lastmod>
          <changefreq>daily</changefreq>
