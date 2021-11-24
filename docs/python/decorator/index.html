@@ -303,49 +303,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#函数装饰器" class="md-nav__link">
-    函数装饰器
-  </a>
-  
-    <nav class="md-nav" aria-label="函数装饰器">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#装饰器无参数" class="md-nav__link">
     装饰器无参数
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#装饰器有参数" class="md-nav__link">
     装饰器有参数
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#成员函数及叠加使用" class="md-nav__link">
     成员函数及叠加使用
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#functoolswraps" class="md-nav__link">
-    @functools.wraps
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#类装饰器" class="md-nav__link">
-    类装饰器
+  <a href="#functoolswraps" class="md-nav__link">
+    @functools.wraps
   </a>
   
 </li>
@@ -408,49 +388,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#函数装饰器" class="md-nav__link">
-    函数装饰器
-  </a>
-  
-    <nav class="md-nav" aria-label="函数装饰器">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#装饰器无参数" class="md-nav__link">
     装饰器无参数
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#装饰器有参数" class="md-nav__link">
     装饰器有参数
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#成员函数及叠加使用" class="md-nav__link">
     成员函数及叠加使用
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#functoolswraps" class="md-nav__link">
-    @functools.wraps
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#类装饰器" class="md-nav__link">
-    类装饰器
+  <a href="#functoolswraps" class="md-nav__link">
+    @functools.wraps
   </a>
   
 </li>
@@ -469,8 +429,7 @@
                 
                 
                 <h1 id="装饰器-decorator">装饰器 decorator<a class="headerlink" href="#装饰器-decorator" title="Permanent link">⚓︎</a></h1>
-<h2 id="函数装饰器">函数装饰器<a class="headerlink" href="#函数装饰器" title="Permanent link">⚓︎</a></h2>
-<h3 id="装饰器无参数">装饰器无参数<a class="headerlink" href="#装饰器无参数" title="Permanent link">⚓︎</a></h3>
+<h2 id="装饰器无参数">装饰器无参数<a class="headerlink" href="#装饰器无参数" title="Permanent link">⚓︎</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
 <span class="linenos" data-linenos=" 2 "></span>
 <span class="linenos" data-linenos=" 3 "></span><span class="k">def</span> <span class="nf">decorator_a</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
@@ -493,7 +452,7 @@
 <p class="admonition-title">Warning</p>
 <p>封装后 <code class="highlight"><span class="n">myfun_a</span><span class="o">.</span><span class="vm">__name__</span></code> 发生了改变，如果想封装后不改这个名字可以用 <a href="#functoolswraps">wraps</a></p>
 </div>
-<h3 id="装饰器有参数">装饰器有参数<a class="headerlink" href="#装饰器有参数" title="Permanent link">⚓︎</a></h3>
+<h2 id="装饰器有参数">装饰器有参数<a class="headerlink" href="#装饰器有参数" title="Permanent link">⚓︎</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
 <span class="linenos" data-linenos=" 2 "></span>
 <span class="linenos" data-linenos=" 3 "></span><span class="k">def</span> <span class="nf">decorator_b</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
@@ -519,7 +478,7 @@
 <p class="admonition-title">Warning</p>
 <p>封装后 <code class="highlight"><span class="n">myfun_b</span><span class="o">.</span><span class="vm">__name__</span></code> 发生了改变，如果想封装后不改这个名字可以用 <a href="#functoolswraps">wraps</a></p>
 </div>
-<h3 id="成员函数及叠加使用">成员函数及叠加使用<a class="headerlink" href="#成员函数及叠加使用" title="Permanent link">⚓︎</a></h3>
+<h2 id="成员函数及叠加使用">成员函数及叠加使用<a class="headerlink" href="#成员函数及叠加使用" title="Permanent link">⚓︎</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
 <span class="linenos" data-linenos=" 2 "></span>
 <span class="linenos" data-linenos=" 3 "></span><span class="k">def</span> <span class="nf">decorator_a</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
@@ -552,7 +511,7 @@
 <p class="admonition-title">Tips</p>
 <p>执行顺序是 <code>a.before</code> -&gt; <code>b.before</code> -&gt; <code>method_b</code> -&gt; <code>b.after</code> -&gt; <code>a.after</code></p>
 </div>
-<h3 id="functoolswraps">@functools.wraps<a class="headerlink" href="#functoolswraps" title="Permanent link">⚓︎</a></h3>
+<h2 id="functoolswraps">@functools.wraps<a class="headerlink" href="#functoolswraps" title="Permanent link">⚓︎</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
 <span class="linenos" data-linenos=" 2 "></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
 <span class="linenos" data-linenos=" 3 "></span>
@@ -569,7 +528,6 @@
 <span class="linenos" data-linenos="14 "></span><span class="k">def</span> <span class="nf">myfun_a</span><span class="p">():</span>
 <span class="linenos" data-linenos="15 "></span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;myfun_a&quot;</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="类装饰器">类装饰器<a class="headerlink" href="#类装饰器" title="Permanent link">⚓︎</a></h2>
                 
               
               
