@@ -11,7 +11,7 @@
 - [OpenPyXL](https://openpyxl.readthedocs.io/en/stable/) `excel` 库，可读可写功能强大
 - [FastAPI](https://fastapi.tiangolo.com/) 网络框架，据说比 `Flask` 更高效
 - [Typer](https://typer.tiangolo.com/) `FastAPI` 的命令行版本
-
+- [PyYAML](https://pyyaml.org/wiki/PyYAMLDocumentation) `Python` 默认没有提供 `YAML` 支持，这个是最权威的第三方库
 
 ## Python 非官网教程
 
