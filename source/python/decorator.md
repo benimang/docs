@@ -9,9 +9,9 @@ from typing import Any
 
 def decorator_a(func: Any):
     def wraper(*parList: Any, **parDict: Any):
-        print("... a.before")
+        print("a.before ...")
         result = func(*parList, **parDict)
-        print("... a.after")
+        print("a.after ...")
         return result
     return wraper
 
@@ -36,10 +36,10 @@ from typing import Any
 def decorator_b(value: str):
     def decorator_b1(func: Any):
         def wraper(*parList: Any, **parDict: Any):
-            print("... b.before")
+            print("b.before ...")
             print(f"b value is {value}")
             result = func(*parList, **parDict)
-            print("... b.after")
+            print("b.after ...")
             return result
         return wraper
     return decorator_b1
@@ -58,24 +58,24 @@ def myfun_b():
 
 ## 成员函数及叠加使用
 
-``` py
+``` py hl_lines="24-25"
 from typing import Any
 
 def decorator_a(func: Any):
     def wraper(*parList: Any, **parDict: Any):
-        print("... a.before")
+        print("a.before ...")
         result = func(*parList, **parDict)
-        print("... a.after")
+        print("a.after ...")
         return result
     return wraper
 
 def decorator_b(value: str):
     def decorator_b1(func: Any):
         def wraper(*parList: Any, **parDict: Any):
-            print("... b.before")
+            print("b.before ...")
             print(f"b value is {value}")
             result = func(*parList, **parDict)
-            print("... b.after")
+            print("b.after ...")
             return result
         return wraper
     return decorator_b1
@@ -95,16 +95,18 @@ class AClass():
 
 ## @functools.wraps
 
-``` py
+官方提供的方法，通过这个包装后，函数的名称不会改变
+
+``` py hl_lines="1 5"
 from functools import wraps
 from typing import Any
 
 def decorator_a(func: Any):
     @wraps(func)
     def wraper(*parList: Any, **parDict: Any):
-        print("... a.before")
+        print("a.before ...")
         result = func(*parList, **parDict)
-        print("... a.after")
+        print("a.after ...")
         return result
     return wraper
 
