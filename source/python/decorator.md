@@ -116,3 +116,65 @@ def myfun_a():
 ```
 
 
+
+## Examples
+
+
+
+### @cache
+
+官方提供的方法，函数调用的结果将缓存起来，下次再调用则使用缓存直接返回
+
+``` py hl_lines="1 3"
+from functools import cache
+
+@cache
+def factorial(n: int):
+    return n * factorial(n - 1) if n else 1
+```
+
+
+### @cached_property
+
+官方提供的方法，针对类成员函数，相当于是带缓存版本 `@property`
+
+``` py hl_lines="1 8"
+from functools import cached_property
+
+class AClass:
+
+    def __init__(self):
+        self.data = (1, 2)
+
+    @cached_property
+    def first_value(self):
+        return self.data[0]
+```
+
+
+### 异步超时
+
+这个可以指定 `async` 函数的超时时间
+
+``` py hl_lines="6-13 15"
+import asyncio
+from functools import wraps
+from typing import Any
+from async_timeout import timeout
+
+def asyncTimeout(waitSeconds: float):
+    def fun(func: Any):
+        @wraps(func)
+        async def wrapper(*args: Any, **kwargs: Any):
+            async with timeout(waitSeconds):
+                return await func(*args, **kwargs)
+        return wrapper
+    return fun
+
+@asyncTimeout(2)
+async def myfun():    
+    await asyncio.sleep(3)
+```
+
+!!! warning
+    这里抛出的异常是 `asyncio.CancelledError` 
