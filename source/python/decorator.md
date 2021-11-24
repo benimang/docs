@@ -1,10 +1,8 @@
 # 装饰器 decorator
 
-## 函数装饰器
 
 
-
-### 装饰器无参数
+## 装饰器无参数
 
 ``` py
 from typing import Any
@@ -30,7 +28,7 @@ def myfun_a():
 
 
 
-### 装饰器有参数
+## 装饰器有参数
 
 ``` py
 from typing import Any
@@ -58,7 +56,7 @@ def myfun_b():
     封装后 `#!py myfun_b.__name__` 发生了改变，如果想封装后不改这个名字可以用 [wraps](#functoolswraps)
 
 
-### 成员函数及叠加使用
+## 成员函数及叠加使用
 
 ``` py
 from typing import Any
@@ -95,7 +93,7 @@ class AClass():
 
 
 
-### @functools.wraps
+## @functools.wraps
 
 ``` py
 from functools import wraps
@@ -116,5 +114,3 @@ def myfun_a():
 ```
 
 
-
-## 类装饰器
