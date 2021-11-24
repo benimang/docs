@@ -30,7 +30,7 @@ def myfun_a():
 
 ## 装饰器有参数
 
-``` py
+``` py hl_lines="3 12 14"
 from typing import Any
 
 def decorator_b(value: str):
