@@ -330,6 +330,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cache" class="md-nav__link">
+    @cache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cached_property" class="md-nav__link">
+    @cached_property
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#异步超时" class="md-nav__link">
+    异步超时
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -415,6 +449,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cache" class="md-nav__link">
+    @cache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cached_property" class="md-nav__link">
+    @cached_property
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#异步超时" class="md-nav__link">
+    异步超时
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -434,9 +502,9 @@
 <span class="linenos" data-linenos=" 2 "></span>
 <span class="linenos" data-linenos=" 3 "></span><span class="k">def</span> <span class="nf">decorator_a</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
 <span class="linenos" data-linenos=" 4 "></span>    <span class="k">def</span> <span class="nf">wraper</span><span class="p">(</span><span class="o">*</span><span class="n">parList</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">parDict</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
-<span class="linenos" data-linenos=" 5 "></span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;... a.before&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 5 "></span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a.before ...&quot;</span><span class="p">)</span>
 <span class="linenos" data-linenos=" 6 "></span>        <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">parList</span><span class="p">,</span> <span class="o">**</span><span class="n">parDict</span><span class="p">)</span>
-<span class="linenos" data-linenos=" 7 "></span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;... a.after&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a.after ...&quot;</span><span class="p">)</span>
 <span class="linenos" data-linenos=" 8 "></span>        <span class="k">return</span> <span class="n">result</span>
 <span class="linenos" data-linenos=" 9 "></span>    <span class="k">return</span> <span class="n">wraper</span>
 <span class="linenos" data-linenos="10 "></span>
@@ -455,19 +523,19 @@
 <h2 id="装饰器有参数">装饰器有参数<a class="headerlink" href="#装饰器有参数" title="Permanent link">⚓︎</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
 <span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="k">def</span> <span class="nf">decorator_b</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-<span class="linenos" data-linenos=" 4 "></span>    <span class="k">def</span> <span class="nf">decorator_b1</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
+<span class="hll"><span class="linenos" data-linenos=" 3 "></span><span class="k">def</span> <span class="nf">decorator_b</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+</span><span class="linenos" data-linenos=" 4 "></span>    <span class="k">def</span> <span class="nf">decorator_b1</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
 <span class="linenos" data-linenos=" 5 "></span>        <span class="k">def</span> <span class="nf">wraper</span><span class="p">(</span><span class="o">*</span><span class="n">parList</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">parDict</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
-<span class="linenos" data-linenos=" 6 "></span>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;... b.before&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 6 "></span>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b.before ...&quot;</span><span class="p">)</span>
 <span class="linenos" data-linenos=" 7 "></span>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;b value is </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="linenos" data-linenos=" 8 "></span>            <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">parList</span><span class="p">,</span> <span class="o">**</span><span class="n">parDict</span><span class="p">)</span>
-<span class="linenos" data-linenos=" 9 "></span>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;... b.after&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 9 "></span>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b.after ...&quot;</span><span class="p">)</span>
 <span class="linenos" data-linenos="10 "></span>            <span class="k">return</span> <span class="n">result</span>
 <span class="linenos" data-linenos="11 "></span>        <span class="k">return</span> <span class="n">wraper</span>
-<span class="linenos" data-linenos="12 "></span>    <span class="k">return</span> <span class="n">decorator_b1</span>
-<span class="linenos" data-linenos="13 "></span>
-<span class="linenos" data-linenos="14 "></span><span class="nd">@decorator_b</span><span class="p">(</span><span class="s2">&quot;xxx&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="15 "></span><span class="k">def</span> <span class="nf">myfun_b</span><span class="p">():</span>
+<span class="hll"><span class="linenos" data-linenos="12 "></span>    <span class="k">return</span> <span class="n">decorator_b1</span>
+</span><span class="linenos" data-linenos="13 "></span>
+<span class="hll"><span class="linenos" data-linenos="14 "></span><span class="nd">@decorator_b</span><span class="p">(</span><span class="s2">&quot;xxx&quot;</span><span class="p">)</span>
+</span><span class="linenos" data-linenos="15 "></span><span class="k">def</span> <span class="nf">myfun_b</span><span class="p">():</span>
 <span class="linenos" data-linenos="16 "></span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;myfun_b&quot;</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition tips">
@@ -483,28 +551,28 @@
 <span class="linenos" data-linenos=" 2 "></span>
 <span class="linenos" data-linenos=" 3 "></span><span class="k">def</span> <span class="nf">decorator_a</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
 <span class="linenos" data-linenos=" 4 "></span>    <span class="k">def</span> <span class="nf">wraper</span><span class="p">(</span><span class="o">*</span><span class="n">parList</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">parDict</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
-<span class="linenos" data-linenos=" 5 "></span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;... a.before&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 5 "></span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a.before ...&quot;</span><span class="p">)</span>
 <span class="linenos" data-linenos=" 6 "></span>        <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">parList</span><span class="p">,</span> <span class="o">**</span><span class="n">parDict</span><span class="p">)</span>
-<span class="linenos" data-linenos=" 7 "></span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;... a.after&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a.after ...&quot;</span><span class="p">)</span>
 <span class="linenos" data-linenos=" 8 "></span>        <span class="k">return</span> <span class="n">result</span>
 <span class="linenos" data-linenos=" 9 "></span>    <span class="k">return</span> <span class="n">wraper</span>
 <span class="linenos" data-linenos="10 "></span>
 <span class="linenos" data-linenos="11 "></span><span class="k">def</span> <span class="nf">decorator_b</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
 <span class="linenos" data-linenos="12 "></span>    <span class="k">def</span> <span class="nf">decorator_b1</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
 <span class="linenos" data-linenos="13 "></span>        <span class="k">def</span> <span class="nf">wraper</span><span class="p">(</span><span class="o">*</span><span class="n">parList</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">parDict</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
-<span class="linenos" data-linenos="14 "></span>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;... b.before&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="14 "></span>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b.before ...&quot;</span><span class="p">)</span>
 <span class="linenos" data-linenos="15 "></span>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;b value is </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="linenos" data-linenos="16 "></span>            <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">parList</span><span class="p">,</span> <span class="o">**</span><span class="n">parDict</span><span class="p">)</span>
-<span class="linenos" data-linenos="17 "></span>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;... b.after&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="17 "></span>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b.after ...&quot;</span><span class="p">)</span>
 <span class="linenos" data-linenos="18 "></span>            <span class="k">return</span> <span class="n">result</span>
 <span class="linenos" data-linenos="19 "></span>        <span class="k">return</span> <span class="n">wraper</span>
 <span class="linenos" data-linenos="20 "></span>    <span class="k">return</span> <span class="n">decorator_b1</span>
 <span class="linenos" data-linenos="21 "></span>
 <span class="linenos" data-linenos="22 "></span><span class="k">class</span> <span class="nc">AClass</span><span class="p">():</span>
 <span class="linenos" data-linenos="23 "></span>
-<span class="linenos" data-linenos="24 "></span>    <span class="nd">@decorator_a</span>
-<span class="linenos" data-linenos="25 "></span>    <span class="nd">@decorator_b</span><span class="p">(</span><span class="s2">&quot;mmm&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="26 "></span>    <span class="k">def</span> <span class="nf">method_b</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="hll"><span class="linenos" data-linenos="24 "></span>    <span class="nd">@decorator_a</span>
+</span><span class="hll"><span class="linenos" data-linenos="25 "></span>    <span class="nd">@decorator_b</span><span class="p">(</span><span class="s2">&quot;mmm&quot;</span><span class="p">)</span>
+</span><span class="linenos" data-linenos="26 "></span>    <span class="k">def</span> <span class="nf">method_b</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos" data-linenos="27 "></span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;AClass.method_b is called&quot;</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition tips">
@@ -512,15 +580,16 @@
 <p>执行顺序是 <code>a.before</code> -&gt; <code>b.before</code> -&gt; <code>method_b</code> -&gt; <code>b.after</code> -&gt; <code>a.after</code></p>
 </div>
 <h2 id="functoolswraps">@functools.wraps<a class="headerlink" href="#functoolswraps" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
-<span class="linenos" data-linenos=" 2 "></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+<p>官方提供的方法，通过这个包装后，函数的名称不会改变</p>
+<div class="highlight"><pre><span></span><code><span class="hll"><span class="linenos" data-linenos=" 1 "></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+</span><span class="linenos" data-linenos=" 2 "></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
 <span class="linenos" data-linenos=" 3 "></span>
 <span class="linenos" data-linenos=" 4 "></span><span class="k">def</span> <span class="nf">decorator_a</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-<span class="linenos" data-linenos=" 6 "></span>    <span class="k">def</span> <span class="nf">wraper</span><span class="p">(</span><span class="o">*</span><span class="n">parList</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">parDict</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
-<span class="linenos" data-linenos=" 7 "></span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;... a.before&quot;</span><span class="p">)</span>
+<span class="hll"><span class="linenos" data-linenos=" 5 "></span>    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+</span><span class="linenos" data-linenos=" 6 "></span>    <span class="k">def</span> <span class="nf">wraper</span><span class="p">(</span><span class="o">*</span><span class="n">parList</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">parDict</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a.before ...&quot;</span><span class="p">)</span>
 <span class="linenos" data-linenos=" 8 "></span>        <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">parList</span><span class="p">,</span> <span class="o">**</span><span class="n">parDict</span><span class="p">)</span>
-<span class="linenos" data-linenos=" 9 "></span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;... a.after&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 9 "></span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a.after ...&quot;</span><span class="p">)</span>
 <span class="linenos" data-linenos="10 "></span>        <span class="k">return</span> <span class="n">result</span>
 <span class="linenos" data-linenos="11 "></span>    <span class="k">return</span> <span class="n">wraper</span>
 <span class="linenos" data-linenos="12 "></span>
@@ -528,6 +597,52 @@
 <span class="linenos" data-linenos="14 "></span><span class="k">def</span> <span class="nf">myfun_a</span><span class="p">():</span>
 <span class="linenos" data-linenos="15 "></span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;myfun_a&quot;</span><span class="p">)</span>
 </code></pre></div>
+<h2 id="Examples">Examples<a class="headerlink" href="#Examples" title="Permanent link">⚓︎</a></h2>
+<h3 id="cache">@cache<a class="headerlink" href="#cache" title="Permanent link">⚓︎</a></h3>
+<p>官方提供的方法，函数调用的结果将缓存起来，下次再调用则使用缓存直接返回</p>
+<div class="highlight"><pre><span></span><code><span class="hll"><span class="linenos" data-linenos="1 "></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">cache</span>
+</span><span class="linenos" data-linenos="2 "></span>
+<span class="hll"><span class="linenos" data-linenos="3 "></span><span class="nd">@cache</span>
+</span><span class="linenos" data-linenos="4 "></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="linenos" data-linenos="5 "></span>    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span> <span class="k">else</span> <span class="mi">1</span>
+</code></pre></div>
+<h3 id="cached_property">@cached_property<a class="headerlink" href="#cached_property" title="Permanent link">⚓︎</a></h3>
+<p>官方提供的方法，针对类成员函数，相当于是带缓存版本 <code>@property</code></p>
+<div class="highlight"><pre><span></span><code><span class="hll"><span class="linenos" data-linenos=" 1 "></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">cached_property</span>
+</span><span class="linenos" data-linenos=" 2 "></span>
+<span class="linenos" data-linenos=" 3 "></span><span class="k">class</span> <span class="nc">AClass</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 4 "></span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="hll"><span class="linenos" data-linenos=" 8 "></span>    <span class="nd">@cached_property</span>
+</span><span class="linenos" data-linenos=" 9 "></span>    <span class="k">def</span> <span class="nf">first_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="异步超时">异步超时<a class="headerlink" href="#异步超时" title="Permanent link">⚓︎</a></h3>
+<p>这个可以指定 <code>async</code> 函数的超时时间</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="kn">from</span> <span class="nn">async_timeout</span> <span class="kn">import</span> <span class="n">timeout</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="hll"><span class="linenos" data-linenos=" 6 "></span><span class="k">def</span> <span class="nf">asyncTimeout</span><span class="p">(</span><span class="n">waitSeconds</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+</span><span class="hll"><span class="linenos" data-linenos=" 7 "></span>    <span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
+</span><span class="hll"><span class="linenos" data-linenos=" 8 "></span>        <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+</span><span class="hll"><span class="linenos" data-linenos=" 9 "></span>        <span class="k">async</span> <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
+</span><span class="hll"><span class="linenos" data-linenos="10 "></span>            <span class="k">async</span> <span class="k">with</span> <span class="n">timeout</span><span class="p">(</span><span class="n">waitSeconds</span><span class="p">):</span>
+</span><span class="hll"><span class="linenos" data-linenos="11 "></span>                <span class="k">return</span> <span class="k">await</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span><span class="hll"><span class="linenos" data-linenos="12 "></span>        <span class="k">return</span> <span class="n">wrapper</span>
+</span><span class="hll"><span class="linenos" data-linenos="13 "></span>    <span class="k">return</span> <span class="n">fun</span>
+</span><span class="linenos" data-linenos="14 "></span>
+<span class="hll"><span class="linenos" data-linenos="15 "></span><span class="nd">@asyncTimeout</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span><span class="linenos" data-linenos="16 "></span><span class="k">async</span> <span class="k">def</span> <span class="nf">myfun</span><span class="p">():</span>    
+<span class="linenos" data-linenos="17 "></span>    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>这里抛出的异常是 <code>asyncio.CancelledError</code> </p>
+</div>
                 
               
               
