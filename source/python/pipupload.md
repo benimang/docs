@@ -6,7 +6,7 @@
 首先需要账号注册 [pypi](https://pypi.org/)，很特别的地方是，项目不是在这里创建，而是上传的时候决定的。
 
 
-## 准备配置文件
+## 配置文件
 
 ``` py title="setup.py" hl_lines="32 33 44-46"
 version = "0.0.117"
@@ -89,3 +89,5 @@ pip install twine
 python setup.py sdist
 twine upload dist/*
 ```
+!!! warning
+    每次打包前先删除 `*.egg-info` 和 `dist` 这两个目录，否则有可能打出来的包不是最新。
