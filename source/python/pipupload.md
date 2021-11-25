@@ -71,6 +71,8 @@ include README.md
 !!! quote
     <https://docs.python.org/3/distutils/sourcedist.html>
 
+!!! tips
+    还需要其中一个文件，否则会打包有警告 `README` `README.rst` `README.txt` `README.md`
 
 ## twine
 
