@@ -1,8 +1,10 @@
 nav:
-  - index.md
-  - website/deploy.md
-  - python:
+  - index.md  
+  - Python:
     - python/decorator.md
+  - Others:
+    - others/website.md
+    - others/nginx.md
   - others/url.md
   # - bak:
   #     - bak/text.md
