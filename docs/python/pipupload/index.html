@@ -309,8 +309,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#准备配置文件" class="md-nav__link">
-    准备配置文件
+  <a href="#配置文件" class="md-nav__link">
+    配置文件
   </a>
   
 </li>
@@ -456,8 +456,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#准备配置文件" class="md-nav__link">
-    准备配置文件
+  <a href="#配置文件" class="md-nav__link">
+    配置文件
   </a>
   
 </li>
@@ -492,7 +492,7 @@
                 <h1 id="PIP-包上传">PIP 包上传<a class="headerlink" href="#PIP-包上传" title="Permanent link">⚓︎</a></h1>
 <h2 id="pypi-账号">pypi 账号<a class="headerlink" href="#pypi-账号" title="Permanent link">⚓︎</a></h2>
 <p>首先需要账号注册 <a href="https://pypi.org/">pypi</a>，很特别的地方是，项目不是在这里创建，而是上传的时候决定的。</p>
-<h2 id="准备配置文件">准备配置文件<a class="headerlink" href="#准备配置文件" title="Permanent link">⚓︎</a></h2>
+<h2 id="配置文件">配置文件<a class="headerlink" href="#配置文件" title="Permanent link">⚓︎</a></h2>
 <div class="highlight"><span class="filename">setup.py</span><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;0.0.117&quot;</span>
 <span class="linenos" data-linenos=" 2 "></span><span class="n">install_requires</span> <span class="o">=</span> <span class="p">[</span>
 <span class="linenos" data-linenos=" 3 "></span>    <span class="s2">&quot;aiohttp&quot;</span><span class="p">,</span>
@@ -563,6 +563,10 @@
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>python setup.py sdist
 <span class="linenos" data-linenos="2 "></span>twine upload dist/*
 </code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>每次打包前先删除 <code>*.egg-info</code> 和 <code>dist</code> 这两个目录，否则有可能打出来的包不是最新。</p>
+</div>
                 
               
               
