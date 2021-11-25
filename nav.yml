@@ -3,6 +3,7 @@ nav:
   - Python:
     - python/decorator.md
     - python/pipupload.md
+    - python/pythontips.md
   - Others:
     - others/website.md
     - others/nginx.md
