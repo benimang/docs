@@ -15,4 +15,11 @@ pip install benimang -i https://pypi.douban.com/simple
 f-str 格式化
 f"{12345:,}"
 
+获取文件尺寸
+os.path.getsize
+
+获取图片尺寸
+from PIL import Image
+image = Image.open(file)
+print(image.size)
 -->
