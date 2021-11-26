@@ -22,4 +22,9 @@ os.path.getsize
 from PIL import Image
 image = Image.open(file)
 print(image.size)
+
+for ... else ...
+
+dict | dict 合并
+
 -->
