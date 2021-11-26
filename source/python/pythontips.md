@@ -7,3 +7,12 @@
 ```
 pip install benimang -i https://pypi.douban.com/simple
 ```
+
+
+<!-- 
+向下整除 //
+
+f-str 格式化
+f"{12345:,}"
+
+-->
