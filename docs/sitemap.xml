@@ -2,42 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://pytask.com/</loc>
-         <lastmod>2021-11-29</lastmod>
+         <lastmod>2021-12-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pytask.com/amazon/ad/</loc>
+         <lastmod>2021-12-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pytask.com/amazon/listing/</loc>
+         <lastmod>2021-12-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pytask.com/amazon/promotion/</loc>
+         <lastmod>2021-12-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pytask.com/amazon/selection/</loc>
+         <lastmod>2021-12-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pytask.com/amazon/storage/</loc>
+         <lastmod>2021-12-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pytask.com/bak/text/</loc>
-         <lastmod>2021-11-29</lastmod>
+         <lastmod>2021-12-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pytask.com/others/nginx/</loc>
-         <lastmod>2021-11-29</lastmod>
+         <lastmod>2021-12-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pytask.com/others/url/</loc>
-         <lastmod>2021-11-29</lastmod>
+         <lastmod>2021-12-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pytask.com/others/website/</loc>
-         <lastmod>2021-11-29</lastmod>
+         <lastmod>2021-12-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pytask.com/python/decorator/</loc>
-         <lastmod>2021-11-29</lastmod>
+         <lastmod>2021-12-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://pytask.com/python/pipupload/</loc>
-         <lastmod>2021-11-29</lastmod>
+         <loc>https://pytask.com/python/pip/</loc>
+         <lastmod>2021-12-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pytask.com/python/pythontips/</loc>
-         <lastmod>2021-11-29</lastmod>
+         <lastmod>2021-12-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
