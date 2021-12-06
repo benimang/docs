@@ -1,12 +1,41 @@
-# PIP 包上传
+# PIP 使用
 
 
-## pypi 账号
+## 使用镜像地址下载安装
+
+可以统一设置，也可以在有需要的时候带参数 `-i`，其中一个稳定的源是豆瓣。
+
+```
+pip install benimang -i https://pypi.douban.com/simple
+```
+
+!!! warning
+    实际使用发现，镜像不一定都能下载成功，比如少人用的一些包首次就下载不成功
+
+
+
+## 本地安装包
+
+针对有 `setup.py` 文件的包，可以直接本地安装，比如自己的包改动完可以在上传前先放本地测试。
+
+```
+python setup.py install
+```
+
+!!! warning
+    必须跳转到对应目录下执行，不能指定 `setup.py` 的路径。
+
+
+
+## 上传包到 pypi.org
+
+
+### pypi 账号
 
 首先需要账号注册 [pypi](https://pypi.org/)，很特别的地方是，项目不是在这里创建，而是上传的时候决定的。
 
 
-## 配置文件
+### 配置文件
 
 ``` py title="setup.py" hl_lines="32 33 44-46"
 version = "0.0.117"
@@ -74,7 +103,7 @@ include README.md
 !!! tips
     还需要其中一个文件，否则会打包有警告 `README` `README.rst` `README.txt` `README.md`
 
-## twine
+### twine
 
 需要安装第三方库 `twine` 用来上传包
 
@@ -83,7 +112,7 @@ pip install twine
 ```
 
 
-## 打包并上传
+### 打包并上传
 
 上传时要输入用户名和密码，`twine` 也提供了指定用户名和密码的可选参数可以不用每次调用都上传。
 
