@@ -11,6 +11,7 @@ nav:
     - amazon/promotion.md
     - amazon/ad.md
     - amazon/storage.md
+    - amazon/oneday.md
   - Others:
     - others/website.md
     - others/nginx.md
