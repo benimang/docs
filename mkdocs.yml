@@ -22,7 +22,7 @@ theme:
   custom_dir: custom_theme
   features:
     - navigation.top # 返回顶部
-    - search.highlight  # 搜索高亮
+    - search.highlight # 搜索高亮
     # - content.code.annotate # 要等待 8.0 版本才可以用，现在pip提供的最新版本是 7.3.6
     # - navigation.instant # 异步加载
     # - navigation.indexes # 不清楚
@@ -45,12 +45,12 @@ extra:
       # name: 联系邮箱 benimang@126.com
 #   generator: false # 屏蔽底部（Made with Material for MkDocs）
 
-
 markdown_extensions:
   - meta
   - abbr
   - tables
   - attr_list
+  - def_list
   - md_in_html
   - toc:
       permalink: ⚓︎
