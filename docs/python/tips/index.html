@@ -13,7 +13,7 @@
         <meta name="author" content="Beni Mang">
       
       
-        <link rel="canonical" href="https://pytask.com/python/pythontips/">
+        <link rel="canonical" href="https://pytask.com/python/tips/">
       
       <link rel="icon" href="../../img/favicon.svg">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
@@ -371,6 +371,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#复制与粘贴" class="md-nav__link">
+    复制与粘贴
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asyncio-嵌套支持" class="md-nav__link">
+    asyncio 嵌套支持
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -539,7 +553,21 @@
   
     <li class="md-nav__item">
       <a href="../../others/website/" class="md-nav__link">
-        网站部署
+        博客网站部署
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/vscode/" class="md-nav__link">
+        vscode
       </a>
     </li>
   
@@ -650,6 +678,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#复制与粘贴" class="md-nav__link">
+    复制与粘贴
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asyncio-嵌套支持" class="md-nav__link">
+    asyncio 嵌套支持
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -708,6 +750,31 @@
 <span class="linenos" data-linenos=" 8 "></span><span class="n">qr</span><span class="o">.</span><span class="n">add_data</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">UPLOAD_URL</span><span class="si">}{</span><span class="n">outputFileName</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="linenos" data-linenos=" 9 "></span><span class="n">qr</span><span class="o">.</span><span class="n">make</span><span class="p">()</span>
 <span class="linenos" data-linenos="10 "></span><span class="n">qr</span><span class="o">.</span><span class="n">print_tty</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="复制与粘贴">复制与粘贴<a class="headerlink" href="#复制与粘贴" title="Permanent link">⚓︎</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># 需要第三方库支持 pyperclip</span>
+<span class="linenos" data-linenos="2 "></span>
+<span class="linenos" data-linenos="3 "></span><span class="kn">import</span> <span class="nn">pyperclip</span>
+<span class="linenos" data-linenos="4 "></span>
+<span class="linenos" data-linenos="5 "></span><span class="n">pyperclip</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="s2">&quot;content...&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="6 "></span><span class="n">pyperclip</span><span class="o">.</span><span class="n">paste</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="asyncio-嵌套支持">asyncio 嵌套支持<a class="headerlink" href="#asyncio-嵌套支持" title="Permanent link">⚓︎</a></h2>
+<p>其中一个使用场景是在 <code>ipython</code> 中使用 <code>playwright</code> 的异步接口就需要用到这个支持</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># 需要第三方库支持 nest_asyncio</span>
+<span class="linenos" data-linenos=" 2 "></span>
+<span class="hll"><span class="linenos" data-linenos=" 3 "></span><span class="kn">import</span> <span class="nn">nest_asyncio</span>
+</span><span class="hll"><span class="linenos" data-linenos=" 4 "></span><span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
+</span><span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main2</span><span class="p">())</span>
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span><span class="k">async</span> <span class="k">def</span> <span class="nf">main2</span><span class="p">():</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="k">pass</span>
+<span class="linenos" data-linenos="13 "></span>
+<span class="linenos" data-linenos="14 "></span><span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </code></pre></div>
                 
               
@@ -802,7 +869,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.highlight"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.highlight", "content.code.annotate"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>

@@ -51,6 +51,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://pytask.com/others/vscode/</loc>
+         <lastmod>2021-12-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://pytask.com/others/website/</loc>
          <lastmod>2021-12-08</lastmod>
          <changefreq>daily</changefreq>
@@ -71,7 +76,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://pytask.com/python/pythontips/</loc>
+         <loc>https://pytask.com/python/tips/</loc>
          <lastmod>2021-12-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
