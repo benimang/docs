@@ -69,6 +69,7 @@ qr.make()
 qr.print_tty()
 ```
 
+
 ## 复制与粘贴
 
 ``` py
@@ -78,4 +79,26 @@ import pyperclip
 
 pyperclip.copy("content...")
 pyperclip.paste()
+```
+
+
+## asyncio 嵌套支持
+
+其中一个使用场景是在 `ipython` 中使用 `playwright` 的异步接口就需要用到这个支持
+
+``` py hl_lines="3-4"
+# 需要第三方库支持 nest_asyncio
+
+import nest_asyncio
+nest_asyncio.apply()
+
+import asyncio
+
+async def main():
+    asyncio.run(main2())
+
+async def main2():
+    pass
+
+asyncio.run(main())
 ```
