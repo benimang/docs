@@ -130,8 +130,8 @@
 | ------------------------------------------------- | --------------------------------------- |
 | ++alt+slash++                                     | 语法提示                 ==需要自定义== |
 | ++alt+d++                                         | 关闭终端                 ==需要自定义== |
-| ++ctrl+shift+f++                                  | 全局搜索文本             ==需要自定义== |
-| ++ctrl+shift+h++                                  | 全局替换文本                            |
+| ++ctrl+shift+f++                                  | 全局搜索                 ==需要自定义== |
+| ++ctrl+shift+h++                                  | 全局替换                                |
 | ++ctrl+semicolon++ -> ++a++                       | `pytest` 全部测试                       |
 | ++ctrl+semicolon++ -> ++e++                       | `pytest` 只测试上次错误                 |
 | ++ctrl+semicolon++ -> ++ctrl+a++                  | `pytest` 调试全部                       |
@@ -142,9 +142,9 @@
 | ++ctrl+p++                                        | 打开文件                                |
 | ++ctrl+r++                                        | 打开项目（目录）                        |
 | ++ctrl+g++                                        | 跳转到某一行                            |
-| ++ctrl+f++                                        | 当前文件查找                            |
+| ++ctrl+f++                                        | 当前文件搜索                            |
 | ++ctrl+h++                                        | 当前文件替换                            |
-| ++ctrl+alt++ + ( ++arrow-up++ or ++arrow-down++ ) | 选中多行文本，选中后可以同时修改        |
+| ++ctrl+alt++ + ( ++arrow-up++ or ++arrow-down++ ) | 选中多行，选中后可以同时修改            |
 
 !!! warning
     Windows 输入法默认开启了快捷键 ++ctrl+shift+f++ 用于切换简体和繁体，需要屏蔽，否则会跟我们 `vscode` 定义的热键冲突
