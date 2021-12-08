@@ -68,3 +68,14 @@ qr.add_data(f"{UPLOAD_URL}{outputFileName}")
 qr.make()
 qr.print_tty()
 ```
+
+## 复制与粘贴
+
+``` py
+# 需要第三方库支持 pyperclip
+
+import pyperclip
+
+pyperclip.copy("content...")
+pyperclip.paste()
+```

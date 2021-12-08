@@ -4,7 +4,7 @@ nav:
     - python/decorator.md
     - python/pip.md
     - python/fstring.md
-    - python/pythontips.md
+    - python/tips.md
   - Amazon:
     - amazon/selection.md
     - amazon/listing.md
