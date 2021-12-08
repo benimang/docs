@@ -21,16 +21,6 @@ os.path.getsize("file")  # 单位是字节
 ```
 
 
-## 获取图片尺寸
-
-``` py
-from PIL import Image
-
-image = Image.open("file")
-image.size  # (width, height)
-```
-
-
 ## dict 合并
 
 ``` py
@@ -49,4 +39,31 @@ for i in range(3):
 else:
     pass
     # 如果循环有 break 就会执行
+```
+
+
+## 获取图片尺寸
+
+``` py
+# 需要第三方库支持 pillow
+
+from PIL import Image
+
+image = Image.open("file")
+image.size  # (width, height)
+```
+
+
+## 命令行显示二维码
+
+``` py
+# 需要第三方库支持 qrcode
+# 但是在 Windows 下如果调整命令行窗口会导致二维码消失，而且没找到如何设置二维码大小，所以有点鸡肋
+
+import qrcode
+
+qr = qrcode.QRCode()
+qr.add_data(f"{UPLOAD_URL}{outputFileName}")
+qr.make()
+qr.print_tty()
 ```
