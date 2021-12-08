@@ -143,3 +143,10 @@
 !!! quote
     <https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index>{:target="_blank"}
 
+
+
+| Method      | Description                          |
+| ----------- | ------------------------------------ |
+| `GET`       | :material-check:     Fetch resource  |
+| `PUT`       | :material-check-all: Update resource |
+| `DELETE`    | :material-close:     Delete resource |
