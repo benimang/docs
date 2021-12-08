@@ -58,7 +58,8 @@ image.size  # (width, height)
 
 ``` py
 # 需要第三方库支持 qrcode
-# 但是在 Windows 下如果调整命令行窗口会导致二维码消失，而且没找到如何设置二维码大小，所以有点鸡肋
+# Windows 命令行窗口调整大小会导致二维码消失
+# 没找到如何设置二维码大小
 
 import qrcode
 
