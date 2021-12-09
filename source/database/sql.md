@@ -4,7 +4,9 @@
 
 ``` sql
 SELECT DISTINCT
-	prod_id  -- 可以指定多个值
+	prod_id
+    -- 可以指定多个字段  
 FROM
 	Products;
 ```
+
