@@ -12,14 +12,14 @@
         <meta name="author" content="Beni Mang">
       
       
-        <link rel="canonical" href="https://pytask.com/bak/text/">
+        <link rel="canonical" href="https://pytask.com/database/sql/">
       
       <link rel="icon" href="../../img/favicon.svg">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.5">
     
     
       
-        <title>文字效果 - Beni Docs</title>
+        <title>SQL 基本语法 - Beni Docs</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#文字效果" class="md-skip">
+        <a href="#SQL-基本语法" class="md-skip">
           跳转至
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              文字效果
+              SQL 基本语法
             
           </span>
         </div>
@@ -310,12 +310,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -336,11 +338,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../database/sql/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         SQL 基本语法
       </a>
+      
     </li>
   
 
@@ -581,56 +593,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#标题" class="md-nav__link">
-    标题
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#粗体--斜体" class="md-nav__link">
-    粗体 / 斜体
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#高亮--删除--下划" class="md-nav__link">
-    高亮 / 删除 / 下划
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#Critic-Markup" class="md-nav__link">
-    Critic Markup
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#上标--下标" class="md-nav__link">
-    上标 / 下标
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#键盘按键" class="md-nav__link">
-    键盘按键
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -642,172 +604,7 @@
               
                 
 
-<h1 id="文字效果">文字效果<a class="headerlink" href="#文字效果" title="Permanent link">⚓︎</a></h1>
-<h2 id="标题">标题<a class="headerlink" href="#标题" title="Permanent link">⚓︎</a></h2>
-<ul>
-<li><code># 一级标题</code></li>
-<li><code>## 二级标题</code></li>
-<li><code>### 三级标题</code></li>
-<li><code>#### 四级标题</code></li>
-<li><code>##### 五级标题</code></li>
-<li><code>###### 六级标题</code></li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>在 mkdocs-material 的样式中，四级标题有加粗效果，感觉不太好，不建议使用。</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>markdown 标准定义文字底部加 <code>===</code> 表示一级标题，文字底部加 <code>---</code> 表示二级标题，阅读性很差，不建议使用。</p>
-</div>
-<h2 id="粗体--斜体">粗体 / 斜体<a class="headerlink" href="#粗体--斜体" title="Permanent link">⚓︎</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">表现效果</label><label for="__tabbed_1_2">Markdown</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<ul>
-<li><strong>粗体</strong></li>
-<li><em>斜体</em></li>
-</ul>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="gs">**粗体**</span>
-<span class="linenos" data-linenos="2 "></span><span class="ge">*斜体*</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>markdown 标准定义中支持以下划线 <code>_</code> 代替 <code>*</code> 实现粗体和斜体，但并不建议。</p>
-</div>
-<h2 id="高亮--删除--下划">高亮 / 删除 / 下划<a class="headerlink" href="#高亮--删除--下划" title="Permanent link">⚓︎</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">表现效果</label><label for="__tabbed_2_2">Markdown</label><label for="__tabbed_2_3">mkdocs.yml</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<ul>
-<li><mark>pymdownx.mark</mark></li>
-<li><del>pymdownx.tilde</del></li>
-<li><ins>pymdownx.caret</ins></li>
-</ul>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>==pymdownx.mark==
-<span class="linenos" data-linenos="2 "></span><span class="gd">~~pymdownx.tilde~~</span>
-<span class="linenos" data-linenos="3 "></span>^^pymdownx.caret^^
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">markdown_extensions</span><span class="p">:</span>
-<span class="linenos" data-linenos="2 "></span>  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.mark</span>
-<span class="linenos" data-linenos="3 "></span>  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.caret</span>
-<span class="linenos" data-linenos="4 "></span>  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.tilde</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<div class="admonition quote">
-<p class="admonition-title">Quote</p>
-<p><a href="https://squidfunk.github.io/mkdocs-material/reference/formatting/#highlighting-text" target="_blank">https://squidfunk.github.io/mkdocs-material/reference/formatting/#highlighting-text</a></p>
-</div>
-<h2 id="Critic-Markup">Critic Markup<a class="headerlink" href="#Critic-Markup" title="Permanent link">⚓︎</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">表现效果</label><label for="__tabbed_3_2">Markdown</label><label for="__tabbed_3_3">mkdocs.yml</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<ul>
-<li><del class="critic">deleted</del></li>
-<li><ins class="critic">added</ins></li>
-<li><del class="critic">deleted</del><ins class="critic">added</ins></li>
-<li><mark class="critic">highlighting</mark></li>
-<li><span class="critic comment">comments</span></li>
-</ul>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="gh"># 注意：右花括号前面的空白不需要</span>
-<span class="linenos" data-linenos="2 "></span>{--deleted-- }
-<span class="linenos" data-linenos="3 "></span>{++added++ }
-<span class="linenos" data-linenos="4 "></span>{~~deleted~&gt;added~~ }
-<span class="linenos" data-linenos="5 "></span>{==highlighting== }
-<span class="linenos" data-linenos="6 "></span>{&gt;&gt;comments&lt;&lt; }
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">markdown_extensions</span><span class="p">:</span>
-<span class="linenos" data-linenos="2 "></span>  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.critic</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>这个插件在块中也可以正常展示。</p>
-</div>
-<div class="admonition quote">
-<p class="admonition-title">Quote</p>
-<p><a href="https://squidfunk.github.io/mkdocs-material/reference/formatting/#highlighting-changes" target="_blank">https://squidfunk.github.io/mkdocs-material/reference/formatting/#highlighting-changes</a></p>
-</div>
-<h2 id="上标--下标">上标 / 下标<a class="headerlink" href="#上标--下标" title="Permanent link">⚓︎</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">表现效果</label><label for="__tabbed_4_2">Markdown</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<ul>
-<li>A<sup>T</sup>A</li>
-<li>H<sub>2</sub>0</li>
-</ul>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>A^T^A
-<span class="linenos" data-linenos="2 "></span>H~2~0
-</code></pre></div>
-</div>
-</div>
-</div>
-<h2 id="键盘按键">键盘按键<a class="headerlink" href="#键盘按键" title="Permanent link">⚓︎</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">表现效果</label><label for="__tabbed_5_2">Markdown</label><label for="__tabbed_5_3">mkdocs.yml</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<ul>
-<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-delete">Del</kbd></span></li>
-<li><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-f4">F4</kbd></span></li>
-</ul>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>++ctrl+alt+del++
-<span class="linenos" data-linenos="2 "></span>++alt+f4++
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nt">markdown_extensions</span><span class="p">:</span>
-<span class="linenos" data-linenos="2 "></span>  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.keys</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<div class="admonition quote">
-<p class="admonition-title">Quote</p>
-<p><a href="https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index" target="_blank">https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index</a></p>
-</div>
-<table>
-<thead>
-<tr>
-<th>Method</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>GET</code></td>
-<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7z"/></svg></span>     Fetch resource</td>
-</tr>
-<tr>
-<td><code>PUT</code></td>
-<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7z"/></svg></span> Update resource</td>
-</tr>
-<tr>
-<td><code>DELETE</code></td>
-<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg></span>     Delete resource</td>
-</tr>
-</tbody>
-</table>
+<h1 id="SQL-基本语法">SQL 基本语法<a class="headerlink" href="#SQL-基本语法" title="Permanent link">⚓︎</a></h1>
 
               
             </article>
@@ -824,6 +621,41 @@
         
 <footer class="md-footer">
   <!--
+  
+    <nav class="md-footer__inner md-grid" aria-label="页脚">
+      
+        
+        <a href="../../python/tips/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 使用技巧" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              使用技巧
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../amazon/selection/" class="md-footer__link md-footer__link--next" aria-label="下一页: 研发新品" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              研发新品
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   -->
   <div class="md-footer-meta md-typeset">

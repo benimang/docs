@@ -5,6 +5,8 @@ nav:
     - python/pip.md
     - python/fstring.md
     - python/tips.md
+  - Database:
+    - database/sql.md
   - Amazon:
     - amazon/selection.md
     - amazon/listing.md
