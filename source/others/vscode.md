@@ -145,6 +145,8 @@
 | ++ctrl+f++                                        | 当前文件搜索                            |
 | ++ctrl+h++                                        | 当前文件替换                            |
 | ++ctrl+alt++ + ( ++arrow-up++ or ++arrow-down++ ) | 选中多行，选中后可以同时修改            |
+| ++alt+shift+f++                                   | 格式化                                  |
+| ++alt+shift+o++                                   | 格式化import                            |
 
 !!! warning
     Windows 输入法默认开启了快捷键 ++ctrl+shift+f++ 用于切换简体和繁体，需要屏蔽，否则会跟我们 `vscode` 定义的热键冲突
