@@ -3,8 +3,8 @@
 ## 查询不同的值 DISTINCT
 
 ``` sql
-SELECT
-	DISTINCT vend_id 
+SELECT DISTINCT
+	prod_id  -- 可以指定多个值
 FROM
 	Products;
 ```
