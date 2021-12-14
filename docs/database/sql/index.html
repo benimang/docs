@@ -19,7 +19,7 @@
     
     
       
-        <title>SQL 基本语法 - Beni Docs</title>
+        <title>SQL 语法 - Beni Docs</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#SQL-基本语法" class="md-skip">
+        <a href="#SQL-语法" class="md-skip">
           跳转至
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SQL 基本语法
+              SQL 语法
             
           </span>
         </div>
@@ -350,12 +350,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          SQL 基本语法
+          SQL 语法
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        SQL 基本语法
+        SQL 语法
       </a>
       
         
@@ -436,10 +436,113 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#汇总数据聚集函数" class="md-nav__link">
+    汇总数据（聚集函数）
+  </a>
+  
+    <nav class="md-nav" aria-label="汇总数据（聚集函数）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#AVG-平均值" class="md-nav__link">
+    AVG 平均值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#COUNT-计算行数" class="md-nav__link">
+    COUNT 计算行数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#MAX-获取最大值" class="md-nav__link">
+    MAX 获取最大值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#MIN-获取最小值" class="md-nav__link">
+    MIN 获取最小值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SUM-求和" class="md-nav__link">
+    SUM 求和
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#GROUP-BY-分组" class="md-nav__link">
+    GROUP BY 分组
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#HAVING-分组过滤" class="md-nav__link">
+    HAVING 分组过滤
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#子查询" class="md-nav__link">
+    子查询
+  </a>
+  
+    <nav class="md-nav" aria-label="子查询">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#子查询作为条件" class="md-nav__link">
+    子查询作为条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#子查询作为计算字段" class="md-nav__link">
+    子查询作为计算字段
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concept/" class="md-nav__link">
+        SQL 概念
+      </a>
     </li>
   
 
@@ -749,6 +852,95 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#汇总数据聚集函数" class="md-nav__link">
+    汇总数据（聚集函数）
+  </a>
+  
+    <nav class="md-nav" aria-label="汇总数据（聚集函数）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#AVG-平均值" class="md-nav__link">
+    AVG 平均值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#COUNT-计算行数" class="md-nav__link">
+    COUNT 计算行数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#MAX-获取最大值" class="md-nav__link">
+    MAX 获取最大值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#MIN-获取最小值" class="md-nav__link">
+    MIN 获取最小值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SUM-求和" class="md-nav__link">
+    SUM 求和
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#GROUP-BY-分组" class="md-nav__link">
+    GROUP BY 分组
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#HAVING-分组过滤" class="md-nav__link">
+    HAVING 分组过滤
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#子查询" class="md-nav__link">
+    子查询
+  </a>
+  
+    <nav class="md-nav" aria-label="子查询">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#子查询作为条件" class="md-nav__link">
+    子查询作为条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#子查询作为计算字段" class="md-nav__link">
+    子查询作为计算字段
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -762,7 +954,7 @@
               
                 
 
-<h1 id="SQL-基本语法">SQL 基本语法<a class="headerlink" href="#SQL-基本语法" title="Permanent link">⚓︎</a></h1>
+<h1 id="SQL-语法">SQL 语法<a class="headerlink" href="#SQL-语法" title="Permanent link">⚓︎</a></h1>
 <h2 id="DISTINCT-查询不同的值">DISTINCT 查询不同的值<a class="headerlink" href="#DISTINCT-查询不同的值" title="Permanent link">⚓︎</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span> <span class="k">DISTINCT</span>
 <span class="linenos" data-linenos="2 "></span>    <span class="n">prod_id</span>
@@ -869,6 +1061,108 @@
 <span class="linenos" data-linenos="11 "></span>    <span class="k">TIME</span><span class="p">(),</span> <span class="nb">DATE</span><span class="p">(),</span> <span class="n">DATETIME</span><span class="p">(),</span>
 <span class="linenos" data-linenos="12 "></span>    <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span> <span class="k">CURRENT_DATE</span><span class="p">,</span> <span class="k">CURRENT_TIME</span><span class="p">;</span>
 </code></pre></div>
+<h2 id="汇总数据聚集函数">汇总数据（聚集函数）<a class="headerlink" href="#汇总数据聚集函数" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>对所有行执行计算，指定 <code>ALL</code> 参数或不指定参数（因为 <code>ALL</code> 是默认行为）</li>
+<li>只包含不同的值，指定 <code>DISTINCT</code> 参数，如：<code>COUNT( DISTINCE column_name )</code></li>
+<li><code>DISTINCT</code> 不能用于 <code>COUNT( * )</code></li>
+<li>将 <code>DISTINCT</code> 用于 <code>MIN()</code> 和 <code>MAX()</code>，语法正确，但没有意义</li>
+<li>可以同时使用多个</li>
+</ul>
+<h3 id="AVG-平均值">AVG 平均值<a class="headerlink" href="#AVG-平均值" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="k">AVG</span><span class="p">(</span> <span class="n">prod_price</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">avg_price</span> 
+<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="n">Products</span> 
+<span class="linenos" data-linenos="5 "></span><span class="k">WHERE</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="n">vend_id</span> <span class="o">=</span> <span class="s1">&#39;DLL01&#39;</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="COUNT-计算行数">COUNT 计算行数<a class="headerlink" href="#COUNT-计算行数" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li><code>COUNT(*)</code> 计算所有包括 <code>NULL</code> 在内的行数</li>
+<li><code>COUNT(column_name)</code> 指定列名则不会计算 <code>NULL</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="k">COUNT</span><span class="p">(</span> <span class="n">cust_email</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">num_cust</span> 
+<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="n">Customers</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="MAX-获取最大值">MAX 获取最大值<a class="headerlink" href="#MAX-获取最大值" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="k">MAX</span><span class="p">(</span> <span class="n">prod_price</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">max_price</span> 
+<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="n">Products</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="MIN-获取最小值">MIN 获取最小值<a class="headerlink" href="#MIN-获取最小值" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="k">MIN</span><span class="p">(</span> <span class="n">prod_price</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">max_price</span> 
+<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="n">Products</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="SUM-求和">SUM 求和<a class="headerlink" href="#SUM-求和" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="k">SUM</span><span class="p">(</span> <span class="n">quantity</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">items_ordered</span> 
+<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="n">OrderItems</span> 
+<span class="linenos" data-linenos="5 "></span><span class="k">WHERE</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="n">order_num</span> <span class="o">=</span> <span class="mi">20005</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="GROUP-BY-分组">GROUP BY 分组<a class="headerlink" href="#GROUP-BY-分组" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li><code>GROUP BY</code> 跟 <code>汇总数据（聚集函数）</code> 搭配使用才有意义</li>
+<li><code>GROUP BY</code> 子句可以包含任意数目的列，因而可以对分组进行嵌套，更细致地进行数据分组</li>
+<li>如果在 <code>GROUP BY</code> 子句中嵌套了分组，数据将在最后指定的分组上进行汇总。换句话说，在建立分组时，指定的所有列都一起计算（所以不能从个别的列取回数据）</li>
+<li><code>GROUP BY</code> 子句中列出的每一列都必须是检索列或有效的表达式（但不能是聚集函数）。如果在SELECT中使用表达式，则必须在 <code>GROUP BY</code> 子句中指定相同的表达式。不能使用别名</li>
+<li>如果分组列中包含具有 <code>NULL</code> 值的行，则 <code>NULL</code> 将作为一个分组返回。如果列中有多行 <code>NULL</code> 值，它们将分为一组</li>
+<li>GROUP BY子句必须出现在WHERE子句之后，ORDER BY子句之前</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="o">*</span> 
+<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="n">Products</span> 
+<span class="linenos" data-linenos="5 "></span><span class="k">GROUP</span> <span class="k">BY</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="n">vend_id</span><span class="p">;</span>
+<span class="linenos" data-linenos="7 "></span>    <span class="c1">-- 可以指定多个列</span>
+</code></pre></div>
+<h2 id="HAVING-分组过滤">HAVING 分组过滤<a class="headerlink" href="#HAVING-分组过滤" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li><code>WHERE</code> 使用的技术可以全部套用在 <code>HAVING</code></li>
+<li><code>WHERE</code> 在数据分组前进行过滤，<code>HAVING</code> 在数据分组后进行过滤</li>
+<li>使用 <code>HAVING</code> 时应该结合 <code>GROUP BY</code> 子句，而 <code>WHERE</code> 子句用于标准的行级过滤</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="o">*</span>
+<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="n">Products</span>
+<span class="linenos" data-linenos="5 "></span><span class="k">GROUP</span> <span class="k">BY</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="n">vend_id</span>
+<span class="linenos" data-linenos="7 "></span><span class="k">HAVING</span>
+<span class="linenos" data-linenos="8 "></span>    <span class="n">prod_name</span> <span class="k">NOT</span> <span class="k">LIKE</span> <span class="s1">&#39;F%&#39;</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="子查询">子查询<a class="headerlink" href="#子查询" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>作为子查询的 <code>SELECT</code> 语句只能查询单个列</li>
+<li>子查询并不总是最有效的方法，而且可读性低</li>
+</ul>
+<h3 id="子查询作为条件">子查询作为条件<a class="headerlink" href="#子查询作为条件" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="n">cust_name</span><span class="p">,</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="n">cust_contact</span> 
+<span class="linenos" data-linenos="4 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="5 "></span>    <span class="n">Customers</span> 
+<span class="linenos" data-linenos="6 "></span><span class="k">WHERE</span>
+<span class="linenos" data-linenos="7 "></span>    <span class="n">cust_id</span> <span class="k">IN</span> <span class="p">(</span> <span class="k">SELECT</span> <span class="n">cust_id</span> <span class="k">FROM</span> <span class="n">Orders</span> <span class="k">WHERE</span> <span class="n">order_num</span> <span class="k">IN</span> <span class="p">(</span> <span class="k">SELECT</span> <span class="n">order_num</span> <span class="k">FROM</span> <span class="n">OrderItems</span> <span class="k">WHERE</span> <span class="n">prod_id</span> <span class="o">=</span> <span class="s1">&#39;RGAN01&#39;</span> <span class="p">)</span> <span class="p">);</span>
+</code></pre></div>
+<h3 id="子查询作为计算字段">子查询作为计算字段<a class="headerlink" href="#子查询作为计算字段" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="n">cust_name</span><span class="p">,</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="n">cust_state</span><span class="p">,</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="p">(</span> <span class="k">SELECT</span> <span class="k">COUNT</span><span class="p">(</span> <span class="o">*</span> <span class="p">)</span> <span class="k">FROM</span> <span class="n">Orders</span> <span class="k">WHERE</span> <span class="n">Orders</span><span class="p">.</span><span class="n">cust_id</span> <span class="o">=</span> <span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">orders</span> 
+<span class="linenos" data-linenos="5 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="n">Customers</span> 
+<span class="linenos" data-linenos="7 "></span><span class="k">ORDER</span> <span class="k">BY</span>
+<span class="linenos" data-linenos="8 "></span>    <span class="n">cust_name</span><span class="p">;</span>
+</code></pre></div>
 
               
             </article>
@@ -905,13 +1199,13 @@
       
       
         
-        <a href="../../amazon/selection/" class="md-footer__link md-footer__link--next" aria-label="下一页: 研发新品" rel="next">
+        <a href="../concept/" class="md-footer__link md-footer__link--next" aria-label="下一页: SQL 概念" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              研发新品
+              SQL 概念
             </div>
           </div>
           <div class="md-footer__button md-icon">

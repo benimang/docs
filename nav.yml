@@ -7,6 +7,7 @@ nav:
     - python/tips.md
   - Database:
     - database/sql.md
+    - database/concept.md
   - Amazon:
     - amazon/selection.md
     - amazon/listing.md

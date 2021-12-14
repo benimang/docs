@@ -1,4 +1,4 @@
-# SQL 基本语法
+# SQL 语法
 
 ## DISTINCT 查询不同的值
 
@@ -136,3 +136,136 @@ SELECT
 	CURRENT_TIMESTAMP, CURRENT_DATE, CURRENT_TIME;
 ```
 
+
+## 汇总数据（聚集函数）
+
+- 对所有行执行计算，指定 `ALL` 参数或不指定参数（因为 `ALL` 是默认行为）
+- 只包含不同的值，指定 `DISTINCT` 参数，如：`COUNT( DISTINCE column_name )`
+- `DISTINCT` 不能用于 `COUNT( * )`
+- 将 `DISTINCT` 用于 `MIN()` 和 `MAX()`，语法正确，但没有意义
+- 可以同时使用多个
+
+### AVG 平均值
+
+``` sql
+SELECT
+	AVG( prod_price ) AS avg_price 
+FROM
+	Products 
+WHERE
+	vend_id = 'DLL01';
+```
+
+
+### COUNT 计算行数
+
+- `COUNT(*)` 计算所有包括 `NULL` 在内的行数
+- `COUNT(column_name)` 指定列名则不会计算 `NULL`
+
+``` sql
+SELECT
+	COUNT( cust_email ) AS num_cust 
+FROM
+	Customers;
+```
+
+
+### MAX 获取最大值
+
+``` sql
+SELECT
+	MAX( prod_price ) AS max_price 
+FROM
+	Products;
+```
+
+
+### MIN 获取最小值
+
+``` sql
+SELECT
+	MIN( prod_price ) AS max_price 
+FROM
+	Products;
+```
+
+
+### SUM 求和
+
+``` sql
+SELECT
+	SUM( quantity ) AS items_ordered 
+FROM
+	OrderItems 
+WHERE
+	order_num = 20005;
+```
+
+
+## GROUP BY 分组
+
+- `GROUP BY` 跟 `汇总数据（聚集函数）` 搭配使用才有意义
+- `GROUP BY` 子句可以包含任意数目的列，因而可以对分组进行嵌套，更细致地进行数据分组
+- 如果在 `GROUP BY` 子句中嵌套了分组，数据将在最后指定的分组上进行汇总。换句话说，在建立分组时，指定的所有列都一起计算（所以不能从个别的列取回数据）
+- `GROUP BY` 子句中列出的每一列都必须是检索列或有效的表达式（但不能是聚集函数）。如果在SELECT中使用表达式，则必须在 `GROUP BY` 子句中指定相同的表达式。不能使用别名
+- 如果分组列中包含具有 `NULL` 值的行，则 `NULL` 将作为一个分组返回。如果列中有多行 `NULL` 值，它们将分为一组
+- GROUP BY子句必须出现在WHERE子句之后，ORDER BY子句之前
+
+``` sql
+SELECT
+	* 
+FROM
+	Products 
+GROUP BY
+	vend_id;
+	-- 可以指定多个列
+```
+
+
+## HAVING 分组过滤
+
+- `WHERE` 使用的技术可以全部套用在 `HAVING`
+- `WHERE` 在数据分组前进行过滤，`HAVING` 在数据分组后进行过滤
+- 使用 `HAVING` 时应该结合 `GROUP BY` 子句，而 `WHERE` 子句用于标准的行级过滤
+
+``` sql
+SELECT
+	*
+FROM
+	Products
+GROUP BY
+	vend_id
+HAVING
+	prod_name NOT LIKE 'F%';
+```
+
+
+## 子查询
+
+- 作为子查询的 `SELECT` 语句只能查询单个列
+- 子查询并不总是最有效的方法，而且可读性低
+
+### 子查询作为条件
+
+``` sql
+SELECT
+	cust_name,
+	cust_contact 
+FROM
+	Customers 
+WHERE
+	cust_id IN ( SELECT cust_id FROM Orders WHERE order_num IN ( SELECT order_num FROM OrderItems WHERE prod_id = 'RGAN01' ) );
+```
+
+### 子查询作为计算字段
+
+``` sql
+SELECT
+	cust_name,
+	cust_state,
+	( SELECT COUNT( * ) FROM Orders WHERE Orders.cust_id = Customers.cust_id ) AS orders 
+FROM
+	Customers 
+ORDER BY
+	cust_name;
+```

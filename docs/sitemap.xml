@@ -41,6 +41,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://pytask.com/database/concept/</loc>
+         <lastmod>2021-12-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://pytask.com/database/sql/</loc>
          <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
