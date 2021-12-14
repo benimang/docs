@@ -374,8 +374,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#查询不同的值-DISTINCT" class="md-nav__link">
-    查询不同的值 DISTINCT
+  <a href="#DISTINCT-查询不同的值" class="md-nav__link">
+    DISTINCT 查询不同的值
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#LIMIT-OFFSET-限制返回结果" class="md-nav__link">
+    LIMIT OFFSET 限制返回结果
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ORDER-BY-排序结果" class="md-nav__link">
+    ORDER BY 排序结果
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#BETWEEN-AND-范围值检查" class="md-nav__link">
+    BETWEEN AND 范围值检查
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#IS-NULL-检查空值" class="md-nav__link">
+    IS NULL 检查空值
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#IN-指定条件范围" class="md-nav__link">
+    IN 指定条件范围
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#LIKE-通配符匹配查询" class="md-nav__link">
+    LIKE 通配符匹配查询
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#拼接字段" class="md-nav__link">
+    拼接字段
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#常用函数" class="md-nav__link">
+    常用函数
   </a>
   
 </li>
@@ -631,8 +687,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#查询不同的值-DISTINCT" class="md-nav__link">
-    查询不同的值 DISTINCT
+  <a href="#DISTINCT-查询不同的值" class="md-nav__link">
+    DISTINCT 查询不同的值
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#LIMIT-OFFSET-限制返回结果" class="md-nav__link">
+    LIMIT OFFSET 限制返回结果
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ORDER-BY-排序结果" class="md-nav__link">
+    ORDER BY 排序结果
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#BETWEEN-AND-范围值检查" class="md-nav__link">
+    BETWEEN AND 范围值检查
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#IS-NULL-检查空值" class="md-nav__link">
+    IS NULL 检查空值
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#IN-指定条件范围" class="md-nav__link">
+    IN 指定条件范围
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#LIKE-通配符匹配查询" class="md-nav__link">
+    LIKE 通配符匹配查询
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#拼接字段" class="md-nav__link">
+    拼接字段
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#常用函数" class="md-nav__link">
+    常用函数
   </a>
   
 </li>
@@ -651,12 +763,111 @@
                 
 
 <h1 id="SQL-基本语法">SQL 基本语法<a class="headerlink" href="#SQL-基本语法" title="Permanent link">⚓︎</a></h1>
-<h2 id="查询不同的值-DISTINCT">查询不同的值 DISTINCT<a class="headerlink" href="#查询不同的值-DISTINCT" title="Permanent link">⚓︎</a></h2>
+<h2 id="DISTINCT-查询不同的值">DISTINCT 查询不同的值<a class="headerlink" href="#DISTINCT-查询不同的值" title="Permanent link">⚓︎</a></h2>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span> <span class="k">DISTINCT</span>
 <span class="linenos" data-linenos="2 "></span>    <span class="n">prod_id</span>
 <span class="linenos" data-linenos="3 "></span>    <span class="c1">-- 可以指定多个字段  </span>
 <span class="linenos" data-linenos="4 "></span><span class="k">FROM</span>
 <span class="linenos" data-linenos="5 "></span>    <span class="n">Products</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="LIMIT-OFFSET-限制返回结果">LIMIT OFFSET 限制返回结果<a class="headerlink" href="#LIMIT-OFFSET-限制返回结果" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li><code>LIMIT</code> 表示返回记录的数量</li>
+<li><code>OFFSET</code> 表示从第几行开始返回，注意：第1行用0表示</li>
+<li><code>OFFSET</code> 可以不写，表示从第0行开始</li>
+<li><code>OFFSET</code> 不能没有 <code>LIMIT</code> 单独出现</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span> 
+<span class="linenos" data-linenos="2 "></span>    <span class="o">*</span>
+<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="n">Products</span>
+<span class="linenos" data-linenos="5 "></span><span class="k">LIMIT</span> <span class="mi">3</span> <span class="k">OFFSET</span> <span class="mi">3</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="ORDER-BY-排序结果">ORDER BY 排序结果<a class="headerlink" href="#ORDER-BY-排序结果" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li><code>ORDER BY</code> 可以指定多个列排序，甚至可以指定 <code>SELECT</code> 没有指定的列</li>
+<li>使用 <code>DESC</code> 指定降序</li>
+<li>默认是升序，也可以明确指定 <code>ASC</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="o">*</span> 
+<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="n">Products</span> 
+<span class="linenos" data-linenos="5 "></span><span class="k">ORDER</span> <span class="k">BY</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="n">prod_name</span> <span class="k">ASC</span><span class="p">,</span>
+<span class="linenos" data-linenos="7 "></span>    <span class="n">prod_price</span> <span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="BETWEEN-AND-范围值检查">BETWEEN AND 范围值检查<a class="headerlink" href="#BETWEEN-AND-范围值检查" title="Permanent link">⚓︎</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="o">*</span> 
+<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="n">Products</span> 
+<span class="linenos" data-linenos="5 "></span><span class="k">WHERE</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="n">prod_price</span> <span class="k">BETWEEN</span> <span class="mi">1</span> <span class="k">AND</span> <span class="mi">5</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="IS-NULL-检查空值">IS NULL 检查空值<a class="headerlink" href="#IS-NULL-检查空值" title="Permanent link">⚓︎</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="o">*</span> 
+<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="n">Customers</span> 
+<span class="linenos" data-linenos="5 "></span><span class="k">WHERE</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="n">cust_email</span> <span class="k">IS</span> <span class="k">NULL</span>            <span class="c1">-- IS NULL 检查空值</span>
+<span class="linenos" data-linenos="7 "></span>    <span class="k">AND</span> <span class="n">cust_contact</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">;</span> <span class="c1">-- IS NOT NULL 检查非空值</span>
+</code></pre></div>
+<h2 id="IN-指定条件范围">IN 指定条件范围<a class="headerlink" href="#IN-指定条件范围" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li><code>IN</code> 操作符比 <code>OR</code> 操作符更简洁，速度更快</li>
+<li><code>IN</code> 可以配合子查询而 <code>OR</code> 不好实现</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="n">prod_name</span><span class="p">,</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="n">prod_price</span> 
+<span class="linenos" data-linenos="4 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="5 "></span>    <span class="n">Products</span> 
+<span class="linenos" data-linenos="6 "></span><span class="k">WHERE</span>
+<span class="linenos" data-linenos="7 "></span>    <span class="n">vend_id</span> <span class="k">IN</span> <span class="p">(</span> <span class="s1">&#39;DLL01&#39;</span><span class="p">,</span> <span class="s1">&#39;BRS01&#39;</span> <span class="p">);</span>
+</code></pre></div>
+<h2 id="LIKE-通配符匹配查询">LIKE 通配符匹配查询<a class="headerlink" href="#LIKE-通配符匹配查询" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li><code>LIKE</code> 大小写不敏感</li>
+<li><code>%</code> 表示任意个字符，包括0个</li>
+<li><code>_</code> 表示单个字符</li>
+<li>不要过度使用通配符，如果其他操作符能达到相同的目的，应该使用其他操作符。</li>
+<li>在确实需要使用通配符时，也尽量不要把它们用在搜索模式的开始处。把通配符置于开始处，搜索起来是最慢的。</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="o">*</span>
+<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="n">Products</span> 
+<span class="linenos" data-linenos="5 "></span><span class="k">WHERE</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="n">prod_name</span> <span class="k">LIKE</span> <span class="s1">&#39;Fish%&#39;</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="拼接字段">拼接字段<a class="headerlink" href="#拼接字段" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li><code>SQL Server</code> 使用 <code>+</code></li>
+<li><code>DB2</code>、<code>Oracle</code>、<code>PostgreSQL</code> 和 <code>SQLite</code> 使用 <code>||</code></li>
+<li><code>MySQL</code> 或 <code>MariaDB</code> 使用语句 <code>Concat</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="n">vend_name</span> <span class="o">||</span> <span class="s1">&#39;(&#39;</span> <span class="o">||</span> <span class="n">vend_country</span> <span class="o">||</span> <span class="s1">&#39;)&#39;</span> 
+<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="n">Vendors</span> 
+<span class="linenos" data-linenos="5 "></span><span class="k">ORDER</span> <span class="k">BY</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="n">vend_name</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="常用函数">常用函数<a class="headerlink" href="#常用函数" title="Permanent link">⚓︎</a></h2>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="k">ABS</span><span class="p">(</span> <span class="o">-</span> <span class="mi">123</span> <span class="p">),</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="k">TRIM</span><span class="p">(</span> <span class="s1">&#39; x &#39;</span> <span class="p">),</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="n">LTRIM</span><span class="p">(</span><span class="s1">&#39; x &#39;</span><span class="p">),</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="n">RTRIM</span><span class="p">(</span><span class="s1">&#39; x &#39;</span><span class="p">),</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="k">LENGTH</span><span class="p">(</span> <span class="s1">&#39;aBc&#39;</span> <span class="p">),</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="k">LOWER</span><span class="p">(</span> <span class="s1">&#39;aBc&#39;</span> <span class="p">),</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="k">UPPER</span><span class="p">(</span> <span class="s1">&#39;aBc&#39;</span> <span class="p">),</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="n">SUBSTR</span><span class="p">(</span> <span class="s1">&#39;abcdef&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">),</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="c1">-- 注意：时间相关的数据库都是使用了 UTC-0 为单位</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="k">TIME</span><span class="p">(),</span> <span class="nb">DATE</span><span class="p">(),</span> <span class="n">DATETIME</span><span class="p">(),</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span> <span class="k">CURRENT_DATE</span><span class="p">,</span> <span class="k">CURRENT_TIME</span><span class="p">;</span>
 </code></pre></div>
 
               
