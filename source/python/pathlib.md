@@ -19,23 +19,23 @@
 
 ## 对象方法
 
-| 代码                                 | 说明                                                             |
-| ------------------------------------ | ---------------------------------------------------------------- |
-| `file.exists()`                      | 判断是否存在                                                     |
-| `file.is_file()`                     | 判断是否文件                                                     |
-| `file.is_dir()`                      | 判断是否目录                                                     |
-| `file.is_absolute()`                 | 判断是否绝对路径                                                 |
-| `folder.iterdir()`                   | 目录下内容的 `iterable`                                          |
+| 代码                       | 说明                                                             |
+| -------------------------- | ---------------------------------------------------------------- |
+| `path.exists()`            | 判断是否存在                                                     |
+| `path.is_file()`           | 判断是否文件                                                     |
+| `path.is_dir()`            | 判断是否目录                                                     |
+| `path.is_absolute()`       | 判断是否绝对路径                                                 |
 | `path.expanduser('~/xxx')` | 返回带有扩展的 `~user` 构造的新路径                              |
-| `file.read_text()`                   | 读取文本文件                                                     |
-| `file.write_text('')`                | 写入文本文件                                                     |
-| `file.read_bytes()`                  | 读取二进制文件                                                   |
-| `file.write_bytes(b'')`              | 写入二进制文件                                                   |
-| `file.open()`                        | 相当于调用原生的 `open`                                          |
-| `file.unlink()`                      | 删除文件                                                         |
-| `file.rmdir()`                       | 不能删除非空目录，无法取代 `shutil.rmtree(path)`                 |
-| `file.mkdir()`                       | 不能递归创建，无法取代 `os.makedirs`                             |
-| `file.rename()`                      | 需要传入 `Path` 对象，如果是字符串就会拿了当前路径拼接生成的路径 |
+| `path.rename()`            | 需要传入 `Path` 对象，如果是字符串就会拿了当前路径拼接生成的路径 |
+| `file.read_text()`         | 读取文本文件                                                     |
+| `file.write_text('')`      | 写入文本文件                                                     |
+| `file.read_bytes()`        | 读取二进制文件                                                   |
+| `file.write_bytes(b'')`    | 写入二进制文件                                                   |
+| `file.open()`              | 相当于调用原生的 `open`                                          |
+| `file.unlink()`            | 删除文件                                                         |
+| `folder.iterdir()`         | 目录下内容的 `iterable`                                          |
+| `folder.rmdir()`           | 不能删除非空目录，无法取代 `shutil.rmtree(path)`                 |
+| `folder.mkdir()`           | 不能递归创建，无法取代 `os.makedirs`                             |
 
 
 ## glob 用例
