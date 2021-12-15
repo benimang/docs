@@ -843,7 +843,7 @@
 </tr>
 <tr>
 <td><code>folder.mkdir()</code></td>
-<td>不能递归创建，无法取代 <code>os.makedirs</code></td>
+<td>默认不能递归创建，需要指定参数 <code>parents=True</code> 如果设置了这个参数需要注意创建的目录权限是使用系统默认权限，与函数参数无关</td>
 </tr>
 </tbody>
 </table>
