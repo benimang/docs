@@ -6,4 +6,3 @@ cd ..
 mkdocs build
 TortoiseGitProc.exe /command:commit
 
-pause
