@@ -81,6 +81,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://pytask.com/python/pathlib/</loc>
+         <lastmod>2021-12-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://pytask.com/python/pip/</loc>
          <lastmod>2021-12-15</lastmod>
          <changefreq>daily</changefreq>
