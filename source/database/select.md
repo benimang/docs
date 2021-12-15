@@ -1,4 +1,4 @@
-# SQL 语法
+# SQL 查询
 
 ## DISTINCT 查询不同的值
 

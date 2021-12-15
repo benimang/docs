@@ -6,7 +6,7 @@ nav:
     - python/fstring.md
     - python/tips.md
   - Database:
-    - database/sql.md
+    - database/select.md
     - database/concept.md
   - Amazon:
     - amazon/selection.md
