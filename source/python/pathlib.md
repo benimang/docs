@@ -3,18 +3,22 @@
 
 ## 对象属性
 
+
 | 代码                   | 说明                                  |
 | ---------------------- | ------------------------------------- |
-| `file.name`            | 文件名（不带路径）                    |
-| `file.stem`            | 文件名去除扩展名                      |
-| `file.suffix`          | 扩展名                                |
-| `file.suffixes`        | 扩展名数组                            |
-| `file.parent`          | 获取父亲的 `Path` 对象                |
-| `file.parents`         | 返回所有父亲 `Path` 对象的 `iterable` |
-| `file.parts`           | 将路径分割成字符串元组                |
-| `file.stat().st_size`  | 文件大小（单位：字节）                |
-| `file.stat().st_ctime` | 文件创建时间戳                        |
-| `file.stat().st_mtime` | 文件上次修改时间戳                    |
+| `path.name`            | 文件名（不带路径）                    |
+| `path.stem`            | 文件名去除扩展名                      |
+| `path.suffix`          | 扩展名                                |
+| `path.suffixes`        | 扩展名数组                            |
+| `path.parent`          | 获取父亲的 `Path` 对象                |
+| `path.parents`         | 返回所有父亲 `Path` 对象的 `iterable` |
+| `path.parts`           | 将路径分割成字符串元组                |
+| `path.stat().st_size`  | 文件大小（单位：字节）                |
+| `path.stat().st_ctime` | 文件创建时间戳                        |
+| `path.stat().st_mtime` | 文件上次修改时间戳                    |
+
+!!! tips
+    部分方法如果传入的是路径，不会出错，但是没有意义
 
 
 ## 对象方法

@@ -731,47 +731,51 @@
 </thead>
 <tbody>
 <tr>
-<td><code>file.name</code></td>
+<td><code>path.name</code></td>
 <td>文件名（不带路径）</td>
 </tr>
 <tr>
-<td><code>file.stem</code></td>
+<td><code>path.stem</code></td>
 <td>文件名去除扩展名</td>
 </tr>
 <tr>
-<td><code>file.suffix</code></td>
+<td><code>path.suffix</code></td>
 <td>扩展名</td>
 </tr>
 <tr>
-<td><code>file.suffixes</code></td>
+<td><code>path.suffixes</code></td>
 <td>扩展名数组</td>
 </tr>
 <tr>
-<td><code>file.parent</code></td>
+<td><code>path.parent</code></td>
 <td>获取父亲的 <code>Path</code> 对象</td>
 </tr>
 <tr>
-<td><code>file.parents</code></td>
+<td><code>path.parents</code></td>
 <td>返回所有父亲 <code>Path</code> 对象的 <code>iterable</code></td>
 </tr>
 <tr>
-<td><code>file.parts</code></td>
+<td><code>path.parts</code></td>
 <td>将路径分割成字符串元组</td>
 </tr>
 <tr>
-<td><code>file.stat().st_size</code></td>
+<td><code>path.stat().st_size</code></td>
 <td>文件大小（单位：字节）</td>
 </tr>
 <tr>
-<td><code>file.stat().st_ctime</code></td>
+<td><code>path.stat().st_ctime</code></td>
 <td>文件创建时间戳</td>
 </tr>
 <tr>
-<td><code>file.stat().st_mtime</code></td>
+<td><code>path.stat().st_mtime</code></td>
 <td>文件上次修改时间戳</td>
 </tr>
 </tbody>
 </table>
+<div class="admonition tips">
+<p class="admonition-title">Tips</p>
+<p>部分方法如果传入的是路径，不会出错，但是没有意义</p>
+</div>
 <h2 id="对象方法">对象方法<a class="headerlink" href="#对象方法" title="Permanent link">⚓︎</a></h2>
 <table>
 <thead>
