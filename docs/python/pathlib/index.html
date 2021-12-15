@@ -805,6 +805,42 @@
 <td><code>file_or_folder.expanduser('~/xxx')</code></td>
 <td>返回带有扩展的 <code>~user</code> 构造的新路径</td>
 </tr>
+<tr>
+<td><code>file.read_text()</code></td>
+<td>读取文本文件</td>
+</tr>
+<tr>
+<td><code>file.write_text('')</code></td>
+<td>写入文本文件</td>
+</tr>
+<tr>
+<td><code>file.read_bytes()</code></td>
+<td>读取二进制文件</td>
+</tr>
+<tr>
+<td><code>file.write_bytes(b'')</code></td>
+<td>写入二进制文件</td>
+</tr>
+<tr>
+<td><code>file.open()</code></td>
+<td>相当于调用原生的 <code>open</code></td>
+</tr>
+<tr>
+<td><code>file.unlink()</code></td>
+<td>删除文件</td>
+</tr>
+<tr>
+<td><code>file.rmdir()</code></td>
+<td>不能删除非空目录，无法取代 <code>shutil.rmtree(path)</code></td>
+</tr>
+<tr>
+<td><code>file.mkdir()</code></td>
+<td>不能递归创建，无法取代 <code>os.makedirs</code></td>
+</tr>
+<tr>
+<td><code>file.rename()</code></td>
+<td>需要传入 <code>Path</code> 对象，如果是字符串就会拿了当前路径拼接生成的路径</td>
+</tr>
 </tbody>
 </table>
 <h2 id="glob-用例">glob 用例<a class="headerlink" href="#glob-用例" title="Permanent link">⚓︎</a></h2>
