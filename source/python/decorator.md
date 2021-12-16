@@ -177,3 +177,58 @@ async def myfun():
 
 !!! warning
     这里抛出的异常是 `asyncio.CancelledError` 
+
+
+## typing 类型返回
+
+`decorator` 实际上是函数的嵌套实现，所以加了 `decorator` 后，原来函数的 `typing` 提示就会变成封装函数的类型，需要指定泛型实现才可以显示原函数的类型
+
+### 普通方法实现
+
+``` py
+from functools import wraps
+from typing import Any, Callable, TypeVar, cast
+
+WrappedFunc = TypeVar("WrappedFunc", bound=Callable[..., object])
+
+
+def wrapper_retry(times: int):
+    def fun(func: WrappedFunc) -> WrappedFunc:
+        @wraps(func)
+        def wrapper(*parlist: Any, **pardict: Any):
+            current = 0
+            while True:
+                try:
+                    return func(*parlist, **pardict)
+                except:
+                    current += 1
+                    if current >= times:
+                        raise
+        return cast(WrappedFunc, wrapper)
+    return fun
+```
+
+### 异步方法实现
+
+``` py
+from functools import wraps
+from typing import Any, Callable, Coroutine, TypeVar, cast
+
+WrappedAsyncFunc = TypeVar("WrappedAsyncFunc", bound=Callable[..., Coroutine[Any, Any, object]])
+
+
+def wrapper_async_retry(times: int):
+    def fun(func: WrappedAsyncFunc) -> WrappedAsyncFunc:
+        @wraps(func)
+        async def wrapper(*parlist: Any, **pardict: Any):
+            current = 0
+            while True:
+                try:
+                    return await func(*parlist, **pardict)
+                except:
+                    current += 1
+                    if current >= times:
+                        raise
+        return cast(WrappedAsyncFunc, wrapper)
+    return fun
+```
