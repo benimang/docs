@@ -2,6 +2,7 @@ nav:
   - index.md  
   - Python:
     - python/decorator.md
+    - python/typing.md
     - python/pathlib.md
     - python/fstring.md
     - python/pip.md
