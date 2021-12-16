@@ -1,4 +1,4 @@
-# decorator 装饰器
+# decorator
 
 
 ## 装饰器无参数
