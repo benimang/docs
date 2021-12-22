@@ -553,6 +553,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#表联结" class="md-nav__link">
+    表联结
+  </a>
+  
+    <nav class="md-nav" aria-label="表联结">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#内联结" class="md-nav__link">
+    内联结
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#自联结" class="md-nav__link">
+    自联结
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#外联结" class="md-nav__link">
+    外联结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#UNION-组合查询" class="md-nav__link">
+    UNION 组合查询
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -969,6 +1010,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#表联结" class="md-nav__link">
+    表联结
+  </a>
+  
+    <nav class="md-nav" aria-label="表联结">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#内联结" class="md-nav__link">
+    内联结
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#自联结" class="md-nav__link">
+    自联结
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#外联结" class="md-nav__link">
+    外联结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#UNION-组合查询" class="md-nav__link">
+    UNION 组合查询
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1190,6 +1272,87 @@
 <span class="linenos" data-linenos="6 "></span>    <span class="n">Customers</span> 
 <span class="linenos" data-linenos="7 "></span><span class="k">ORDER</span> <span class="k">BY</span>
 <span class="linenos" data-linenos="8 "></span>    <span class="n">cust_name</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="表联结">表联结<a class="headerlink" href="#表联结" title="Permanent link">⚓︎</a></h2>
+<h3 id="内联结">内联结<a class="headerlink" href="#内联结" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>要保证所有联结都有WHERE子句，否则DBMS将返回比想要的数据多得多的数据</li>
+<li>笛卡儿积的联结，也称叉联结（cross join）</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="n">vend_name</span><span class="p">,</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="n">prod_name</span><span class="p">,</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="n">prod_price</span> 
+<span class="linenos" data-linenos="5 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="n">Vendors</span><span class="p">,</span>
+<span class="linenos" data-linenos="7 "></span>    <span class="n">Products</span> 
+<span class="linenos" data-linenos="8 "></span><span class="k">WHERE</span>
+<span class="linenos" data-linenos="9 "></span>    <span class="n">Vendors</span><span class="p">.</span><span class="n">vend_id</span> <span class="o">=</span> <span class="n">Products</span><span class="p">.</span><span class="n">vend_id</span><span class="p">;</span>
+</code></pre></div>
+<p>等效写法，使用 <code>INNER JOIN</code>，在使用这种语法时，联结条件用特定的ON子句而不是WHERE子句给出。上面是简单写法，下面是规范写法，具体使用哪个取决于哪个更方便。</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="n">vend_name</span><span class="p">,</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="n">prod_name</span><span class="p">,</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="n">prod_price</span> 
+<span class="linenos" data-linenos="5 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="n">Vendors</span>
+<span class="linenos" data-linenos="7 "></span>    <span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">Products</span> <span class="k">ON</span> <span class="n">Vendors</span><span class="p">.</span><span class="n">vend_id</span> <span class="o">=</span> <span class="n">Products</span><span class="p">.</span><span class="n">vend_id</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="自联结">自联结<a class="headerlink" href="#自联结" title="Permanent link">⚓︎</a></h3>
+<p>相当于是同一个表自己联结自己，许多DBMS处理联结远比处理子查询快得多。</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="n">c1</span><span class="p">.</span><span class="n">cust_id</span><span class="p">,</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="n">c1</span><span class="p">.</span><span class="n">cust_name</span><span class="p">,</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="n">c1</span><span class="p">.</span><span class="n">cust_contact</span> 
+<span class="linenos" data-linenos=" 5 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="n">Customers</span> <span class="k">AS</span> <span class="n">c1</span><span class="p">,</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="n">Customers</span> <span class="k">AS</span> <span class="n">c2</span> 
+<span class="linenos" data-linenos=" 8 "></span><span class="k">WHERE</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="n">c1</span><span class="p">.</span><span class="n">cust_name</span> <span class="o">=</span> <span class="n">c2</span><span class="p">.</span><span class="n">cust_name</span> 
+<span class="linenos" data-linenos="10 "></span>    <span class="k">AND</span> <span class="n">c2</span><span class="p">.</span><span class="n">cust_contact</span> <span class="o">=</span> <span class="s1">&#39;Jim Jones&#39;</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="外联结">外联结<a class="headerlink" href="#外联结" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>与内联结关联两个表中的行不同的是，外联结还包括没有关联行的行</li>
+<li>在使用OUTER JOIN语法时，必须使用RIGHT或LEFT关键字指定包括其所有行的表</li>
+<li>左外联结和右外联结，它们之间的唯一差别是所关联的表的顺序</li>
+<li>SQLite支持 <code>LEFT OUTER JOIN</code>，但不支持 <code>RIGHT OUTER JOIN</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span><span class="p">,</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="n">Orders</span><span class="p">.</span><span class="n">order_num</span> 
+<span class="linenos" data-linenos="4 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="5 "></span>    <span class="n">Customers</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">Orders</span> <span class="k">ON</span> <span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span> <span class="o">=</span> <span class="n">Orders</span><span class="p">.</span><span class="n">cust_id</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="UNION-组合查询">UNION 组合查询<a class="headerlink" href="#UNION-组合查询" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>合并多个查询结果返回</li>
+<li>使用场景<ul>
+<li>在一个查询中从不同的表返回结构数据</li>
+<li>对一个表执行多个查询，按一个查询返回数据</li>
+</ul>
+</li>
+<li><code>UNION</code> 中的每个查询必须包含相同的列、表达式或聚集函数（不过，各个列不需要以相同的次序列出）</li>
+<li><code>UNION</code> 从查询结果集中自动去除了重复的行，除非使用 <code>UNION ALL</code> 则不取消重复的行</li>
+<li>只能使用一条 <code>ORDER BY</code> 子句，它必须位于最后一条 <code>SELECT</code> 语句之后</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="n">cust_name</span><span class="p">,</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="n">cust_contact</span><span class="p">,</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="n">cust_email</span> 
+<span class="linenos" data-linenos=" 5 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="n">Customers</span> 
+<span class="linenos" data-linenos=" 7 "></span><span class="k">WHERE</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="n">cust_state</span> <span class="k">IN</span> <span class="p">(</span> <span class="s1">&#39;IL&#39;</span><span class="p">,</span> <span class="s1">&#39;IN&#39;</span><span class="p">,</span> <span class="s1">&#39;MI&#39;</span> <span class="p">)</span> <span class="k">UNION</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="k">SELECT</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="n">cust_name</span><span class="p">,</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="n">cust_contact</span><span class="p">,</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="n">cust_email</span> 
+<span class="linenos" data-linenos="13 "></span><span class="k">FROM</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="n">Customers</span> 
+<span class="linenos" data-linenos="15 "></span><span class="k">WHERE</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="n">cust_name</span> <span class="o">=</span> <span class="s1">&#39;Fun4All&#39;</span><span class="p">;</span>
 </code></pre></div>
 
               

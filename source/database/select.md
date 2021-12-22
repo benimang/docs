@@ -269,3 +269,98 @@ FROM
 ORDER BY
 	cust_name;
 ```
+
+
+## 表联结
+
+### 内联结
+
+- 要保证所有联结都有WHERE子句，否则DBMS将返回比想要的数据多得多的数据
+- 笛卡儿积的联结，也称叉联结（cross join）
+
+``` sql
+SELECT
+	vend_name,
+	prod_name,
+	prod_price 
+FROM
+	Vendors,
+	Products 
+WHERE
+	Vendors.vend_id = Products.vend_id;
+```
+
+等效写法，使用 `INNER JOIN`，在使用这种语法时，联结条件用特定的ON子句而不是WHERE子句给出。上面是简单写法，下面是规范写法，具体使用哪个取决于哪个更方便。
+
+``` sql
+SELECT
+	vend_name,
+	prod_name,
+	prod_price 
+FROM
+	Vendors
+	INNER JOIN Products ON Vendors.vend_id = Products.vend_id;
+```
+
+### 自联结
+
+相当于是同一个表自己联结自己，许多DBMS处理联结远比处理子查询快得多。
+
+``` sql
+SELECT
+	c1.cust_id,
+	c1.cust_name,
+	c1.cust_contact 
+FROM
+	Customers AS c1,
+	Customers AS c2 
+WHERE
+	c1.cust_name = c2.cust_name 
+	AND c2.cust_contact = 'Jim Jones';
+```
+
+### 外联结
+
+- 与内联结关联两个表中的行不同的是，外联结还包括没有关联行的行
+- 在使用OUTER JOIN语法时，必须使用RIGHT或LEFT关键字指定包括其所有行的表
+- 左外联结和右外联结，它们之间的唯一差别是所关联的表的顺序
+- SQLite支持 `LEFT OUTER JOIN`，但不支持 `RIGHT OUTER JOIN`
+
+``` sql
+SELECT
+	Customers.cust_id,
+	Orders.order_num 
+FROM
+	Customers
+	LEFT OUTER JOIN Orders ON Customers.cust_id = Orders.cust_id;
+```
+
+
+## UNION 组合查询
+
+- 合并多个查询结果返回
+- 使用场景
+    - 在一个查询中从不同的表返回结构数据
+    - 对一个表执行多个查询，按一个查询返回数据
+- `UNION` 中的每个查询必须包含相同的列、表达式或聚集函数（不过，各个列不需要以相同的次序列出）
+- `UNION` 从查询结果集中自动去除了重复的行，除非使用 `UNION ALL` 则不取消重复的行
+- 只能使用一条 `ORDER BY` 子句，它必须位于最后一条 `SELECT` 语句之后
+
+``` sql
+SELECT
+	cust_name,
+	cust_contact,
+	cust_email 
+FROM
+	Customers 
+WHERE
+	cust_state IN ( 'IL', 'IN', 'MI' ) UNION
+SELECT
+	cust_name,
+	cust_contact,
+	cust_email 
+FROM
+	Customers 
+WHERE
+	cust_name = 'Fun4All';
+```
