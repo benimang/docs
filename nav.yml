@@ -5,6 +5,7 @@ nav:
     - python/typing.md
     - python/pathlib.md
     - python/fstring.md
+    - python/sqlite.md
     - python/pip.md
     - python/tips.md
   - Database:
