@@ -9,6 +9,7 @@ nav:
     - python/tips.md
   - Database:
     - database/select.md
+    - database/modify.md
     - database/concept.md
   - Amazon:
     - amazon/selection.md

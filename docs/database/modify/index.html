@@ -12,14 +12,14 @@
         <meta name="author" content="Beni Mang">
       
       
-        <link rel="canonical" href="https://pytask.com/python/pathlib/">
+        <link rel="canonical" href="https://pytask.com/database/modify/">
       
       <link rel="icon" href="../../img/favicon.svg">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
-        <title>pathlib - Beni Docs</title>
+        <title>SQL 增删改 - Beni Docs</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pathlib" class="md-skip">
+        <a href="#SQL-增删改" class="md-skip">
           跳转至
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              pathlib
+              SQL 增删改
             
           </span>
         </div>
@@ -220,14 +220,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -250,7 +248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../decorator/" class="md-nav__link">
+      <a href="../../python/decorator/" class="md-nav__link">
         decorator
       </a>
     </li>
@@ -264,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../typing/" class="md-nav__link">
+      <a href="../../python/typing/" class="md-nav__link">
         typing
       </a>
     </li>
@@ -276,73 +274,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          pathlib
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../python/pathlib/" class="md-nav__link">
         pathlib
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#对象属性" class="md-nav__link">
-    对象属性
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#对象方法" class="md-nav__link">
-    对象方法
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#glob-用例" class="md-nav__link">
-    glob 用例
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#静态方法" class="md-nav__link">
-    静态方法
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -354,7 +290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fstring/" class="md-nav__link">
+      <a href="../../python/fstring/" class="md-nav__link">
         f-string
       </a>
     </li>
@@ -368,7 +304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pip/" class="md-nav__link">
+      <a href="../../python/pip/" class="md-nav__link">
         PIP 使用
       </a>
     </li>
@@ -382,7 +318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tips/" class="md-nav__link">
+      <a href="../../python/tips/" class="md-nav__link">
         使用技巧
       </a>
     </li>
@@ -402,12 +338,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -430,7 +368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/select/" class="md-nav__link">
+      <a href="../select/" class="md-nav__link">
         SQL 查询
       </a>
     </li>
@@ -442,11 +380,100 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../database/modify/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SQL 增删改
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         SQL 增删改
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#INSERT" class="md-nav__link">
+    INSERT
+  </a>
+  
+    <nav class="md-nav" aria-label="INSERT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#插入完整的行" class="md-nav__link">
+    插入完整的行
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#插入部分行" class="md-nav__link">
+    插入部分行
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#INSERT-SELECT" class="md-nav__link">
+    INSERT SELECT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#CREATE-SELECT" class="md-nav__link">
+    CREATE SELECT
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#UPDATE" class="md-nav__link">
+    UPDATE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#DELETE" class="md-nav__link">
+    DELETE
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -458,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/concept/" class="md-nav__link">
+      <a href="../concept/" class="md-nav__link">
         SQL 概念
       </a>
     </li>
@@ -708,29 +735,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#对象属性" class="md-nav__link">
-    对象属性
+  <a href="#INSERT" class="md-nav__link">
+    INSERT
+  </a>
+  
+    <nav class="md-nav" aria-label="INSERT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#插入完整的行" class="md-nav__link">
+    插入完整的行
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#插入部分行" class="md-nav__link">
+    插入部分行
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#INSERT-SELECT" class="md-nav__link">
+    INSERT SELECT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#CREATE-SELECT" class="md-nav__link">
+    CREATE SELECT
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#UPDATE" class="md-nav__link">
+    UPDATE
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#对象方法" class="md-nav__link">
-    对象方法
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#glob-用例" class="md-nav__link">
-    glob 用例
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#静态方法" class="md-nav__link">
-    静态方法
+  <a href="#DELETE" class="md-nav__link">
+    DELETE
   </a>
   
 </li>
@@ -748,179 +802,114 @@
               
                 
 
-<h1 id="pathlib">pathlib<a class="headerlink" href="#pathlib" title="Permanent link">#</a></h1>
-<h2 id="对象属性">对象属性<a class="headerlink" href="#对象属性" title="Permanent link">#</a></h2>
-<table>
-<thead>
-<tr>
-<th>代码</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>path.name</code></td>
-<td>文件名（不带路径）</td>
-</tr>
-<tr>
-<td><code>path.stem</code></td>
-<td>文件名去除扩展名</td>
-</tr>
-<tr>
-<td><code>path.suffix</code></td>
-<td>扩展名</td>
-</tr>
-<tr>
-<td><code>path.suffixes</code></td>
-<td>扩展名数组</td>
-</tr>
-<tr>
-<td><code>path.parent</code></td>
-<td>获取父亲的 <code>Path</code> 对象</td>
-</tr>
-<tr>
-<td><code>path.parents</code></td>
-<td>返回所有父亲 <code>Path</code> 对象的 <code>iterable</code></td>
-</tr>
-<tr>
-<td><code>path.parts</code></td>
-<td>将路径分割成字符串元组</td>
-</tr>
-<tr>
-<td><code>path.stat().st_size</code></td>
-<td>文件大小（单位：字节）</td>
-</tr>
-<tr>
-<td><code>path.stat().st_ctime</code></td>
-<td>文件创建时间戳</td>
-</tr>
-<tr>
-<td><code>path.stat().st_mtime</code></td>
-<td>文件上次修改时间戳</td>
-</tr>
-</tbody>
-</table>
+<h1 id="SQL-增删改">SQL 增删改<a class="headerlink" href="#SQL-增删改" title="Permanent link">#</a></h1>
+<h2 id="INSERT">INSERT<a class="headerlink" href="#INSERT" title="Permanent link">#</a></h2>
+<h3 id="插入完整的行">插入完整的行<a class="headerlink" href="#插入完整的行" title="Permanent link">#</a></h3>
+<ul>
+<li>各列必须以它们在表定义中出现的次序填充</li>
+<li>如果某列没有值则应该使用 <code>NULL</code></li>
+<li>太过于依赖列的顺序，不易维护，建议少用</li>
+</ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Customers</span>
+<span class="k">VALUES</span>
+    <span class="p">(</span> <span class="mi">1000000006</span><span class="p">,</span> <span class="s1">&#39;Toy Land&#39;</span><span class="p">,</span> <span class="s1">&#39;123 Any Street&#39;</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="s1">&#39;NY&#39;</span><span class="p">,</span> <span class="s1">&#39;11111&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="k">NULL</span><span class="p">,</span> <span class="k">NULL</span> <span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="插入部分行">插入部分行<a class="headerlink" href="#插入部分行" title="Permanent link">#</a></h3>
+<ul>
+<li>允许不依赖表中列的顺序</li>
+<li>允许忽略部分列（忽略的列允许 <code>NULL</code> 或有默认值）</li>
+<li>列名和 <code>VALUES</code> 顺序必须对应</li>
+</ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Customers</span> <span class="p">(</span> <span class="n">cust_id</span><span class="p">,</span> <span class="n">cust_name</span><span class="p">,</span> <span class="n">cust_address</span><span class="p">,</span> <span class="n">cust_city</span><span class="p">,</span> <span class="n">cust_state</span><span class="p">,</span> <span class="n">cust_zip</span><span class="p">,</span> <span class="n">cust_country</span> <span class="p">)</span>
+<span class="k">VALUES</span>
+    <span class="p">(</span> <span class="mi">1000000006</span><span class="p">,</span> <span class="s1">&#39;Toy Land&#39;</span><span class="p">,</span> <span class="s1">&#39;123 Any Street&#39;</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="s1">&#39;NY&#39;</span><span class="p">,</span> <span class="s1">&#39;11111&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span> <span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="INSERT-SELECT">INSERT SELECT<a class="headerlink" href="#INSERT-SELECT" title="Permanent link">#</a></h3>
+<ul>
+<li>允许同时插入多条数据</li>
+<li><code>INSERT</code> 和 <code>SELECT</code> 列数量、顺序以及类型必须对应，列名则无所谓</li>
+</ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Customers</span> <span class="p">(</span> <span class="n">cust_id</span><span class="p">,</span> <span class="n">cust_contact</span><span class="p">,</span> <span class="n">cust_email</span><span class="p">,</span> <span class="n">cust_name</span><span class="p">,</span> <span class="n">cust_address</span><span class="p">,</span> <span class="n">cust_city</span><span class="p">,</span> <span class="n">cust_state</span><span class="p">,</span> <span class="n">cust_zip</span><span class="p">,</span> <span class="n">cust_country</span> <span class="p">)</span> <span class="k">SELECT</span>
+<span class="n">cust_id</span><span class="p">,</span>
+<span class="n">cust_contact</span><span class="p">,</span>
+<span class="n">cust_email</span><span class="p">,</span>
+<span class="n">cust_name</span><span class="p">,</span>
+<span class="n">cust_address</span><span class="p">,</span>
+<span class="n">cust_city</span><span class="p">,</span>
+<span class="n">cust_state</span><span class="p">,</span>
+<span class="n">cust_zip</span><span class="p">,</span>
+<span class="n">cust_country</span> 
+<span class="k">FROM</span>
+    <span class="n">CustNew</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="CREATE-SELECT">CREATE SELECT<a class="headerlink" href="#CREATE-SELECT" title="Permanent link">#</a></h3>
+<ul>
+<li>允许使用 <code>*</code> 指定全部列或指定部分列</li>
+<li>允许指定部分列使用别名，生成的表的列明则为列名</li>
+<li>允许多表联结，但数据都只会生成到同一个表里</li>
+<li>创建出来新的表，只有数据而不包含其他表定义内容，主键 / 外键 / 索引 / 默认值 / 唯一索引等都不会有</li>
+</ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">CustCopy</span> <span class="k">AS</span> <span class="k">SELECT</span>
+<span class="o">*</span> 
+<span class="k">FROM</span>
+    <span class="n">Customers</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="UPDATE">UPDATE<a class="headerlink" href="#UPDATE" title="Permanent link">#</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">UPDATE</span> <span class="n">Customers</span> 
+<span class="k">SET</span> <span class="n">cust_email</span> <span class="o">=</span> <span class="s1">&#39;kim@thetoystore.com&#39;</span> 
+<span class="k">WHERE</span>
+    <span class="n">cust_id</span> <span class="o">=</span> <span class="mi">1000000005</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>务必检查 <code>WHERE</code> 条件，如果不指定则更新全部行</p>
+</div>
+<h2 id="DELETE">DELETE<a class="headerlink" href="#DELETE" title="Permanent link">#</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">DELETE</span> 
+<span class="k">FROM</span>
+    <span class="n">Customers</span> 
+<span class="k">WHERE</span>
+    <span class="n">cust_id</span> <span class="o">=</span> <span class="mi">1000000006</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>务必检查 <code>WHERE</code> 条件，如果不指定则删除全部行</p>
+</div>
 <div class="admonition tips">
 <p class="admonition-title">Tips</p>
-<p>部分方法如果传入的是路径，不会出错，但是没有意义</p>
+<p>如果想从表中删除所有行，不要使用DELETE。可使用TRUNCATE TABLE语句，它完成相同的工作，而速度更快（因为不记录数据的变动）</p>
 </div>
-<h2 id="对象方法">对象方法<a class="headerlink" href="#对象方法" title="Permanent link">#</a></h2>
-<table>
-<thead>
-<tr>
-<th>代码</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>path.exists()</code></td>
-<td>判断是否存在</td>
-</tr>
-<tr>
-<td><code>path.is_file()</code></td>
-<td>判断是否文件</td>
-</tr>
-<tr>
-<td><code>path.is_dir()</code></td>
-<td>判断是否目录</td>
-</tr>
-<tr>
-<td><code>path.is_absolute()</code></td>
-<td>判断是否绝对路径</td>
-</tr>
-<tr>
-<td><code>path.expanduser('~/xxx')</code></td>
-<td>返回带有扩展的 <code>~user</code> 构造的新路径</td>
-</tr>
-<tr>
-<td><code>path.rename()</code></td>
-<td>需要传入 <code>Path</code> 对象，如果是字符串就会拿了当前路径拼接生成的路径</td>
-</tr>
-<tr>
-<td><code>file.read_text()</code></td>
-<td>读取文本文件</td>
-</tr>
-<tr>
-<td><code>file.write_text('')</code></td>
-<td>写入文本文件</td>
-</tr>
-<tr>
-<td><code>file.read_bytes()</code></td>
-<td>读取二进制文件</td>
-</tr>
-<tr>
-<td><code>file.write_bytes(b'')</code></td>
-<td>写入二进制文件</td>
-</tr>
-<tr>
-<td><code>file.open()</code></td>
-<td>相当于调用原生的 <code>open</code></td>
-</tr>
-<tr>
-<td><code>file.unlink()</code></td>
-<td>删除文件</td>
-</tr>
-<tr>
-<td><code>folder.iterdir()</code></td>
-<td>目录下内容的 <code>iterable</code></td>
-</tr>
-<tr>
-<td><code>folder.rmdir()</code></td>
-<td>不能删除非空目录，无法取代 <code>shutil.rmtree(path)</code></td>
-</tr>
-<tr>
-<td><code>folder.mkdir()</code></td>
-<td>默认不能递归创建，需要指定参数 <code>parents=True</code> 如果设置了这个参数需要注意创建的目录权限是使用系统默认权限，与函数参数无关</td>
-</tr>
-</tbody>
-</table>
-<h2 id="glob-用例">glob 用例<a class="headerlink" href="#glob-用例" title="Permanent link">#</a></h2>
-<table>
-<thead>
-<tr>
-<th>代码</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>folder.glob('*.txt')</code></td>
-<td>当前目录下的扩展名为 <code>.txt</code> 的所有文件</td>
-</tr>
-<tr>
-<td><code>folder.glob('**/*.txt')</code></td>
-<td>递归当前目录下的扩展名为 <code>.txt</code> 的所有文件</td>
-</tr>
-<tr>
-<td><code>folder.glob('a/*.txt')</code></td>
-<td>当前目录下子目录 <code>a</code> 下的扩展名为 <code>.txt</code> 的所有文件</td>
-</tr>
-<tr>
-<td><code>folder.glob('**/b/*.txt')</code></td>
-<td>任意目录名为 <code>b</code> 下的扩展名为 <code>.txt</code> 的所有文件</td>
-</tr>
-</tbody>
-</table>
-<h2 id="静态方法">静态方法<a class="headerlink" href="#静态方法" title="Permanent link">#</a></h2>
-<table>
-<thead>
-<tr>
-<th>代码</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Path.cwd()</code></td>
-<td>当前路径</td>
-</tr>
-<tr>
-<td><code>Path.home()</code></td>
-<td>用户目录</td>
-</tr>
-</tbody>
-</table>
 
               
             </article>
@@ -941,7 +930,7 @@
     <nav class="md-footer__inner md-grid" aria-label="页脚">
       
         
-        <a href="../typing/" class="md-footer__link md-footer__link--prev" aria-label="上一页: typing" rel="prev">
+        <a href="../select/" class="md-footer__link md-footer__link--prev" aria-label="上一页: SQL 查询" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -950,20 +939,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              typing
+              SQL 查询
             </div>
           </div>
         </a>
       
       
         
-        <a href="../fstring/" class="md-footer__link md-footer__link--next" aria-label="下一页: f-string" rel="next">
+        <a href="../concept/" class="md-footer__link md-footer__link--next" aria-label="下一页: SQL 概念" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              f-string
+              SQL 概念
             </div>
           </div>
           <div class="md-footer__button md-icon">
