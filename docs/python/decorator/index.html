@@ -856,8 +856,8 @@
               
                 
 
-<h1 id="decorator">decorator<a class="headerlink" href="#decorator" title="Anchor link to this section for reference">#</a></h1>
-<h2 id="装饰器无参数">装饰器无参数<a class="headerlink" href="#装饰器无参数" title="Anchor link to this section for reference">#</a></h2>
+<h1 id="decorator">decorator<a class="headerlink" href="#decorator" title="Permanent link">#</a></h1>
+<h2 id="装饰器无参数">装饰器无参数<a class="headerlink" href="#装饰器无参数" title="Permanent link">#</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -893,7 +893,7 @@
 <p class="admonition-title">Warning</p>
 <p>封装后 <code class="highlight"><span class="n">myfun_a</span><span class="o">.</span><span class="vm">__name__</span></code> 发生了改变，如果想封装后不改这个名字可以用 <a href="#functoolswraps">wraps</a></p>
 </div>
-<h2 id="装饰器有参数">装饰器有参数<a class="headerlink" href="#装饰器有参数" title="Anchor link to this section for reference">#</a></h2>
+<h2 id="装饰器有参数">装饰器有参数<a class="headerlink" href="#装饰器有参数" title="Permanent link">#</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -935,7 +935,7 @@
 <p class="admonition-title">Warning</p>
 <p>封装后 <code class="highlight"><span class="n">myfun_b</span><span class="o">.</span><span class="vm">__name__</span></code> 发生了改变，如果想封装后不改这个名字可以用 <a href="#functoolswraps">wraps</a></p>
 </div>
-<h2 id="成员函数及叠加使用">成员函数及叠加使用<a class="headerlink" href="#成员函数及叠加使用" title="Anchor link to this section for reference">#</a></h2>
+<h2 id="成员函数及叠加使用">成员函数及叠加使用<a class="headerlink" href="#成员函数及叠加使用" title="Permanent link">#</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -995,7 +995,7 @@
 <p class="admonition-title">Tips</p>
 <p>执行顺序是 <code>a.before</code> -&gt; <code>b.before</code> -&gt; <code>method_b</code> -&gt; <code>b.after</code> -&gt; <code>a.after</code></p>
 </div>
-<h2 id="functoolswraps">@functools.wraps<a class="headerlink" href="#functoolswraps" title="Anchor link to this section for reference">#</a></h2>
+<h2 id="functoolswraps">@functools.wraps<a class="headerlink" href="#functoolswraps" title="Permanent link">#</a></h2>
 <p>官方提供的方法，通过这个包装后，函数的名称不会改变</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1028,8 +1028,8 @@
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;myfun_a&quot;</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="Examples">Examples<a class="headerlink" href="#Examples" title="Anchor link to this section for reference">#</a></h2>
-<h3 id="cache">@cache<a class="headerlink" href="#cache" title="Anchor link to this section for reference">#</a></h3>
+<h2 id="Examples">Examples<a class="headerlink" href="#Examples" title="Permanent link">#</a></h2>
+<h3 id="cache">@cache<a class="headerlink" href="#cache" title="Permanent link">#</a></h3>
 <p>官方提供的方法，函数调用的结果将缓存起来，下次再调用则使用缓存直接返回</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1042,7 +1042,7 @@
     <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span> <span class="k">else</span> <span class="mi">1</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="cached_property">@cached_property<a class="headerlink" href="#cached_property" title="Anchor link to this section for reference">#</a></h3>
+<h3 id="cached_property">@cached_property<a class="headerlink" href="#cached_property" title="Permanent link">#</a></h3>
 <p>官方提供的方法，针对类成员函数，相当于是带缓存版本 <code>@property</code></p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1065,7 +1065,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="异步超时">异步超时<a class="headerlink" href="#异步超时" title="Anchor link to this section for reference">#</a></h3>
+<h3 id="异步超时">异步超时<a class="headerlink" href="#异步超时" title="Permanent link">#</a></h3>
 <p>这个可以指定 <code>async</code> 函数的超时时间</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1106,9 +1106,9 @@
 <p class="admonition-title">Warning</p>
 <p>这里抛出的异常是 <code>asyncio.CancelledError</code> </p>
 </div>
-<h2 id="typing-类型返回">typing 类型返回<a class="headerlink" href="#typing-类型返回" title="Anchor link to this section for reference">#</a></h2>
+<h2 id="typing-类型返回">typing 类型返回<a class="headerlink" href="#typing-类型返回" title="Permanent link">#</a></h2>
 <p><code>decorator</code> 实际上是函数的嵌套实现，所以加了 <code>decorator</code> 后，原来函数的 <code>typing</code> 提示就会变成封装函数的类型，需要指定泛型实现才可以显示原函数的类型</p>
-<h3 id="普通方法实现">普通方法实现<a class="headerlink" href="#普通方法实现" title="Anchor link to this section for reference">#</a></h3>
+<h3 id="普通方法实现">普通方法实现<a class="headerlink" href="#普通方法实现" title="Permanent link">#</a></h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1150,7 +1150,7 @@
     <span class="k">return</span> <span class="n">fun</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="异步方法实现">异步方法实现<a class="headerlink" href="#异步方法实现" title="Anchor link to this section for reference">#</a></h3>
+<h3 id="异步方法实现">异步方法实现<a class="headerlink" href="#异步方法实现" title="Permanent link">#</a></h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>

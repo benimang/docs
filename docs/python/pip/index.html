@@ -788,8 +788,8 @@
               
                 
 
-<h1 id="PIP-使用">PIP 使用<a class="headerlink" href="#PIP-使用" title="Anchor link to this section for reference">#</a></h1>
-<h2 id="使用镜像地址下载安装">使用镜像地址下载安装<a class="headerlink" href="#使用镜像地址下载安装" title="Anchor link to this section for reference">#</a></h2>
+<h1 id="PIP-使用">PIP 使用<a class="headerlink" href="#PIP-使用" title="Permanent link">#</a></h1>
+<h2 id="使用镜像地址下载安装">使用镜像地址下载安装<a class="headerlink" href="#使用镜像地址下载安装" title="Permanent link">#</a></h2>
 <p>可以统一设置，也可以在有需要的时候带参数 <code>-i</code>，其中一个稳定的源是豆瓣。</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pip install benimang -i https://pypi.douban.com/simple
 </code></pre></div>
@@ -798,7 +798,7 @@
 <p class="admonition-title">Warning</p>
 <p>实际使用发现，镜像不一定都能下载成功，比如少人用的一些包首次就下载不成功</p>
 </div>
-<h2 id="本地安装包">本地安装包<a class="headerlink" href="#本地安装包" title="Anchor link to this section for reference">#</a></h2>
+<h2 id="本地安装包">本地安装包<a class="headerlink" href="#本地安装包" title="Permanent link">#</a></h2>
 <p>针对有 <code>setup.py</code> 文件的包，可以直接本地安装，比如自己的包改动完可以在上传前先放本地测试。</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>python setup.py install
 </code></pre></div>
@@ -807,10 +807,10 @@
 <p class="admonition-title">Warning</p>
 <p>必须跳转到对应目录下执行，不能指定 <code>setup.py</code> 的路径。</p>
 </div>
-<h2 id="上传包到-pypiorg">上传包到 pypi.org<a class="headerlink" href="#上传包到-pypiorg" title="Anchor link to this section for reference">#</a></h2>
-<h3 id="pypi-账号">pypi 账号<a class="headerlink" href="#pypi-账号" title="Anchor link to this section for reference">#</a></h3>
+<h2 id="上传包到-pypiorg">上传包到 pypi.org<a class="headerlink" href="#上传包到-pypiorg" title="Permanent link">#</a></h2>
+<h3 id="pypi-账号">pypi 账号<a class="headerlink" href="#pypi-账号" title="Permanent link">#</a></h3>
 <p>首先需要账号注册 <a href="https://pypi.org/">pypi</a>，很特别的地方是，项目不是在这里创建，而是上传的时候决定的。</p>
-<h3 id="配置文件">配置文件<a class="headerlink" href="#配置文件" title="Anchor link to this section for reference">#</a></h3>
+<h3 id="配置文件">配置文件<a class="headerlink" href="#配置文件" title="Permanent link">#</a></h3>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">setup.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -925,12 +925,12 @@ include README.md
 <p class="admonition-title">Tips</p>
 <p>还需要其中一个文件，否则会打包有警告 <code>README</code> <code>README.rst</code> <code>README.txt</code> <code>README.md</code></p>
 </div>
-<h3 id="twine">twine<a class="headerlink" href="#twine" title="Anchor link to this section for reference">#</a></h3>
+<h3 id="twine">twine<a class="headerlink" href="#twine" title="Permanent link">#</a></h3>
 <p>需要安装第三方库 <code>twine</code> 用来上传包</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pip install twine
 </code></pre></div>
 </td></tr></table>
-<h3 id="打包并上传">打包并上传<a class="headerlink" href="#打包并上传" title="Anchor link to this section for reference">#</a></h3>
+<h3 id="打包并上传">打包并上传<a class="headerlink" href="#打包并上传" title="Permanent link">#</a></h3>
 <p>上传时要输入用户名和密码，<code>twine</code> 也提供了指定用户名和密码的可选参数可以不用每次调用都上传。</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>python setup.py sdist

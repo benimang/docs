@@ -37,6 +37,16 @@ site_dir: docs # 原来是 site，用来生成 html 资源文件
 `MkDocs` 很好用，但是功能也比较简单，所以大部分网站都使用 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) 这个模板。功能确实丰富了很多，但有少量新功能也是需要付费会员才能使用的。
 
 
+## 本地部署
+
+网站可以不放在网络，直接在电脑上，用浏览器打开，但是本地默认是不支持搜索，官网说要使用第三方支持 `file://` 的搜索插件，但是没有找到。
+
+``` yaml
+site_url:
+use_directory_urls: false
+```
+
+
 ## 资源网站
 
 - [快捷键显示](https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index)

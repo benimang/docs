@@ -1064,8 +1064,8 @@
               
                 
 
-<h1 id="SQL-查询">SQL 查询<a class="headerlink" href="#SQL-查询" title="Anchor link to this section for reference">#</a></h1>
-<h2 id="DISTINCT-查询不同的值">DISTINCT 查询不同的值<a class="headerlink" href="#DISTINCT-查询不同的值" title="Anchor link to this section for reference">#</a></h2>
+<h1 id="SQL-查询">SQL 查询<a class="headerlink" href="#SQL-查询" title="Permanent link">#</a></h1>
+<h2 id="DISTINCT-查询不同的值">DISTINCT 查询不同的值<a class="headerlink" href="#DISTINCT-查询不同的值" title="Permanent link">#</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1077,7 +1077,7 @@
     <span class="n">Products</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="LIMIT-OFFSET-限制返回结果">LIMIT OFFSET 限制返回结果<a class="headerlink" href="#LIMIT-OFFSET-限制返回结果" title="Anchor link to this section for reference">#</a></h2>
+<h2 id="LIMIT-OFFSET-限制返回结果">LIMIT OFFSET 限制返回结果<a class="headerlink" href="#LIMIT-OFFSET-限制返回结果" title="Permanent link">#</a></h2>
 <ul>
 <li><code>LIMIT</code> 表示返回记录的数量</li>
 <li><code>OFFSET</code> 表示从第几行开始返回，注意：第1行用0表示</li>
@@ -1095,7 +1095,7 @@
 <span class="k">LIMIT</span> <span class="mi">3</span> <span class="k">OFFSET</span> <span class="mi">3</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="ORDER-BY-排序结果">ORDER BY 排序结果<a class="headerlink" href="#ORDER-BY-排序结果" title="Anchor link to this section for reference">#</a></h2>
+<h2 id="ORDER-BY-排序结果">ORDER BY 排序结果<a class="headerlink" href="#ORDER-BY-排序结果" title="Permanent link">#</a></h2>
 <ul>
 <li><code>ORDER BY</code> 可以指定多个列排序，甚至可以指定 <code>SELECT</code> 没有指定的列</li>
 <li>使用 <code>DESC</code> 指定降序</li>
@@ -1116,7 +1116,7 @@
     <span class="n">prod_price</span> <span class="k">DESC</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="BETWEEN-AND-范围值检查">BETWEEN AND 范围值检查<a class="headerlink" href="#BETWEEN-AND-范围值检查" title="Anchor link to this section for reference">#</a></h2>
+<h2 id="BETWEEN-AND-范围值检查">BETWEEN AND 范围值检查<a class="headerlink" href="#BETWEEN-AND-范围值检查" title="Permanent link">#</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1130,7 +1130,7 @@
     <span class="n">prod_price</span> <span class="k">BETWEEN</span> <span class="mi">1</span> <span class="k">AND</span> <span class="mi">5</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="IS-NULL-检查空值">IS NULL 检查空值<a class="headerlink" href="#IS-NULL-检查空值" title="Anchor link to this section for reference">#</a></h2>
+<h2 id="IS-NULL-检查空值">IS NULL 检查空值<a class="headerlink" href="#IS-NULL-检查空值" title="Permanent link">#</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1146,7 +1146,7 @@
     <span class="k">AND</span> <span class="n">cust_contact</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">;</span> <span class="c1">-- IS NOT NULL 检查非空值</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="IN-指定条件范围">IN 指定条件范围<a class="headerlink" href="#IN-指定条件范围" title="Anchor link to this section for reference">#</a></h2>
+<h2 id="IN-指定条件范围">IN 指定条件范围<a class="headerlink" href="#IN-指定条件范围" title="Permanent link">#</a></h2>
 <ul>
 <li><code>IN</code> 操作符比 <code>OR</code> 操作符更简洁，速度更快</li>
 <li><code>IN</code> 可以配合子查询而 <code>OR</code> 不好实现</li>
@@ -1166,7 +1166,7 @@
     <span class="n">vend_id</span> <span class="k">IN</span> <span class="p">(</span> <span class="s1">&#39;DLL01&#39;</span><span class="p">,</span> <span class="s1">&#39;BRS01&#39;</span> <span class="p">);</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="LIKE-通配符匹配查询">LIKE 通配符匹配查询<a class="headerlink" href="#LIKE-通配符匹配查询" title="Anchor link to this section for reference">#</a></h2>
+<h2 id="LIKE-通配符匹配查询">LIKE 通配符匹配查询<a class="headerlink" href="#LIKE-通配符匹配查询" title="Permanent link">#</a></h2>
 <ul>
 <li><code>LIKE</code> 大小写不敏感</li>
 <li><code>%</code> 表示任意个字符，包括0个</li>
@@ -1187,7 +1187,7 @@
     <span class="n">prod_name</span> <span class="k">LIKE</span> <span class="s1">&#39;Fish%&#39;</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="拼接字段">拼接字段<a class="headerlink" href="#拼接字段" title="Anchor link to this section for reference">#</a></h2>
+<h2 id="拼接字段">拼接字段<a class="headerlink" href="#拼接字段" title="Permanent link">#</a></h2>
 <ul>
 <li><code>SQL Server</code> 使用 <code>+</code></li>
 <li><code>DB2</code>、<code>Oracle</code>、<code>PostgreSQL</code> 和 <code>SQLite</code> 使用 <code>||</code></li>
@@ -1206,7 +1206,7 @@
     <span class="n">vend_name</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="常用函数">常用函数<a class="headerlink" href="#常用函数" title="Anchor link to this section for reference">#</a></h2>
+<h2 id="常用函数">常用函数<a class="headerlink" href="#常用函数" title="Permanent link">#</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1232,7 +1232,7 @@
     <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span> <span class="k">CURRENT_DATE</span><span class="p">,</span> <span class="k">CURRENT_TIME</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="汇总数据聚集函数">汇总数据（聚集函数）<a class="headerlink" href="#汇总数据聚集函数" title="Anchor link to this section for reference">#</a></h2>
+<h2 id="汇总数据聚集函数">汇总数据（聚集函数）<a class="headerlink" href="#汇总数据聚集函数" title="Permanent link">#</a></h2>
 <ul>
 <li>对所有行执行计算，指定 <code>ALL</code> 参数或不指定参数（因为 <code>ALL</code> 是默认行为）</li>
 <li>只包含不同的值，指定 <code>DISTINCT</code> 参数，如：<code>COUNT( DISTINCE column_name )</code></li>
@@ -1240,7 +1240,7 @@
 <li>将 <code>DISTINCT</code> 用于 <code>MIN()</code> 和 <code>MAX()</code>，语法正确，但没有意义</li>
 <li>可以同时使用多个</li>
 </ul>
-<h3 id="AVG-平均值">AVG 平均值<a class="headerlink" href="#AVG-平均值" title="Anchor link to this section for reference">#</a></h3>
+<h3 id="AVG-平均值">AVG 平均值<a class="headerlink" href="#AVG-平均值" title="Permanent link">#</a></h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1254,7 +1254,7 @@
     <span class="n">vend_id</span> <span class="o">=</span> <span class="s1">&#39;DLL01&#39;</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="COUNT-计算行数">COUNT 计算行数<a class="headerlink" href="#COUNT-计算行数" title="Anchor link to this section for reference">#</a></h3>
+<h3 id="COUNT-计算行数">COUNT 计算行数<a class="headerlink" href="#COUNT-计算行数" title="Permanent link">#</a></h3>
 <ul>
 <li><code>COUNT(*)</code> 计算所有包括 <code>NULL</code> 在内的行数</li>
 <li><code>COUNT(column_name)</code> 指定列名则不会计算 <code>NULL</code></li>
@@ -1268,7 +1268,7 @@
     <span class="n">Customers</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="MAX-获取最大值">MAX 获取最大值<a class="headerlink" href="#MAX-获取最大值" title="Anchor link to this section for reference">#</a></h3>
+<h3 id="MAX-获取最大值">MAX 获取最大值<a class="headerlink" href="#MAX-获取最大值" title="Permanent link">#</a></h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1278,7 +1278,7 @@
     <span class="n">Products</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="MIN-获取最小值">MIN 获取最小值<a class="headerlink" href="#MIN-获取最小值" title="Anchor link to this section for reference">#</a></h3>
+<h3 id="MIN-获取最小值">MIN 获取最小值<a class="headerlink" href="#MIN-获取最小值" title="Permanent link">#</a></h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1288,7 +1288,7 @@
     <span class="n">Products</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="SUM-求和">SUM 求和<a class="headerlink" href="#SUM-求和" title="Anchor link to this section for reference">#</a></h3>
+<h3 id="SUM-求和">SUM 求和<a class="headerlink" href="#SUM-求和" title="Permanent link">#</a></h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1302,7 +1302,7 @@
     <span class="n">order_num</span> <span class="o">=</span> <span class="mi">20005</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="GROUP-BY-分组">GROUP BY 分组<a class="headerlink" href="#GROUP-BY-分组" title="Anchor link to this section for reference">#</a></h2>
+<h2 id="GROUP-BY-分组">GROUP BY 分组<a class="headerlink" href="#GROUP-BY-分组" title="Permanent link">#</a></h2>
 <ul>
 <li><code>GROUP BY</code> 跟 <code>汇总数据（聚集函数）</code> 搭配使用才有意义</li>
 <li><code>GROUP BY</code> 子句可以包含任意数目的列，因而可以对分组进行嵌套，更细致地进行数据分组</li>
@@ -1326,7 +1326,7 @@
     <span class="c1">-- 可以指定多个列</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="HAVING-分组过滤">HAVING 分组过滤<a class="headerlink" href="#HAVING-分组过滤" title="Anchor link to this section for reference">#</a></h2>
+<h2 id="HAVING-分组过滤">HAVING 分组过滤<a class="headerlink" href="#HAVING-分组过滤" title="Permanent link">#</a></h2>
 <ul>
 <li><code>WHERE</code> 使用的技术可以全部套用在 <code>HAVING</code></li>
 <li><code>WHERE</code> 在数据分组前进行过滤，<code>HAVING</code> 在数据分组后进行过滤</li>
@@ -1349,12 +1349,12 @@
     <span class="n">prod_name</span> <span class="k">NOT</span> <span class="k">LIKE</span> <span class="s1">&#39;F%&#39;</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="子查询">子查询<a class="headerlink" href="#子查询" title="Anchor link to this section for reference">#</a></h2>
+<h2 id="子查询">子查询<a class="headerlink" href="#子查询" title="Permanent link">#</a></h2>
 <ul>
 <li>作为子查询的 <code>SELECT</code> 语句只能查询单个列</li>
 <li>子查询并不总是最有效的方法，而且可读性低</li>
 </ul>
-<h3 id="子查询作为条件">子查询作为条件<a class="headerlink" href="#子查询作为条件" title="Anchor link to this section for reference">#</a></h3>
+<h3 id="子查询作为条件">子查询作为条件<a class="headerlink" href="#子查询作为条件" title="Permanent link">#</a></h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1370,7 +1370,7 @@
     <span class="n">cust_id</span> <span class="k">IN</span> <span class="p">(</span> <span class="k">SELECT</span> <span class="n">cust_id</span> <span class="k">FROM</span> <span class="n">Orders</span> <span class="k">WHERE</span> <span class="n">order_num</span> <span class="k">IN</span> <span class="p">(</span> <span class="k">SELECT</span> <span class="n">order_num</span> <span class="k">FROM</span> <span class="n">OrderItems</span> <span class="k">WHERE</span> <span class="n">prod_id</span> <span class="o">=</span> <span class="s1">&#39;RGAN01&#39;</span> <span class="p">)</span> <span class="p">);</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="子查询作为计算字段">子查询作为计算字段<a class="headerlink" href="#子查询作为计算字段" title="Anchor link to this section for reference">#</a></h3>
+<h3 id="子查询作为计算字段">子查询作为计算字段<a class="headerlink" href="#子查询作为计算字段" title="Permanent link">#</a></h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1388,8 +1388,8 @@
     <span class="n">cust_name</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="表联结">表联结<a class="headerlink" href="#表联结" title="Anchor link to this section for reference">#</a></h2>
-<h3 id="内联结">内联结<a class="headerlink" href="#内联结" title="Anchor link to this section for reference">#</a></h3>
+<h2 id="表联结">表联结<a class="headerlink" href="#表联结" title="Permanent link">#</a></h2>
+<h3 id="内联结">内联结<a class="headerlink" href="#内联结" title="Permanent link">#</a></h3>
 <ul>
 <li>要保证所有联结都有WHERE子句，否则DBMS将返回比想要的数据多得多的数据</li>
 <li>笛卡儿积的联结，也称叉联结（cross join）</li>
@@ -1429,7 +1429,7 @@
     <span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">Products</span> <span class="k">ON</span> <span class="n">Vendors</span><span class="p">.</span><span class="n">vend_id</span> <span class="o">=</span> <span class="n">Products</span><span class="p">.</span><span class="n">vend_id</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="自联结">自联结<a class="headerlink" href="#自联结" title="Anchor link to this section for reference">#</a></h3>
+<h3 id="自联结">自联结<a class="headerlink" href="#自联结" title="Permanent link">#</a></h3>
 <p>相当于是同一个表自己联结自己，许多DBMS处理联结远比处理子查询快得多。</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1452,7 +1452,7 @@
     <span class="k">AND</span> <span class="n">c2</span><span class="p">.</span><span class="n">cust_contact</span> <span class="o">=</span> <span class="s1">&#39;Jim Jones&#39;</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="外联结">外联结<a class="headerlink" href="#外联结" title="Anchor link to this section for reference">#</a></h3>
+<h3 id="外联结">外联结<a class="headerlink" href="#外联结" title="Permanent link">#</a></h3>
 <ul>
 <li>与内联结关联两个表中的行不同的是，外联结还包括没有关联行的行</li>
 <li>在使用OUTER JOIN语法时，必须使用RIGHT或LEFT关键字指定包括其所有行的表</li>
@@ -1472,7 +1472,7 @@
     <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">Orders</span> <span class="k">ON</span> <span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span> <span class="o">=</span> <span class="n">Orders</span><span class="p">.</span><span class="n">cust_id</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="UNION-组合查询">UNION 组合查询<a class="headerlink" href="#UNION-组合查询" title="Anchor link to this section for reference">#</a></h2>
+<h2 id="UNION-组合查询">UNION 组合查询<a class="headerlink" href="#UNION-组合查询" title="Permanent link">#</a></h2>
 <ul>
 <li>合并多个查询结果返回</li>
 <li>使用场景<ul>
