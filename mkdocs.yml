@@ -61,7 +61,7 @@ markdown_extensions:
       use_pygments: true
       # auto_title: true
       linenums: true
-      # linenums_style: pymdownx-inline  # 设置后导致代代码块带有行号的往右，暂时不明白原因
+      # linenums_style: pymdownx-inline  # 设置后导致代码块带有行号的往右，暂时不明白原因
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
