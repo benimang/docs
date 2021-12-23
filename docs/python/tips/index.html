@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://pytask.com/python/tips/">
       
       <link rel="icon" href="../../img/favicon.svg">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f7951f6f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -790,77 +790,130 @@
               
                 
 
-<h1 id="使用技巧">使用技巧<a class="headerlink" href="#使用技巧" title="Permanent link">⚓︎</a></h1>
-<h2 id="向下取整">向下取整<a class="headerlink" href="#向下取整" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kn">import</span> <span class="nn">math</span>
-<span class="linenos" data-linenos="2 "></span>
-<span class="linenos" data-linenos="3 "></span><span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="mi">5</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># 2</span>
-<span class="linenos" data-linenos="4 "></span>
-<span class="linenos" data-linenos="5 "></span><span class="mi">5</span> <span class="o">//</span> <span class="mi">2</span>             <span class="c1"># 2</span>
+<h1 id="使用技巧">使用技巧<a class="headerlink" href="#使用技巧" title="Anchor link to this section for reference">#</a></h1>
+<h2 id="向下取整">向下取整<a class="headerlink" href="#向下取整" title="Anchor link to this section for reference">#</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="mi">5</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># 2</span>
+
+<span class="mi">5</span> <span class="o">//</span> <span class="mi">2</span>             <span class="c1"># 2</span>
 </code></pre></div>
-<h2 id="获取文件大小">获取文件大小<a class="headerlink" href="#获取文件大小" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="linenos" data-linenos="2 "></span>
-<span class="linenos" data-linenos="3 "></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="s2">&quot;file&quot;</span><span class="p">)</span>  <span class="c1"># 单位是字节</span>
+</td></tr></table>
+<h2 id="获取文件大小">获取文件大小<a class="headerlink" href="#获取文件大小" title="Anchor link to this section for reference">#</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="s2">&quot;file&quot;</span><span class="p">)</span>  <span class="c1"># 单位是字节</span>
 </code></pre></div>
-<h2 id="dict-合并">dict 合并<a class="headerlink" href="#dict-合并" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">456</span><span class="p">}</span> <span class="o">|</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">567</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="mi">999</span><span class="p">}</span>
-<span class="linenos" data-linenos="2 "></span>
-<span class="linenos" data-linenos="3 "></span><span class="c1"># 生成新的 dict，如果 key 相同则后面的覆盖前面</span>
+</td></tr></table>
+<h2 id="dict-合并">dict 合并<a class="headerlink" href="#dict-合并" title="Anchor link to this section for reference">#</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">456</span><span class="p">}</span> <span class="o">|</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">567</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="mi">999</span><span class="p">}</span>
+
+<span class="c1"># 生成新的 dict，如果 key 相同则后面的覆盖前面</span>
 </code></pre></div>
-<h2 id="for-else">for else<a class="headerlink" href="#for-else" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-<span class="linenos" data-linenos="3 "></span>        <span class="k">break</span>
-<span class="linenos" data-linenos="4 "></span><span class="k">else</span><span class="p">:</span>
-<span class="linenos" data-linenos="5 "></span>    <span class="k">pass</span>
-<span class="linenos" data-linenos="6 "></span>    <span class="c1"># 如果循环有 break 就会执行</span>
+</td></tr></table>
+<h2 id="for-else">for else<a class="headerlink" href="#for-else" title="Anchor link to this section for reference">#</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">break</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">pass</span>
+    <span class="c1"># 如果循环有 break 就会执行</span>
 </code></pre></div>
-<h2 id="获取图片尺寸">获取图片尺寸<a class="headerlink" href="#获取图片尺寸" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># 需要第三方库支持 pillow</span>
-<span class="linenos" data-linenos="2 "></span>
-<span class="linenos" data-linenos="3 "></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="linenos" data-linenos="4 "></span>
-<span class="linenos" data-linenos="5 "></span><span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;file&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="6 "></span><span class="n">image</span><span class="o">.</span><span class="n">size</span>  <span class="c1"># (width, height)</span>
+</td></tr></table>
+<h2 id="获取图片尺寸">获取图片尺寸<a class="headerlink" href="#获取图片尺寸" title="Anchor link to this section for reference">#</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># 需要第三方库支持 pillow</span>
+
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+
+<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;file&quot;</span><span class="p">)</span>
+<span class="n">image</span><span class="o">.</span><span class="n">size</span>  <span class="c1"># (width, height)</span>
 </code></pre></div>
-<h2 id="命令行显示二维码">命令行显示二维码<a class="headerlink" href="#命令行显示二维码" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># 需要第三方库支持 qrcode</span>
-<span class="linenos" data-linenos=" 2 "></span><span class="c1"># Windows 命令行窗口调整大小会导致二维码消失</span>
-<span class="linenos" data-linenos=" 3 "></span><span class="c1"># 没找到如何设置二维码大小</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="kn">import</span> <span class="nn">qrcode</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span><span class="n">qr</span> <span class="o">=</span> <span class="n">qrcode</span><span class="o">.</span><span class="n">QRCode</span><span class="p">()</span>
-<span class="linenos" data-linenos=" 8 "></span><span class="n">qr</span><span class="o">.</span><span class="n">add_data</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">UPLOAD_URL</span><span class="si">}{</span><span class="n">outputFileName</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos=" 9 "></span><span class="n">qr</span><span class="o">.</span><span class="n">make</span><span class="p">()</span>
-<span class="linenos" data-linenos="10 "></span><span class="n">qr</span><span class="o">.</span><span class="n">print_tty</span><span class="p">()</span>
+</td></tr></table>
+<h2 id="命令行显示二维码">命令行显示二维码<a class="headerlink" href="#命令行显示二维码" title="Anchor link to this section for reference">#</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># 需要第三方库支持 qrcode</span>
+<span class="c1"># Windows 命令行窗口调整大小会导致二维码消失</span>
+<span class="c1"># 没找到如何设置二维码大小</span>
+
+<span class="kn">import</span> <span class="nn">qrcode</span>
+
+<span class="n">qr</span> <span class="o">=</span> <span class="n">qrcode</span><span class="o">.</span><span class="n">QRCode</span><span class="p">()</span>
+<span class="n">qr</span><span class="o">.</span><span class="n">add_data</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">UPLOAD_URL</span><span class="si">}{</span><span class="n">outputFileName</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">qr</span><span class="o">.</span><span class="n">make</span><span class="p">()</span>
+<span class="n">qr</span><span class="o">.</span><span class="n">print_tty</span><span class="p">()</span>
 </code></pre></div>
-<h2 id="复制与粘贴">复制与粘贴<a class="headerlink" href="#复制与粘贴" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># 需要第三方库支持 pyperclip</span>
-<span class="linenos" data-linenos="2 "></span>
-<span class="linenos" data-linenos="3 "></span><span class="kn">import</span> <span class="nn">pyperclip</span>
-<span class="linenos" data-linenos="4 "></span>
-<span class="linenos" data-linenos="5 "></span><span class="n">pyperclip</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="s2">&quot;content...&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="6 "></span><span class="n">pyperclip</span><span class="o">.</span><span class="n">paste</span><span class="p">()</span>
+</td></tr></table>
+<h2 id="复制与粘贴">复制与粘贴<a class="headerlink" href="#复制与粘贴" title="Anchor link to this section for reference">#</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># 需要第三方库支持 pyperclip</span>
+
+<span class="kn">import</span> <span class="nn">pyperclip</span>
+
+<span class="n">pyperclip</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="s2">&quot;content...&quot;</span><span class="p">)</span>
+<span class="n">pyperclip</span><span class="o">.</span><span class="n">paste</span><span class="p">()</span>
 </code></pre></div>
-<h2 id="asyncio-嵌套支持">asyncio 嵌套支持<a class="headerlink" href="#asyncio-嵌套支持" title="Permanent link">⚓︎</a></h2>
+</td></tr></table>
+<h2 id="asyncio-嵌套支持">asyncio 嵌套支持<a class="headerlink" href="#asyncio-嵌套支持" title="Anchor link to this section for reference">#</a></h2>
 <p>其中一个使用场景是在 <code>ipython</code> 中使用 <code>playwright</code> 的异步接口就需要用到这个支持</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># 需要第三方库支持 nest_asyncio</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="hll"><span class="linenos" data-linenos=" 3 "></span><span class="kn">import</span> <span class="nn">nest_asyncio</span>
-</span><span class="hll"><span class="linenos" data-linenos=" 4 "></span><span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
-</span><span class="linenos" data-linenos=" 5 "></span>
-<span class="linenos" data-linenos=" 6 "></span><span class="kn">import</span> <span class="nn">asyncio</span>
-<span class="linenos" data-linenos=" 7 "></span>
-<span class="linenos" data-linenos=" 8 "></span><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-<span class="linenos" data-linenos=" 9 "></span>    <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main2</span><span class="p">())</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span><span class="k">async</span> <span class="k">def</span> <span class="nf">main2</span><span class="p">():</span>
-<span class="linenos" data-linenos="12 "></span>    <span class="k">pass</span>
-<span class="linenos" data-linenos="13 "></span>
-<span class="linenos" data-linenos="14 "></span><span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># 需要第三方库支持 nest_asyncio</span>
+
+<span class="hll"><span class="kn">import</span> <span class="nn">nest_asyncio</span>
+</span><span class="hll"><span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
+</span>
+<span class="kn">import</span> <span class="nn">asyncio</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main2</span><span class="p">())</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main2</span><span class="p">():</span>
+    <span class="k">pass</span>
+
+<span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </code></pre></div>
+</td></tr></table>
 
               
             </article>
@@ -950,7 +1003,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.highlight", "content.code.annotate"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.649a939e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
       
         <script src="../../assets/js/tablesort.min.js"></script>
       

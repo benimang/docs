@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://pytask.com/others/vscode/">
       
       <link rel="icon" href="../../img/favicon.svg">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f7951f6f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -762,15 +762,15 @@
               
                 
 
-<h1 id="vscode">vscode<a class="headerlink" href="#vscode" title="Permanent link">⚓︎</a></h1>
-<h2 id="常用插件">常用插件<a class="headerlink" href="#常用插件" title="Permanent link">⚓︎</a></h2>
+<h1 id="vscode">vscode<a class="headerlink" href="#vscode" title="Anchor link to this section for reference">#</a></h1>
+<h2 id="常用插件">常用插件<a class="headerlink" href="#常用插件" title="Anchor link to this section for reference">#</a></h2>
 <ul>
 <li><code>Python</code> </li>
 <li><code>Pylance</code> 语言服务器，其中 <code>typing</code> 需要这个的支持</li>
 <li><code>Markdown All in One</code></li>
 <li><code>YAML</code></li>
 </ul>
-<h2 id="Unity-开发常用插件">Unity 开发常用插件<a class="headerlink" href="#Unity-开发常用插件" title="Permanent link">⚓︎</a></h2>
+<h2 id="Unity-开发常用插件">Unity 开发常用插件<a class="headerlink" href="#Unity-开发常用插件" title="Anchor link to this section for reference">#</a></h2>
 <ul>
 <li><code>Unity Tools</code></li>
 <li><code>Unity Code Snippets</code></li>
@@ -779,104 +779,195 @@
 <li><code>C# XML Documentation Comments</code></li>
 <li><code>Auto-Using for C#</code></li>
 </ul>
-<h2 id="settingjson-工作环境常用配置">setting.json 工作环境常用配置<a class="headerlink" href="#settingjson-工作环境常用配置" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="p">{</span>
-<span class="linenos" data-linenos=" 2 "></span>    <span class="nt">&quot;workbench.editor.enablePreview&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-<span class="linenos" data-linenos=" 3 "></span>    <span class="nt">&quot;breadcrumbs.enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="err">//</span> <span class="err">代码顶部导航</span>
-<span class="linenos" data-linenos=" 4 "></span>    <span class="nt">&quot;explorer.autoReveal&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="err">//</span> <span class="err">取消文件自动定位跟踪</span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="nt">&quot;python.linting.flake8Enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-<span class="linenos" data-linenos=" 6 "></span>    <span class="nt">&quot;editor.renderWhitespace&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="nt">&quot;files.eol&quot;</span><span class="p">:</span> <span class="s2">&quot;\n&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos=" 8 "></span>    <span class="nt">&quot;python.formatting.autopep8Args&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos" data-linenos=" 9 "></span>        <span class="s2">&quot;--ignore=E501&quot;</span>  <span class="err">//</span> <span class="err">换行格式化</span>
-<span class="linenos" data-linenos="10 "></span>    <span class="p">],</span>
-<span class="linenos" data-linenos="11 "></span>
-<span class="linenos" data-linenos="12 "></span>    <span class="err">//</span> <span class="kc">t</span><span class="err">ypi</span><span class="kc">n</span><span class="err">g</span> <span class="err">语法检查</span>
-<span class="linenos" data-linenos="13 "></span>    <span class="nt">&quot;python.languageServer&quot;</span><span class="p">:</span> <span class="s2">&quot;Pylance&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="14 "></span>    <span class="nt">&quot;python.analysis.diagnosticMode&quot;</span><span class="p">:</span> <span class="s2">&quot;workspace&quot;</span><span class="p">,</span>  <span class="err">//</span> <span class="err">检查整个workspace</span>
-<span class="linenos" data-linenos="15 "></span>    <span class="nt">&quot;python.analysis.typeCheckingMode&quot;</span><span class="p">:</span> <span class="s2">&quot;strict&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="16 "></span>    <span class="nt">&quot;python.analysis.diagnosticSeverityOverrides&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos" data-linenos="17 "></span>        <span class="nt">&quot;reportMissingTypeStubs&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="18 "></span>        <span class="nt">&quot;reportUnknownMemberType&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="19 "></span>        <span class="nt">&quot;reportUnknownParameterType&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="20 "></span>        <span class="nt">&quot;reportUnknownVariableType&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="21 "></span>        <span class="nt">&quot;reportUnknownArgumentType&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="22 "></span>        <span class="err">//</span> <span class="nt">&quot;reportUnusedCallResult&quot;</span><span class="p">:</span> <span class="s2">&quot;warning&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="23 "></span>        <span class="nt">&quot;reportUnusedClass&quot;</span><span class="p">:</span> <span class="s2">&quot;warning&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="24 "></span>        <span class="nt">&quot;reportUnusedCoroutine&quot;</span><span class="p">:</span> <span class="s2">&quot;warning&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="25 "></span>        <span class="nt">&quot;reportUnusedFunction&quot;</span><span class="p">:</span> <span class="s2">&quot;warning&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="26 "></span>        <span class="nt">&quot;reportUnusedImport&quot;</span><span class="p">:</span> <span class="s2">&quot;warning&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="27 "></span>        <span class="nt">&quot;reportUnusedVariable&quot;</span><span class="p">:</span> <span class="s2">&quot;warning&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="28 "></span>        <span class="nt">&quot;reportImportCycles&quot;</span><span class="p">:</span> <span class="s2">&quot;warning&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="29 "></span>    <span class="p">},</span>
-<span class="linenos" data-linenos="30 "></span>
-<span class="linenos" data-linenos="31 "></span>    <span class="err">//</span> <span class="err">py</span><span class="kc">test</span>
-<span class="linenos" data-linenos="32 "></span>    <span class="nt">&quot;python.testing.pytestArgs&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos" data-linenos="33 "></span>        <span class="s2">&quot;test&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="34 "></span>        <span class="s2">&quot;-s&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="35 "></span>    <span class="p">],</span>
-<span class="linenos" data-linenos="36 "></span>    <span class="nt">&quot;python.testing.unittestEnabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-<span class="linenos" data-linenos="37 "></span>    <span class="nt">&quot;python.testing.pytestEnabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-<span class="linenos" data-linenos="38 "></span>
-<span class="linenos" data-linenos="39 "></span>    <span class="err">//</span> <span class="err">开发环境下不显示指定文件</span>
-<span class="linenos" data-linenos="40 "></span>    <span class="nt">&quot;files.exclude&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos" data-linenos="41 "></span>        <span class="nt">&quot;**/__pycache__&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-<span class="linenos" data-linenos="42 "></span>        <span class="nt">&quot;.gitignore&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-<span class="linenos" data-linenos="43 "></span>        <span class="nt">&quot;.pytest_cache&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-<span class="linenos" data-linenos="44 "></span>        <span class="nt">&quot;publish.bat&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-<span class="linenos" data-linenos="45 "></span>        <span class="nt">&quot;setup.py&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-<span class="linenos" data-linenos="46 "></span>        <span class="nt">&quot;beniutils.egg-info&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-<span class="linenos" data-linenos="47 "></span>        <span class="nt">&quot;dist&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-<span class="linenos" data-linenos="48 "></span>        <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-<span class="linenos" data-linenos="49 "></span>        <span class="nt">&quot;MANIFEST.in&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-<span class="linenos" data-linenos="50 "></span>        <span class="nt">&quot;README.md&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-<span class="linenos" data-linenos="51 "></span>    <span class="p">},</span>
-<span class="linenos" data-linenos="52 "></span><span class="p">}</span>
+<h2 id="settingjson-工作环境常用配置">setting.json 工作环境常用配置<a class="headerlink" href="#settingjson-工作环境常用配置" title="Anchor link to this section for reference">#</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;workbench.editor.enablePreview&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;breadcrumbs.enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="err">//</span> <span class="err">代码顶部导航</span>
+    <span class="nt">&quot;explorer.autoReveal&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="err">//</span> <span class="err">取消文件自动定位跟踪</span>
+    <span class="nt">&quot;python.linting.flake8Enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;editor.renderWhitespace&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;files.eol&quot;</span><span class="p">:</span> <span class="s2">&quot;\n&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;python.formatting.autopep8Args&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;--ignore=E501&quot;</span>  <span class="err">//</span> <span class="err">换行格式化</span>
+    <span class="p">],</span>
+
+    <span class="err">//</span> <span class="kc">t</span><span class="err">ypi</span><span class="kc">n</span><span class="err">g</span> <span class="err">语法检查</span>
+    <span class="nt">&quot;python.languageServer&quot;</span><span class="p">:</span> <span class="s2">&quot;Pylance&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;python.analysis.diagnosticMode&quot;</span><span class="p">:</span> <span class="s2">&quot;workspace&quot;</span><span class="p">,</span>  <span class="err">//</span> <span class="err">检查整个workspace</span>
+    <span class="nt">&quot;python.analysis.typeCheckingMode&quot;</span><span class="p">:</span> <span class="s2">&quot;strict&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;python.analysis.diagnosticSeverityOverrides&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;reportMissingTypeStubs&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;reportUnknownMemberType&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;reportUnknownParameterType&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;reportUnknownVariableType&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;reportUnknownArgumentType&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+        <span class="err">//</span> <span class="nt">&quot;reportUnusedCallResult&quot;</span><span class="p">:</span> <span class="s2">&quot;warning&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;reportUnusedClass&quot;</span><span class="p">:</span> <span class="s2">&quot;warning&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;reportUnusedCoroutine&quot;</span><span class="p">:</span> <span class="s2">&quot;warning&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;reportUnusedFunction&quot;</span><span class="p">:</span> <span class="s2">&quot;warning&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;reportUnusedImport&quot;</span><span class="p">:</span> <span class="s2">&quot;warning&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;reportUnusedVariable&quot;</span><span class="p">:</span> <span class="s2">&quot;warning&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;reportImportCycles&quot;</span><span class="p">:</span> <span class="s2">&quot;warning&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+
+    <span class="err">//</span> <span class="err">py</span><span class="kc">test</span>
+    <span class="nt">&quot;python.testing.pytestArgs&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;-s&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;python.testing.unittestEnabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;python.testing.pytestEnabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="err">//</span> <span class="err">开发环境下不显示指定文件</span>
+    <span class="nt">&quot;files.exclude&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;**/__pycache__&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;.gitignore&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;.pytest_cache&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;publish.bat&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;setup.py&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;beniutils.egg-info&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;dist&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;MANIFEST.in&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;README.md&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}</span>
 </code></pre></div>
-<h2 id="settingjson-用户常用配置">setting.json 用户常用配置<a class="headerlink" href="#settingjson-用户常用配置" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="p">{</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="nt">&quot;security.workspace.trust.enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-<span class="linenos" data-linenos="3 "></span>    <span class="nt">&quot;redhat.telemetry.enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="nt">&quot;workbench.startupEditor&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="5 "></span>    <span class="nt">&quot;window.restoreWindows&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="6 "></span><span class="p">}</span>
+</td></tr></table>
+<h2 id="settingjson-用户常用配置">setting.json 用户常用配置<a class="headerlink" href="#settingjson-用户常用配置" title="Anchor link to this section for reference">#</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;security.workspace.trust.enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;redhat.telemetry.enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;workbench.startupEditor&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;window.restoreWindows&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+<span class="p">}</span>
 </code></pre></div>
-<h2 id="快捷键配置">快捷键配置<a class="headerlink" href="#快捷键配置" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="p">[</span>
-<span class="linenos" data-linenos=" 2 "></span>    <span class="p">{</span>
-<span class="linenos" data-linenos=" 3 "></span>        <span class="err">//</span> <span class="err">语法提示</span>
-<span class="linenos" data-linenos=" 4 "></span>        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;alt+/&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos=" 5 "></span>        <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;editor.action.triggerSuggest&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos=" 6 "></span>        <span class="nt">&quot;when&quot;</span><span class="p">:</span> <span class="s2">&quot;editorHasCompletionItemProvider &amp;&amp; textInputFocus &amp;&amp; !editorReadonly&quot;</span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="p">},</span>
-<span class="linenos" data-linenos=" 8 "></span>    <span class="p">{</span>
-<span class="linenos" data-linenos=" 9 "></span>        <span class="err">//</span> <span class="err">关闭终端</span>
-<span class="linenos" data-linenos="10 "></span>        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;alt+d&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="11 "></span>        <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;workbench.action.terminal.kill&quot;</span>
-<span class="linenos" data-linenos="12 "></span>    <span class="p">},</span>
-<span class="linenos" data-linenos="13 "></span>    <span class="p">{</span>
-<span class="linenos" data-linenos="14 "></span>        <span class="err">//</span> <span class="err">全局搜索文本</span>
-<span class="linenos" data-linenos="15 "></span>        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;ctrl+shift+f&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="16 "></span>        <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;workbench.action.findInFiles&quot;</span>
-<span class="linenos" data-linenos="17 "></span>    <span class="p">},</span>
-<span class="linenos" data-linenos="18 "></span>    <span class="p">{</span>
-<span class="linenos" data-linenos="19 "></span>        <span class="err">//</span> <span class="err">py</span><span class="kc">test</span> <span class="err">清除结果</span>
-<span class="linenos" data-linenos="20 "></span>        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;ctrl+; c&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="21 "></span>        <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;testing.clearTestResults&quot;</span>
-<span class="linenos" data-linenos="22 "></span>    <span class="p">},</span>
-<span class="linenos" data-linenos="23 "></span>    <span class="p">{</span>
-<span class="linenos" data-linenos="24 "></span>        <span class="err">//</span> <span class="err">文本转大写</span>
-<span class="linenos" data-linenos="25 "></span>        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;ctrl+shift+alt+u&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="26 "></span>        <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;editor.action.transformToUppercase&quot;</span>
-<span class="linenos" data-linenos="27 "></span>    <span class="p">},</span>
-<span class="linenos" data-linenos="28 "></span>    <span class="p">{</span>
-<span class="linenos" data-linenos="29 "></span>        <span class="err">//</span> <span class="err">文本转小写</span>
-<span class="linenos" data-linenos="30 "></span>        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;ctrl+shift+alt+l&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="31 "></span>        <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;editor.action.transformToLowercase&quot;</span>
-<span class="linenos" data-linenos="32 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="33 "></span><span class="p">]</span>
+</td></tr></table>
+<h2 id="快捷键配置">快捷键配置<a class="headerlink" href="#快捷键配置" title="Anchor link to this section for reference">#</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="err">//</span> <span class="err">语法提示</span>
+        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;alt+/&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;editor.action.triggerSuggest&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;when&quot;</span><span class="p">:</span> <span class="s2">&quot;editorHasCompletionItemProvider &amp;&amp; textInputFocus &amp;&amp; !editorReadonly&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="err">//</span> <span class="err">关闭终端</span>
+        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;alt+d&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;workbench.action.terminal.kill&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="err">//</span> <span class="err">全局搜索文本</span>
+        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;ctrl+shift+f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;workbench.action.findInFiles&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="err">//</span> <span class="err">py</span><span class="kc">test</span> <span class="err">清除结果</span>
+        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;ctrl+; c&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;testing.clearTestResults&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="err">//</span> <span class="err">文本转大写</span>
+        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;ctrl+shift+alt+u&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;editor.action.transformToUppercase&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="err">//</span> <span class="err">文本转小写</span>
+        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;ctrl+shift+alt+l&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;editor.action.transformToLowercase&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
 </code></pre></div>
-<h2 id="常用快捷键">常用快捷键<a class="headerlink" href="#常用快捷键" title="Permanent link">⚓︎</a></h2>
+</td></tr></table>
+<h2 id="常用快捷键">常用快捷键<a class="headerlink" href="#常用快捷键" title="Anchor link to this section for reference">#</a></h2>
 <table>
 <thead>
 <tr>
@@ -1056,7 +1147,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.highlight", "content.code.annotate"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.649a939e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
       
         <script src="../../assets/js/tablesort.min.js"></script>
       

@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://pytask.com/python/typing/">
       
       <link rel="icon" href="../../img/favicon.svg">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f7951f6f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -732,25 +732,38 @@
               
                 
 
-<h1 id="typing">typing<a class="headerlink" href="#typing" title="Permanent link">⚓︎</a></h1>
-<h2 id="TypeVar">TypeVar<a class="headerlink" href="#TypeVar" title="Permanent link">⚓︎</a></h2>
-<h3 id="泛型使用">泛型使用<a class="headerlink" href="#泛型使用" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypeVar</span>
-<span class="linenos" data-linenos="2 "></span>
-<span class="linenos" data-linenos="3 "></span><span class="n">TestType</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">&#39;TestType&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
-<span class="linenos" data-linenos="4 "></span>
-<span class="linenos" data-linenos="5 "></span><span class="k">def</span> <span class="nf">myfun</span><span class="p">(</span><span class="n">aa</span><span class="p">:</span> <span class="n">TestType</span><span class="p">,</span> <span class="n">bb</span><span class="p">:</span> <span class="n">TestType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TestType</span><span class="p">:</span>
-<span class="linenos" data-linenos="6 "></span>    <span class="k">return</span> <span class="n">aa</span> <span class="o">+</span> <span class="n">bb</span>
-<span class="linenos" data-linenos="7 "></span>
-<span class="linenos" data-linenos="8 "></span><span class="n">myfun</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>  <span class="c1"># ab</span>
-<span class="linenos" data-linenos="9 "></span><span class="n">myfun</span><span class="p">(</span><span class="mi">123</span><span class="p">,</span> <span class="mi">456</span><span class="p">)</span>  <span class="c1"># 579</span>
+<h1 id="typing">typing<a class="headerlink" href="#typing" title="Anchor link to this section for reference">#</a></h1>
+<h2 id="TypeVar">TypeVar<a class="headerlink" href="#TypeVar" title="Anchor link to this section for reference">#</a></h2>
+<h3 id="泛型使用">泛型使用<a class="headerlink" href="#泛型使用" title="Anchor link to this section for reference">#</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypeVar</span>
+
+<span class="n">TestType</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">&#39;TestType&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">myfun</span><span class="p">(</span><span class="n">aa</span><span class="p">:</span> <span class="n">TestType</span><span class="p">,</span> <span class="n">bb</span><span class="p">:</span> <span class="n">TestType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TestType</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">aa</span> <span class="o">+</span> <span class="n">bb</span>
+
+<span class="n">myfun</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>  <span class="c1"># ab</span>
+<span class="n">myfun</span><span class="p">(</span><span class="mi">123</span><span class="p">,</span> <span class="mi">456</span><span class="p">)</span>  <span class="c1"># 579</span>
 </code></pre></div>
-<h3 id="decorator-类型定义">decorator 类型定义<a class="headerlink" href="#decorator-类型定义" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Coroutine</span>
-<span class="linenos" data-linenos="2 "></span>
-<span class="linenos" data-linenos="3 "></span><span class="n">WrappedFunc</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;WrappedFunc&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="nb">object</span><span class="p">])</span>
-<span class="linenos" data-linenos="4 "></span><span class="n">WrappedAsyncFunc</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;WrappedAsyncFunc&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Coroutine</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="nb">object</span><span class="p">]])</span>
+</td></tr></table>
+<h3 id="decorator-类型定义">decorator 类型定义<a class="headerlink" href="#decorator-类型定义" title="Anchor link to this section for reference">#</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Coroutine</span>
+
+<span class="n">WrappedFunc</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;WrappedFunc&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="nb">object</span><span class="p">])</span>
+<span class="n">WrappedAsyncFunc</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;WrappedAsyncFunc&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Coroutine</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="nb">object</span><span class="p">]])</span>
 </code></pre></div>
+</td></tr></table>
 <div class="admonition tips">
 <p class="admonition-title">Tips</p>
 <p><a href="../decorator/#typing-类型返回">详细使用方法参考 <code>decorator</code> 实现</a></p>
@@ -844,7 +857,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.highlight", "content.code.annotate"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.649a939e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
       
         <script src="../../assets/js/tablesort.min.js"></script>
       

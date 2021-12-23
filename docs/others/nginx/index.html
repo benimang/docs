@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://pytask.com/others/nginx/">
       
       <link rel="icon" href="../../img/favicon.svg">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f7951f6f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -646,58 +646,108 @@
               
                 
 
-<h1 id="Nginx-常用配置">Nginx 常用配置<a class="headerlink" href="#Nginx-常用配置" title="Permanent link">⚓︎</a></h1>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>server {
-<span class="linenos" data-linenos=" 2 "></span>    listen 80;
-<span class="linenos" data-linenos=" 3 "></span>    server_name www.xxx.com;
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span>    location /static {
-<span class="linenos" data-linenos=" 6 "></span>        alias /data/www/xiao4;
-<span class="linenos" data-linenos=" 7 "></span>        add_header Access-Control-Allow-Origin *;
-<span class="linenos" data-linenos=" 8 "></span>        add_header Access-Control-Allow-Headers &quot;Origin, X-Requested-With, Content-Type, Accept&quot;;
-<span class="linenos" data-linenos=" 9 "></span>        add_header Access-Control-Allow-Methods &quot;GET, POST, OPTIONS&quot;;
-<span class="linenos" data-linenos="10 "></span>    }
-<span class="linenos" data-linenos="11 "></span>
-<span class="linenos" data-linenos="12 "></span>    location ~* ^.*/rs_([\d|a-z]+)_re/.*$ {
-<span class="linenos" data-linenos="13 "></span>        rewrite ^(.*)/rs_([\d|a-z]+)_re/(.*)$ $1/$3?v=$2;
-<span class="linenos" data-linenos="14 "></span>    }
-<span class="linenos" data-linenos="15 "></span>
-<span class="linenos" data-linenos="16 "></span>    gzip on;
-<span class="linenos" data-linenos="17 "></span>    gzip_min_length 5k;
-<span class="linenos" data-linenos="18 "></span>    gzip_types text/css text/plain application/javascript application/json application/xml image/gif;
-<span class="linenos" data-linenos="19 "></span>}
-<span class="linenos" data-linenos="20 "></span>
-<span class="linenos" data-linenos="21 "></span>server {
-<span class="linenos" data-linenos="22 "></span>    listen       443 ssl;    
-<span class="linenos" data-linenos="23 "></span>    server_name www.xxx.com;
-<span class="linenos" data-linenos="24 "></span>
-<span class="linenos" data-linenos="25 "></span>    # https 证书
-<span class="linenos" data-linenos="26 "></span>    ssl on;
-<span class="linenos" data-linenos="27 "></span>    ssl_certificate /data/cert/xxx.com.pem;
-<span class="linenos" data-linenos="28 "></span>    ssl_certificate_key  /data/cert/xxx.com.key;
-<span class="linenos" data-linenos="29 "></span>
-<span class="linenos" data-linenos="30 "></span>    location /static {
-<span class="linenos" data-linenos="31 "></span>        alias /data/www/xiao4;
-<span class="linenos" data-linenos="32 "></span>        add_header Access-Control-Allow-Origin *;
-<span class="linenos" data-linenos="33 "></span>        add_header Access-Control-Allow-Headers &quot;Origin, X-Requested-With, Content-Type, Accept&quot;;
-<span class="linenos" data-linenos="34 "></span>        add_header Access-Control-Allow-Methods &quot;GET, POST, OPTIONS&quot;;
-<span class="linenos" data-linenos="35 "></span>    }
-<span class="linenos" data-linenos="36 "></span>
-<span class="linenos" data-linenos="37 "></span>    # url rewrite
-<span class="linenos" data-linenos="38 "></span>    location ~* ^.*/rs_([\d|a-z]+)_re/.*$ {
-<span class="linenos" data-linenos="39 "></span>        rewrite ^(.*)/rs_([\d|a-z]+)_re/(.*)$ $1/$3?v=$2;
-<span class="linenos" data-linenos="40 "></span>    }
-<span class="linenos" data-linenos="41 "></span>
-<span class="linenos" data-linenos="42 "></span>    # gzip 设置
-<span class="linenos" data-linenos="43 "></span>    gzip on;
-<span class="linenos" data-linenos="44 "></span>    gzip_min_length 5k;
-<span class="linenos" data-linenos="45 "></span>    gzip_types text/css text/plain application/javascript application/json application/xml image/gif;
-<span class="linenos" data-linenos="46 "></span>
-<span class="linenos" data-linenos="47 "></span>    # image/png 项目中的资源已经没有压缩效果
-<span class="linenos" data-linenos="48 "></span>    # audio/mpeg 项目中大部分的声音是没有压缩效果，只有一个大文件的背景音乐而已
-<span class="linenos" data-linenos="49 "></span>    # image/jpeg jpeg图片本身就有压缩无需再压缩
-<span class="linenos" data-linenos="50 "></span>}
+<h1 id="Nginx-常用配置">Nginx 常用配置<a class="headerlink" href="#Nginx-常用配置" title="Anchor link to this section for reference">#</a></h1>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>server {
+    listen 80;
+    server_name www.xxx.com;
+
+    location /static {
+        alias /data/www/xiao4;
+        add_header Access-Control-Allow-Origin *;
+        add_header Access-Control-Allow-Headers &quot;Origin, X-Requested-With, Content-Type, Accept&quot;;
+        add_header Access-Control-Allow-Methods &quot;GET, POST, OPTIONS&quot;;
+    }
+
+    location ~* ^.*/rs_([\d|a-z]+)_re/.*$ {
+        rewrite ^(.*)/rs_([\d|a-z]+)_re/(.*)$ $1/$3?v=$2;
+    }
+
+    gzip on;
+    gzip_min_length 5k;
+    gzip_types text/css text/plain application/javascript application/json application/xml image/gif;
+}
+
+server {
+    listen       443 ssl;    
+    server_name www.xxx.com;
+
+    # https 证书
+    ssl on;
+    ssl_certificate /data/cert/xxx.com.pem;
+    ssl_certificate_key  /data/cert/xxx.com.key;
+
+    location /static {
+        alias /data/www/xiao4;
+        add_header Access-Control-Allow-Origin *;
+        add_header Access-Control-Allow-Headers &quot;Origin, X-Requested-With, Content-Type, Accept&quot;;
+        add_header Access-Control-Allow-Methods &quot;GET, POST, OPTIONS&quot;;
+    }
+
+    # url rewrite
+    location ~* ^.*/rs_([\d|a-z]+)_re/.*$ {
+        rewrite ^(.*)/rs_([\d|a-z]+)_re/(.*)$ $1/$3?v=$2;
+    }
+
+    # gzip 设置
+    gzip on;
+    gzip_min_length 5k;
+    gzip_types text/css text/plain application/javascript application/json application/xml image/gif;
+
+    # image/png 项目中的资源已经没有压缩效果
+    # audio/mpeg 项目中大部分的声音是没有压缩效果，只有一个大文件的背景音乐而已
+    # image/jpeg jpeg图片本身就有压缩无需再压缩
+}
 </code></pre></div>
+</td></tr></table>
 
               
             </article>
@@ -787,7 +837,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.highlight", "content.code.annotate"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.649a939e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
       
         <script src="../../assets/js/tablesort.min.js"></script>
       

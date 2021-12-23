@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://pytask.com/database/select/">
       
       <link rel="icon" href="../../img/favicon.svg">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f7951f6f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -1064,72 +1064,109 @@
               
                 
 
-<h1 id="SQL-查询">SQL 查询<a class="headerlink" href="#SQL-查询" title="Permanent link">⚓︎</a></h1>
-<h2 id="DISTINCT-查询不同的值">DISTINCT 查询不同的值<a class="headerlink" href="#DISTINCT-查询不同的值" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span> <span class="k">DISTINCT</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="n">prod_id</span>
-<span class="linenos" data-linenos="3 "></span>    <span class="c1">-- 可以指定多个字段  </span>
-<span class="linenos" data-linenos="4 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="5 "></span>    <span class="n">Products</span><span class="p">;</span>
+<h1 id="SQL-查询">SQL 查询<a class="headerlink" href="#SQL-查询" title="Anchor link to this section for reference">#</a></h1>
+<h2 id="DISTINCT-查询不同的值">DISTINCT 查询不同的值<a class="headerlink" href="#DISTINCT-查询不同的值" title="Anchor link to this section for reference">#</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="k">DISTINCT</span>
+    <span class="n">prod_id</span>
+    <span class="c1">-- 可以指定多个字段  </span>
+<span class="k">FROM</span>
+    <span class="n">Products</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="LIMIT-OFFSET-限制返回结果">LIMIT OFFSET 限制返回结果<a class="headerlink" href="#LIMIT-OFFSET-限制返回结果" title="Permanent link">⚓︎</a></h2>
+</td></tr></table>
+<h2 id="LIMIT-OFFSET-限制返回结果">LIMIT OFFSET 限制返回结果<a class="headerlink" href="#LIMIT-OFFSET-限制返回结果" title="Anchor link to this section for reference">#</a></h2>
 <ul>
 <li><code>LIMIT</code> 表示返回记录的数量</li>
 <li><code>OFFSET</code> 表示从第几行开始返回，注意：第1行用0表示</li>
 <li><code>OFFSET</code> 可以不写，表示从第0行开始</li>
 <li><code>OFFSET</code> 不能没有 <code>LIMIT</code> 单独出现</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span> 
-<span class="linenos" data-linenos="2 "></span>    <span class="o">*</span>
-<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="n">Products</span>
-<span class="linenos" data-linenos="5 "></span><span class="k">LIMIT</span> <span class="mi">3</span> <span class="k">OFFSET</span> <span class="mi">3</span><span class="p">;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span> 
+    <span class="o">*</span>
+<span class="k">FROM</span>
+    <span class="n">Products</span>
+<span class="k">LIMIT</span> <span class="mi">3</span> <span class="k">OFFSET</span> <span class="mi">3</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="ORDER-BY-排序结果">ORDER BY 排序结果<a class="headerlink" href="#ORDER-BY-排序结果" title="Permanent link">⚓︎</a></h2>
+</td></tr></table>
+<h2 id="ORDER-BY-排序结果">ORDER BY 排序结果<a class="headerlink" href="#ORDER-BY-排序结果" title="Anchor link to this section for reference">#</a></h2>
 <ul>
 <li><code>ORDER BY</code> 可以指定多个列排序，甚至可以指定 <code>SELECT</code> 没有指定的列</li>
 <li>使用 <code>DESC</code> 指定降序</li>
 <li>默认是升序，也可以明确指定 <code>ASC</code></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="o">*</span> 
-<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="n">Products</span> 
-<span class="linenos" data-linenos="5 "></span><span class="k">ORDER</span> <span class="k">BY</span>
-<span class="linenos" data-linenos="6 "></span>    <span class="n">prod_name</span> <span class="k">ASC</span><span class="p">,</span>
-<span class="linenos" data-linenos="7 "></span>    <span class="n">prod_price</span> <span class="k">DESC</span><span class="p">;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="o">*</span> 
+<span class="k">FROM</span>
+    <span class="n">Products</span> 
+<span class="k">ORDER</span> <span class="k">BY</span>
+    <span class="n">prod_name</span> <span class="k">ASC</span><span class="p">,</span>
+    <span class="n">prod_price</span> <span class="k">DESC</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="BETWEEN-AND-范围值检查">BETWEEN AND 范围值检查<a class="headerlink" href="#BETWEEN-AND-范围值检查" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="o">*</span> 
-<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="n">Products</span> 
-<span class="linenos" data-linenos="5 "></span><span class="k">WHERE</span>
-<span class="linenos" data-linenos="6 "></span>    <span class="n">prod_price</span> <span class="k">BETWEEN</span> <span class="mi">1</span> <span class="k">AND</span> <span class="mi">5</span><span class="p">;</span>
+</td></tr></table>
+<h2 id="BETWEEN-AND-范围值检查">BETWEEN AND 范围值检查<a class="headerlink" href="#BETWEEN-AND-范围值检查" title="Anchor link to this section for reference">#</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="o">*</span> 
+<span class="k">FROM</span>
+    <span class="n">Products</span> 
+<span class="k">WHERE</span>
+    <span class="n">prod_price</span> <span class="k">BETWEEN</span> <span class="mi">1</span> <span class="k">AND</span> <span class="mi">5</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="IS-NULL-检查空值">IS NULL 检查空值<a class="headerlink" href="#IS-NULL-检查空值" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="o">*</span> 
-<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="n">Customers</span> 
-<span class="linenos" data-linenos="5 "></span><span class="k">WHERE</span>
-<span class="linenos" data-linenos="6 "></span>    <span class="n">cust_email</span> <span class="k">IS</span> <span class="k">NULL</span>            <span class="c1">-- IS NULL 检查空值</span>
-<span class="linenos" data-linenos="7 "></span>    <span class="k">AND</span> <span class="n">cust_contact</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">;</span> <span class="c1">-- IS NOT NULL 检查非空值</span>
+</td></tr></table>
+<h2 id="IS-NULL-检查空值">IS NULL 检查空值<a class="headerlink" href="#IS-NULL-检查空值" title="Anchor link to this section for reference">#</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="o">*</span> 
+<span class="k">FROM</span>
+    <span class="n">Customers</span> 
+<span class="k">WHERE</span>
+    <span class="n">cust_email</span> <span class="k">IS</span> <span class="k">NULL</span>            <span class="c1">-- IS NULL 检查空值</span>
+    <span class="k">AND</span> <span class="n">cust_contact</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">;</span> <span class="c1">-- IS NOT NULL 检查非空值</span>
 </code></pre></div>
-<h2 id="IN-指定条件范围">IN 指定条件范围<a class="headerlink" href="#IN-指定条件范围" title="Permanent link">⚓︎</a></h2>
+</td></tr></table>
+<h2 id="IN-指定条件范围">IN 指定条件范围<a class="headerlink" href="#IN-指定条件范围" title="Anchor link to this section for reference">#</a></h2>
 <ul>
 <li><code>IN</code> 操作符比 <code>OR</code> 操作符更简洁，速度更快</li>
 <li><code>IN</code> 可以配合子查询而 <code>OR</code> 不好实现</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="n">prod_name</span><span class="p">,</span>
-<span class="linenos" data-linenos="3 "></span>    <span class="n">prod_price</span> 
-<span class="linenos" data-linenos="4 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="5 "></span>    <span class="n">Products</span> 
-<span class="linenos" data-linenos="6 "></span><span class="k">WHERE</span>
-<span class="linenos" data-linenos="7 "></span>    <span class="n">vend_id</span> <span class="k">IN</span> <span class="p">(</span> <span class="s1">&#39;DLL01&#39;</span><span class="p">,</span> <span class="s1">&#39;BRS01&#39;</span> <span class="p">);</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="n">prod_name</span><span class="p">,</span>
+    <span class="n">prod_price</span> 
+<span class="k">FROM</span>
+    <span class="n">Products</span> 
+<span class="k">WHERE</span>
+    <span class="n">vend_id</span> <span class="k">IN</span> <span class="p">(</span> <span class="s1">&#39;DLL01&#39;</span><span class="p">,</span> <span class="s1">&#39;BRS01&#39;</span> <span class="p">);</span>
 </code></pre></div>
-<h2 id="LIKE-通配符匹配查询">LIKE 通配符匹配查询<a class="headerlink" href="#LIKE-通配符匹配查询" title="Permanent link">⚓︎</a></h2>
+</td></tr></table>
+<h2 id="LIKE-通配符匹配查询">LIKE 通配符匹配查询<a class="headerlink" href="#LIKE-通配符匹配查询" title="Anchor link to this section for reference">#</a></h2>
 <ul>
 <li><code>LIKE</code> 大小写不敏感</li>
 <li><code>%</code> 表示任意个字符，包括0个</li>
@@ -1137,41 +1174,65 @@
 <li>不要过度使用通配符，如果其他操作符能达到相同的目的，应该使用其他操作符。</li>
 <li>在确实需要使用通配符时，也尽量不要把它们用在搜索模式的开始处。把通配符置于开始处，搜索起来是最慢的。</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="o">*</span>
-<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="n">Products</span> 
-<span class="linenos" data-linenos="5 "></span><span class="k">WHERE</span>
-<span class="linenos" data-linenos="6 "></span>    <span class="n">prod_name</span> <span class="k">LIKE</span> <span class="s1">&#39;Fish%&#39;</span><span class="p">;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="o">*</span>
+<span class="k">FROM</span>
+    <span class="n">Products</span> 
+<span class="k">WHERE</span>
+    <span class="n">prod_name</span> <span class="k">LIKE</span> <span class="s1">&#39;Fish%&#39;</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="拼接字段">拼接字段<a class="headerlink" href="#拼接字段" title="Permanent link">⚓︎</a></h2>
+</td></tr></table>
+<h2 id="拼接字段">拼接字段<a class="headerlink" href="#拼接字段" title="Anchor link to this section for reference">#</a></h2>
 <ul>
 <li><code>SQL Server</code> 使用 <code>+</code></li>
 <li><code>DB2</code>、<code>Oracle</code>、<code>PostgreSQL</code> 和 <code>SQLite</code> 使用 <code>||</code></li>
 <li><code>MySQL</code> 或 <code>MariaDB</code> 使用语句 <code>Concat</code></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="n">vend_name</span> <span class="o">||</span> <span class="s1">&#39;(&#39;</span> <span class="o">||</span> <span class="n">vend_country</span> <span class="o">||</span> <span class="s1">&#39;)&#39;</span> 
-<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="n">Vendors</span> 
-<span class="linenos" data-linenos="5 "></span><span class="k">ORDER</span> <span class="k">BY</span>
-<span class="linenos" data-linenos="6 "></span>    <span class="n">vend_name</span><span class="p">;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="n">vend_name</span> <span class="o">||</span> <span class="s1">&#39;(&#39;</span> <span class="o">||</span> <span class="n">vend_country</span> <span class="o">||</span> <span class="s1">&#39;)&#39;</span> 
+<span class="k">FROM</span>
+    <span class="n">Vendors</span> 
+<span class="k">ORDER</span> <span class="k">BY</span>
+    <span class="n">vend_name</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="常用函数">常用函数<a class="headerlink" href="#常用函数" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos=" 2 "></span>    <span class="k">ABS</span><span class="p">(</span> <span class="o">-</span> <span class="mi">123</span> <span class="p">),</span>
-<span class="linenos" data-linenos=" 3 "></span>    <span class="k">TRIM</span><span class="p">(</span> <span class="s1">&#39; x &#39;</span> <span class="p">),</span>
-<span class="linenos" data-linenos=" 4 "></span>    <span class="n">LTRIM</span><span class="p">(</span><span class="s1">&#39; x &#39;</span><span class="p">),</span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="n">RTRIM</span><span class="p">(</span><span class="s1">&#39; x &#39;</span><span class="p">),</span>
-<span class="linenos" data-linenos=" 6 "></span>    <span class="k">LENGTH</span><span class="p">(</span> <span class="s1">&#39;aBc&#39;</span> <span class="p">),</span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="k">LOWER</span><span class="p">(</span> <span class="s1">&#39;aBc&#39;</span> <span class="p">),</span>
-<span class="linenos" data-linenos=" 8 "></span>    <span class="k">UPPER</span><span class="p">(</span> <span class="s1">&#39;aBc&#39;</span> <span class="p">),</span>
-<span class="linenos" data-linenos=" 9 "></span>    <span class="n">SUBSTR</span><span class="p">(</span> <span class="s1">&#39;abcdef&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">),</span>
-<span class="linenos" data-linenos="10 "></span>    <span class="c1">-- 注意：时间相关的数据库都是使用了 UTC-0 为单位</span>
-<span class="linenos" data-linenos="11 "></span>    <span class="k">TIME</span><span class="p">(),</span> <span class="nb">DATE</span><span class="p">(),</span> <span class="n">DATETIME</span><span class="p">(),</span>
-<span class="linenos" data-linenos="12 "></span>    <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span> <span class="k">CURRENT_DATE</span><span class="p">,</span> <span class="k">CURRENT_TIME</span><span class="p">;</span>
+</td></tr></table>
+<h2 id="常用函数">常用函数<a class="headerlink" href="#常用函数" title="Anchor link to this section for reference">#</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="k">ABS</span><span class="p">(</span> <span class="o">-</span> <span class="mi">123</span> <span class="p">),</span>
+    <span class="k">TRIM</span><span class="p">(</span> <span class="s1">&#39; x &#39;</span> <span class="p">),</span>
+    <span class="n">LTRIM</span><span class="p">(</span><span class="s1">&#39; x &#39;</span><span class="p">),</span>
+    <span class="n">RTRIM</span><span class="p">(</span><span class="s1">&#39; x &#39;</span><span class="p">),</span>
+    <span class="k">LENGTH</span><span class="p">(</span> <span class="s1">&#39;aBc&#39;</span> <span class="p">),</span>
+    <span class="k">LOWER</span><span class="p">(</span> <span class="s1">&#39;aBc&#39;</span> <span class="p">),</span>
+    <span class="k">UPPER</span><span class="p">(</span> <span class="s1">&#39;aBc&#39;</span> <span class="p">),</span>
+    <span class="n">SUBSTR</span><span class="p">(</span> <span class="s1">&#39;abcdef&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">),</span>
+    <span class="c1">-- 注意：时间相关的数据库都是使用了 UTC-0 为单位</span>
+    <span class="k">TIME</span><span class="p">(),</span> <span class="nb">DATE</span><span class="p">(),</span> <span class="n">DATETIME</span><span class="p">(),</span>
+    <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span> <span class="k">CURRENT_DATE</span><span class="p">,</span> <span class="k">CURRENT_TIME</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="汇总数据聚集函数">汇总数据（聚集函数）<a class="headerlink" href="#汇总数据聚集函数" title="Permanent link">⚓︎</a></h2>
+</td></tr></table>
+<h2 id="汇总数据聚集函数">汇总数据（聚集函数）<a class="headerlink" href="#汇总数据聚集函数" title="Anchor link to this section for reference">#</a></h2>
 <ul>
 <li>对所有行执行计算，指定 <code>ALL</code> 参数或不指定参数（因为 <code>ALL</code> 是默认行为）</li>
 <li>只包含不同的值，指定 <code>DISTINCT</code> 参数，如：<code>COUNT( DISTINCE column_name )</code></li>
@@ -1179,45 +1240,69 @@
 <li>将 <code>DISTINCT</code> 用于 <code>MIN()</code> 和 <code>MAX()</code>，语法正确，但没有意义</li>
 <li>可以同时使用多个</li>
 </ul>
-<h3 id="AVG-平均值">AVG 平均值<a class="headerlink" href="#AVG-平均值" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="k">AVG</span><span class="p">(</span> <span class="n">prod_price</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">avg_price</span> 
-<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="n">Products</span> 
-<span class="linenos" data-linenos="5 "></span><span class="k">WHERE</span>
-<span class="linenos" data-linenos="6 "></span>    <span class="n">vend_id</span> <span class="o">=</span> <span class="s1">&#39;DLL01&#39;</span><span class="p">;</span>
+<h3 id="AVG-平均值">AVG 平均值<a class="headerlink" href="#AVG-平均值" title="Anchor link to this section for reference">#</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="k">AVG</span><span class="p">(</span> <span class="n">prod_price</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">avg_price</span> 
+<span class="k">FROM</span>
+    <span class="n">Products</span> 
+<span class="k">WHERE</span>
+    <span class="n">vend_id</span> <span class="o">=</span> <span class="s1">&#39;DLL01&#39;</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="COUNT-计算行数">COUNT 计算行数<a class="headerlink" href="#COUNT-计算行数" title="Permanent link">⚓︎</a></h3>
+</td></tr></table>
+<h3 id="COUNT-计算行数">COUNT 计算行数<a class="headerlink" href="#COUNT-计算行数" title="Anchor link to this section for reference">#</a></h3>
 <ul>
 <li><code>COUNT(*)</code> 计算所有包括 <code>NULL</code> 在内的行数</li>
 <li><code>COUNT(column_name)</code> 指定列名则不会计算 <code>NULL</code></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="k">COUNT</span><span class="p">(</span> <span class="n">cust_email</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">num_cust</span> 
-<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="n">Customers</span><span class="p">;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="k">COUNT</span><span class="p">(</span> <span class="n">cust_email</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">num_cust</span> 
+<span class="k">FROM</span>
+    <span class="n">Customers</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="MAX-获取最大值">MAX 获取最大值<a class="headerlink" href="#MAX-获取最大值" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="k">MAX</span><span class="p">(</span> <span class="n">prod_price</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">max_price</span> 
-<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="n">Products</span><span class="p">;</span>
+</td></tr></table>
+<h3 id="MAX-获取最大值">MAX 获取最大值<a class="headerlink" href="#MAX-获取最大值" title="Anchor link to this section for reference">#</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="k">MAX</span><span class="p">(</span> <span class="n">prod_price</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">max_price</span> 
+<span class="k">FROM</span>
+    <span class="n">Products</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="MIN-获取最小值">MIN 获取最小值<a class="headerlink" href="#MIN-获取最小值" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="k">MIN</span><span class="p">(</span> <span class="n">prod_price</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">max_price</span> 
-<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="n">Products</span><span class="p">;</span>
+</td></tr></table>
+<h3 id="MIN-获取最小值">MIN 获取最小值<a class="headerlink" href="#MIN-获取最小值" title="Anchor link to this section for reference">#</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="k">MIN</span><span class="p">(</span> <span class="n">prod_price</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">max_price</span> 
+<span class="k">FROM</span>
+    <span class="n">Products</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="SUM-求和">SUM 求和<a class="headerlink" href="#SUM-求和" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="k">SUM</span><span class="p">(</span> <span class="n">quantity</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">items_ordered</span> 
-<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="n">OrderItems</span> 
-<span class="linenos" data-linenos="5 "></span><span class="k">WHERE</span>
-<span class="linenos" data-linenos="6 "></span>    <span class="n">order_num</span> <span class="o">=</span> <span class="mi">20005</span><span class="p">;</span>
+</td></tr></table>
+<h3 id="SUM-求和">SUM 求和<a class="headerlink" href="#SUM-求和" title="Anchor link to this section for reference">#</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="k">SUM</span><span class="p">(</span> <span class="n">quantity</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">items_ordered</span> 
+<span class="k">FROM</span>
+    <span class="n">OrderItems</span> 
+<span class="k">WHERE</span>
+    <span class="n">order_num</span> <span class="o">=</span> <span class="mi">20005</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="GROUP-BY-分组">GROUP BY 分组<a class="headerlink" href="#GROUP-BY-分组" title="Permanent link">⚓︎</a></h2>
+</td></tr></table>
+<h2 id="GROUP-BY-分组">GROUP BY 分组<a class="headerlink" href="#GROUP-BY-分组" title="Anchor link to this section for reference">#</a></h2>
 <ul>
 <li><code>GROUP BY</code> 跟 <code>汇总数据（聚集函数）</code> 搭配使用才有意义</li>
 <li><code>GROUP BY</code> 子句可以包含任意数目的列，因而可以对分组进行嵌套，更细致地进行数据分组</li>
@@ -1226,106 +1311,168 @@
 <li>如果分组列中包含具有 <code>NULL</code> 值的行，则 <code>NULL</code> 将作为一个分组返回。如果列中有多行 <code>NULL</code> 值，它们将分为一组</li>
 <li>GROUP BY子句必须出现在WHERE子句之后，ORDER BY子句之前</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="o">*</span> 
-<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="n">Products</span> 
-<span class="linenos" data-linenos="5 "></span><span class="k">GROUP</span> <span class="k">BY</span>
-<span class="linenos" data-linenos="6 "></span>    <span class="n">vend_id</span><span class="p">;</span>
-<span class="linenos" data-linenos="7 "></span>    <span class="c1">-- 可以指定多个列</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="o">*</span> 
+<span class="k">FROM</span>
+    <span class="n">Products</span> 
+<span class="k">GROUP</span> <span class="k">BY</span>
+    <span class="n">vend_id</span><span class="p">;</span>
+    <span class="c1">-- 可以指定多个列</span>
 </code></pre></div>
-<h2 id="HAVING-分组过滤">HAVING 分组过滤<a class="headerlink" href="#HAVING-分组过滤" title="Permanent link">⚓︎</a></h2>
+</td></tr></table>
+<h2 id="HAVING-分组过滤">HAVING 分组过滤<a class="headerlink" href="#HAVING-分组过滤" title="Anchor link to this section for reference">#</a></h2>
 <ul>
 <li><code>WHERE</code> 使用的技术可以全部套用在 <code>HAVING</code></li>
 <li><code>WHERE</code> 在数据分组前进行过滤，<code>HAVING</code> 在数据分组后进行过滤</li>
 <li>使用 <code>HAVING</code> 时应该结合 <code>GROUP BY</code> 子句，而 <code>WHERE</code> 子句用于标准的行级过滤</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="o">*</span>
-<span class="linenos" data-linenos="3 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="n">Products</span>
-<span class="linenos" data-linenos="5 "></span><span class="k">GROUP</span> <span class="k">BY</span>
-<span class="linenos" data-linenos="6 "></span>    <span class="n">vend_id</span>
-<span class="linenos" data-linenos="7 "></span><span class="k">HAVING</span>
-<span class="linenos" data-linenos="8 "></span>    <span class="n">prod_name</span> <span class="k">NOT</span> <span class="k">LIKE</span> <span class="s1">&#39;F%&#39;</span><span class="p">;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="o">*</span>
+<span class="k">FROM</span>
+    <span class="n">Products</span>
+<span class="k">GROUP</span> <span class="k">BY</span>
+    <span class="n">vend_id</span>
+<span class="k">HAVING</span>
+    <span class="n">prod_name</span> <span class="k">NOT</span> <span class="k">LIKE</span> <span class="s1">&#39;F%&#39;</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="子查询">子查询<a class="headerlink" href="#子查询" title="Permanent link">⚓︎</a></h2>
+</td></tr></table>
+<h2 id="子查询">子查询<a class="headerlink" href="#子查询" title="Anchor link to this section for reference">#</a></h2>
 <ul>
 <li>作为子查询的 <code>SELECT</code> 语句只能查询单个列</li>
 <li>子查询并不总是最有效的方法，而且可读性低</li>
 </ul>
-<h3 id="子查询作为条件">子查询作为条件<a class="headerlink" href="#子查询作为条件" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="n">cust_name</span><span class="p">,</span>
-<span class="linenos" data-linenos="3 "></span>    <span class="n">cust_contact</span> 
-<span class="linenos" data-linenos="4 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="5 "></span>    <span class="n">Customers</span> 
-<span class="linenos" data-linenos="6 "></span><span class="k">WHERE</span>
-<span class="linenos" data-linenos="7 "></span>    <span class="n">cust_id</span> <span class="k">IN</span> <span class="p">(</span> <span class="k">SELECT</span> <span class="n">cust_id</span> <span class="k">FROM</span> <span class="n">Orders</span> <span class="k">WHERE</span> <span class="n">order_num</span> <span class="k">IN</span> <span class="p">(</span> <span class="k">SELECT</span> <span class="n">order_num</span> <span class="k">FROM</span> <span class="n">OrderItems</span> <span class="k">WHERE</span> <span class="n">prod_id</span> <span class="o">=</span> <span class="s1">&#39;RGAN01&#39;</span> <span class="p">)</span> <span class="p">);</span>
+<h3 id="子查询作为条件">子查询作为条件<a class="headerlink" href="#子查询作为条件" title="Anchor link to this section for reference">#</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="n">cust_name</span><span class="p">,</span>
+    <span class="n">cust_contact</span> 
+<span class="k">FROM</span>
+    <span class="n">Customers</span> 
+<span class="k">WHERE</span>
+    <span class="n">cust_id</span> <span class="k">IN</span> <span class="p">(</span> <span class="k">SELECT</span> <span class="n">cust_id</span> <span class="k">FROM</span> <span class="n">Orders</span> <span class="k">WHERE</span> <span class="n">order_num</span> <span class="k">IN</span> <span class="p">(</span> <span class="k">SELECT</span> <span class="n">order_num</span> <span class="k">FROM</span> <span class="n">OrderItems</span> <span class="k">WHERE</span> <span class="n">prod_id</span> <span class="o">=</span> <span class="s1">&#39;RGAN01&#39;</span> <span class="p">)</span> <span class="p">);</span>
 </code></pre></div>
-<h3 id="子查询作为计算字段">子查询作为计算字段<a class="headerlink" href="#子查询作为计算字段" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="n">cust_name</span><span class="p">,</span>
-<span class="linenos" data-linenos="3 "></span>    <span class="n">cust_state</span><span class="p">,</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="p">(</span> <span class="k">SELECT</span> <span class="k">COUNT</span><span class="p">(</span> <span class="o">*</span> <span class="p">)</span> <span class="k">FROM</span> <span class="n">Orders</span> <span class="k">WHERE</span> <span class="n">Orders</span><span class="p">.</span><span class="n">cust_id</span> <span class="o">=</span> <span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">orders</span> 
-<span class="linenos" data-linenos="5 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="6 "></span>    <span class="n">Customers</span> 
-<span class="linenos" data-linenos="7 "></span><span class="k">ORDER</span> <span class="k">BY</span>
-<span class="linenos" data-linenos="8 "></span>    <span class="n">cust_name</span><span class="p">;</span>
+</td></tr></table>
+<h3 id="子查询作为计算字段">子查询作为计算字段<a class="headerlink" href="#子查询作为计算字段" title="Anchor link to this section for reference">#</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="n">cust_name</span><span class="p">,</span>
+    <span class="n">cust_state</span><span class="p">,</span>
+    <span class="p">(</span> <span class="k">SELECT</span> <span class="k">COUNT</span><span class="p">(</span> <span class="o">*</span> <span class="p">)</span> <span class="k">FROM</span> <span class="n">Orders</span> <span class="k">WHERE</span> <span class="n">Orders</span><span class="p">.</span><span class="n">cust_id</span> <span class="o">=</span> <span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">orders</span> 
+<span class="k">FROM</span>
+    <span class="n">Customers</span> 
+<span class="k">ORDER</span> <span class="k">BY</span>
+    <span class="n">cust_name</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="表联结">表联结<a class="headerlink" href="#表联结" title="Permanent link">⚓︎</a></h2>
-<h3 id="内联结">内联结<a class="headerlink" href="#内联结" title="Permanent link">⚓︎</a></h3>
+</td></tr></table>
+<h2 id="表联结">表联结<a class="headerlink" href="#表联结" title="Anchor link to this section for reference">#</a></h2>
+<h3 id="内联结">内联结<a class="headerlink" href="#内联结" title="Anchor link to this section for reference">#</a></h3>
 <ul>
 <li>要保证所有联结都有WHERE子句，否则DBMS将返回比想要的数据多得多的数据</li>
 <li>笛卡儿积的联结，也称叉联结（cross join）</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="n">vend_name</span><span class="p">,</span>
-<span class="linenos" data-linenos="3 "></span>    <span class="n">prod_name</span><span class="p">,</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="n">prod_price</span> 
-<span class="linenos" data-linenos="5 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="6 "></span>    <span class="n">Vendors</span><span class="p">,</span>
-<span class="linenos" data-linenos="7 "></span>    <span class="n">Products</span> 
-<span class="linenos" data-linenos="8 "></span><span class="k">WHERE</span>
-<span class="linenos" data-linenos="9 "></span>    <span class="n">Vendors</span><span class="p">.</span><span class="n">vend_id</span> <span class="o">=</span> <span class="n">Products</span><span class="p">.</span><span class="n">vend_id</span><span class="p">;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="n">vend_name</span><span class="p">,</span>
+    <span class="n">prod_name</span><span class="p">,</span>
+    <span class="n">prod_price</span> 
+<span class="k">FROM</span>
+    <span class="n">Vendors</span><span class="p">,</span>
+    <span class="n">Products</span> 
+<span class="k">WHERE</span>
+    <span class="n">Vendors</span><span class="p">.</span><span class="n">vend_id</span> <span class="o">=</span> <span class="n">Products</span><span class="p">.</span><span class="n">vend_id</span><span class="p">;</span>
 </code></pre></div>
+</td></tr></table>
 <p>等效写法，使用 <code>INNER JOIN</code>，在使用这种语法时，联结条件用特定的ON子句而不是WHERE子句给出。上面是简单写法，下面是规范写法，具体使用哪个取决于哪个更方便。</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="n">vend_name</span><span class="p">,</span>
-<span class="linenos" data-linenos="3 "></span>    <span class="n">prod_name</span><span class="p">,</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="n">prod_price</span> 
-<span class="linenos" data-linenos="5 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="6 "></span>    <span class="n">Vendors</span>
-<span class="linenos" data-linenos="7 "></span>    <span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">Products</span> <span class="k">ON</span> <span class="n">Vendors</span><span class="p">.</span><span class="n">vend_id</span> <span class="o">=</span> <span class="n">Products</span><span class="p">.</span><span class="n">vend_id</span><span class="p">;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="n">vend_name</span><span class="p">,</span>
+    <span class="n">prod_name</span><span class="p">,</span>
+    <span class="n">prod_price</span> 
+<span class="k">FROM</span>
+    <span class="n">Vendors</span>
+    <span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">Products</span> <span class="k">ON</span> <span class="n">Vendors</span><span class="p">.</span><span class="n">vend_id</span> <span class="o">=</span> <span class="n">Products</span><span class="p">.</span><span class="n">vend_id</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="自联结">自联结<a class="headerlink" href="#自联结" title="Permanent link">⚓︎</a></h3>
+</td></tr></table>
+<h3 id="自联结">自联结<a class="headerlink" href="#自联结" title="Anchor link to this section for reference">#</a></h3>
 <p>相当于是同一个表自己联结自己，许多DBMS处理联结远比处理子查询快得多。</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos=" 2 "></span>    <span class="n">c1</span><span class="p">.</span><span class="n">cust_id</span><span class="p">,</span>
-<span class="linenos" data-linenos=" 3 "></span>    <span class="n">c1</span><span class="p">.</span><span class="n">cust_name</span><span class="p">,</span>
-<span class="linenos" data-linenos=" 4 "></span>    <span class="n">c1</span><span class="p">.</span><span class="n">cust_contact</span> 
-<span class="linenos" data-linenos=" 5 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos=" 6 "></span>    <span class="n">Customers</span> <span class="k">AS</span> <span class="n">c1</span><span class="p">,</span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="n">Customers</span> <span class="k">AS</span> <span class="n">c2</span> 
-<span class="linenos" data-linenos=" 8 "></span><span class="k">WHERE</span>
-<span class="linenos" data-linenos=" 9 "></span>    <span class="n">c1</span><span class="p">.</span><span class="n">cust_name</span> <span class="o">=</span> <span class="n">c2</span><span class="p">.</span><span class="n">cust_name</span> 
-<span class="linenos" data-linenos="10 "></span>    <span class="k">AND</span> <span class="n">c2</span><span class="p">.</span><span class="n">cust_contact</span> <span class="o">=</span> <span class="s1">&#39;Jim Jones&#39;</span><span class="p">;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="n">c1</span><span class="p">.</span><span class="n">cust_id</span><span class="p">,</span>
+    <span class="n">c1</span><span class="p">.</span><span class="n">cust_name</span><span class="p">,</span>
+    <span class="n">c1</span><span class="p">.</span><span class="n">cust_contact</span> 
+<span class="k">FROM</span>
+    <span class="n">Customers</span> <span class="k">AS</span> <span class="n">c1</span><span class="p">,</span>
+    <span class="n">Customers</span> <span class="k">AS</span> <span class="n">c2</span> 
+<span class="k">WHERE</span>
+    <span class="n">c1</span><span class="p">.</span><span class="n">cust_name</span> <span class="o">=</span> <span class="n">c2</span><span class="p">.</span><span class="n">cust_name</span> 
+    <span class="k">AND</span> <span class="n">c2</span><span class="p">.</span><span class="n">cust_contact</span> <span class="o">=</span> <span class="s1">&#39;Jim Jones&#39;</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="外联结">外联结<a class="headerlink" href="#外联结" title="Permanent link">⚓︎</a></h3>
+</td></tr></table>
+<h3 id="外联结">外联结<a class="headerlink" href="#外联结" title="Anchor link to this section for reference">#</a></h3>
 <ul>
 <li>与内联结关联两个表中的行不同的是，外联结还包括没有关联行的行</li>
 <li>在使用OUTER JOIN语法时，必须使用RIGHT或LEFT关键字指定包括其所有行的表</li>
 <li>左外联结和右外联结，它们之间的唯一差别是所关联的表的顺序</li>
 <li>SQLite支持 <code>LEFT OUTER JOIN</code>，但不支持 <code>RIGHT OUTER JOIN</code></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span><span class="p">,</span>
-<span class="linenos" data-linenos="3 "></span>    <span class="n">Orders</span><span class="p">.</span><span class="n">order_num</span> 
-<span class="linenos" data-linenos="4 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="5 "></span>    <span class="n">Customers</span>
-<span class="linenos" data-linenos="6 "></span>    <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">Orders</span> <span class="k">ON</span> <span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span> <span class="o">=</span> <span class="n">Orders</span><span class="p">.</span><span class="n">cust_id</span><span class="p">;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span><span class="p">,</span>
+    <span class="n">Orders</span><span class="p">.</span><span class="n">order_num</span> 
+<span class="k">FROM</span>
+    <span class="n">Customers</span>
+    <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">Orders</span> <span class="k">ON</span> <span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span> <span class="o">=</span> <span class="n">Orders</span><span class="p">.</span><span class="n">cust_id</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="UNION-组合查询">UNION 组合查询<a class="headerlink" href="#UNION-组合查询" title="Permanent link">⚓︎</a></h2>
+</td></tr></table>
+<h2 id="UNION-组合查询">UNION 组合查询<a class="headerlink" href="#UNION-组合查询" title="Anchor link to this section for reference">#</a></h2>
 <ul>
 <li>合并多个查询结果返回</li>
 <li>使用场景<ul>
@@ -1337,23 +1484,39 @@
 <li><code>UNION</code> 从查询结果集中自动去除了重复的行，除非使用 <code>UNION ALL</code> 则不取消重复的行</li>
 <li>只能使用一条 <code>ORDER BY</code> 子句，它必须位于最后一条 <code>SELECT</code> 语句之后</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos=" 2 "></span>    <span class="n">cust_name</span><span class="p">,</span>
-<span class="linenos" data-linenos=" 3 "></span>    <span class="n">cust_contact</span><span class="p">,</span>
-<span class="linenos" data-linenos=" 4 "></span>    <span class="n">cust_email</span> 
-<span class="linenos" data-linenos=" 5 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos=" 6 "></span>    <span class="n">Customers</span> 
-<span class="linenos" data-linenos=" 7 "></span><span class="k">WHERE</span>
-<span class="linenos" data-linenos=" 8 "></span>    <span class="n">cust_state</span> <span class="k">IN</span> <span class="p">(</span> <span class="s1">&#39;IL&#39;</span><span class="p">,</span> <span class="s1">&#39;IN&#39;</span><span class="p">,</span> <span class="s1">&#39;MI&#39;</span> <span class="p">)</span> <span class="k">UNION</span>
-<span class="linenos" data-linenos=" 9 "></span><span class="k">SELECT</span>
-<span class="linenos" data-linenos="10 "></span>    <span class="n">cust_name</span><span class="p">,</span>
-<span class="linenos" data-linenos="11 "></span>    <span class="n">cust_contact</span><span class="p">,</span>
-<span class="linenos" data-linenos="12 "></span>    <span class="n">cust_email</span> 
-<span class="linenos" data-linenos="13 "></span><span class="k">FROM</span>
-<span class="linenos" data-linenos="14 "></span>    <span class="n">Customers</span> 
-<span class="linenos" data-linenos="15 "></span><span class="k">WHERE</span>
-<span class="linenos" data-linenos="16 "></span>    <span class="n">cust_name</span> <span class="o">=</span> <span class="s1">&#39;Fun4All&#39;</span><span class="p">;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="n">cust_name</span><span class="p">,</span>
+    <span class="n">cust_contact</span><span class="p">,</span>
+    <span class="n">cust_email</span> 
+<span class="k">FROM</span>
+    <span class="n">Customers</span> 
+<span class="k">WHERE</span>
+    <span class="n">cust_state</span> <span class="k">IN</span> <span class="p">(</span> <span class="s1">&#39;IL&#39;</span><span class="p">,</span> <span class="s1">&#39;IN&#39;</span><span class="p">,</span> <span class="s1">&#39;MI&#39;</span> <span class="p">)</span> <span class="k">UNION</span>
+<span class="k">SELECT</span>
+    <span class="n">cust_name</span><span class="p">,</span>
+    <span class="n">cust_contact</span><span class="p">,</span>
+    <span class="n">cust_email</span> 
+<span class="k">FROM</span>
+    <span class="n">Customers</span> 
+<span class="k">WHERE</span>
+    <span class="n">cust_name</span> <span class="o">=</span> <span class="s1">&#39;Fun4All&#39;</span><span class="p">;</span>
 </code></pre></div>
+</td></tr></table>
 
               
             </article>
@@ -1443,7 +1606,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.highlight", "content.code.annotate"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.649a939e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
       
         <script src="../../assets/js/tablesort.min.js"></script>
       
