@@ -53,14 +53,15 @@ markdown_extensions:
   - def_list
   - md_in_html
   - toc:
-      permalink: ⚓︎
+      permalink: '#' # ⚓︎
       toc_depth: 6
       slugify: !!python/name:pymdownx.slugs.uslugify_cased
+      permalink_title: Anchor link to this section for reference
   - pymdownx.highlight:
       use_pygments: true
       # auto_title: true
       linenums: true
-      linenums_style: pymdownx-inline
+      # linenums_style: pymdownx-inline  # 设置后导致代代码块带有行号的往右，暂时不明白原因
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
