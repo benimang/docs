@@ -394,6 +394,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#处理新打开页面" class="md-nav__link">
+    处理新打开页面
+  </a>
+  
+    <nav class="md-nav" aria-label="处理新打开页面">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contextexpect_page" class="md-nav__link">
+    context.expect_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contexton" class="md-nav__link">
+    context.on
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -789,6 +816,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#处理新打开页面" class="md-nav__link">
+    处理新打开页面
+  </a>
+  
+    <nav class="md-nav" aria-label="处理新打开页面">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contextexpect_page" class="md-nav__link">
+    context.expect_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contexton" class="md-nav__link">
+    context.on
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -842,6 +896,41 @@
 <p class="admonition-title">Warning</p>
 <p>新版本已经警告不要使用，要求使用 <code>locator</code> 替代；其中一个原因是说，如果定位到元素后，元素可能会发生改变，这个时候 <code>locator</code> 会自动处理。</p>
 </div>
+<h2 id="处理新打开页面">处理新打开页面<a class="headerlink" href="#处理新打开页面" title="Permanent link">#</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p><a href="https://playwright.dev/python/docs/pages#handling-new-pages">https://playwright.dev/python/docs/pages#handling-new-pages</a></p>
+</div>
+<div class="admonition tips">
+<p class="admonition-title">Tips</p>
+<p>注意两种方式都要执行等待加载 <code>wait_for_load_state()</code></p>
+</div>
+<h3 id="contextexpect_page">context.expect_page<a class="headerlink" href="#contextexpect_page" title="Permanent link">#</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">context</span><span class="o">.</span><span class="n">expect_page</span><span class="p">()</span> <span class="k">as</span> <span class="n">new_page_info</span><span class="p">:</span>
+    <span class="n">page</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="s1">&#39;a[target=&quot;_blank&quot;]&#39;</span><span class="p">)</span> <span class="c1"># Opens a new tab</span>
+<span class="n">new_page</span> <span class="o">=</span> <span class="n">new_page_info</span><span class="o">.</span><span class="n">value</span>
+
+<span class="n">new_page</span><span class="o">.</span><span class="n">wait_for_load_state</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_page</span><span class="o">.</span><span class="n">title</span><span class="p">())</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="contexton">context.on<a class="headerlink" href="#contexton" title="Permanent link">#</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">handle_page</span><span class="p">(</span><span class="n">page</span><span class="p">):</span>
+    <span class="n">page</span><span class="o">.</span><span class="n">wait_for_load_state</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">title</span><span class="p">())</span>
+
+<span class="n">context</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s2">&quot;page&quot;</span><span class="p">,</span> <span class="n">handle_page</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 
               
             </article>

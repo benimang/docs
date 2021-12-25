@@ -44,3 +44,33 @@ context = browser.new_context(storage_state="state.json")
 
 !!! warning
     新版本已经警告不要使用，要求使用 `locator` 替代；其中一个原因是说，如果定位到元素后，元素可能会发生改变，这个时候 `locator` 会自动处理。
+
+
+## 处理新打开页面
+
+!!! quote
+    <https://playwright.dev/python/docs/pages#handling-new-pages>
+
+!!! tips
+    注意两种方式都要执行等待加载 `wait_for_load_state()`
+
+### context.expect_page
+
+``` py
+with context.expect_page() as new_page_info:
+    page.click('a[target="_blank"]') # Opens a new tab
+new_page = new_page_info.value
+
+new_page.wait_for_load_state()
+print(new_page.title())
+```
+
+### context.on
+
+``` py
+def handle_page(page):
+    page.wait_for_load_state()
+    print(page.title())
+
+context.on("page", handle_page)
+```
