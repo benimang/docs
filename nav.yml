@@ -6,6 +6,7 @@ nav:
     - python/pathlib.md
     - python/fstring.md
     - python/sqlite.md
+    - python/playwright.md
     - python/pip.md
     - python/tips.md
   - Database:
