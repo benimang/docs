@@ -22,6 +22,16 @@ context = browser.new_context(storage_state="state.json")
     <https://playwright.dev/python/docs/auth#automate-logging-in>
 
 
+
+## 使用 Chrome 浏览器
+
+默认使用 `Chromium` 但是某些特殊情况需要使用原生的 `Chrome` 替代，例如视频编码。
+
+``` py
+playwright.chromium.launch(channel="chrome")
+```
+
+
 ## CSS 选择器
 
 页面上要获取某个元素，用到 `CSS Selector` 没有必要纯手写。

@@ -361,6 +361,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#使用-Chrome-浏览器" class="md-nav__link">
+    使用 Chrome 浏览器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#CSS-选择器" class="md-nav__link">
     CSS 选择器
   </a>
@@ -783,6 +790,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#使用-Chrome-浏览器" class="md-nav__link">
+    使用 Chrome 浏览器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#CSS-选择器" class="md-nav__link">
     CSS 选择器
   </a>
@@ -880,6 +894,11 @@
 <p class="admonition-title">Quote</p>
 <p><a href="https://playwright.dev/python/docs/auth#automate-logging-in">https://playwright.dev/python/docs/auth#automate-logging-in</a></p>
 </div>
+<h2 id="使用-Chrome-浏览器">使用 Chrome 浏览器<a class="headerlink" href="#使用-Chrome-浏览器" title="Permanent link">#</a></h2>
+<p>默认使用 <code>Chromium</code> 但是某些特殊情况需要使用原生的 <code>Chrome</code> 替代，例如视频编码。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">playwright</span><span class="o">.</span><span class="n">chromium</span><span class="o">.</span><span class="n">launch</span><span class="p">(</span><span class="n">channel</span><span class="o">=</span><span class="s2">&quot;chrome&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <h2 id="CSS-选择器">CSS 选择器<a class="headerlink" href="#CSS-选择器" title="Permanent link">#</a></h2>
 <p>页面上要获取某个元素，用到 <code>CSS Selector</code> 没有必要纯手写。</p>
 <p><code>Chrome 开发者工具</code> 页面上 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-c">C</kbd></span> 定位到想要的元素，或者 <code>Elements</code> 页签找到对应的元素，右键选择 <code>Copy selector</code>。</p>
