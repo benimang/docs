@@ -30,6 +30,7 @@
 | `path.is_dir()`            | 判断是否目录                                                                                                             |
 | `path.is_absolute()`       | 判断是否绝对路径                                                                                                         |
 | `path.expanduser('~/xxx')` | 返回带有扩展的 `~user` 构造的新路径                                                                                      |
+| `path.relative_to(path)`   | 根据指定路径返回生成相对路径                                                                                             |
 | `path.rename()`            | 需要传入 `Path` 对象，如果是字符串就会拿了当前路径拼接生成的路径                                                         |
 | `file.read_text()`         | 读取文本文件                                                                                                             |
 | `file.write_text('')`      | 写入文本文件                                                                                                             |
