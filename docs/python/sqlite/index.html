@@ -371,6 +371,19 @@
     aiosqlite 异步
   </a>
   
+    <nav class="md-nav" aria-label="aiosqlite 异步">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#标准库差异" class="md-nav__link">
+    标准库差异
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -773,6 +786,19 @@
     aiosqlite 异步
   </a>
   
+    <nav class="md-nav" aria-label="aiosqlite 异步">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#标准库差异" class="md-nav__link">
+    标准库差异
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -857,6 +883,12 @@
 </code></pre></div>
 </td></tr></table>
 <h2 id="aiosqlite-异步">aiosqlite 异步<a class="headerlink" href="#aiosqlite-异步" title="Permanent link">#</a></h2>
+<h3 id="标准库差异">标准库差异<a class="headerlink" href="#标准库差异" title="Permanent link">#</a></h3>
+<p><code>aiosqlite</code> 基于标准库设计，但是与标准库之前还是有不少差异</p>
+<ul>
+<li><code>Connection</code> 标准库允许先生成对象，然后再使用上下文管理器 <code>with</code> , <code>aiosqlite</code> 必须在构建的时候使用 <code>with</code> 语句</li>
+<li><code>Connection</code> 使用 <code>with</code> , 标准库在退出上下文管理器时会执行 <code>commit</code> , 而 <code>aiosqlite</code> 不会自动调用</li>
+</ul>
 
               
             </article>

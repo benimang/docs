@@ -48,3 +48,11 @@ con.close()
 
 
 ## aiosqlite 异步
+
+
+### 标准库差异
+
+`aiosqlite` 基于标准库设计，但是与标准库之前还是有不少差异
+
+- `Connection` 标准库允许先生成对象，然后再使用上下文管理器 `with` , `aiosqlite` 必须在构建的时候使用 `with` 语句
+- `Connection` 使用 `with` , 标准库在退出上下文管理器时会执行 `commit` , 而 `aiosqlite` 不会自动调用
