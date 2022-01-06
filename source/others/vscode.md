@@ -25,7 +25,8 @@
     "explorer.autoReveal": false,  // 取消文件自动定位跟踪
     "python.linting.flake8Enabled": false,
     "editor.renderWhitespace": "none",
-    "files.eol": "\n",
+    "files.eol": "\n",    
+    "python.formatting.provider": "autopep8",
     "python.formatting.autopep8Args": [
         "--ignore=E501"  // 换行格式化
     ],
