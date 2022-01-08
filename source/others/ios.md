@@ -35,6 +35,7 @@
 - 执行 `pod install` 更新第三方库，如果第一次执行可以先执行 `pod setup`，执行完成后会生成一个 `workspace`，打包用的是这个而不是 `Unity` 生成的项目
 - `File` / `Project Settings...` 或 `Workspace Settings...` 在 `Build System` 选项选择 `New Build System`
 - `Product` / `Scheme` / `Edit Scheme` 将里面 `Debug executabble` 去掉勾选
+- `Info.plist` 添加 `NSUserTrackingUsageDescription` 内容可以是 `让您获得更好的广告体验`，使用了广告如果不加这句会导致游戏闪退
 - 证书设置 `Unity-iPhone` / `Build Settings` / `Code Signing Identity`
 - 证书设置 `Unity-iPhone` / `Signing & Capabilities` / `Provisioning Profile`
 

@@ -939,6 +939,7 @@
 <li>执行 <code>pod install</code> 更新第三方库，如果第一次执行可以先执行 <code>pod setup</code>，执行完成后会生成一个 <code>workspace</code>，打包用的是这个而不是 <code>Unity</code> 生成的项目</li>
 <li><code>File</code> / <code>Project Settings...</code> 或 <code>Workspace Settings...</code> 在 <code>Build System</code> 选项选择 <code>New Build System</code></li>
 <li><code>Product</code> / <code>Scheme</code> / <code>Edit Scheme</code> 将里面 <code>Debug executabble</code> 去掉勾选</li>
+<li><code>Info.plist</code> 添加 <code>NSUserTrackingUsageDescription</code> 内容可以是 <code>让您获得更好的广告体验</code>，使用了广告如果不加这句会导致游戏闪退</li>
 <li>证书设置 <code>Unity-iPhone</code> / <code>Build Settings</code> / <code>Code Signing Identity</code></li>
 <li>证书设置 <code>Unity-iPhone</code> / <code>Signing &amp; Capabilities</code> / <code>Provisioning Profile</code></li>
 </ul>
