@@ -20,6 +20,11 @@
 
 `cocosapod` 用来管理项目中用到的库文件，并不是必须要，但是 `GoogleAdmob` 就要用到，系统必须要支持 `Ruby` 环境
 
+- 修改 `/etc/hosts` 否则国内环境无法正常下载
+  - <https://www.jianshu.com/p/6ed63cf3b920>
+  - <https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com.ipaddress.com%2F>
+  - <https://links.jianshu.com/go?to=https%3A%2F%2Ffastly.net.ipaddress.com%2Fgithub.global.ssl.fastly.net%23ipinfo>
+
 ### Unity生成Xcode项目
 
 - `Edit` / `Project Settings` / `Player`
@@ -32,6 +37,7 @@
 ### Xcode项目调整
 
 - `MapFileParser.sh` 文件需要有执行权限 `#!sh chmod 777 MapFileParser.sh`
+- `Podfile` 修改2个 `source` 使用镜像 `github.com.cnpmjs.org` 因为之前下载用了这个，所以后面得用上这个
 - 执行 `pod install` 更新第三方库，如果第一次执行可以先执行 `pod setup`，执行完成后会生成一个 `workspace`，打包用的是这个而不是 `Unity` 生成的项目
 - `File` / `Project Settings...` 或 `Workspace Settings...` 在 `Build System` 选项选择 `New Build System`
 - `Product` / `Scheme` / `Edit Scheme` 将里面 `Debug executabble` 去掉勾选
