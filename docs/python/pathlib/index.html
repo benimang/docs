@@ -791,6 +791,7 @@
                 
 
 <h1 id="pathlib">pathlib<a class="headerlink" href="#pathlib" title="Permanent link">#</a></h1>
+<p><a href="https://docs.python.org/3/library/pathlib.html">https://docs.python.org/3/library/pathlib.html</a></p>
 <h2 id="对象属性">对象属性<a class="headerlink" href="#对象属性" title="Permanent link">#</a></h2>
 <table>
 <thead>
@@ -811,6 +812,10 @@
 <tr>
 <td><code>path.suffix</code></td>
 <td>扩展名</td>
+</tr>
+<tr>
+<td><code>path.anchor</code></td>
+<td>盘符以及根路径</td>
 </tr>
 <tr>
 <td><code>path.suffixes</code></td>
@@ -882,6 +887,10 @@
 <tr>
 <td><code>path.rename()</code></td>
 <td>需要传入 <code>Path</code> 对象，如果是字符串就会拿了当前路径拼接生成的路径</td>
+</tr>
+<tr>
+<td><code>path.joinpath(str|path)</code></td>
+<td>拼接路径</td>
 </tr>
 <tr>
 <td><code>file.read_text()</code></td>

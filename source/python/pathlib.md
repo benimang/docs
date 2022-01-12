@@ -1,5 +1,6 @@
 # pathlib
 
+<https://docs.python.org/3/library/pathlib.html>
 
 ## 对象属性
 
@@ -9,6 +10,7 @@
 | `path.name`            | 文件名（不带路径）                    |
 | `path.stem`            | 文件名去除扩展名                      |
 | `path.suffix`          | 扩展名                                |
+| `path.anchor`          | 盘符以及根路径                        |
 | `path.suffixes`        | 扩展名数组                            |
 | `path.parent`          | 获取父亲的 `Path` 对象                |
 | `path.parents`         | 返回所有父亲 `Path` 对象的 `iterable` |
@@ -32,6 +34,7 @@
 | `path.expanduser('~/xxx')` | 返回带有扩展的 `~user` 构造的新路径                                                                                      |
 | `path.relative_to(path)`   | 根据指定路径返回生成相对路径                                                                                             |
 | `path.rename()`            | 需要传入 `Path` 对象，如果是字符串就会拿了当前路径拼接生成的路径                                                         |
+| `path.joinpath(str|path)`  | 拼接路径                                                                                                                     |
 | `file.read_text()`         | 读取文本文件                                                                                                             |
 | `file.write_text('')`      | 写入文本文件                                                                                                             |
 | `file.read_bytes()`        | 读取二进制文件                                                                                                           |
