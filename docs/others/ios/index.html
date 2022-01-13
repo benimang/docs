@@ -956,7 +956,6 @@
 <h3 id="Xcode项目调整">Xcode项目调整<a class="headerlink" href="#Xcode项目调整" title="Permanent link">#</a></h3>
 <ul>
 <li><code>MapFileParser.sh</code> 文件需要有执行权限 <code class="highlight">chmod <span class="m">777</span> MapFileParser.sh</code></li>
-<li><code>Podfile</code> 修改2个 <code>source</code> 使用镜像 <code>github.com.cnpmjs.org</code> 因为之前下载用了这个，所以后面得用上这个</li>
 <li>执行 <code>pod install</code> 更新第三方库，如果第一次执行可以先执行 <code>pod setup</code>，执行完成后会生成一个 <code>workspace</code>，打包用的是这个而不是 <code>Unity</code> 生成的项目</li>
 <li><code>File</code> / <code>Project Settings...</code> 或 <code>Workspace Settings...</code> 在 <code>Build System</code> 选项选择 <code>New Build System</code></li>
 <li><code>Product</code> / <code>Scheme</code> / <code>Edit Scheme</code> 将里面 <code>Debug executabble</code> 去掉勾选</li>
