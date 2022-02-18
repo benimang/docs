@@ -151,3 +151,19 @@
 
 !!! warning
     Windows 输入法默认开启了快捷键 ++ctrl+shift+f++ 用于切换简体和繁体，需要屏蔽，否则会跟我们 `vscode` 定义的热键冲突
+
+
+## tasks.json
+
+`tasks.json` 可以用于使用外部的工具，非常有用。[官网参考](https://code.visualstudio.com/docs/editor/tasks)
+
+创建 `tasks.json` 文件
+
+1. 可以在 `.vscode` 目录下直接创建 `tasks.json` 文件
+2. 或者使用菜单创建 `Terminal` / `Configure Tasks...`
+
+项目中的启动任务，可以定义 `preLaunchTask` 用于配置启动任务前先执行的任务
+
+!!! quote
+    - [官网参考](https://code.visualstudio.com/docs/editor/tasks)
+    - [介绍基本用法的参考文章](https://blog.csdn.net/qq_53653262/article/details/120859147)
