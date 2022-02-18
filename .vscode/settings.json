@@ -5,7 +5,6 @@
     "files.eol": "\n",
     "files.exclude": {
         ".gitignore": true,
-        ".vscode": true,
         "**/docs": true,
     },
 }
