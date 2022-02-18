@@ -20,6 +20,8 @@ nav:
     - amazon/ad.md
     - amazon/storage.md
     - amazon/oneday.md
+  - Laya:
+    - laya/laya-zlib.md
   - Others:
     - others/website.md
     - others/vscode.md
