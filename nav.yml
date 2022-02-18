@@ -22,6 +22,7 @@ nav:
     - amazon/oneday.md
   - Laya:
     - laya/laya-zlib.md
+    - laya/laya-promise.md
   - Others:
     - others/website.md
     - others/vscode.md
