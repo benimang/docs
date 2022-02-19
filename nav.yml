@@ -21,6 +21,7 @@ nav:
     - amazon/storage.md
     - amazon/oneday.md
   - Laya:
+    - laya/base.md
     - laya/laya-zlib.md
     - laya/laya-promise.md
   - Others:

@@ -12,14 +12,14 @@
         <meta name="author" content="Beni Mang">
       
       
-        <link rel="canonical" href="https://pytask.com/laya/laya-zlib/">
+        <link rel="canonical" href="https://pytask.com/laya/base/">
       
       <link rel="icon" href="../../img/favicon.svg">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
-        <title>zlib - Beni Docs</title>
+        <title>安装与环境搭建 - Beni Docs</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#zlib" class="md-skip">
+        <a href="#安装与环境搭建" class="md-skip">
           跳转至
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              zlib
+              安装与环境搭建
             
           </span>
         </div>
@@ -588,20 +588,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../base/" class="md-nav__link">
-        安装与环境搭建
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -614,12 +600,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          zlib
+          安装与环境搭建
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        zlib
+        安装与环境搭建
       </a>
       
         
@@ -638,15 +624,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#第三方库的方式加入" class="md-nav__link">
-    第三方库的方式加入
+  <a href="#安装-nodejs" class="md-nav__link">
+    安装 node.js
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#使用例子" class="md-nav__link">
-    使用例子
+  <a href="#安装-cnpm" class="md-nav__link">
+    安装 cnpm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#安装-TypeScript-环境" class="md-nav__link">
+    安装 TypeScript 环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#安装-layaair2-cmd" class="md-nav__link">
+    安装 layaair2-cmd
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#下载-LayaAir-IDE" class="md-nav__link">
+    下载 LayaAir IDE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#安装-vscode" class="md-nav__link">
+    安装 vscode
   </a>
   
 </li>
@@ -655,6 +669,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../laya-zlib/" class="md-nav__link">
+        zlib
+      </a>
     </li>
   
 
@@ -826,15 +854,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#第三方库的方式加入" class="md-nav__link">
-    第三方库的方式加入
+  <a href="#安装-nodejs" class="md-nav__link">
+    安装 node.js
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#使用例子" class="md-nav__link">
-    使用例子
+  <a href="#安装-cnpm" class="md-nav__link">
+    安装 cnpm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#安装-TypeScript-环境" class="md-nav__link">
+    安装 TypeScript 环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#安装-layaair2-cmd" class="md-nav__link">
+    安装 layaair2-cmd
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#下载-LayaAir-IDE" class="md-nav__link">
+    下载 LayaAir IDE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#安装-vscode" class="md-nav__link">
+    安装 vscode
   </a>
   
 </li>
@@ -852,65 +908,38 @@
               
                 
 
-<h1 id="zlib">zlib<a class="headerlink" href="#zlib" title="Permanent link">#</a></h1>
-<p><code>Laya</code> 引擎本身是没有 <code>zlib</code>，需要自己手动添加为第三方库使用</p>
-<h2 id="第三方库的方式加入">第三方库的方式加入<a class="headerlink" href="#第三方库的方式加入" title="Permanent link">#</a></h2>
-<ol>
-<li>下载 <code>zlib.js</code> 或者 <code>zlib.min.js</code></li>
-<li>文件放置 <code>/bin/libs/zlib.js</code></li>
-<li>文件放置 <code>/bin/libs/min/zlib.min.js</code></li>
-<li>新建文件 <code>zlib.d.ts</code> 放在 <code>/libs/zlib.d.ts</code></li>
-<li><code>LayaAirIDE</code> 项目设置类库里就会看到 <code>zlib</code> 勾上就可以了（实际会在 <code>index.js</code> 添加导入）</li>
-</ol>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">/libs/zlib.d.ts</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kr">declare</span> <span class="kr">module</span> <span class="nx">Zlib</span> <span class="p">{</span>
-    <span class="kd">class</span> <span class="nx">Inflate</span> <span class="p">{</span>
-        <span class="kr">constructor</span><span class="p">(</span><span class="nx">data</span>: <span class="kt">any</span><span class="p">);</span>
-        <span class="nx">decompress</span><span class="p">()</span><span class="o">:</span> <span class="nx">any</span><span class="p">;</span>
-    <span class="p">}</span>
+<h1 id="安装与环境搭建">安装与环境搭建<a class="headerlink" href="#安装与环境搭建" title="Permanent link">#</a></h1>
+<h2 id="安装-nodejs">安装 node.js<a class="headerlink" href="#安装-nodejs" title="Permanent link">#</a></h2>
+<p>当前版本是 <code>2.13.0 beta</code> 必须使用 <code>node.js</code> 10.x 版本，新的版本会导致命令行无法调用</p>
+<p><a href="https://nodejs.org/download/release/latest-v10.x/">https://nodejs.org/download/release/latest-v10.x/</a></p>
+<h2 id="安装-cnpm">安装 cnpm<a class="headerlink" href="#安装-cnpm" title="Permanent link">#</a></h2>
+<p>下载很多时候受网络限制，安装 <code>cnpm</code> 可以加速下载，这个其实并不是必选项</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>npm install -g cnpm --registry<span class="o">=</span>https://registry.npmmirror.com
+</code></pre></div>
+</td></tr></table>
+<h2 id="安装-TypeScript-环境">安装 TypeScript 环境<a class="headerlink" href="#安装-TypeScript-环境" title="Permanent link">#</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># 安装</span>
+cnpm install -g typescript
 
-    <span class="kd">class</span> <span class="nx">Deflate</span> <span class="p">{</span>
-        <span class="kr">constructor</span><span class="p">(</span><span class="nx">data</span>: <span class="kt">any</span><span class="p">);</span>
-        <span class="nx">compress</span><span class="p">()</span><span class="o">:</span> <span class="nx">any</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<span class="c1"># 验证安装完成</span>
+tsc -v
 </code></pre></div>
 </td></tr></table>
-<h2 id="使用例子">使用例子<a class="headerlink" href="#使用例子" title="Permanent link">#</a></h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">Laya</span><span class="p">.</span><span class="nx">loader</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s1">&#39;test/30023.skel&#39;</span><span class="p">,</span> <span class="nx">Laya</span><span class="p">.</span><span class="nx">Handler</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="p">(</span><span class="nx">result</span>: <span class="kt">ArrayBuffer</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="kd">let</span> <span class="nx">zip</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Zlib</span><span class="p">.</span><span class="nx">Inflate</span><span class="p">(</span><span class="ow">new</span> <span class="nb">Uint8Array</span><span class="p">(</span><span class="nx">result</span><span class="p">));</span>
-    <span class="kd">let</span> <span class="nx">res</span>: <span class="kt">Uint8Array</span> <span class="o">=</span> <span class="nx">zip</span><span class="p">.</span><span class="nx">decompress</span><span class="p">();</span>
-    <span class="c1">// 将二进制转换成文本（这个例子是文本解压缩）</span>
-    <span class="kd">let</span> <span class="nx">content</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">content</span> <span class="o">+=</span> <span class="nb">String</span><span class="p">.</span><span class="nx">fromCharCode</span><span class="p">(</span><span class="nx">res</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
-    <span class="p">}</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">content</span><span class="p">);</span>
-<span class="p">}),</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">Laya</span><span class="p">.</span><span class="nx">Loader</span><span class="p">.</span><span class="nx">BUFFER</span><span class="p">);</span> <span class="c1">// 注意这里的加载类型必须要填写 Laya.Loader.BUFFER</span>
+<h2 id="安装-layaair2-cmd">安装 layaair2-cmd<a class="headerlink" href="#安装-layaair2-cmd" title="Permanent link">#</a></h2>
+<p><code>layaair2-cmd</code> 用于命令行调用编译与发布，首次发布还是要在 <code>IDE</code> 手动执行一次，因为部分配置文件需要在 <code>IDE</code> 发布时才会生成</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>cnpm install layaair2-cmd -g
 </code></pre></div>
 </td></tr></table>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>注意加载一定要加上类型 <code>Laya.Loader.BUFFER</code> 否则会报错 <code>unsupported compression method</code></p>
-</div>
+<h2 id="下载-LayaAir-IDE">下载 LayaAir IDE<a class="headerlink" href="#下载-LayaAir-IDE" title="Permanent link">#</a></h2>
+<p>软件是绿色免安装，下载后可以直接执行</p>
+<p><a href="https://ldc2.layabox.com/layadownload/?language=zh&amp;type=layaairide">https://ldc2.layabox.com/layadownload/?language=zh&amp;type=layaairide</a></p>
+<h2 id="安装-vscode">安装 vscode<a class="headerlink" href="#安装-vscode" title="Permanent link">#</a></h2>
+<p>新版本的 <code>LayaAir IDE</code> 已经将代码编辑功能分离出来由 <code>vscode</code> 实现</p>
+<p><code>Laya</code> 官方文档说调试要安装插件 <code>Debugger for Chrome</code> 然后这个插件已经过时了，取而代之的是内置的 <code>JavaScript Debugger</code></p>
 
               
             </article>
@@ -931,7 +960,7 @@
     <nav class="md-footer__inner md-grid" aria-label="页脚">
       
         
-        <a href="../base/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 安装与环境搭建" rel="prev">
+        <a href="../../amazon/oneday/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 日常工作内容" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -940,20 +969,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              安装与环境搭建
+              日常工作内容
             </div>
           </div>
         </a>
       
       
         
-        <a href="../laya-promise/" class="md-footer__link md-footer__link--next" aria-label="下一页: promise / async / await" rel="next">
+        <a href="../laya-zlib/" class="md-footer__link md-footer__link--next" aria-label="下一页: zlib" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              promise / async / await
+              zlib
             </div>
           </div>
           <div class="md-footer__button md-icon">
