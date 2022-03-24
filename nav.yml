@@ -24,6 +24,8 @@ nav:
     - laya/base.md
     - laya/laya-zlib.md
     - laya/laya-promise.md
+  - Linux:
+    - linux/centos.md
   - Others:
     - others/website.md
     - others/vscode.md
