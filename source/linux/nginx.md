@@ -1,5 +1,8 @@
 # Nginx 常用配置
 
+
+## 常用配置
+
 ``` conf
 server {
     listen 80;
@@ -52,3 +55,19 @@ server {
     # image/jpeg jpeg图片本身就有压缩无需再压缩
 }
 ```
+
+
+## FastAPI + uvicorn
+
+```
+location /server/ {
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_pass http://127.0.0.1:8000/;
+    access_log off;
+}
+```
+
+!!! warning
+    要特别注意 `location` 和 `proxy_pass` 两个后面的 `/`
