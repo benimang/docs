@@ -700,15 +700,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#CentOS-创建软链接" class="md-nav__link">
-    CentOS 创建软链接
+  <a href="#创建软链接" class="md-nav__link">
+    创建软链接
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#CentOS-查看版本" class="md-nav__link">
-    CentOS 查看版本
+  <a href="#查看版本" class="md-nav__link">
+    查看版本
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#查看进程并杀掉" class="md-nav__link">
+    查看进程并杀掉
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#查看端口占用情况" class="md-nav__link">
+    查看端口占用情况
   </a>
   
 </li>
@@ -888,15 +902,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#CentOS-创建软链接" class="md-nav__link">
-    CentOS 创建软链接
+  <a href="#创建软链接" class="md-nav__link">
+    创建软链接
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#CentOS-查看版本" class="md-nav__link">
-    CentOS 查看版本
+  <a href="#查看版本" class="md-nav__link">
+    查看版本
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#查看进程并杀掉" class="md-nav__link">
+    查看进程并杀掉
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#查看端口占用情况" class="md-nav__link">
+    查看端口占用情况
   </a>
   
 </li>
@@ -915,12 +943,20 @@
                 
 
 <h1 id="CentOS-基础">CentOS 基础<a class="headerlink" href="#CentOS-基础" title="Permanent link">#</a></h1>
-<h2 id="CentOS-创建软链接">CentOS 创建软链接<a class="headerlink" href="#CentOS-创建软链接" title="Permanent link">#</a></h2>
+<h2 id="创建软链接">创建软链接<a class="headerlink" href="#创建软链接" title="Permanent link">#</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ln -s /usr/local/nginx/sbin/nginx /usr/local/bin/nginx
 </code></pre></div>
 </td></tr></table>
-<h2 id="CentOS-查看版本">CentOS 查看版本<a class="headerlink" href="#CentOS-查看版本" title="Permanent link">#</a></h2>
+<h2 id="查看版本">查看版本<a class="headerlink" href="#查看版本" title="Permanent link">#</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>cat /etc/redhat-release
+</code></pre></div>
+</td></tr></table>
+<h2 id="查看进程并杀掉">查看进程并杀掉<a class="headerlink" href="#查看进程并杀掉" title="Permanent link">#</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">kill</span> <span class="sb">`</span>ps -ef <span class="p">|</span> grep <span class="s2">&quot;python3 main.py&quot;</span><span class="p">|</span> grep -v grep <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span><span class="sb">`</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="查看端口占用情况">查看端口占用情况<a class="headerlink" href="#查看端口占用情况" title="Permanent link">#</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>netstat -tulpn
 </code></pre></div>
 </td></tr></table>
 
