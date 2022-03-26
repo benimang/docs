@@ -27,6 +27,8 @@ nav:
   - Linux:
     - linux/centos.md
     - linux/nginx.md
+  - Docker:
+    - docker/base.md
   - Others:
     - others/website.md
     - others/vscode.md
