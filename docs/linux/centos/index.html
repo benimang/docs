@@ -735,6 +735,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#repository管理" class="md-nav__link">
+    repository管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#安装python3" class="md-nav__link">
     安装python3
   </a>
@@ -971,6 +978,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#repository管理" class="md-nav__link">
+    repository管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#安装python3" class="md-nav__link">
     安装python3
   </a>
@@ -1031,6 +1045,20 @@
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>find /usr/local/python3/bin -name beni
 </code></pre></div>
 </td></tr></table>
+<h2 id="repository管理">repository管理<a class="headerlink" href="#repository管理" title="Permanent link">#</a></h2>
+<p>需要先安装 <code>yum-utils</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>yum install -y yum-utils
+</code></pre></div>
+</td></tr></table>
+<p>添加源</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>yum-config-manager --add-repo xxxxxxxx
+</code></pre></div>
+</td></tr></table>
+<p>删除源可以直接在目录找到删除 <code>/etc/yum.repos.d/</code></p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p><a href="https://www.cnblogs.com/coolruo/articles/13891885.html">yum-config-manager命令介绍</a></p>
+</div>
 <h2 id="安装python3">安装python3<a class="headerlink" href="#安装python3" title="Permanent link">#</a></h2>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>

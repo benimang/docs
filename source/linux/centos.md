@@ -36,13 +36,32 @@ find /usr/local/python3/bin -name beni
 ```
 
 
+## repository管理
+
+需要先安装 `yum-utils`
+
+``` sh
+yum install -y yum-utils
+```
+
+添加源
+
+``` sh
+yum-config-manager --add-repo xxxxxxxx
+```
+
+删除源可以直接在目录找到删除 `/etc/yum.repos.d/`
+
+!!! quote
+    [yum-config-manager命令介绍](https://www.cnblogs.com/coolruo/articles/13891885.html)
+
+
 ## 安装python3
 
 !!! quote
     - [`CentOS7` 安装 `Python3`](https://www.cnblogs.com/xiujin/p/11477419.html)
     - [`CentOS7` 升级 `gcc` 版本](https://www.cnblogs.com/jixiaohua/p/11732225.html)
     - [`CentOS7` 升级 `OpenSSL`](https://www.jianshu.com/p/4b5a2f80bcc3)
-
     
 
 ### --enable-optimizations
