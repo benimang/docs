@@ -5,7 +5,7 @@ site_name: Beni Docs
 site_url: https://pytask.com
 site_author: Beni Mang
 site_description: Beni 个人博客网站
-copyright: 粤ICP备17090505号
+# copyright: 粤ICP备17090505号
 
 docs_dir: source # 源文件（.md）路径
 site_dir: docs # 生成文件（.html/.css/...）路径
