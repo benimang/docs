@@ -10,6 +10,7 @@ nav:
           - python/pip.md
           - python/tips.md
     - GO:
+          - go/others.md
           - go/base.md
     - Database:
           - database/select.md

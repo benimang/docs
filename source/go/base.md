@@ -1,20 +1,41 @@
-# GO相关
-
-## 安装以及使用第三方库
-
-!!! quote
-    <https://blog.csdn.net/qq_39611230/article/details/121232707>{:target="_blank"}
-    <https://blog.csdn.net/weixin_54707168/article/details/122658675>{:target="_blank"}
-
-1.  强制打开 `GO111MODULE` 可以使用命令行 `#!sh env -w GO111MODULE=on`
-2.  设置代理 `#!sh go env -w GOPROXY=https://goproxy.cn,direct`
-3.  拉取第三方库，在项目目录下执行 `#! go get github.com/skip2/go-qrcode`
-4.  如果顺利的话 `go.mod` 和 `go.sum` 2个文件会更新，然后就可以使用了
+# GO基础
 
 
-## GO命令
+## 检查变量类型
 
-| 命令       | 说明                               |
-| ---------- | ---------------------------------- |
-| `go run`   | 直接运行                           |
-| `go build` | 生成可执行文件，甚至可以跨平台生成 |
+```go
+package main
+
+import (
+	"reflect"
+)
+
+func main() {
+	s := "string"
+	reflect.TypeOf(s) // 返回的类型是 refect.Type
+}
+```
+
+
+## 类型转换
+
+```go
+package main
+
+import (
+	"strconv"
+)
+
+func main() {
+
+	// 其他类型转字符串
+	strconv.FormatBool(false)
+	strconv.FormatInt(112, 10)
+	strconv.FormatFloat(123.456, 'f', -1, 32)
+
+	// 字符串转其他类型
+	b, _ := strconv.ParseBool("true")
+	i, _ := strconv.ParseInt("112", 10, 32)
+	f, _ := strconv.ParseFloat("123.456", 32)
+}
+```
