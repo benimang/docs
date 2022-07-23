@@ -16,13 +16,19 @@
             "problemMatcher": []
         },
         {
-            "label": "git commit",
+            "label": "update",
             "type": "shell",
             "command": "TortoiseGitProc.exe /command:commit /path:./",
             "problemMatcher": [],
             "dependsOn": [
-                "build"
+                "build",
             ]
+        },
+        {
+            "label": "git commit",
+            "type": "shell",
+            "command": "TortoiseGitProc.exe /command:commit /path:./",
+            "problemMatcher": [],
         },
         {
             "label": "git revert",
@@ -41,9 +47,6 @@
             "type": "shell",
             "command": "TortoiseGitProc.exe /command:pull /path:./",
             "problemMatcher": [],
-            "dependsOn": [
-                "build"
-            ]
         },
     ]
 }
