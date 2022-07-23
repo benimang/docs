@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://pytask.com/database/select/">
       
       <link rel="icon" href="../../img/favicon.svg">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
@@ -23,19 +23,21 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
+      
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -60,7 +62,7 @@
   
     
     
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -88,7 +90,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -114,7 +116,7 @@
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
             </label>
           
         
@@ -123,7 +125,7 @@
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
             </label>
           
         
@@ -132,7 +134,7 @@
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -140,13 +142,13 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="查找">
         
         <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -1320,19 +1322,19 @@
               
                 
 
+
 <h1 id="SQL-查询">SQL 查询<a class="headerlink" href="#SQL-查询" title="Permanent link">#</a></h1>
 <h2 id="DISTINCT-查询不同的值">DISTINCT 查询不同的值<a class="headerlink" href="#DISTINCT-查询不同的值" title="Permanent link">#</a></h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="k">DISTINCT</span>
-    <span class="n">prod_id</span>
-    <span class="c1">-- 可以指定多个字段  </span>
-<span class="k">FROM</span>
-    <span class="n">Products</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"></span>
+<span class="w">    </span><span class="n">prod_id</span><span class="w"></span>
+<span class="w">    </span><span class="c1">-- 可以指定多个字段  </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Products</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h2 id="LIMIT-OFFSET-限制返回结果">LIMIT OFFSET 限制返回结果<a class="headerlink" href="#LIMIT-OFFSET-限制返回结果" title="Permanent link">#</a></h2>
 <ul>
 <li><code>LIMIT</code> 表示返回记录的数量</li>
@@ -1340,88 +1342,83 @@
 <li><code>OFFSET</code> 可以不写，表示从第0行开始</li>
 <li><code>OFFSET</code> 不能没有 <code>LIMIT</code> 单独出现</li>
 </ul>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span> 
-    <span class="o">*</span>
-<span class="k">FROM</span>
-    <span class="n">Products</span>
-<span class="k">LIMIT</span> <span class="mi">3</span> <span class="k">OFFSET</span> <span class="mi">3</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span>
+<span class="w">    </span><span class="o">*</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Products</span><span class="w"></span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="k">OFFSET</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h2 id="ORDER-BY-排序结果">ORDER BY 排序结果<a class="headerlink" href="#ORDER-BY-排序结果" title="Permanent link">#</a></h2>
 <ul>
 <li><code>ORDER BY</code> 可以指定多个列排序，甚至可以指定 <code>SELECT</code> 没有指定的列</li>
 <li>使用 <code>DESC</code> 指定降序</li>
 <li>默认是升序，也可以明确指定 <code>ASC</code></li>
 </ul>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="o">*</span> 
-<span class="k">FROM</span>
-    <span class="n">Products</span> 
-<span class="k">ORDER</span> <span class="k">BY</span>
-    <span class="n">prod_name</span> <span class="k">ASC</span><span class="p">,</span>
-    <span class="n">prod_price</span> <span class="k">DESC</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Products</span><span class="w"> </span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"></span>
+<span class="w">    </span><span class="n">prod_name</span><span class="w"> </span><span class="k">ASC</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">prod_price</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h2 id="BETWEEN-AND-范围值检查">BETWEEN AND 范围值检查<a class="headerlink" href="#BETWEEN-AND-范围值检查" title="Permanent link">#</a></h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="o">*</span> 
-<span class="k">FROM</span>
-    <span class="n">Products</span> 
-<span class="k">WHERE</span>
-    <span class="n">prod_price</span> <span class="k">BETWEEN</span> <span class="mi">1</span> <span class="k">AND</span> <span class="mi">5</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Products</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"></span>
+<span class="w">    </span><span class="n">prod_price</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h2 id="IS-NULL-检查空值">IS NULL 检查空值<a class="headerlink" href="#IS-NULL-检查空值" title="Permanent link">#</a></h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="o">*</span> 
-<span class="k">FROM</span>
-    <span class="n">Customers</span> 
-<span class="k">WHERE</span>
-    <span class="n">cust_email</span> <span class="k">IS</span> <span class="k">NULL</span>            <span class="c1">-- IS NULL 检查空值</span>
-    <span class="k">AND</span> <span class="n">cust_contact</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">;</span> <span class="c1">-- IS NOT NULL 检查非空值</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Customers</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"></span>
+<span class="w">    </span><span class="n">cust_email</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="w">            </span><span class="c1">-- IS NULL 检查空值</span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">cust_contact</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span><span class="w"> </span><span class="c1">-- IS NOT NULL 检查非空值</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="IN-指定条件范围">IN 指定条件范围<a class="headerlink" href="#IN-指定条件范围" title="Permanent link">#</a></h2>
 <ul>
 <li><code>IN</code> 操作符比 <code>OR</code> 操作符更简洁，速度更快</li>
 <li><code>IN</code> 可以配合子查询而 <code>OR</code> 不好实现</li>
 </ul>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="n">prod_name</span><span class="p">,</span>
-    <span class="n">prod_price</span> 
-<span class="k">FROM</span>
-    <span class="n">Products</span> 
-<span class="k">WHERE</span>
-    <span class="n">vend_id</span> <span class="k">IN</span> <span class="p">(</span> <span class="s1">&#39;DLL01&#39;</span><span class="p">,</span> <span class="s1">&#39;BRS01&#39;</span> <span class="p">);</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="n">prod_name</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">prod_price</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Products</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"></span>
+<span class="w">    </span><span class="n">vend_id</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;DLL01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;BRS01&#39;</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h2 id="LIKE-通配符匹配查询">LIKE 通配符匹配查询<a class="headerlink" href="#LIKE-通配符匹配查询" title="Permanent link">#</a></h2>
 <ul>
 <li><code>LIKE</code> 大小写不敏感</li>
@@ -1430,40 +1427,38 @@
 <li>不要过度使用通配符，如果其他操作符能达到相同的目的，应该使用其他操作符。</li>
 <li>在确实需要使用通配符时，也尽量不要把它们用在搜索模式的开始处。把通配符置于开始处，搜索起来是最慢的。</li>
 </ul>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="o">*</span>
-<span class="k">FROM</span>
-    <span class="n">Products</span> 
-<span class="k">WHERE</span>
-    <span class="n">prod_name</span> <span class="k">LIKE</span> <span class="s1">&#39;Fish%&#39;</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="o">*</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Products</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"></span>
+<span class="w">    </span><span class="n">prod_name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;Fish%&#39;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h2 id="拼接字段">拼接字段<a class="headerlink" href="#拼接字段" title="Permanent link">#</a></h2>
 <ul>
 <li><code>SQL Server</code> 使用 <code>+</code></li>
 <li><code>DB2</code>、<code>Oracle</code>、<code>PostgreSQL</code> 和 <code>SQLite</code> 使用 <code>||</code></li>
 <li><code>MySQL</code> 或 <code>MariaDB</code> 使用语句 <code>Concat</code></li>
 </ul>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="n">vend_name</span> <span class="o">||</span> <span class="s1">&#39;(&#39;</span> <span class="o">||</span> <span class="n">vend_country</span> <span class="o">||</span> <span class="s1">&#39;)&#39;</span> 
-<span class="k">FROM</span>
-    <span class="n">Vendors</span> 
-<span class="k">ORDER</span> <span class="k">BY</span>
-    <span class="n">vend_name</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="n">vend_name</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;(&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">vend_country</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;)&#39;</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Vendors</span><span class="w"> </span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"></span>
+<span class="w">    </span><span class="n">vend_name</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h2 id="常用函数">常用函数<a class="headerlink" href="#常用函数" title="Permanent link">#</a></h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1474,20 +1469,19 @@
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="k">ABS</span><span class="p">(</span> <span class="o">-</span> <span class="mi">123</span> <span class="p">),</span>
-    <span class="k">TRIM</span><span class="p">(</span> <span class="s1">&#39; x &#39;</span> <span class="p">),</span>
-    <span class="n">LTRIM</span><span class="p">(</span><span class="s1">&#39; x &#39;</span><span class="p">),</span>
-    <span class="n">RTRIM</span><span class="p">(</span><span class="s1">&#39; x &#39;</span><span class="p">),</span>
-    <span class="k">LENGTH</span><span class="p">(</span> <span class="s1">&#39;aBc&#39;</span> <span class="p">),</span>
-    <span class="k">LOWER</span><span class="p">(</span> <span class="s1">&#39;aBc&#39;</span> <span class="p">),</span>
-    <span class="k">UPPER</span><span class="p">(</span> <span class="s1">&#39;aBc&#39;</span> <span class="p">),</span>
-    <span class="n">SUBSTR</span><span class="p">(</span> <span class="s1">&#39;abcdef&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">),</span>
-    <span class="c1">-- 注意：时间相关的数据库都是使用了 UTC-0 为单位</span>
-    <span class="k">TIME</span><span class="p">(),</span> <span class="nb">DATE</span><span class="p">(),</span> <span class="n">DATETIME</span><span class="p">(),</span>
-    <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span> <span class="k">CURRENT_DATE</span><span class="p">,</span> <span class="k">CURRENT_TIME</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="k">ABS</span><span class="p">(</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">123</span><span class="w"> </span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="k">TRIM</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39; x &#39;</span><span class="w"> </span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">LTRIM</span><span class="p">(</span><span class="s1">&#39; x &#39;</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">RTRIM</span><span class="p">(</span><span class="s1">&#39; x &#39;</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="k">LENGTH</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;aBc&#39;</span><span class="w"> </span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="k">LOWER</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;aBc&#39;</span><span class="w"> </span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="k">UPPER</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;aBc&#39;</span><span class="w"> </span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">SUBSTR</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;abcdef&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="c1">-- 注意：时间相关的数据库都是使用了 UTC-0 为单位</span>
+<span class="w">    </span><span class="k">TIME</span><span class="p">(),</span><span class="w"> </span><span class="nb">DATE</span><span class="p">(),</span><span class="w"> </span><span class="n">DATETIME</span><span class="p">(),</span><span class="w"></span>
+<span class="w">    </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="p">,</span><span class="w"> </span><span class="k">CURRENT_TIME</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h2 id="汇总数据聚集函数">汇总数据（聚集函数）<a class="headerlink" href="#汇总数据聚集函数" title="Permanent link">#</a></h2>
 <ul>
 <li>对所有行执行计算，指定 <code>ALL</code> 参数或不指定参数（因为 <code>ALL</code> 是默认行为）</li>
@@ -1497,67 +1491,62 @@
 <li>可以同时使用多个</li>
 </ul>
 <h3 id="AVG-平均值">AVG 平均值<a class="headerlink" href="#AVG-平均值" title="Permanent link">#</a></h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="k">AVG</span><span class="p">(</span> <span class="n">prod_price</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">avg_price</span> 
-<span class="k">FROM</span>
-    <span class="n">Products</span> 
-<span class="k">WHERE</span>
-    <span class="n">vend_id</span> <span class="o">=</span> <span class="s1">&#39;DLL01&#39;</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="k">AVG</span><span class="p">(</span><span class="w"> </span><span class="n">prod_price</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">avg_price</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Products</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"></span>
+<span class="w">    </span><span class="n">vend_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;DLL01&#39;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h3 id="COUNT-计算行数">COUNT 计算行数<a class="headerlink" href="#COUNT-计算行数" title="Permanent link">#</a></h3>
 <ul>
 <li><code>COUNT(*)</code> 计算所有包括 <code>NULL</code> 在内的行数</li>
 <li><code>COUNT(column_name)</code> 指定列名则不会计算 <code>NULL</code></li>
 </ul>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="k">COUNT</span><span class="p">(</span> <span class="n">cust_email</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">num_cust</span> 
-<span class="k">FROM</span>
-    <span class="n">Customers</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="w"> </span><span class="n">cust_email</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">num_cust</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Customers</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h3 id="MAX-获取最大值">MAX 获取最大值<a class="headerlink" href="#MAX-获取最大值" title="Permanent link">#</a></h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="k">MAX</span><span class="p">(</span> <span class="n">prod_price</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">max_price</span> 
-<span class="k">FROM</span>
-    <span class="n">Products</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="k">MAX</span><span class="p">(</span><span class="w"> </span><span class="n">prod_price</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">max_price</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Products</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h3 id="MIN-获取最小值">MIN 获取最小值<a class="headerlink" href="#MIN-获取最小值" title="Permanent link">#</a></h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="k">MIN</span><span class="p">(</span> <span class="n">prod_price</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">max_price</span> 
-<span class="k">FROM</span>
-    <span class="n">Products</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="k">MIN</span><span class="p">(</span><span class="w"> </span><span class="n">prod_price</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">max_price</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Products</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h3 id="SUM-求和">SUM 求和<a class="headerlink" href="#SUM-求和" title="Permanent link">#</a></h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="k">SUM</span><span class="p">(</span> <span class="n">quantity</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">items_ordered</span> 
-<span class="k">FROM</span>
-    <span class="n">OrderItems</span> 
-<span class="k">WHERE</span>
-    <span class="n">order_num</span> <span class="o">=</span> <span class="mi">20005</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="w"> </span><span class="n">quantity</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">items_ordered</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">OrderItems</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"></span>
+<span class="w">    </span><span class="n">order_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20005</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h2 id="GROUP-BY-分组">GROUP BY 分组<a class="headerlink" href="#GROUP-BY-分组" title="Permanent link">#</a></h2>
 <ul>
 <li><code>GROUP BY</code> 跟 <code>汇总数据（聚集函数）</code> 搭配使用才有意义</li>
@@ -1567,90 +1556,86 @@
 <li>如果分组列中包含具有 <code>NULL</code> 值的行，则 <code>NULL</code> 将作为一个分组返回。如果列中有多行 <code>NULL</code> 值，它们将分为一组</li>
 <li>GROUP BY子句必须出现在WHERE子句之后，ORDER BY子句之前</li>
 </ul>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="o">*</span> 
-<span class="k">FROM</span>
-    <span class="n">Products</span> 
-<span class="k">GROUP</span> <span class="k">BY</span>
-    <span class="n">vend_id</span><span class="p">;</span>
-    <span class="c1">-- 可以指定多个列</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Products</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"></span>
+<span class="w">    </span><span class="n">vend_id</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">-- 可以指定多个列</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="HAVING-分组过滤">HAVING 分组过滤<a class="headerlink" href="#HAVING-分组过滤" title="Permanent link">#</a></h2>
 <ul>
 <li><code>WHERE</code> 使用的技术可以全部套用在 <code>HAVING</code></li>
 <li><code>WHERE</code> 在数据分组前进行过滤，<code>HAVING</code> 在数据分组后进行过滤</li>
 <li>使用 <code>HAVING</code> 时应该结合 <code>GROUP BY</code> 子句，而 <code>WHERE</code> 子句用于标准的行级过滤</li>
 </ul>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="o">*</span>
-<span class="k">FROM</span>
-    <span class="n">Products</span>
-<span class="k">GROUP</span> <span class="k">BY</span>
-    <span class="n">vend_id</span>
-<span class="k">HAVING</span>
-    <span class="n">prod_name</span> <span class="k">NOT</span> <span class="k">LIKE</span> <span class="s1">&#39;F%&#39;</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="o">*</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Products</span><span class="w"></span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"></span>
+<span class="w">    </span><span class="n">vend_id</span><span class="w"></span>
+<span class="k">HAVING</span><span class="w"></span>
+<span class="w">    </span><span class="n">prod_name</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;F%&#39;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h2 id="子查询">子查询<a class="headerlink" href="#子查询" title="Permanent link">#</a></h2>
 <ul>
 <li>作为子查询的 <code>SELECT</code> 语句只能查询单个列</li>
 <li>子查询并不总是最有效的方法，而且可读性低</li>
 </ul>
 <h3 id="子查询作为条件">子查询作为条件<a class="headerlink" href="#子查询作为条件" title="Permanent link">#</a></h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="n">cust_name</span><span class="p">,</span>
-    <span class="n">cust_contact</span> 
-<span class="k">FROM</span>
-    <span class="n">Customers</span> 
-<span class="k">WHERE</span>
-    <span class="n">cust_id</span> <span class="k">IN</span> <span class="p">(</span> <span class="k">SELECT</span> <span class="n">cust_id</span> <span class="k">FROM</span> <span class="n">Orders</span> <span class="k">WHERE</span> <span class="n">order_num</span> <span class="k">IN</span> <span class="p">(</span> <span class="k">SELECT</span> <span class="n">order_num</span> <span class="k">FROM</span> <span class="n">OrderItems</span> <span class="k">WHERE</span> <span class="n">prod_id</span> <span class="o">=</span> <span class="s1">&#39;RGAN01&#39;</span> <span class="p">)</span> <span class="p">);</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="n">cust_name</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">cust_contact</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Customers</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"></span>
+<span class="w">    </span><span class="n">cust_id</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">cust_id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Orders</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">order_num</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">order_num</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">OrderItems</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">prod_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;RGAN01&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h3 id="子查询作为计算字段">子查询作为计算字段<a class="headerlink" href="#子查询作为计算字段" title="Permanent link">#</a></h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="n">cust_name</span><span class="p">,</span>
-    <span class="n">cust_state</span><span class="p">,</span>
-    <span class="p">(</span> <span class="k">SELECT</span> <span class="k">COUNT</span><span class="p">(</span> <span class="o">*</span> <span class="p">)</span> <span class="k">FROM</span> <span class="n">Orders</span> <span class="k">WHERE</span> <span class="n">Orders</span><span class="p">.</span><span class="n">cust_id</span> <span class="o">=</span> <span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span> <span class="p">)</span> <span class="k">AS</span> <span class="n">orders</span> 
-<span class="k">FROM</span>
-    <span class="n">Customers</span> 
-<span class="k">ORDER</span> <span class="k">BY</span>
-    <span class="n">cust_name</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="n">cust_name</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">cust_state</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Orders</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Orders</span><span class="p">.</span><span class="n">cust_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Customers</span><span class="w"> </span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"></span>
+<span class="w">    </span><span class="n">cust_name</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h2 id="表联结">表联结<a class="headerlink" href="#表联结" title="Permanent link">#</a></h2>
 <h3 id="内联结">内联结<a class="headerlink" href="#内联结" title="Permanent link">#</a></h3>
 <ul>
 <li>要保证所有联结都有WHERE子句，否则DBMS将返回比想要的数据多得多的数据</li>
 <li>笛卡儿积的联结，也称叉联结（cross join）</li>
 </ul>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -1658,36 +1643,34 @@
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="n">vend_name</span><span class="p">,</span>
-    <span class="n">prod_name</span><span class="p">,</span>
-    <span class="n">prod_price</span> 
-<span class="k">FROM</span>
-    <span class="n">Vendors</span><span class="p">,</span>
-    <span class="n">Products</span> 
-<span class="k">WHERE</span>
-    <span class="n">Vendors</span><span class="p">.</span><span class="n">vend_id</span> <span class="o">=</span> <span class="n">Products</span><span class="p">.</span><span class="n">vend_id</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="n">vend_name</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">prod_name</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">prod_price</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Vendors</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">Products</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"></span>
+<span class="w">    </span><span class="n">Vendors</span><span class="p">.</span><span class="n">vend_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Products</span><span class="p">.</span><span class="n">vend_id</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <p>等效写法，使用 <code>INNER JOIN</code>，在使用这种语法时，联结条件用特定的ON子句而不是WHERE子句给出。上面是简单写法，下面是规范写法，具体使用哪个取决于哪个更方便。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="n">vend_name</span><span class="p">,</span>
-    <span class="n">prod_name</span><span class="p">,</span>
-    <span class="n">prod_price</span> 
-<span class="k">FROM</span>
-    <span class="n">Vendors</span>
-    <span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">Products</span> <span class="k">ON</span> <span class="n">Vendors</span><span class="p">.</span><span class="n">vend_id</span> <span class="o">=</span> <span class="n">Products</span><span class="p">.</span><span class="n">vend_id</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="n">vend_name</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">prod_name</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">prod_price</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Vendors</span><span class="w"></span>
+<span class="w">    </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Products</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Vendors</span><span class="p">.</span><span class="n">vend_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Products</span><span class="p">.</span><span class="n">vend_id</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h3 id="自联结">自联结<a class="headerlink" href="#自联结" title="Permanent link">#</a></h3>
 <p>相当于是同一个表自己联结自己，许多DBMS处理联结远比处理子查询快得多。</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1696,18 +1679,17 @@
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="n">c1</span><span class="p">.</span><span class="n">cust_id</span><span class="p">,</span>
-    <span class="n">c1</span><span class="p">.</span><span class="n">cust_name</span><span class="p">,</span>
-    <span class="n">c1</span><span class="p">.</span><span class="n">cust_contact</span> 
-<span class="k">FROM</span>
-    <span class="n">Customers</span> <span class="k">AS</span> <span class="n">c1</span><span class="p">,</span>
-    <span class="n">Customers</span> <span class="k">AS</span> <span class="n">c2</span> 
-<span class="k">WHERE</span>
-    <span class="n">c1</span><span class="p">.</span><span class="n">cust_name</span> <span class="o">=</span> <span class="n">c2</span><span class="p">.</span><span class="n">cust_name</span> 
-    <span class="k">AND</span> <span class="n">c2</span><span class="p">.</span><span class="n">cust_contact</span> <span class="o">=</span> <span class="s1">&#39;Jim Jones&#39;</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="n">c1</span><span class="p">.</span><span class="n">cust_id</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">c1</span><span class="p">.</span><span class="n">cust_name</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">c1</span><span class="p">.</span><span class="n">cust_contact</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Customers</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c1</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">Customers</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c2</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"></span>
+<span class="w">    </span><span class="n">c1</span><span class="p">.</span><span class="n">cust_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c2</span><span class="p">.</span><span class="n">cust_name</span><span class="w"> </span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">c2</span><span class="p">.</span><span class="n">cust_contact</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Jim Jones&#39;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h3 id="外联结">外联结<a class="headerlink" href="#外联结" title="Permanent link">#</a></h3>
 <ul>
 <li>与内联结关联两个表中的行不同的是，外联结还包括没有关联行的行</li>
@@ -1715,19 +1697,18 @@
 <li>左外联结和右外联结，它们之间的唯一差别是所关联的表的顺序</li>
 <li>SQLite支持 <code>LEFT OUTER JOIN</code>，但不支持 <code>RIGHT OUTER JOIN</code></li>
 </ul>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span><span class="p">,</span>
-    <span class="n">Orders</span><span class="p">.</span><span class="n">order_num</span> 
-<span class="k">FROM</span>
-    <span class="n">Customers</span>
-    <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">Orders</span> <span class="k">ON</span> <span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span> <span class="o">=</span> <span class="n">Orders</span><span class="p">.</span><span class="n">cust_id</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">Orders</span><span class="p">.</span><span class="n">order_num</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Customers</span><span class="w"></span>
+<span class="w">    </span><span class="k">LEFT</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Orders</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Orders</span><span class="p">.</span><span class="n">cust_id</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h2 id="UNION-组合查询">UNION 组合查询<a class="headerlink" href="#UNION-组合查询" title="Permanent link">#</a></h2>
 <ul>
 <li>合并多个查询结果返回</li>
@@ -1740,7 +1721,7 @@
 <li><code>UNION</code> 从查询结果集中自动去除了重复的行，除非使用 <code>UNION ALL</code> 则不取消重复的行</li>
 <li>只能使用一条 <code>ORDER BY</code> 子句，它必须位于最后一条 <code>SELECT</code> 语句之后</li>
 </ul>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1755,32 +1736,32 @@
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-    <span class="n">cust_name</span><span class="p">,</span>
-    <span class="n">cust_contact</span><span class="p">,</span>
-    <span class="n">cust_email</span> 
-<span class="k">FROM</span>
-    <span class="n">Customers</span> 
-<span class="k">WHERE</span>
-    <span class="n">cust_state</span> <span class="k">IN</span> <span class="p">(</span> <span class="s1">&#39;IL&#39;</span><span class="p">,</span> <span class="s1">&#39;IN&#39;</span><span class="p">,</span> <span class="s1">&#39;MI&#39;</span> <span class="p">)</span> <span class="k">UNION</span>
-<span class="k">SELECT</span>
-    <span class="n">cust_name</span><span class="p">,</span>
-    <span class="n">cust_contact</span><span class="p">,</span>
-    <span class="n">cust_email</span> 
-<span class="k">FROM</span>
-    <span class="n">Customers</span> 
-<span class="k">WHERE</span>
-    <span class="n">cust_name</span> <span class="o">=</span> <span class="s1">&#39;Fun4All&#39;</span><span class="p">;</span>
-</code></pre></div>
-</td></tr></table>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="n">cust_name</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">cust_contact</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">cust_email</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Customers</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"></span>
+<span class="w">    </span><span class="n">cust_state</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;IL&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;IN&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;MI&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">UNION</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="n">cust_name</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">cust_contact</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">cust_email</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">Customers</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"></span>
+<span class="w">    </span><span class="n">cust_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Fun4All&#39;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 
               
             </article>
+            
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             回到页面顶部
           </a>
         
@@ -1795,7 +1776,7 @@
         
         <a href="../../python/tips/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 使用技巧" rel="prev">
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
@@ -1819,7 +1800,7 @@
             </div>
           </div>
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
           </div>
         </a>
       
@@ -1843,7 +1824,7 @@
     
     
     <a href="mailto:<benimang@126.com>" target="_blank" rel="noopener" title="" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2 12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m511.6 36.86-64 415.1a32.008 32.008 0 0 1-31.65 27.147c-4.188 0-8.319-.815-12.29-2.472l-122.6-51.1-50.86 76.29C226.3 508.5 219.8 512 212.8 512c-11.5 0-20.8-9.3-20.8-20.8v-96.18c0-7.115 2.372-14.03 6.742-19.64L416 96 122.3 360.3 19.69 317.5C8.438 312.8.812 302.2.062 289.1s5.47-23.72 16.06-29.77l448-255.1c10.69-6.109 23.88-5.547 34 1.406S513.5 24.72 511.6 36.86z"/></svg>
     </a>
   
 </div>
@@ -1855,10 +1836,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.highlight", "content.code.annotate"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.highlight", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
         <script src="../../assets/js/tablesort.min.js"></script>
       
