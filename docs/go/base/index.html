@@ -19,7 +19,7 @@
     
     
       
-        <title>GO语言相关 - Beni Docs</title>
+        <title>GO相关 - Beni Docs</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#GO语言相关" class="md-skip">
+        <a href="#GO相关" class="md-skip">
           跳转至
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GO语言相关
+              GO相关
             
           </span>
         </div>
@@ -408,12 +408,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          GO语言相关
+          GO相关
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        GO语言相关
+        GO相关
       </a>
       
         
@@ -434,6 +434,13 @@
         <li class="md-nav__item">
   <a href="#安装以及使用第三方库" class="md-nav__link">
     安装以及使用第三方库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#GO命令" class="md-nav__link">
+    GO命令
   </a>
   
 </li>
@@ -1018,6 +1025,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#GO命令" class="md-nav__link">
+    GO命令
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1032,7 +1046,7 @@
                 
 
 
-<h1 id="GO语言相关">GO语言相关<a class="headerlink" href="#GO语言相关" title="Permanent link">#</a></h1>
+<h1 id="GO相关">GO相关<a class="headerlink" href="#GO相关" title="Permanent link">#</a></h1>
 <h2 id="安装以及使用第三方库">安装以及使用第三方库<a class="headerlink" href="#安装以及使用第三方库" title="Permanent link">#</a></h2>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
@@ -1042,9 +1056,28 @@
 <ol>
 <li>强制打开 <code>GO111MODULE</code> 可以使用命令行 <code class="highlight">env -w <span class="nv">GO111MODULE</span><span class="o">=</span>on</code></li>
 <li>设置代理 <code class="highlight">go env -w <span class="nv">GOPROXY</span><span class="o">=</span>https://goproxy.cn,direct</code></li>
-<li>拉取第三方库 <code>go get github.com/skip2/go-qrcode</code></li>
+<li>拉取第三方库，在项目目录下执行 <code>go get github.com/skip2/go-qrcode</code></li>
 <li>如果顺利的话 <code>go.mod</code> 和 <code>go.sum</code> 2个文件会更新，然后就可以使用了</li>
 </ol>
+<h2 id="GO命令">GO命令<a class="headerlink" href="#GO命令" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>go run</code></td>
+<td>直接运行</td>
+</tr>
+<tr>
+<td><code>go build</code></td>
+<td>生成可执行文件，甚至可以跨平台生成</td>
+</tr>
+</tbody>
+</table>
 
               
             </article>
