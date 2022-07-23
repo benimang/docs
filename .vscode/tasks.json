@@ -16,9 +16,30 @@
             "problemMatcher": []
         },
         {
-            "label": "commit",
+            "label": "git commit",
             "type": "shell",
-            "command": "TortoiseGitProc.exe /command:commit",
+            "command": "TortoiseGitProc.exe /command:commit /path:./",
+            "problemMatcher": [],
+            "dependsOn": [
+                "build"
+            ]
+        },
+        {
+            "label": "git revert",
+            "type": "shell",
+            "command": "TortoiseGitProc.exe /command:revert /path:./",
+            "problemMatcher": []
+        },
+        {
+            "label": "git log",
+            "type": "shell",
+            "command": "TortoiseGitProc.exe /command:log /path:./",
+            "problemMatcher": []
+        },
+        {
+            "label": "git pull",
+            "type": "shell",
+            "command": "TortoiseGitProc.exe /command:pull /path:./",
             "problemMatcher": [],
             "dependsOn": [
                 "build"
