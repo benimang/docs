@@ -1,41 +1,41 @@
 nav:
-  - index.md  
+  - index.md
   - Python:
-    - python/decorator.md
-    - python/typing.md
-    - python/pathlib.md
-    - python/fstring.md
-    - python/sqlite.md
-    - python/playwright.md
-    - python/pip.md
-    - python/tips.md
+      - python/decorator.md
+      - python/typing.md
+      - python/pathlib.md
+      - python/fstring.md
+      - python/sqlite.md
+      - python/playwright.md
+      - python/pip.md
+      - python/tips.md
   - Database:
-    - database/select.md
-    - database/modify.md
-    - database/concept.md
-  - Amazon:
-    - amazon/selection.md
-    - amazon/listing.md
-    - amazon/promotion.md
-    - amazon/ad.md
-    - amazon/storage.md
-    - amazon/oneday.md
+      - database/select.md
+      - database/modify.md
+      - database/concept.md
   - Laya:
-    - laya/base.md
-    - laya/laya-zlib.md
-    - laya/laya-promise.md
+      - laya/base.md
+      - laya/laya-zlib.md
+      - laya/laya-promise.md
   - Linux:
-    - linux/centos.md
-    - linux/nginx.md
+      - linux/centos.md
+      - linux/nginx.md
   - Docker:
-    - docker/base.md
+      - docker/base.md
   - Others:
-    - others/website.md
-    - others/vscode.md
-    - others/ios.md
-    - others/proxy.md
-    - others/nodejs.md
+      - others/website.md
+      - others/vscode.md
+      - others/ios.md
+      - others/proxy.md
+      - others/nodejs.md
+  - Eshop:
+      - Amazon:
+          - amazon/selection.md
+          - amazon/listing.md
+          - amazon/promotion.md
+          - amazon/ad.md
+          - amazon/storage.md
+          - amazon/oneday.md
   - others/url.md
   # - bak:
   #     - bak/text.md
-  
