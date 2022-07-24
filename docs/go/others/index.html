@@ -1087,7 +1087,7 @@
 <a href="https://blog.csdn.net/weixin_54707168/article/details/122658675" target="_blank">https://blog.csdn.net/weixin_54707168/article/details/122658675</a></p>
 </div>
 <ol>
-<li>强制打开 <code>GO111MODULE</code> 可以使用命令行 <code class="highlight">env -w <span class="nv">GO111MODULE</span><span class="o">=</span>on</code></li>
+<li>强制打开 <code>GO111MODULE</code> 可以使用命令行 <code class="highlight">go env -w <span class="nv">GO111MODULE</span><span class="o">=</span>on</code></li>
 <li>设置代理 <code class="highlight">go env -w <span class="nv">GOPROXY</span><span class="o">=</span>https://goproxy.cn,direct</code></li>
 <li>拉取第三方库，在项目目录下执行 <code>go get github.com/skip2/go-qrcode</code></li>
 <li>如果顺利的话 <code>go.mod</code> 和 <code>go.sum</code> 2个文件会更新，然后就可以使用了</li>
