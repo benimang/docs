@@ -313,7 +313,7 @@ func eFunc(
 
 ## for 循环
 
-```go hl_lines="7-8 18-19 24-25"
+```go hl_lines="7-8 18-19 24-25 30-31"
 package main
 
 func main() {
@@ -339,6 +339,13 @@ func main() {
 	{
 		// 常规循环
 		for i := 0; i < 3; i++ {
+		}
+	}
+	{
+		ary := []int{1, 2, 3, 4, 5}
+		// 遍历数组
+		for i, v := range ary {
+			println(i, v)
 		}
 	}
 }
@@ -377,5 +384,73 @@ func bfunc() {
 
 func cfunc() {
 	println("running in cfunc")
+}
+```
+
+
+## 数组
+
+```go hl_lines="7"
+package main
+
+import "fmt"
+
+func main() {
+
+	// 数组必须声明长度，而且长度不允许修改
+
+	// 先声明数组，后面再使用
+	var ary1 [2]int
+	ary1[0] = 12
+	ary1[1] = 34
+
+	// 声明数组并初始化
+	ary2 := [2]int{12, 34}
+
+	// 声明数组并仅初始化部分
+	ary3 := [2]int{1: 34}
+
+	fmt.Println(ary1, ary2, ary3)
+}
+```
+
+
+## 切片
+
+```go hl_lines="7-9"
+package main
+
+import "fmt"
+
+func main() {
+
+	// 切片是底层数组的一个片段，可以添加或移除
+	// 特别注意：切片执行append操作后得到新的切片，不一定是新的引用
+	// 			取决于有没有超出底层数组的长度
+
+    // 切片定义并初始化
+	ary1 := []int{1, 2, 3, 4, 5}
+	printAry("ary1", ary1)
+
+	// 获取切片
+	ary2 := ary1[2:4]
+	printAry("ary2", ary2)
+
+	// 添加
+	ary3 := append(ary1, 6, 7)
+	printAry("ary3", ary3)
+
+	// 移除（其实也是以来append来操作）
+	ary4 := append(ary1[:2], ary1[3:]...)
+	printAry("ary4", ary4)
+
+	// 复制一个新的（注意：要先准备一个带长度的切片，否则无法弄进去）
+	ary5 := make([]int, len(ary1))
+	copy(ary5, ary1)
+	printAry("ary5", ary5)
+}
+
+func printAry(msg string, ary []int) {
+	fmt.Printf("%v = %v\n", msg, ary)
 }
 ```
