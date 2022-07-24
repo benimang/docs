@@ -345,14 +345,15 @@ func main() {
 ```
 
 
-# defer 延迟执行
+## defer 延迟执行
 
-```go hl_lines="14-15"
+```go hl_lines="15-18"
 package main
 
 func main() {
 	// afunc xxx...1
 	// afunc xxx...2
+	// running in cfunc
 	// running in bfunc
 	// afunc result
 	println(afunc())
@@ -362,13 +363,19 @@ func afunc() string {
 	println("afunc xxx...1")
 
 	// defer 指定的函数将会在当前所在函数返回结果出去前执行
+	// 注意：越往后面调用的defer会越先执行
 	defer bfunc()
-	
+	defer cfunc()
+
 	println("afunc xxx...2")
 	return "afunc result"
 }
 
 func bfunc() {
 	println("running in bfunc")
+}
+
+func cfunc() {
+	println("running in cfunc")
 }
 ```
