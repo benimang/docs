@@ -249,3 +249,63 @@ type address struct {
 	street string
 }
 ```
+
+
+## 函数
+
+```go
+package main
+
+import "strconv"
+
+func main() {
+	println(aFunc(1))       // 2
+	println(bFunc(1))       // 2 0
+	println(cFunc())        // 0
+	println(cFunc(1, 2, 3)) // 6
+	println(dFunc())        // 123 sss
+	{
+		tempFunc := func(v1 int, v2 float32) string {
+			s1 := strconv.FormatInt(int64(v1), 10)
+			s2 := strconv.FormatFloat(float64(v2), 'f', 3, 32)
+			return  s1 + " " + s2
+		}
+		println(eFunc(tempFunc, 123, 456.789)) // 123 456.789
+	}
+}
+
+// 指定参数以及返回值
+func aFunc(value int) int {
+	return value + 1
+}
+
+// 指定多个返回值
+func bFunc(value int) (int, int) {
+	return value + 1, value - 1
+}
+
+// 指定任意参数
+func cFunc(valueList ...int) int {
+	result := 0
+	for _, value := range valueList {
+		result += value
+	}
+	return result
+}
+
+// 指定返回变量名字
+func dFunc() (aa int, bb string) {
+	aa += 123
+	bb = "sss"
+	return
+}
+
+// 指定一个函数作为参数
+func eFunc(
+	f func(int, float32) string,
+	v1 int,
+	v2 float32,
+) string {
+	return f(v1, v2)
+}
+```
