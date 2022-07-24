@@ -21,7 +21,7 @@
             "command": "TortoiseGitProc.exe /command:commit /path:./",
             "problemMatcher": [],
             "dependsOn": [
-                "build",
+                "mkdocs build",
             ]
         },
         {
