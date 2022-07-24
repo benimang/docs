@@ -182,3 +182,28 @@ func main() {
 	fmt.Fprintf(os.Stderr, "an %s\n", "error")
 }
 ```
+
+
+## 指针
+
+```go
+package main
+
+func main() {
+
+	i := 123
+	x := &i // 获取变量的地址
+
+	updateInt(x)
+
+	println(i)
+	println(x)
+	println(*x) // 指针前面加上*表示指针对应的值
+}
+
+// 类型前加上*表示指针
+func updateInt(value *int) {
+	// 指针前面加上*表示指针对应的值
+	*value += 1
+}
+```
