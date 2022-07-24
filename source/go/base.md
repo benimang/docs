@@ -207,3 +207,45 @@ func updateInt(value *int) {
 	*value += 1
 }
 ```
+
+
+## 结构体和指针
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	apple := student{
+		name: "apple",
+		addr: address{
+			city:   "Guangzhou",
+			street: "Wenming Road",
+		},
+	}
+
+	// {name:apple addr:{city:Guangzhou street:Wenming Road}}
+	fmt.Printf("%+v\n", apple)
+	
+	myfun(&apple)
+	
+	// {name:Xxxxx addr:{city:Xxxxxxxxx street:Wenming Road}}
+	fmt.Printf("%+v\n", apple) 
+}
+
+func myfun(value *student) {
+	value.name = "Xxxxx"
+	value.addr.city = "Xxxxxxxxx"
+}
+
+type student struct {
+	name string
+	addr address
+}
+
+type address struct {
+	city   string
+	street string
+}
+```
