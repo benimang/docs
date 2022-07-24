@@ -313,7 +313,7 @@ func eFunc(
 
 ## for 循环
 
-```go
+```go hl_lines="7-8 18-19 24-25"
 package main
 
 func main() {
@@ -341,5 +341,34 @@ func main() {
 		for i := 0; i < 3; i++ {
 		}
 	}
+}
+```
+
+
+# defer 延迟执行
+
+```go hl_lines="14-15"
+package main
+
+func main() {
+	// afunc xxx...1
+	// afunc xxx...2
+	// running in bfunc
+	// afunc result
+	println(afunc())
+}
+
+func afunc() string {
+	println("afunc xxx...1")
+
+	// defer 指定的函数将会在当前所在函数返回结果出去前执行
+	defer bfunc()
+	
+	println("afunc xxx...2")
+	return "afunc result"
+}
+
+func bfunc() {
+	println("running in bfunc")
 }
 ```
