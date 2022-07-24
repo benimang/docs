@@ -90,7 +90,7 @@ func main() {
 ```
 
 
-## fmt.Printf参数例子
+## fmt.Printf
 
 ```go
 package main
@@ -307,5 +307,39 @@ func eFunc(
 	v2 float32,
 ) string {
 	return f(v1, v2)
+}
+```
+
+
+## for 循环
+
+```go
+package main
+
+func main() {
+	{
+		a := 0
+		b := 3
+		// 无条件循环
+		for {
+			a++
+			if a > b {
+				break
+			}
+		}
+	}
+	{
+		a := 0
+		b := 3
+		// 带条件循环
+		for a < b {
+			a++
+		}
+	}
+	{
+		// 常规循环
+		for i := 0; i < 3; i++ {
+		}
+	}
 }
 ```
