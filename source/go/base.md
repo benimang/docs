@@ -748,7 +748,7 @@ func main() {
 
 	c := make(chan string)
 
-	// 启动一个协程只需在函数调用前加上go
+	// 启动一个并发只需在函数调用前加上go
 	go myfun(c)
 
 	<-c
@@ -759,5 +759,63 @@ func myfun(c chan string) {
 	println("going to sleep 3s...")
 	time.Sleep(3 * time.Second)
 	c <- "finished"
+}
+```
+
+
+## select
+
+```go hl_lines="12-13"
+package main
+
+import "time"
+
+func main() {
+
+	c1 := make(chan string)
+	c2 := make(chan string)
+
+	go myfun(c1, c2)
+
+	// 存在多个channel的情况下
+	// 可以使用select获取最先收到消息的那个
+	select {
+	case value := <-c1:
+		println("c1 通道返回消息 " + value)
+	case value := <-c2:
+		println("c2 通道返回消息 " + value)
+	}
+	println("end")
+}
+
+func myfun(c1 chan string, c2 chan string) {
+	println("going to sleep 3s...")
+	time.Sleep(3 * time.Second)
+	c2 <- "xx"
+	println("xxxxx1")
+	c1 <- "xxxxx"
+	println("xxxxx2")
+}
+```
+
+
+## 时间控制（延迟和重复间隔）
+
+```go
+package main
+
+import "time"
+
+func main() {
+
+	// 延迟，功能类似于 time.Sleep(...)
+	<-time.After(2 * time.Second)
+
+	// 重复间隔
+	ticker := time.NewTicker(1 * time.Second)
+	for {
+		<-ticker.C
+	}
+
 }
 ```
