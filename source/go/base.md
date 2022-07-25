@@ -467,3 +467,31 @@ func printAry(msg string, ary []int) {
 	fmt.Printf("%v = %v\n", msg, ary)
 }
 ```
+
+
+## map 映射
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	// 映射必须要创建后才能使用
+	map1 := make(map[string]int)
+	map1["a"] = 123
+	map1["b"] = 456
+	printMap("map1", map1)
+
+	// 声明并初始化映射
+	map2 := map[string]int{"a": 123, "b": 456}
+	// 删除映射中的元素
+	delete(map2, "a")
+	printMap("map2", map2)
+}
+
+func printMap(name string, data map[string]int) {
+	fmt.Printf("%v = %+v\n", name, data)
+}
+```
+
