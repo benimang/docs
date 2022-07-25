@@ -819,3 +819,22 @@ func main() {
 
 }
 ```
+
+
+## 单元测试
+
+```go title="xxx_test.go" hl_lines="5-6 10 12"
+package main
+
+import "testing"
+
+// 文件名必须以 _test.go 结尾
+// 测试函数名必须以 Test 开头，参数类型为 *testing.T
+
+func TestFunc(t *testing.T) {
+
+	t.Error("错误，允许继续")
+
+	t.Fatal("错误，立即终止")
+}
+```
