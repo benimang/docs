@@ -190,7 +190,7 @@ func main() {
 
 ## 指针
 
-```go
+```go hl_lines="6 12 15-16"
 package main
 
 func main() {
