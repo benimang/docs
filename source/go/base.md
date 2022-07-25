@@ -624,6 +624,7 @@ func main() {
 
 	// 声明并初始化映射
 	map2 := map[string]int{"a": 123, "b": 456}
+	
 	// 删除映射中的元素
 	delete(map2, "a")
 	printMap("map2", map2)
@@ -634,3 +635,54 @@ func printMap(name string, data map[string]int) {
 }
 ```
 
+
+## 字符串
+
+```go
+package main
+
+import (
+	"bytes"
+	"fmt"
+	"strings"
+)
+
+func main() {
+
+	// 使用缓冲区拼接字符串
+	var buffer bytes.Buffer
+	buffer.WriteString("abc")
+	buffer.WriteString("def")
+	print(
+		buffer.String(),
+	)
+
+	// 使用数组拼接字符串
+	strAry := []string{"xx", "yy"}
+	print(
+		strings.Join(strAry, "-"),
+	)
+
+	print(
+		// 字符串分割成数组
+		strings.Split("a b c", " "),
+
+		// 清除
+		strings.TrimSpace("  xx  "),
+
+		// 使用 `` 可以不转义字符
+		`asdf\32`,
+
+		// 长度
+		len([]rune("GO语言编程")), // 6
+		len("GO语言编程"),         // 14
+	)
+
+}
+
+func print(value ...interface{}) {
+	for _, v := range value {
+		fmt.Printf("%v\n", v)
+	}
+}
+```
