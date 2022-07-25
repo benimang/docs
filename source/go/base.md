@@ -40,6 +40,10 @@ func main() {
 	strconv.ParseBool("true")
 	strconv.ParseInt("112", 10, 32)
 	strconv.ParseFloat("123.456", 32)
+
+	// 字符串 int十进制转换的便捷方法
+	strconv.Atoi("123")
+	strconv.Itoa(123)
 }
 ```
 
