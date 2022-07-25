@@ -355,6 +355,45 @@ func (m *movie) addRating(value float32) {
 ```
 
 
+## 接口
+
+```go hl_lines="12-16 26"
+package main
+
+func main() {
+	var p people = student{"Tom"}
+	p.makeMoney()
+	p.play()
+
+	s := student{"Dick"}
+	s.study()
+}
+
+// 接口定义
+type people interface {
+	makeMoney()
+	play()
+}
+
+type student struct {
+	name string
+}
+
+func (s student) study() {
+	println(s.name + " student study")
+}
+
+// 结构体如果有接口定义全部一样的方法，结构体就算是实现了接口
+func (s student) makeMoney() {
+	println(s.name + " make money")
+}
+
+func (s student) play() {
+	println(s.name + " playing")
+}
+```
+
+
 ## 函数
 
 ```go hl_lines="21-22 26-27 31-32 40-41 47-52"
