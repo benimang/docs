@@ -414,6 +414,9 @@ func main() {
 	// 声明数组并仅初始化部分
 	ary3 := [2]int{1: 34}
 
+	// len 获取数组长度
+	fmt.Println(len(ary3))
+
 	fmt.Println(ary1, ary2, ary3)
 }
 ```
