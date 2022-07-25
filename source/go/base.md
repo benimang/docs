@@ -257,7 +257,7 @@ type address struct {
 
 ## 函数
 
-```go
+```go hl_lines="21-22 26-27 31-32 40-41 47-52"
 package main
 
 import "strconv"
