@@ -213,6 +213,57 @@ func updateInt(value *int) {
 ```
 
 
+## 结构体
+
+```go hl_lines="7-8 11-12 15-17 19-20 23-27 30-34"
+package main
+
+import "fmt"
+
+func main() {
+
+	// 结构体声明后就可以立即使用
+	var m1 movie
+	print("m1", m1)
+
+	// 同样是生命结构体
+	m2 := movie{}
+	print("m2", m2)
+
+	// 结构体的比较必须是同类型的
+	// 比较是判断值相同，不会判断是否同一个对象
+	print("m1==m2", m1 == m2) // m1==m2 => true
+
+	// 使用 new 得到的是结构体指针
+	m3 := new(movie)
+	print("m3", m3)
+
+	// 结构体初始化并指定参数，通过名称指定值
+	m4 := movie{
+		name:   "movie name 3",
+		rating: 3,
+	}
+	print("m4", m4)
+
+	// 结构体初始化并指定参数，根据顺序指定
+	m5 := movie{
+		"movie name 4",
+		4,
+	}
+	print("m5", m5)
+}
+
+type movie struct {
+	name   string
+	rating float32
+}
+
+func print(name string, data interface{}) {
+	fmt.Printf("%v = %+v\n", name, data)
+}
+```
+
+
 ## 结构体和指针
 
 ```go
