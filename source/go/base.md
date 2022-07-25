@@ -215,7 +215,7 @@ func updateInt(value *int) {
 
 ## 结构体
 
-```go hl_lines="7-8 11-12 15-17 19-20 23-27 30-34"
+```go hl_lines="7-8 11-12 15-17 19-20 23-27 30-34 38-43"
 package main
 
 import "fmt"
@@ -253,6 +253,8 @@ func main() {
 	print("m5", m5)
 }
 
+// 结构体的定义
+// 注意：无法指定默认值
 type movie struct {
 	name   string
 	rating float32
