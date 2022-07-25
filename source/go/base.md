@@ -320,6 +320,41 @@ func print(name string, data interface{}) {
 ```
 
 
+## 结构体方法
+
+```go hl_lines="18-24 26-27"
+package main
+
+import "fmt"
+
+func main() {
+	m := movie{"hahaha", 5}
+	m.showSummary()
+
+	m.addRating(1.1)
+	m.showSummary()
+}
+
+type movie struct {
+	name   string
+	rating float32
+}
+
+// 在函数名称前加上结构体，就是结构体方法，结构体可以直接调用
+// 这里是值引用，数值的修改不影响源数据
+func (m movie) showSummary() {
+	println(
+		fmt.Sprintf("%v, %v", m.name, m.rating),
+	)
+}
+
+// 这里是指针引用，可以直接修改源数据
+func (m *movie) addRating(value float32) {
+	m.rating += value
+}
+```
+
+
 ## 函数
 
 ```go hl_lines="21-22 26-27 31-32 40-41 47-52"
