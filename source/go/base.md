@@ -435,13 +435,19 @@ func main() {
 	// 特别注意：切片执行append操作后得到新的切片，不一定是新的引用
 	// 			取决于有没有超出底层数组的长度
 
-    // 切片定义并初始化
+	// 切片定义并初始化
 	ary1 := []int{1, 2, 3, 4, 5}
 	printAry("ary1", ary1)
 
 	// 获取切片
 	ary2 := ary1[2:4]
 	printAry("ary2", ary2)
+
+	// len 切片长度
+	fmt.Printf("len(ary2) = %v\n", len(ary2))
+
+	// cap 切片容量（底层数组到最后一个元素的长度）
+	fmt.Printf("cap(ary2) = %v\n", cap(ary2))
 
 	// 添加
 	ary3 := append(ary1, 6, 7)
