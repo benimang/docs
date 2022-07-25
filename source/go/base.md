@@ -917,3 +917,78 @@ func main() {
 	log.Panic("发送完日志后执行 panic")
 }
 ```
+
+
+## JSON
+
+```go hl_lines="16-17 30-32 39-40 63-64"
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"log"
+	"net/http"
+)
+
+func main() {
+	simpleCase()
+	httpCase()
+}
+
+func simpleCase() {
+	// 使用 json 必须要有对应的结构体
+	// 最后一个配置是可选的，表示json对象的key名字，以及是否忽略零值
+	type Person struct {
+		Name    string   `json:"name,omitempty"`
+		Age     int      `json:"age,omitempty"`
+		Hobbies []string `json:"hobbies,omitempty"`
+	}
+
+	hobbies := []string{"Cycling", "Cheese", "Techno"}
+	p := Person{
+		Name:    "George",
+		Age:     40,
+		Hobbies: hobbies,
+	}
+	// 结构体转json字符串
+	// 注意返回的数据类型是 byte[]
+	jsonByteData, err := json.Marshal(p)
+	if err != nil {
+		log.Fatal(err)
+	}
+	jsonStringData := string(jsonByteData)
+	fmt.Println(jsonStringData)
+	var p2 Person
+	// 注意传入的参数必须是 byte[]
+	err = json.Unmarshal([]byte(jsonStringData), &p2)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("%+v\n", p2)
+}
+
+func httpCase() {
+	type taobaoTime struct {
+		Api  string            `json:"api"`
+		V    string            `json:"v"`
+		Ret  []string          `json:"ret"`
+		Data map[string]string `json:"data"`
+	}
+
+	response, err := http.Get(
+		"http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp",
+	)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer response.Body.Close()
+	var t taobaoTime
+	// 网络请求的数为 io.Reader 解析要使用 Decoder
+	err = json.NewDecoder(response.Body).Decode(&t)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("%+v\n", t)
+}
+```
