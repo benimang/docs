@@ -823,7 +823,7 @@ func main() {
 
 ## 单元测试
 
-```go title="xxx_test.go" hl_lines="5-6 10 12"
+```go title="u_test.go" hl_lines="5-6 10 12"
 package main
 
 import "testing"
@@ -836,5 +836,84 @@ func TestFunc(t *testing.T) {
 	t.Error("错误，允许继续")
 
 	t.Fatal("错误，立即终止")
+}
+```
+
+
+## 基准测试
+
+```go title="b_test.go" hl_lines="8-13 33-34 39-40"
+package main
+
+import (
+	"bytes"
+	"testing"
+)
+
+// 文件名必须以 _test.go 结尾
+// 基准测试函数名必须以 Benchmark 开头，参数类型为 *testing.B
+// 循环次数使用 b.N 不需要考虑实际运行了多少次
+// ns/op     每次操作耗时
+// B/op      每次分配字节
+// allocs/op 每次操作分配内存次数
+
+const n = 100
+
+func funcA() string {
+	result := ""
+	for i := 0; i < n; i++ {
+		result += "a"
+	}
+	return result
+}
+
+func funcB() string {
+	var buffer bytes.Buffer
+	for i := 0; i < n; i++ {
+		buffer.WriteString("a")
+	}
+	return buffer.String()
+}
+
+func BenchmarkA(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		funcA()
+	}
+}
+
+func BenchmarkB(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		funcB()
+	}
+}
+```
+
+
+## 日志
+
+```go hl_lines="17-19 21-23"
+package main
+
+import (
+	"log"
+	"os"
+)
+
+func main() {
+
+	logFile := `C:\Users\Beni\Desktop\test.log`
+	f, err := os.OpenFile(logFile, os.O_APPEND|os.O_CREATE|os.O_RDWR, 0644)
+	if err != nil {
+		log.Fatal("指定日志文件不存在", logFile)
+	}
+	defer f.Close()
+
+	// 指定日志输出到文件
+	// 提示：可以不在代码里设置日志输出，可以直接在系统启动的时候指定管道输出
+	log.SetOutput(f)
+
+	log.Print("普通日志")
+	log.Fatal("发送完日志后终止程序")
+	log.Panic("发送完日志后执行 panic")
 }
 ```
