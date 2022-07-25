@@ -268,7 +268,7 @@ func print(name string, data interface{}) {
 
 ## 结构体和指针
 
-```go
+```go hl_lines="14 29-30"
 package main
 
 import "fmt"
@@ -282,15 +282,22 @@ func main() {
 		},
 	}
 
+	// 结构体直接赋值后，是另外一个新的结构体
+	orange := apple
+	orange.name = "orange"
+
+	// orange = {name:orange addr:{city:Guangzhou street:Wenming Road}}
+	print("orange", orange)
 	// {name:apple addr:{city:Guangzhou street:Wenming Road}}
-	fmt.Printf("%+v\n", apple)
-	
+	print("apple", apple)
+
 	myfun(&apple)
-	
+
 	// {name:Xxxxx addr:{city:Xxxxxxxxx street:Wenming Road}}
-	fmt.Printf("%+v\n", apple) 
+	print("apple", apple)
 }
 
+// 使用指针可以直接修改结构体的值
 func myfun(value *student) {
 	value.name = "Xxxxx"
 	value.addr.city = "Xxxxxxxxx"
@@ -305,6 +312,11 @@ type address struct {
 	city   string
 	street string
 }
+
+func print(name string, data interface{}) {
+	fmt.Printf("%v = %+v\n", name, data)
+}
+
 ```
 
 
