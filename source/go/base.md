@@ -624,7 +624,7 @@ func main() {
 
 	// 声明并初始化映射
 	map2 := map[string]int{"a": 123, "b": 456}
-	
+
 	// 删除映射中的元素
 	delete(map2, "a")
 	printMap("map2", map2)
@@ -684,5 +684,30 @@ func print(value ...interface{}) {
 	for _, v := range value {
 		fmt.Printf("%v\n", v)
 	}
+}
+```
+
+
+## 错误
+
+```go
+package main
+
+import (
+	"errors"
+	"fmt"
+)
+
+func main() {
+	// 生成错误
+	e1 := errors.New("xxx")
+	fmt.Println(e1)
+
+	// 生成错误
+	e2 := fmt.Errorf("%v..%v", 123, 456)
+	fmt.Println(e2)
+
+	// 立即终止程序
+	panic("shutdown at once")
 }
 ```
