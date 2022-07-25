@@ -690,7 +690,7 @@ func print(value ...interface{}) {
 
 ## 错误
 
-```go
+```go hl_lines="9-10 13-14 17-18"
 package main
 
 import (
@@ -709,5 +709,55 @@ func main() {
 
 	// 立即终止程序
 	panic("shutdown at once")
+}
+```
+
+
+## 通道
+
+```go
+package main
+
+func main() {
+	
+	// 创建通道，后面的数值不写默认是0
+	c := make(chan string, 1)
+
+	// 向通道写入数据
+	c <- "xxx"
+
+	// 从通道读取数据
+	value := <-c
+
+	// 关闭通道
+	close(c)
+
+	println(value)
+}
+```
+
+
+## Goroutine 与 通道
+
+```go hl_lines="9-10"
+package main
+
+import "time"
+
+func main() {
+
+	c := make(chan string)
+
+	// 启动一个协程只需在函数调用前加上go
+	go myfun(c)
+
+	<-c
+	close(c)
+}
+
+func myfun(c chan string) {
+	println("going to sleep 3s...")
+	time.Sleep(3 * time.Second)
+	c <- "finished"
 }
 ```
