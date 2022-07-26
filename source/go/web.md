@@ -126,7 +126,7 @@ func helloFunc(w http.ResponseWriter, r *http.Request) {
 ## 客户端
 
 
-### 简单 GET / POST
+### 简单 GET / POST 请求
 
 ```go hl_lines="13-14 19-20 22-23 30-31 33-34 39-40 42-43"
 package main
@@ -177,5 +177,69 @@ func main() {
 		}
 		fmt.Printf("%s\n", body)
 	}
+}
+```
+
+
+### 标准 HTTP 请求
+
+```go hl_lines="14-17 19-20 26-27 34-35 39-40 43-44 51-52"
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+	"log"
+	"net/http"
+	"net/http/httputil"
+	"time"
+)
+
+func main() {
+
+	// 创建一个带有超时的客户端
+	client := &http.Client{
+		Timeout: 3 * time.Second,
+	}
+
+	// 新建立一个 GET 请求
+	request, err := http.NewRequest("GET", "https://ifconfig.co", nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	{
+		// 调试输出 request
+		debugRequest, err := httputil.DumpRequestOut(request, true)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Printf("%s", debugRequest)
+	}
+
+	// 发送请求
+	response, err := client.Do(request)
+	if err != nil {
+		log.Fatal(err)
+	}
+	// 记得要执行关闭操作
+	defer response.Body.Close()
+
+	{
+		// 调试输出 response
+		debugResponse, err := httputil.DumpResponse(response, false)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Printf("%s", debugResponse)
+	}
+
+	// 读取返回的内容
+	body, err := ioutil.ReadAll(response.Body)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Printf("%s", body)
 }
 ```
