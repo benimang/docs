@@ -1110,3 +1110,66 @@ func main() {
 	}
 }
 ```
+
+
+## 正则表达式
+
+```go hl_lines="13-14 26-28 38-40 49-51"
+package main
+
+import (
+	"fmt"
+	"log"
+	"regexp"
+)
+
+func main() {
+	{
+		pattern := `^abc.*def$`
+		value := "abcxxxxdef"
+		// 直接匹配正则
+		matched, err := regexp.MatchString(pattern, value)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Printf(
+			"pattern=%v value=%v matched=%v\n",
+			pattern, value, matched,
+		)
+	}
+	{
+		pattern := `^abc.*def$`
+		value := "abcxxxxdef"
+		// 先编译正则表达式再匹配
+		re := regexp.MustCompile(pattern)
+		matched := re.MatchString(value)
+		fmt.Printf(
+			"pattern=%v value=%v matched=%v\n",
+			pattern, value, matched,
+		)
+	}
+	{
+		pattern := `[0-9]`
+		value := "abc09574de32f"
+		replace := "_"
+		// 正则替换
+		re := regexp.MustCompile(pattern)
+		newValue := re.ReplaceAllString(value, replace)
+		fmt.Printf(
+			"pattern=%v value=%v newValue=%v\n",
+			pattern, value, newValue,
+		)
+	}
+	{
+		pattern := `^abc(.*)def$`
+		value := "abcx23xx45xdef"
+		// 正则查找
+		re := regexp.MustCompile(pattern)
+		strAry := re.FindAllString(value, -1)
+		fmt.Printf(
+			"pattern=%v value=%v strAry=%v\n",
+			pattern, value, strAry,
+		)
+	}
+}
+```
