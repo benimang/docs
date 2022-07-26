@@ -38,9 +38,9 @@ func userFunc(w http.ResponseWriter, r *http.Request) {
 
 ### 响应不同类型的内容
 
-- `#!sh curl http://localhost:8001 -i -H "Accept: application/json"`
-- `#!sh curl http://localhost:8001 -i -H "Accept: application/xml"`
-- `#!sh curl http://localhost:8001 -i`
+- `#!sh curl -i -H "Accept: application/json" http://localhost:8001`
+- `#!sh curl -i -H "Accept: application/xml" http://localhost:8001`
+- `#!sh curl -i http://localhost:8001`
 
 ```go hl_lines="11-12 14-15"
 package main
@@ -65,6 +65,59 @@ func helloFunc(w http.ResponseWriter, r *http.Request) {
 	default:
 		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
 		w.Write([]byte("Hello World\n"))
+	}
+}
+```
+
+
+### 响应不同请求类型
+
+- `#! curl -i "http://localhost:8001/?abc=123&def=xxx"`
+- `#! curl -i -X POST -d "hello" "http://localhost:8001/?abc=123&def=xxx"`
+
+```go hl_lines="15-16 19-20 29-30"
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+	"net/http"
+)
+
+func main() {
+	http.HandleFunc("/", helloFunc)
+	http.ListenAndServe(":8001", nil)
+}
+
+func helloFunc(w http.ResponseWriter, r *http.Request) {
+	// 获取请求类型
+	switch r.Method {
+	case "GET":
+		w.Write([]byte("Received a GET request\n"))
+		// 获取 GET 参数
+		for k, v := range r.URL.Query() {
+			w.Write(
+				[]byte(
+					fmt.Sprintf("%v => %v\n", k, v),
+				),
+			)
+		}
+	case "POST":
+		w.Write([]byte("Received a POST request\n"))
+		// 获取 POST 参数
+		body, err := ioutil.ReadAll(r.Body)
+		if err != nil {
+			w.Write(
+				[]byte(
+					err.Error(),
+				),
+			)
+		} else {
+			w.Write(body)
+		}
+	default:
+		w.WriteHeader(http.StatusNotImplemented)
+		w.Write([]byte(http.StatusText(http.StatusNotImplemented) + "\n"))
 	}
 }
 ```
