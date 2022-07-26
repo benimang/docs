@@ -71,6 +71,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://pytask.com/go/gorm/</loc>
+         <lastmod>2022-07-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://pytask.com/go/others/</loc>
          <lastmod>2022-07-26</lastmod>
          <changefreq>daily</changefreq>
