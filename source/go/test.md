@@ -39,9 +39,9 @@ import (
 // 文件名必须以 _test.go 结尾
 // 基准测试函数名必须以 Benchmark 开头，参数类型为 *testing.B
 // 循环次数使用 b.N 不需要考虑实际运行了多少次
-// ns/op     每次操作耗时
+// ns/op     每次耗时
 // B/op      每次分配字节
-// allocs/op 每次操作分配内存次数
+// allocs/op 每次分配内存次数
 
 const n = 100
 
