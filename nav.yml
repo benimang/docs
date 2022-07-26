@@ -15,6 +15,7 @@ nav:
               - go/web.md
               - go/test.md
               - go/cmd.md
+              - go/gorm.md
       - Database:
               - database/select.md
               - database/modify.md
