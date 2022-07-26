@@ -992,3 +992,121 @@ func httpCase() {
 	fmt.Printf("%+v\n", t)
 }
 ```
+
+
+## 文件操作
+
+```go hl_lines="15-16 25-26 33-34 44-45 51 69-70 81-82 99-100 106-107"
+package main
+
+import (
+	"fmt"
+	"io"
+	"io/ioutil"
+	"log"
+	"os"
+)
+
+var testDir = `C:\Users\Administrator\Desktop\test`
+
+func main() {
+	{
+		// 递归创建目录（如果要创建的目录已存在不会报错）
+		err := os.MkdirAll(testDir, 0644)
+		if err != nil {
+			log.Fatal(err)
+		}
+	}
+	{
+		file := testDir + "/test_1.txt"
+		fileString := "一二三test"
+		fileBytes := []byte(fileString)
+		// 写入文件，如果文件不存在就创建文件
+		err := ioutil.WriteFile(file, fileBytes, 0644)
+		if err != nil {
+			log.Fatal(err)
+		}
+	}
+	{
+		file := testDir + "/test_1.txt"
+		// 读取文件
+		fileBytes, err := ioutil.ReadFile(file)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fileString := string(fileBytes)
+		fmt.Println(fileString)
+	}
+	{
+		fromFile := testDir + "/test_1.txt"
+		toFile := testDir + "/test_2.txt"
+		// 文件重命名，也可以用于移动文件
+		err := os.Rename(fromFile, toFile)
+		if err != nil {
+			log.Fatal(err)
+		}
+	}
+	{
+		// 标准库不提供复制文件的操作，这是其中一个实现方式
+		copyFile := func(fromFilePath, toFilePath string) {
+			fromFile, err := os.Open(fromFilePath)
+			if err != nil {
+				log.Fatal(err)
+			}
+			defer fromFile.Close()
+
+			toFile, err := os.OpenFile(
+				toFilePath,
+				os.O_RDWR|os.O_CREATE,
+				0644,
+			)
+			if err != nil {
+				log.Fatal(err)
+			}
+			defer toFile.Close()
+
+			// 复制的关键代码
+			_, err = io.Copy(toFile, fromFile)
+			if err != nil {
+				log.Fatal(err)
+			}
+		}
+		copyFile(
+			testDir+"/test_2.txt",
+			testDir+"/test_3.txt",
+		)
+	}
+	{
+		// 列出目录内容
+		fileList, err := ioutil.ReadDir(testDir)
+		if err != nil {
+			log.Fatal(err)
+		}
+		for _, file := range fileList {
+			fmt.Printf(
+				"Name=%v IsDir=%v Size=%v Mode=%v ModTime=%v\n",
+				file.Name(),
+				file.IsDir(),
+				file.Size(),
+				file.Mode(),
+				file.ModTime(),
+			)
+		}
+	}
+	{
+		file := testDir + "/test_2.txt"
+		// 删除
+		err := os.Remove(file)
+		if err != nil {
+			log.Fatal(err)
+		}
+	}
+	{
+		// 递归删除
+		err := os.RemoveAll(testDir)
+		if err != nil {
+			log.Fatal(err)
+		}
+	}
+}
+```
