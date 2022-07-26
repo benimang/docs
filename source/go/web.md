@@ -121,3 +121,61 @@ func helloFunc(w http.ResponseWriter, r *http.Request) {
 	}
 }
 ```
+
+
+## 客户端
+
+
+### 简单 GET / POST
+
+```go hl_lines="13-14 19-20 22-23 30-31 33-34 39-40 42-43"
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+	"log"
+	"net/http"
+	"strings"
+)
+
+func main() {
+	{
+		// 简单 GET 请求
+		response, err := http.Get("https://ifconfig.io/")
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		// 记得要调用关闭
+		defer response.Body.Close()
+
+		// response.Body 是 io.Reader 需要读取才能使用
+		body, err := ioutil.ReadAll(response.Body)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Printf("%s\n", body)
+	}
+	{
+		// POST 请求的数需要使用 io.Reader
+		postData := strings.NewReader(`{ "some":"json" }`)
+
+		// 简单 POST 请求
+		response, err := http.Post("https://httpbin.org/post", "application/json", postData)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		// 记得要调用关闭
+		defer response.Body.Close()
+		
+		// response.Body 是 io.Reader 需要读取才能使用
+		body, err := ioutil.ReadAll(response.Body)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Printf("%s\n", body)
+	}
+}
+```
