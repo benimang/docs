@@ -13,6 +13,7 @@ nav:
           - go/others.md
           - go/base.md
           - go/test.md
+          - go/cmd.md
     - Database:
           - database/select.md
           - database/modify.md
