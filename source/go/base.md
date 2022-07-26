@@ -801,22 +801,39 @@ func myfun(c1 chan string, c2 chan string) {
 
 ## 时间控制（延迟和重复间隔）
 
-```go
+```go hl_lines="9-10 12-13 16-17 20 28-29"
 package main
 
-import "time"
+import (
+	"time"
+)
 
 func main() {
 
-	// 延迟，功能类似于 time.Sleep(...)
+	// 休眠指定时间
+	time.Sleep(2 * time.Second)
+
+	// 延迟，可以用在 select
 	<-time.After(2 * time.Second)
 
-	// 重复间隔
-	ticker := time.NewTicker(1 * time.Second)
-	for {
-		<-ticker.C
+	{
+		// 重复间隔
+		ticker := time.NewTicker(1 * time.Second)
+		endTime := time.Now().Add(3 * time.Second)
+		for {
+			<-ticker.C
+			if time.Now().After(endTime) {
+				ticker.Stop()
+				break
+			}
+		}
 	}
-
+	{
+		// 另外一种循环
+		for range time.Tick(1 * time.Second) {
+			println("...")
+		}
+	}
 }
 ```
 
