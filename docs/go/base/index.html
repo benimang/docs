@@ -19,7 +19,7 @@
     
     
       
-        <title>GO基础 - Beni Docs</title>
+        <title>基础 - Beni Docs</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#GO基础" class="md-skip">
+        <a href="#基础" class="md-skip">
           跳转至
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GO基础
+              基础
             
           </span>
         </div>
@@ -422,12 +422,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          GO基础
+          基础
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        GO基础
+        基础
       </a>
       
         
@@ -600,20 +600,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#单元测试" class="md-nav__link">
-    单元测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#基准测试" class="md-nav__link">
-    基准测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#日志" class="md-nav__link">
     日志
   </a>
@@ -627,10 +613,66 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#文件操作" class="md-nav__link">
+    文件操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#正则表达式" class="md-nav__link">
+    正则表达式
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web/" class="md-nav__link">
+        网络
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test/" class="md-nav__link">
+        测试
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cmd/" class="md-nav__link">
+        命令行程序
+      </a>
     </li>
   
 
@@ -1355,20 +1397,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#单元测试" class="md-nav__link">
-    单元测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#基准测试" class="md-nav__link">
-    基准测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#日志" class="md-nav__link">
     日志
   </a>
@@ -1378,6 +1406,20 @@
         <li class="md-nav__item">
   <a href="#JSON" class="md-nav__link">
     JSON
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#文件操作" class="md-nav__link">
+    文件操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#正则表达式" class="md-nav__link">
+    正则表达式
   </a>
   
 </li>
@@ -1396,7 +1438,7 @@
                 
 
 
-<h1 id="GO基础">GO基础<a class="headerlink" href="#GO基础" title="Permanent link">#</a></h1>
+<h1 id="基础">基础<a class="headerlink" href="#基础" title="Permanent link">#</a></h1>
 <h2 id="检查变量类型">检查变量类型<a class="headerlink" href="#检查变量类型" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -2776,66 +2818,6 @@
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
-
-<span class="kn">import</span><span class="w"> </span><span class="s">&quot;time&quot;</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="c1">// 延迟，功能类似于 time.Sleep(...)</span><span class="w"></span>
-<span class="w">    </span><span class="o">&lt;-</span><span class="nx">time</span><span class="p">.</span><span class="nx">After</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">    </span><span class="c1">// 重复间隔</span><span class="w"></span>
-<span class="w">    </span><span class="nx">ticker</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">NewTicker</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="o">&lt;-</span><span class="nx">ticker</span><span class="p">.</span><span class="nx">C</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="p">}</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-<h2 id="单元测试">单元测试<a class="headerlink" href="#单元测试" title="Permanent link">#</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">u_test.go</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
-
-<span class="kn">import</span><span class="w"> </span><span class="s">&quot;testing&quot;</span><span class="w"></span>
-
-<span class="hll"><span class="c1">// 文件名必须以 _test.go 结尾</span><span class="w"></span>
-</span><span class="hll"><span class="c1">// 测试函数名必须以 Test 开头，参数类型为 *testing.T</span><span class="w"></span>
-</span>
-<span class="kd">func</span><span class="w"> </span><span class="nx">TestFunc</span><span class="p">(</span><span class="nx">t</span><span class="w"> </span><span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="hll"><span class="w">    </span><span class="nx">t</span><span class="p">.</span><span class="nx">Error</span><span class="p">(</span><span class="s">&quot;错误，允许继续&quot;</span><span class="p">)</span><span class="w"></span>
-</span>
-<span class="hll"><span class="w">    </span><span class="nx">t</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="s">&quot;错误，立即终止&quot;</span><span class="p">)</span><span class="w"></span>
-</span><span class="p">}</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-<h2 id="基准测试">基准测试<a class="headerlink" href="#基准测试" title="Permanent link">#</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">b_test.go</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
@@ -2853,57 +2835,37 @@
 <span class="normal">30</span>
 <span class="normal">31</span>
 <span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
 
 <span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;bytes&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;testing&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;time&quot;</span><span class="w"></span>
 <span class="p">)</span><span class="w"></span>
 
-<span class="hll"><span class="c1">// 文件名必须以 _test.go 结尾</span><span class="w"></span>
-</span><span class="hll"><span class="c1">// 基准测试函数名必须以 Benchmark 开头，参数类型为 *testing.B</span><span class="w"></span>
-</span><span class="hll"><span class="c1">// 循环次数使用 b.N 不需要考虑实际运行了多少次</span><span class="w"></span>
-</span><span class="hll"><span class="c1">// ns/op     每次操作耗时</span><span class="w"></span>
-</span><span class="hll"><span class="c1">// B/op      每次分配字节</span><span class="w"></span>
-</span><span class="hll"><span class="c1">// allocs/op 每次操作分配内存次数</span><span class="w"></span>
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="hll"><span class="w">    </span><span class="c1">// 休眠指定时间</span><span class="w"></span>
+</span><span class="hll"><span class="w">    </span><span class="nx">time</span><span class="p">.</span><span class="nx">Sleep</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span><span class="w"></span>
 </span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">100</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="nx">funcA</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="nx">n</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nx">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">&quot;a&quot;</span><span class="w"></span>
+<span class="hll"><span class="w">    </span><span class="c1">// 延迟，可以用在 select</span><span class="w"></span>
+</span><span class="hll"><span class="w">    </span><span class="o">&lt;-</span><span class="nx">time</span><span class="p">.</span><span class="nx">After</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span><span class="w"></span>
+</span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="hll"><span class="w">        </span><span class="c1">// 重复间隔</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="nx">ticker</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">NewTicker</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span><span class="w"></span>
+</span><span class="w">        </span><span class="nx">endTime</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">().</span><span class="nx">Add</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="hll"><span class="w">            </span><span class="o">&lt;-</span><span class="nx">ticker</span><span class="p">.</span><span class="nx">C</span><span class="w"></span>
+</span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">().</span><span class="nx">After</span><span class="p">(</span><span class="nx">endTime</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nx">ticker</span><span class="p">.</span><span class="nx">Stop</span><span class="p">()</span><span class="w"></span>
+<span class="w">                </span><span class="k">break</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="kd">func</span><span class="w"> </span><span class="nx">funcB</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">buffer</span><span class="w"> </span><span class="nx">bytes</span><span class="p">.</span><span class="nx">Buffer</span><span class="w"></span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="nx">n</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nx">buffer</span><span class="p">.</span><span class="nx">WriteString</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">buffer</span><span class="p">.</span><span class="nx">String</span><span class="p">()</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="hll"><span class="kd">func</span><span class="w"> </span><span class="nx">BenchmarkA</span><span class="p">(</span><span class="nx">b</span><span class="w"> </span><span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">B</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-</span><span class="hll"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="nx">b</span><span class="p">.</span><span class="nx">N</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-</span><span class="w">        </span><span class="nx">funcA</span><span class="p">()</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="hll"><span class="kd">func</span><span class="w"> </span><span class="nx">BenchmarkB</span><span class="p">(</span><span class="nx">b</span><span class="w"> </span><span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">B</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-</span><span class="hll"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="nx">b</span><span class="p">.</span><span class="nx">N</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-</span><span class="w">        </span><span class="nx">funcB</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="hll"><span class="w">        </span><span class="c1">// 另外一种循环</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Tick</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+</span><span class="w">            </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -3095,6 +3057,346 @@
 <span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%+v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="p">)</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
+<h2 id="文件操作">文件操作<a class="headerlink" href="#文件操作" title="Permanent link">#</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;io&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;io/ioutil&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;os&quot;</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">testDir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">`C:\Users\Administrator\Desktop\test`</span><span class="w"></span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="hll"><span class="w">        </span><span class="c1">// 递归创建目录（如果要创建的目录已存在不会报错）</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">MkdirAll</span><span class="p">(</span><span class="nx">testDir</span><span class="p">,</span><span class="w"> </span><span class="mo">0644</span><span class="p">)</span><span class="w"></span>
+</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">file</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">testDir</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/test_1.txt&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="nx">fileString</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;一二三test&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="nx">fileBytes</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">fileString</span><span class="p">)</span><span class="w"></span>
+<span class="hll"><span class="w">        </span><span class="c1">// 写入文件，如果文件不存在就创建文件</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ioutil</span><span class="p">.</span><span class="nx">WriteFile</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span><span class="w"> </span><span class="nx">fileBytes</span><span class="p">,</span><span class="w"> </span><span class="mo">0644</span><span class="p">)</span><span class="w"></span>
+</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">file</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">testDir</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/test_1.txt&quot;</span><span class="w"></span>
+<span class="hll"><span class="w">        </span><span class="c1">// 读取文件</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="nx">fileBytes</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadFile</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span><span class="w"></span>
+</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="nx">fileString</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">string</span><span class="p">(</span><span class="nx">fileBytes</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">fileString</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">fromFile</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">testDir</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/test_1.txt&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="nx">toFile</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">testDir</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/test_2.txt&quot;</span><span class="w"></span>
+<span class="hll"><span class="w">        </span><span class="c1">// 文件重命名，也可以用于移动文件</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Rename</span><span class="p">(</span><span class="nx">fromFile</span><span class="p">,</span><span class="w"> </span><span class="nx">toFile</span><span class="p">)</span><span class="w"></span>
+</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="hll"><span class="w">        </span><span class="c1">// 标准库不提供复制文件的操作，这是其中一个实现方式</span><span class="w"></span>
+</span><span class="w">        </span><span class="nx">copyFile</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">fromFilePath</span><span class="p">,</span><span class="w"> </span><span class="nx">toFilePath</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">fromFile</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Open</span><span class="p">(</span><span class="nx">fromFilePath</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="k">defer</span><span class="w"> </span><span class="nx">fromFile</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">toFile</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">OpenFile</span><span class="p">(</span><span class="w"></span>
+<span class="w">                </span><span class="nx">toFilePath</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">os</span><span class="p">.</span><span class="nx">O_RDWR</span><span class="p">|</span><span class="nx">os</span><span class="p">.</span><span class="nx">O_CREATE</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="mo">0644</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="k">defer</span><span class="w"> </span><span class="nx">toFile</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span><span class="w"></span>
+
+<span class="hll"><span class="w">            </span><span class="c1">// 复制的关键代码</span><span class="w"></span>
+</span><span class="hll"><span class="w">            </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">io</span><span class="p">.</span><span class="nx">Copy</span><span class="p">(</span><span class="nx">toFile</span><span class="p">,</span><span class="w"> </span><span class="nx">fromFile</span><span class="p">)</span><span class="w"></span>
+</span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="nx">copyFile</span><span class="p">(</span><span class="w"></span>
+<span class="w">            </span><span class="nx">testDir</span><span class="o">+</span><span class="s">&quot;/test_2.txt&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nx">testDir</span><span class="o">+</span><span class="s">&quot;/test_3.txt&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="hll"><span class="w">        </span><span class="c1">// 列出目录内容</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="nx">fileList</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadDir</span><span class="p">(</span><span class="nx">testDir</span><span class="p">)</span><span class="w"></span>
+</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">fileList</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="w"></span>
+<span class="w">                </span><span class="s">&quot;Name=%v IsDir=%v Size=%v Mode=%v ModTime=%v\n&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">file</span><span class="p">.</span><span class="nx">Name</span><span class="p">(),</span><span class="w"></span>
+<span class="w">                </span><span class="nx">file</span><span class="p">.</span><span class="nx">IsDir</span><span class="p">(),</span><span class="w"></span>
+<span class="w">                </span><span class="nx">file</span><span class="p">.</span><span class="nx">Size</span><span class="p">(),</span><span class="w"></span>
+<span class="w">                </span><span class="nx">file</span><span class="p">.</span><span class="nx">Mode</span><span class="p">(),</span><span class="w"></span>
+<span class="w">                </span><span class="nx">file</span><span class="p">.</span><span class="nx">ModTime</span><span class="p">(),</span><span class="w"></span>
+<span class="w">            </span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">file</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">testDir</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/test_2.txt&quot;</span><span class="w"></span>
+<span class="hll"><span class="w">        </span><span class="c1">// 删除</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Remove</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span><span class="w"></span>
+</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="hll"><span class="w">        </span><span class="c1">// 递归删除</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">RemoveAll</span><span class="p">(</span><span class="nx">testDir</span><span class="p">)</span><span class="w"></span>
+</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h2 id="正则表达式">正则表达式<a class="headerlink" href="#正则表达式" title="Permanent link">#</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;regexp&quot;</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">pattern</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">`^abc.*def$`</span><span class="w"></span>
+<span class="w">        </span><span class="nx">value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;abcxxxxdef&quot;</span><span class="w"></span>
+<span class="hll"><span class="w">        </span><span class="c1">// 直接匹配正则</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="nx">matched</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">regexp</span><span class="p">.</span><span class="nx">MatchString</span><span class="p">(</span><span class="nx">pattern</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">)</span><span class="w"></span>
+</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;pattern=%v value=%v matched=%v\n&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nx">pattern</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">matched</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">pattern</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">`^abc.*def$`</span><span class="w"></span>
+<span class="w">        </span><span class="nx">value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;abcxxxxdef&quot;</span><span class="w"></span>
+<span class="hll"><span class="w">        </span><span class="c1">// 先编译正则表达式再匹配</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="nx">re</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">regexp</span><span class="p">.</span><span class="nx">MustCompile</span><span class="p">(</span><span class="nx">pattern</span><span class="p">)</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="nx">matched</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">re</span><span class="p">.</span><span class="nx">MatchString</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="w"></span>
+</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;pattern=%v value=%v matched=%v\n&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nx">pattern</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">matched</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">pattern</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">`[0-9]`</span><span class="w"></span>
+<span class="w">        </span><span class="nx">value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;abc09574de32f&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="nx">replace</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;_&quot;</span><span class="w"></span>
+<span class="hll"><span class="w">        </span><span class="c1">// 正则替换</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="nx">re</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">regexp</span><span class="p">.</span><span class="nx">MustCompile</span><span class="p">(</span><span class="nx">pattern</span><span class="p">)</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="nx">newValue</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">re</span><span class="p">.</span><span class="nx">ReplaceAllString</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">replace</span><span class="p">)</span><span class="w"></span>
+</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;pattern=%v value=%v newValue=%v\n&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nx">pattern</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">newValue</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">pattern</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">`^abc(.*)def$`</span><span class="w"></span>
+<span class="w">        </span><span class="nx">value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;abcx23xx45xdef&quot;</span><span class="w"></span>
+<span class="hll"><span class="w">        </span><span class="c1">// 正则查找</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="nx">re</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">regexp</span><span class="p">.</span><span class="nx">MustCompile</span><span class="p">(</span><span class="nx">pattern</span><span class="p">)</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="nx">strAry</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">re</span><span class="p">.</span><span class="nx">FindAllString</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+</span><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;pattern=%v value=%v strAry=%v\n&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nx">pattern</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">strAry</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 
               
             </article>
@@ -3132,13 +3434,13 @@
       
       
         
-        <a href="../../database/select/" class="md-footer__link md-footer__link--next" aria-label="下一页: SQL 查询" rel="next">
+        <a href="../web/" class="md-footer__link md-footer__link--next" aria-label="下一页: 网络" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              SQL 查询
+              网络
             </div>
           </div>
           <div class="md-footer__button md-icon">
