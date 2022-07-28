@@ -690,7 +690,7 @@ func print(value ...interface{}) {
 
 ## 错误
 
-```go hl_lines="9-10 13-14 17-18"
+```go hl_lines="9-10 13-14 18-20 25-26"
 package main
 
 import (
@@ -706,6 +706,14 @@ func main() {
 	// 生成错误
 	e2 := fmt.Errorf("%v..%v", 123, 456)
 	fmt.Println(e2)
+
+	defer func() {
+		// 允许从 panic 状态中恢复过来
+		// recover 必须放在 defer 中执行
+		if r := recover(); r != nil {
+			fmt.Printf("%+v", r)
+		}
+	}()
 
 	// 立即终止程序
 	panic("shutdown at once")
