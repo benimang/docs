@@ -4,7 +4,7 @@
 ## 测试用例
 
 ```go hl_lines="29-30 36-39 41-42"
-package gormDemo
+package demoGorm
 
 import (
 	"math/rand"
