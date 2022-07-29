@@ -196,6 +196,17 @@ db.Raw(
 ```
 
 
+## 查询结果解析到映射（map）
+
+```go
+var m map[string]interface{}
+db.Model(&product{}).Take(&m)
+
+var mAry []map[string]interface{}
+db.Model(&product{}).Find(&mAry)
+```
+
+
 ## 子查询
 
 ```go
@@ -204,4 +215,31 @@ db.Where(
 	"Price > (?)",
 	db.Model(&product{}).Select("AVG(price)"),
 ).Find(&pAry)
+```
+
+
+## FirstOrInit
+
+- 根据条件查找记录，如果找到就返回记录
+- 如果没有找到记录，就会使用 `Attrs` 定义的数据赋值初始化
+- 无论如何都不会对数据执行写入操作
+
+```go
+p := product{
+	Name: "product_AA",
+}
+db.Where(p).Attrs(product{Star: 9}).FirstOrInit(&p)
+```
+
+
+## FirstOrCreate
+
+- 根据条件查找记录，如果找到就返回记录
+- 如果没有找到记录，就会数据库写入一条记录，并且会实则这只 `Attrs` 指定的数值
+
+```go
+p := product{
+	Name: "product_AA",
+}
+db.Where(p).Attrs(product{Star: 9}).FirstOrCreate(&p)
 ```
