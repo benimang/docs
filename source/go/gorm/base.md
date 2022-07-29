@@ -3,7 +3,7 @@
 
 ## 测试用例
 
-```go hl_lines="28-29 35-38 40-41"
+```go hl_lines="32-33 39-42 44-45"
 package main
 
 import (
@@ -19,6 +19,10 @@ type Product struct {
 	gorm.Model
 	Name  string
 	Price uint
+}
+
+func (p Product) print() {
+	fmt.Printf("Product:{ID:%v Name:%v, Price:%v}\n", p.ID, p.Name, p.Price)
 }
 
 var db *gorm.DB
