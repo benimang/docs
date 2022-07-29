@@ -4,7 +4,7 @@
 ## 测试用例
 
 ```go hl_lines="28-29 35-38 40-41"
-package main
+package gormDemo
 
 import (
 	"math/rand"
@@ -15,7 +15,7 @@ import (
 	"gorm.io/gorm"
 )
 
-type Product struct {
+type product struct {
 	gorm.Model
 	Name  string
 	Price uint
@@ -23,14 +23,14 @@ type Product struct {
 
 var db *gorm.DB
 
-func main() {
+func Run() {
 
 	u, err := user.Current()
 	if err != nil {
 		panic(err)
 	}
-
 	dbFile := u.HomeDir + "/Desktop/test.db"
+
 	// 数据库链接
 	_db, err := gorm.Open(sqlite.Open(dbFile), &gorm.Config{})
 	if err != nil {
@@ -40,7 +40,7 @@ func main() {
 
 	// 迁移 schema
 	db.AutoMigrate(
-		&Product{},
+		&product{},
 	)
 
 	// 开启调试模式用于打印 sql 语句
@@ -52,12 +52,12 @@ func main() {
 	// 创建用于测试的记录
 	{
 		var n int64
-		db.Model(&Product{}).Count(&n)
+		db.Model(&product{}).Count(&n)
 		if n == 0 {
-			var ptrProductAry [10]*Product
+			var ptrProductAry [10]*product
 			n := len(ptrProductAry)
 			for i := 0; i < n; i++ {
-				p := new(Product)
+				p := new(product)
 				p.Name = "product_" + string(rune(65+i))
 				p.Price = uint(70 + rand.Intn(30))
 				ptrProductAry[i] = p
@@ -66,20 +66,10 @@ func main() {
 		}
 	}
 
-	goTest()
+	// 开始测试
+	runTry()
 }
 
-func goTest() {
-
+func runTry() {
 }
-
-```
-
-
-## 获取表的记录数量
-
-
-```go
-var n int64
-db.Model(&Product{}).Count(&n)
 ```

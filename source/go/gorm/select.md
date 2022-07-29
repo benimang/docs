@@ -51,7 +51,7 @@ db.Find(&productAry, "price BETWEEN ? and ?", 85, 95)
 ```
 
 
-## where
+## Where
 
 ```go
 var product Product
@@ -68,4 +68,64 @@ db.Where("price Not in (?)", []int{77, 73}).Find(&productAry)
 
 productAry = []Product{}
 db.Where("price BETWEEN ? AND ?", 85, 95).Find(&productAry)
+```
+
+
+## Or
+
+```go
+var productAry = []Product{}
+
+productAry = []Product{}
+db.Where(
+	"ID > ?", 3,
+).Or(
+	"Price > ?", 90,
+).Find(
+	&productAry,
+)
+
+// 条件嵌套使用，可以写出复杂的查询条件
+productAry = []Product{}
+db.Where(
+	db.Where("ID > ?", 3).Where("Price > ?", 80),
+).Or(
+	db.Where("ID > ?", 5).Or("Price > ?", 90),
+).Find(&productAry)
+fmt.Printf("productAry: %v\n", productAry)
+```
+
+
+## Not
+
+```go
+var productAry = []Product{}
+
+productAry = []Product{}
+db.Not([]uint{3, 5, 7, 9}).Find(&productAry)
+
+productAry = []Product{}
+db.Not("Price BETWEEN ? AND ?", 80, 90).Find(&productAry)
+fmt.Printf("productAry: %v\n", productAry)
+```
+
+
+## Count
+
+```go
+var n int64
+db.Model(&Product{}).Count(&n)
+```
+
+
+## Order
+
+```go
+var productAry []Product
+
+productAry = []Product{}
+db.Order("Price Desc").Find(&productAry)
+
+productAry = []Product{}
+db.Order("Price Desc").Order("Name").Find(&productAry)
 ```
