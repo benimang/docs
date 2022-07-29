@@ -50,6 +50,17 @@ db.Find(&pAry, "price BETWEEN ? and ?", 85, 95)
 ```
 
 
+## Select & Omit
+
+```go
+p := product{}
+db.Select("ID", "Name").Take(&p)
+
+p = product{}
+db.Omit("Star").Take(&p)
+```
+
+
 ## Where
 
 ```go
@@ -126,4 +137,71 @@ db.Order("Price Desc").Find(&pAry)
 
 pAry = []product{}
 db.Order("Price Desc").Order("Name").Find(&pAry)
+```
+
+
+## Limit & Offset
+
+```go
+pAry := []product{}
+db.Offset(5).Limit(2).Find(&pAry)
+```
+
+
+## Distinct
+
+```go
+pAry := []product{}
+db.Distinct("Price").Find(&pAry)
+```
+
+
+## Group & Having
+
+```go
+type pInfo struct {
+	Star  uint
+	Count uint
+}
+
+pInfoAry := []pInfo{}
+
+db.Model(&product{}).Select(
+	"Star, COUNT(*) as Count",
+).Group(
+	"Star",
+).Having(
+	"Count >= ?", 3,
+).Find(&pInfoAry)
+```
+
+
+## Raw & Scan
+
+`Scan` 可以将查询结果赋值到结构体
+
+```go
+type pInfo struct {
+	Star  uint
+	Count uint
+}
+
+pInfoAry := []pInfo{}
+
+db.Raw(
+	"SELECT Star, COUNT(*) as Count FROM products GROUP BY Star Having Count >= 3",
+).Scan(
+	&pInfoAry,
+)
+```
+
+
+## 子查询
+
+```go
+pAry := []product{}
+db.Where(
+	"Price > (?)",
+	db.Model(&product{}).Select("AVG(price)"),
+).Find(&pAry)
 ```
