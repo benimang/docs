@@ -3,7 +3,7 @@
 
 ## 测试用例
 
-```go hl_lines="28-29 35-38 40-41"
+```go hl_lines="29-30 36-39 41-42"
 package gormDemo
 
 import (
@@ -19,6 +19,7 @@ type product struct {
 	gorm.Model
 	Name  string
 	Price uint
+	Star  uint `gorm:"default:1"`
 }
 
 var db *gorm.DB
@@ -60,6 +61,7 @@ func Run() {
 				p := new(product)
 				p.Name = "product_" + string(rune(65+i))
 				p.Price = uint(70 + rand.Intn(30))
+				p.Star = uint(1 + rand.Intn(5))
 				ptrProductAry[i] = p
 			}
 			db.Create(ptrProductAry)
@@ -71,5 +73,6 @@ func Run() {
 }
 
 func runTry() {
+	// todo...
 }
 ```
