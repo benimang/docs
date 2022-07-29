@@ -72,8 +72,8 @@ func helloFunc(w http.ResponseWriter, r *http.Request) {
 
 ### 响应不同请求类型
 
-- `#! curl -i "http://localhost:8001/?abc=123&def=xxx"`
-- `#! curl -i -X POST -d "hello" "http://localhost:8001/?abc=123&def=xxx"`
+- `#!sh curl -i "http://localhost:8001/?abc=123&def=xxx"`
+- `#!sh curl -i -X POST -d "hello" "http://localhost:8001/?abc=123&def=xxx"`
 
 ```go hl_lines="15-16 19-20 29-30"
 package main
