@@ -4,28 +4,27 @@
 ## 查询单个
 
 ```go hl_lines="4 5 8 9 12 13"
-var product Product
+var p product
 
-product = Product{}
+p = product{}
 // 默认加上主键的升序，取第一个
-db.First(&product)
+db.First(&p)
 
-product = Product{}
+p = product{}
 // 默认加上主键的降序，取第一个
-db.Last(&product)
+db.Last(&p)
 
-product = Product{}
+p = product{}
 // 不会添加默认的任何排序，取第一个
-db.Take(&product)
+db.Take(&p)
 ```
 
 
 ## 查询全部
 
 ```go hl_lines="2"
-var products = []Product{}
-db.Find(&products)
-// SELECT * FROM `products` WHERE `products`.`deleted_at` IS NULL
+var pAry = []product{}
+db.Find(&pAry)
 ```
 
 
@@ -34,79 +33,78 @@ db.Find(&products)
 提供给 `Find` `Take` `First` `Last` 便捷设置条件的方式
 
 ```go
-var product Product
-var productAry = []Product{}
+var p product
+var pAry = []product{}
 
-product = Product{}
-db.Take(&product, 3)
+p = product{}
+db.Take(&p, 3)
 
-productAry = []Product{}
-db.Find(&productAry, []int{1, 3, 5})
+pAry = []product{}
+db.Find(&pAry, []int{1, 3, 5})
 
-productAry = []Product{}
-db.Find(&productAry, "price NOT IN (?)", []int{77, 73})
+pAry = []product{}
+db.Find(&pAry, "price NOT IN (?)", []int{77, 73})
 
-productAry = []Product{}
-db.Find(&productAry, "price BETWEEN ? and ?", 85, 95)
+pAry = []product{}
+db.Find(&pAry, "price BETWEEN ? and ?", 85, 95)
 ```
 
 
 ## Where
 
 ```go
-var product Product
-var productAry = []Product{}
+var p product
+var pAry = []product{}
 
-product = Product{}
-db.Where(3).Take(&product)
+p = product{}
+db.Where(3).Take(&p)
 
-productAry = []Product{}
-db.Where([]int{1, 3, 5}).Find(&productAry)
+pAry = []product{}
+db.Where([]int{1, 3, 5}).Find(&pAry)
 
-productAry = []Product{}
-db.Where("price Not in (?)", []int{77, 73}).Find(&productAry)
+pAry = []product{}
+db.Where("price Not in (?)", []int{77, 73}).Find(&pAry)
 
-productAry = []Product{}
-db.Where("price BETWEEN ? AND ?", 85, 95).Find(&productAry)
+pAry = []product{}
+db.Where("price BETWEEN ? AND ?", 85, 95).Find(&pAry)
 ```
 
 
 ## Or
 
 ```go
-var productAry = []Product{}
+var pAry = []product{}
 
-productAry = []Product{}
+pAry = []product{}
 db.Where(
 	"ID > ?", 3,
 ).Or(
 	"Price > ?", 90,
 ).Find(
-	&productAry,
+	&pAry,
 )
 
 // 条件嵌套使用，可以写出复杂的查询条件
-productAry = []Product{}
+pAry = []product{}
 db.Where(
 	db.Where("ID > ?", 3).Where("Price > ?", 80),
 ).Or(
 	db.Where("ID > ?", 5).Or("Price > ?", 90),
-).Find(&productAry)
-fmt.Printf("productAry: %v\n", productAry)
+).Find(&pAry)
+fmt.Printf("productAry: %v\n", pAry)
 ```
 
 
 ## Not
 
 ```go
-var productAry = []Product{}
+var pAry = []product{}
 
-productAry = []Product{}
-db.Not([]uint{3, 5, 7, 9}).Find(&productAry)
+pAry = []product{}
+db.Not([]uint{3, 5, 7, 9}).Find(&pAry)
 
-productAry = []Product{}
-db.Not("Price BETWEEN ? AND ?", 80, 90).Find(&productAry)
-fmt.Printf("productAry: %v\n", productAry)
+pAry = []product{}
+db.Not("Price BETWEEN ? AND ?", 80, 90).Find(&pAry)
 ```
 
 
@@ -114,18 +112,18 @@ fmt.Printf("productAry: %v\n", productAry)
 
 ```go
 var n int64
-db.Model(&Product{}).Count(&n)
+db.Model(&product{}).Count(&n)
 ```
 
 
 ## Order
 
 ```go
-var productAry []Product
+var pAry []product
 
-productAry = []Product{}
-db.Order("Price Desc").Find(&productAry)
+pAry = []product{}
+db.Order("Price Desc").Find(&pAry)
 
-productAry = []Product{}
-db.Order("Price Desc").Order("Name").Find(&productAry)
+pAry = []product{}
+db.Order("Price Desc").Order("Name").Find(&pAry)
 ```
