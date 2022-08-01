@@ -21,6 +21,7 @@ nav:
                             - go/gorm/create.md
                             - go/gorm/select.md
                             - go/gorm/update.md
+                            - go/gorm/delete.md
         - Database:
                   - database/select.md
                   - database/modify.md
