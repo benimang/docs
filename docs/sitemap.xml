@@ -96,6 +96,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://pytask.com/go/gorm/delete/</loc>
+         <lastmod>2022-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://pytask.com/go/gorm/others/</loc>
          <lastmod>2022-08-01</lastmod>
          <changefreq>daily</changefreq>
