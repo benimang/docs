@@ -46,3 +46,20 @@ db.Model(&p).Updates(map[string]interface{}{
 	"Price": 0,
 })
 ```
+
+
+## Select & Omit
+
+可以结合 `Select` 和 `Omit` 指定或忽略某些字段更新
+
+```go
+var p product
+p.ID = 1
+// 结构体的零值同样可以使用 Select 强制作为更新字段
+db.Model(&p).Select("Name", "Price").Updates(
+	product{
+		Name:  "product_A",
+		Price: 0,
+	},
+)
+```

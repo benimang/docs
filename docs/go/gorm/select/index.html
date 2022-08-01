@@ -663,8 +663,36 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#查询结果解析到映射map" class="md-nav__link">
+    查询结果解析到映射（map）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#子查询" class="md-nav__link">
     子查询
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#FirstOrInit" class="md-nav__link">
+    FirstOrInit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#FirstOrCreate" class="md-nav__link">
+    FirstOrCreate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Pluck" class="md-nav__link">
+    Pluck
   </a>
   
 </li>
@@ -673,6 +701,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update/" class="md-nav__link">
+        更新
+      </a>
     </li>
   
 
@@ -1341,8 +1383,36 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#查询结果解析到映射map" class="md-nav__link">
+    查询结果解析到映射（map）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#子查询" class="md-nav__link">
     子查询
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#FirstOrInit" class="md-nav__link">
+    FirstOrInit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#FirstOrCreate" class="md-nav__link">
+    FirstOrCreate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Pluck" class="md-nav__link">
+    Pluck
   </a>
   
 </li>
@@ -1603,6 +1673,17 @@
 <span class="w">    </span><span class="o">&amp;</span><span class="nx">pInfoAry</span><span class="p">,</span><span class="w"></span>
 <span class="p">)</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
+<h2 id="查询结果解析到映射map">查询结果解析到映射（map）<a class="headerlink" href="#查询结果解析到映射map" title="Permanent link">#</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}</span><span class="w"></span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">product</span><span class="p">{}).</span><span class="nx">Take</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">m</span><span class="p">)</span><span class="w"></span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">mAry</span><span class="w"> </span><span class="p">[]</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}</span><span class="w"></span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">product</span><span class="p">{}).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">mAry</span><span class="p">)</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h2 id="子查询">子查询<a class="headerlink" href="#子查询" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1613,6 +1694,45 @@
 <span class="w">    </span><span class="s">&quot;Price &gt; (?)&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">product</span><span class="p">{}).</span><span class="nx">Select</span><span class="p">(</span><span class="s">&quot;AVG(price)&quot;</span><span class="p">),</span><span class="w"></span>
 <span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h2 id="FirstOrInit">FirstOrInit<a class="headerlink" href="#FirstOrInit" title="Permanent link">#</a></h2>
+<ul>
+<li>根据条件查找记录，如果找到就返回记录</li>
+<li>如果没有找到记录，就会使用 <code>Attrs</code> 定义的数据赋值初始化</li>
+<li>无论如何都不会对数据执行写入操作</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">p</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">product</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">Name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;product_AA&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="nx">p</span><span class="p">).</span><span class="nx">Attrs</span><span class="p">(</span><span class="nx">product</span><span class="p">{</span><span class="nx">Star</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">}).</span><span class="nx">FirstOrInit</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h2 id="FirstOrCreate">FirstOrCreate<a class="headerlink" href="#FirstOrCreate" title="Permanent link">#</a></h2>
+<ul>
+<li>根据条件查找记录，如果找到就返回记录</li>
+<li>如果没有找到记录，就会数据库写入一条记录，并且会实则这只 <code>Attrs</code> 指定的数值</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">p</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">product</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">Name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;product_AA&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="nx">p</span><span class="p">).</span><span class="nx">Attrs</span><span class="p">(</span><span class="nx">product</span><span class="p">{</span><span class="nx">Star</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">}).</span><span class="nx">FirstOrCreate</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h2 id="Pluck">Pluck<a class="headerlink" href="#Pluck" title="Permanent link">#</a></h2>
+<p>获取单列数据</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">starAry</span><span class="w"> </span><span class="p">[]</span><span class="kt">uint</span><span class="w"></span>
+
+<span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">product</span><span class="p">{}).</span><span class="nx">Pluck</span><span class="p">(</span><span class="s">&quot;Star&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">starAry</span><span class="p">)</span><span class="w"></span>
+
+<span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">product</span><span class="p">{}).</span><span class="nx">Distinct</span><span class="p">(</span><span class="s">&quot;Star&quot;</span><span class="p">).</span><span class="nx">Order</span><span class="p">(</span><span class="s">&quot;Star DESC&quot;</span><span class="p">).</span><span class="nx">Pluck</span><span class="p">(</span><span class="s">&quot;Star&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">starAry</span><span class="p">)</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 
               
@@ -1651,13 +1771,13 @@
       
       
         
-        <a href="../../../database/select/" class="md-footer__link md-footer__link--next" aria-label="下一页: SQL 查询" rel="next">
+        <a href="../update/" class="md-footer__link md-footer__link--next" aria-label="下一页: 更新" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              SQL 查询
+              更新
             </div>
           </div>
           <div class="md-footer__button md-icon">
