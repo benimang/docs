@@ -26,6 +26,7 @@ nav:
                   - database/select.md
                   - database/modify.md
                   - database/concept.md
+                  - database/install.md
         - Laya:
                   - laya/base.md
                   - laya/laya-zlib.md
@@ -35,12 +36,6 @@ nav:
                   - linux/nginx.md
         - Docker:
                   - docker/base.md
-        - Others:
-                  - others/website.md
-                  - others/vscode.md
-                  - others/ios.md
-                  - others/proxy.md
-                  - others/nodejs.md
         - Eshop:
                   - Amazon:
                             - amazon/selection.md
@@ -49,6 +44,12 @@ nav:
                             - amazon/ad.md
                             - amazon/storage.md
                             - amazon/oneday.md
-        - others/url.md
+        - Others:
+                  - others/website.md
+                  - others/vscode.md
+                  - others/ios.md
+                  - others/proxy.md
+                  - others/nodejs.md
+                  - others/url.md
         # - bak:
         #     - bak/text.md
