@@ -63,3 +63,9 @@ db.Model(&p).Select("Name", "Price").Updates(
 	},
 )
 ```
+
+
+## 跳过勾子以及时间追踪
+
+- `UpdateColumn` 方法与 `Update` 类似，但可以跳过勾子以及时间追踪
+- `UpdateColumns` 方法与 `Updates` 类似，但可以跳过勾子以及时间追踪
