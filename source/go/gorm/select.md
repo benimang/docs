@@ -243,3 +243,16 @@ p := product{
 }
 db.Where(p).Attrs(product{Star: 9}).FirstOrCreate(&p)
 ```
+
+
+## Pluck
+
+获取单列数据
+
+```go
+var starAry []uint
+
+db.Model(&product{}).Pluck("Star", &starAry)
+
+db.Model(&product{}).Distinct("Star").Order("Star DESC").Pluck("Star", &starAry)
+```
