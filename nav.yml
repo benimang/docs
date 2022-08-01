@@ -20,6 +20,7 @@ nav:
                             - go/gorm/base.md
                             - go/gorm/create.md
                             - go/gorm/select.md
+                            - go/gorm/update.md
         - Database:
                   - database/select.md
                   - database/modify.md
