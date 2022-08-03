@@ -396,7 +396,7 @@ func (s student) play() {
 
 ## 函数
 
-```go hl_lines="21-22 26-27 31-32 40-41 47-52"
+```go hl_lines="11-13 26 27 31 32 36 37 45 46 52-57"
 package main
 
 import "strconv"
@@ -406,12 +406,17 @@ func main() {
 	println(bFunc(1))       // 2 0
 	println(cFunc())        // 0
 	println(cFunc(1, 2, 3)) // 6
-	println(dFunc())        // 123 sss
+
+	// 使用切片或数组，提供给不定长度函数的参数使用
+	// 提示:函数定义时3个点在前面，函数调用时3个点在后面
+	println(cFunc([]int{1, 2, 3}...)) // 6
+
+	println(dFunc()) // 123 sss
 	{
 		tempFunc := func(v1 int, v2 float32) string {
 			s1 := strconv.FormatInt(int64(v1), 10)
 			s2 := strconv.FormatFloat(float64(v2), 'f', 3, 32)
-			return  s1 + " " + s2
+			return s1 + " " + s2
 		}
 		println(eFunc(tempFunc, 123, 456.789)) // 123 456.789
 	}
