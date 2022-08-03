@@ -12,7 +12,9 @@ import (
 
 func main() {
 	s := "string"
-	reflect.TypeOf(s) // 返回的类型是 refect.Type
+
+	fmt.Printf("%T", s)	 // string
+	reflect.TypeOf(s)    // 返回的类型是 refect.Type
 	
 	var i32 int32 = 3333
 	println(reflect.TypeOf(i32).Kind() == reflect.Int32) // true
