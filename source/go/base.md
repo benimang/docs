@@ -552,14 +552,12 @@ func cfunc() {
 
 ## 数组
 
-```go hl_lines="7"
+```go
 package main
 
 import "fmt"
 
 func main() {
-
-	// 数组必须声明长度，而且长度不允许修改
 
 	// 先声明数组，后面再使用
 	var ary1 [2]int
@@ -572,10 +570,13 @@ func main() {
 	// 声明数组并仅初始化部分
 	ary3 := [2]int{1: 34}
 
-	// len 获取数组长度
-	fmt.Println(len(ary3))
+	// 声明数组并根据初始化计算长度
+	ary4 := [...]int{1, 2, 3, 4, 5}
 
-	fmt.Println(ary1, ary2, ary3)
+	// len 获取数组长度
+	fmt.Println(len(ary4))
+
+	fmt.Println(ary1, ary2, ary3, ary4)
 }
 ```
 
