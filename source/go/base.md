@@ -761,7 +761,7 @@ func main() {
 	// 从通道读取数据
 	value := <-c
 
-	// 关闭通道
+	// 关闭后可从chan读取，但是不能再写入chan
 	close(c)
 
 	println(value)

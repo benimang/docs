@@ -2919,7 +2919,7 @@
 <span class="w">    </span><span class="c1">// 从通道读取数据</span><span class="w"></span>
 <span class="w">    </span><span class="nx">value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&lt;-</span><span class="nx">c</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">// 关闭通道</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 关闭后可从chan读取，但是不能再写入chan</span><span class="w"></span>
 <span class="w">    </span><span class="nb">close</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span><span class="w"></span>
 
 <span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="w"></span>
