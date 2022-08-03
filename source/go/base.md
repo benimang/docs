@@ -640,18 +640,17 @@ func main() {
 	map1 := make(map[string]int)
 	map1["a"] = 123
 	map1["b"] = 456
-	printMap("map1", map1)
+	fmt.Printf("map1: %v\n", map1)
 
 	// 声明并初始化映射
 	map2 := map[string]int{"a": 123, "b": 456}
 
 	// 删除映射中的元素
 	delete(map2, "a")
-	printMap("map2", map2)
-}
+	fmt.Printf("map2: %v\n", map2)
 
-func printMap(name string, data map[string]int) {
-	fmt.Printf("%v = %+v\n", name, data)
+	// 获取映射的长度
+	fmt.Printf("len(map2): %v\n", len(map2))
 }
 ```
 
