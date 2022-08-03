@@ -586,6 +586,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#通道只读--只写" class="md-nav__link">
+    通道（只读 / 只写）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#Goroutine-与-通道" class="md-nav__link">
     Goroutine 与 通道
   </a>
@@ -1522,6 +1529,13 @@
         <li class="md-nav__item">
   <a href="#通道" class="md-nav__link">
     通道
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#通道只读--只写" class="md-nav__link">
+    通道（只读 / 只写）
   </a>
   
 </li>
@@ -2909,6 +2923,37 @@
 <span class="w">    </span><span class="nb">close</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span><span class="w"></span>
 
 <span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h2 id="通道只读--只写">通道（只读 / 只写）<a class="headerlink" href="#通道只读--只写" title="Permanent link">#</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+
+<span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">c</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">(</span><span class="kd">chan</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w">    </span><span class="c1">// 可读写</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">cRead</span><span class="w"> </span><span class="o">&lt;-</span><span class="kd">chan</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">c</span><span class="w">  </span><span class="c1">// 只读</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">cWrite</span><span class="w"> </span><span class="kd">chan</span><span class="o">&lt;-</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">c</span><span class="w"> </span><span class="c1">// 只写</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">    </span><span class="nx">cWrite</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="o">&lt;-</span><span class="nx">cRead</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="o">&lt;-</span><span class="nx">c</span><span class="p">)</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h2 id="Goroutine-与-通道">Goroutine 与 通道<a class="headerlink" href="#Goroutine-与-通道" title="Permanent link">#</a></h2>
