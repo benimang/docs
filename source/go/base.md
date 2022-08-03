@@ -495,6 +495,25 @@ func main() {
 ```
 
 
+## switch 循环
+
+```go hl_lines="7"
+a := 1
+switch a {
+case 0:
+	println(0)
+case 1:
+	println(1)
+	fallthrough // 不判断直接进入下一个 case 执行
+case 2:
+	println(2)
+default:
+	println("default")
+}
+// 最终输出  1 2
+```
+
+
 ## defer 延迟执行
 
 ```go hl_lines="15-18"
