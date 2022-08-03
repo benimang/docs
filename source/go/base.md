@@ -592,38 +592,38 @@ func main() {
 
 	// 切片是底层数组的一个片段，可以添加或移除
 	// 特别注意：切片执行append操作后得到新的切片，不一定是新的引用
-	// 			取决于有没有超出底层数组的长度
+	//          取决于有没有超出底层数组的长度
 
 	// 切片定义并初始化
 	ary1 := []int{1, 2, 3, 4, 5}
-	printAry("ary1", ary1)
+	fmt.Printf("ary1: %v\n", ary1)
+
+	// 使用make生成切片，将会得到零值作为填充，必须指定长度，可选指定容量
+	ary2 := make([]int, 4)
+	fmt.Printf("ary2: %v\n", ary2)
 
 	// 获取切片
-	ary2 := ary1[2:4]
-	printAry("ary2", ary2)
+	ary3 := ary1[2:4]
+	fmt.Printf("ary3: %v\n", ary3)
 
 	// len 切片长度
-	fmt.Printf("len(ary2) = %v\n", len(ary2))
+	fmt.Printf("len(ary3) = %v\n", len(ary3))
 
 	// cap 切片容量（底层数组到最后一个元素的长度）
-	fmt.Printf("cap(ary2) = %v\n", cap(ary2))
+	fmt.Printf("cap(ary3) = %v\n", cap(ary3))
 
 	// 添加
-	ary3 := append(ary1, 6, 7)
-	printAry("ary3", ary3)
+	ary4 := append(ary1, 6, 7)
+	fmt.Printf("ary4: %v\n", ary4)
 
 	// 移除（其实也是以来append来操作）
-	ary4 := append(ary1[:2], ary1[3:]...)
-	printAry("ary4", ary4)
+	ary5 := append(ary1[:2], ary1[3:]...)
+	fmt.Printf("ary5: %v\n", ary5)
 
 	// 复制一个新的（注意：要先准备一个带长度的切片，否则无法弄进去）
-	ary5 := make([]int, len(ary1))
-	copy(ary5, ary1)
-	printAry("ary5", ary5)
-}
-
-func printAry(msg string, ary []int) {
-	fmt.Printf("%v = %v\n", msg, ary)
+	ary6 := make([]int, len(ary1))
+	copy(ary6, ary1)
+	fmt.Printf("ary6: %v\n", ary6)
 }
 ```
 
