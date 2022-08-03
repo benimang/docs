@@ -795,6 +795,35 @@ func myfun(c chan string) {
 ```
 
 
+## Goroutine 与 sync.WaitGroup
+
+使用 `sync.WaitGroup` 实现等待 `Goroutine` 执行结束
+
+```go
+package main
+
+import (
+	"fmt"
+	"sync"
+	"time"
+)
+
+func main() {
+	fmt.Println("开始执行")
+	wg := sync.WaitGroup{}
+	wg.Add(1)
+	go Run(&wg)
+	wg.Wait()
+}
+
+func Run(wg *sync.WaitGroup) {
+	time.Sleep(3 * time.Second)
+	fmt.Println("Run 执行完成")
+	wg.Done()
+}
+```
+
+
 ## select
 
 ```go hl_lines="12-13"
