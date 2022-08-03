@@ -881,6 +881,40 @@ func myfun(c1 chan string, c2 chan string) {
 ```
 
 
+## Assertion 断言
+
+这里的 `Assertion` 指的是将类型强制指定为某个类型
+
+```go
+package main
+
+func main() {
+	var tom interface{} = Cat{}
+
+	xx := tom.(Cat)
+	xx.SayMiao()
+
+	switch tom.(type) {
+	case Cat:
+		println("It's Cat")
+	case Dog:
+		println("It's Dog")
+	}
+
+}
+
+type Cat struct{}
+
+func (c *Cat) SayMiao() {
+}
+
+type Dog struct{}
+
+func (d *Dog) SayOhOh() {
+}
+```
+
+
 ## 时间控制（延迟和重复间隔）
 
 ```go hl_lines="9-10 12-13 16-17 20 28-29"
