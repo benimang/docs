@@ -621,6 +621,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#Reflect-反射" class="md-nav__link">
+    Reflect 反射
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#时间控制延迟和重复间隔" class="md-nav__link">
     时间控制（延迟和重复间隔）
   </a>
@@ -1571,6 +1578,13 @@
         <li class="md-nav__item">
   <a href="#Assertion-断言" class="md-nav__link">
     Assertion 断言
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Reflect-反射" class="md-nav__link">
+    Reflect 反射
   </a>
   
 </li>
@@ -3168,6 +3182,139 @@
 <span class="kd">type</span><span class="w"> </span><span class="nx">Dog</span><span class="w"> </span><span class="kd">struct</span><span class="p">{}</span><span class="w"></span>
 
 <span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">d</span><span class="w"> </span><span class="o">*</span><span class="nx">Dog</span><span class="p">)</span><span class="w"> </span><span class="nx">SayOhOh</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h2 id="Reflect-反射">Reflect 反射<a class="headerlink" href="#Reflect-反射" title="Permanent link">#</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;reflect&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;strconv&quot;</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">student</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Student</span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">Id</span><span class="p">:</span><span class="w">   </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nx">Name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Beni&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nx">Address</span><span class="p">:</span><span class="w"> </span><span class="nx">Address</span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">City</span><span class="p">:</span><span class="w">   </span><span class="s">&quot;Guangzhou&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nx">Street</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;R&amp;F Peach Garden&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">t</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">reflect</span><span class="p">.</span><span class="nx">TypeOf</span><span class="p">(</span><span class="nx">student</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="nx">student</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 遍历里面的数据</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="nx">t</span><span class="p">.</span><span class="nx">NumField</span><span class="p">();</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%d: %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="p">.</span><span class="nx">Field</span><span class="p">(</span><span class="nx">i</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// t.Kind() == reflect.Struct: true</span><span class="w"></span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="w"></span>
+<span class="w">        </span><span class="s">&quot;t.Kind() == reflect.Struct: %v\n&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nx">t</span><span class="p">.</span><span class="nx">Kind</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">reflect</span><span class="p">.</span><span class="nx">Struct</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;t: %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="p">)</span><span class="w">                 </span><span class="c1">// main.Student</span><span class="w"></span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">v</span><span class="p">.</span><span class="nx">FieldByIndex</span><span class="p">([]</span><span class="kt">int</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">}))</span><span class="w"> </span><span class="c1">// Guangzhou</span><span class="w"></span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">v</span><span class="p">.</span><span class="nx">FieldByName</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">))</span><span class="w">       </span><span class="c1">// Beni</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 修改数值</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 注意：必须要使用指针，否则会报错</span><span class="w"></span>
+<span class="w">    </span><span class="nx">elem</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">student</span><span class="p">).</span><span class="nx">Elem</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="nx">elem</span><span class="p">.</span><span class="nx">FieldByName</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">).</span><span class="nx">SetString</span><span class="p">(</span><span class="s">&quot;Beni Mang&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">elem</span><span class="p">.</span><span class="nx">FieldByIndex</span><span class="p">([]</span><span class="kt">int</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">}).</span><span class="nx">SetString</span><span class="p">(</span><span class="s">&quot;Foshan&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 调用结构体方法</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 注意：方法定义是结构体还是结构体指针</span><span class="w"></span>
+<span class="w">    </span><span class="nx">method</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">v</span><span class="p">.</span><span class="nx">Method</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">method</span><span class="p">.</span><span class="nx">Call</span><span class="p">([]</span><span class="nx">reflect</span><span class="p">.</span><span class="nx">Value</span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="s">&quot;haha&quot;</span><span class="p">),</span><span class="w"></span>
+<span class="w">        </span><span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="p">})</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kd">type</span><span class="w"> </span><span class="nx">Student</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">Id</span><span class="w">   </span><span class="kt">uint</span><span class="w"></span>
+<span class="w">    </span><span class="nx">Name</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
+<span class="w">    </span><span class="nx">Address</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kd">type</span><span class="w"> </span><span class="nx">Address</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">City</span><span class="w">   </span><span class="kt">string</span><span class="w"></span>
+<span class="w">    </span><span class="nx">Street</span><span class="w"> </span><span class="kt">string</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">s</span><span class="w"> </span><span class="nx">Student</span><span class="p">)</span><span class="w"> </span><span class="nx">Say</span><span class="p">(</span><span class="nx">msg</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Saying &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">strconv</span><span class="p">.</span><span class="nx">Itoa</span><span class="p">(</span><span class="nx">value</span><span class="p">))</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h2 id="时间控制延迟和重复间隔">时间控制（延迟和重复间隔）<a class="headerlink" href="#时间控制延迟和重复间隔" title="Permanent link">#</a></h2>

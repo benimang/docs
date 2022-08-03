@@ -915,6 +915,78 @@ func (d *Dog) SayOhOh() {
 ```
 
 
+## Reflect 反射
+
+```go
+package main
+
+import (
+	"fmt"
+	"reflect"
+	"strconv"
+)
+
+func main() {
+
+	student := Student{
+		Id:   1,
+		Name: "Beni",
+		Address: Address{
+			City:   "Guangzhou",
+			Street: "R&F Peach Garden",
+		},
+	}
+
+	t := reflect.TypeOf(student)
+	v := reflect.ValueOf(student)
+
+	// 遍历里面的数据
+	for i := 0; i < t.NumField(); i++ {
+		fmt.Printf("%d: %v\n", i, v.Field(i))
+	}
+
+	// t.Kind() == reflect.Struct: true
+	fmt.Printf(
+		"t.Kind() == reflect.Struct: %v\n",
+		t.Kind() == reflect.Struct,
+	)
+
+	fmt.Printf("t: %v\n", t)                 // main.Student
+	fmt.Println(v.FieldByIndex([]int{2, 0})) // Guangzhou
+	fmt.Println(v.FieldByName("Name"))       // Beni
+
+	// 修改数值
+	// 注意：必须要使用指针，否则会报错
+	elem := reflect.ValueOf(&student).Elem()
+	elem.FieldByName("Name").SetString("Beni Mang")
+	elem.FieldByIndex([]int{2, 0}).SetString("Foshan")
+
+	// 调用结构体方法
+	// 注意：方法定义是结构体还是结构体指针
+	method := v.Method(0)
+	method.Call([]reflect.Value{
+		reflect.ValueOf("haha"),
+		reflect.ValueOf(3),
+	})
+}
+
+type Student struct {
+	Id   uint
+	Name string
+	Address
+}
+
+type Address struct {
+	City   string
+	Street string
+}
+
+func (s Student) Say(msg string, value int) {
+	fmt.Println("Saying " + msg + strconv.Itoa(value))
+}
+```
+
+
 ## 时间控制（延迟和重复间隔）
 
 ```go hl_lines="9-10 12-13 16-17 20 28-29"
