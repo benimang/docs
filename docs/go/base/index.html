@@ -3070,6 +3070,10 @@
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h2 id="select">select<a class="headerlink" href="#select" title="Permanent link">#</a></h2>
+<ul>
+<li><code>select</code> 尝试从多个管道中获取信息，但是不会阻塞</li>
+<li>如果没有任何管道返回消息，就会跑出去了，所以很多时候 <code>select</code> 外面都会有一个循环</li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
