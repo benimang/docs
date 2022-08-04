@@ -76,12 +76,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://pytask.com/go/others/</loc>
+         <loc>https://pytask.com/go/goroutine/</loc>
          <lastmod>2022-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://pytask.com/go/sync/</loc>
+         <loc>https://pytask.com/go/others/</loc>
          <lastmod>2022-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>

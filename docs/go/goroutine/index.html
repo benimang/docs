@@ -12,14 +12,14 @@
         <meta name="author" content="Beni Mang">
       
       
-        <link rel="canonical" href="https://pytask.com/go/sync/">
+        <link rel="canonical" href="https://pytask.com/go/goroutine/">
       
       <link rel="icon" href="../../img/favicon.svg">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>sync - Beni Docs</title>
+        <title>Goroutine - Beni Docs</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sync" class="md-skip">
+        <a href="#Goroutine" class="md-skip">
           跳转至
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              sync
+              Goroutine
             
           </span>
         </div>
@@ -436,12 +436,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          sync
+          Goroutine
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        sync
+        Goroutine
       </a>
       
         
@@ -460,23 +460,84 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#syncWaitGroup" class="md-nav__link">
-    sync.WaitGroup
+  <a href="#启动-Goroutine" class="md-nav__link">
+    启动 Goroutine
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#syncMutex" class="md-nav__link">
-    sync.Mutex
+  <a href="#通道" class="md-nav__link">
+    通道
+  </a>
+  
+    <nav class="md-nav" aria-label="通道">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基本使用" class="md-nav__link">
+    基本使用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#只读--只写" class="md-nav__link">
+    只读 / 只写
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#select" class="md-nav__link">
+    select
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#syncRWMutex" class="md-nav__link">
-    sync.RWMutex
+  <a href="#context" class="md-nav__link">
+    context
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sync" class="md-nav__link">
+    sync
+  </a>
+  
+    <nav class="md-nav" aria-label="sync">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#WaitGroup" class="md-nav__link">
+    WaitGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Mutex" class="md-nav__link">
+    Mutex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#RWMutex" class="md-nav__link">
+    RWMutex
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -546,14 +607,14 @@
       
       
         <label class="md-nav__link" for="__nav_3_7">
-          GORM
+          Gorm
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="GORM" data-md-level="2">
+      <nav class="md-nav" aria-label="Gorm" data-md-level="2">
         <label class="md-nav__title" for="__nav_3_7">
           <span class="md-nav__icon md-icon"></span>
-          GORM
+          Gorm
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1226,23 +1287,84 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#syncWaitGroup" class="md-nav__link">
-    sync.WaitGroup
+  <a href="#启动-Goroutine" class="md-nav__link">
+    启动 Goroutine
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#syncMutex" class="md-nav__link">
-    sync.Mutex
+  <a href="#通道" class="md-nav__link">
+    通道
+  </a>
+  
+    <nav class="md-nav" aria-label="通道">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基本使用" class="md-nav__link">
+    基本使用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#只读--只写" class="md-nav__link">
+    只读 / 只写
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#select" class="md-nav__link">
+    select
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#syncRWMutex" class="md-nav__link">
-    sync.RWMutex
+  <a href="#context" class="md-nav__link">
+    context
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sync" class="md-nav__link">
+    sync
+  </a>
+  
+    <nav class="md-nav" aria-label="sync">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#WaitGroup" class="md-nav__link">
+    WaitGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Mutex" class="md-nav__link">
+    Mutex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#RWMutex" class="md-nav__link">
+    RWMutex
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1260,8 +1382,270 @@
                 
 
 
-<h1 id="sync">sync<a class="headerlink" href="#sync" title="Permanent link">#</a></h1>
-<h2 id="syncWaitGroup"><code>sync.WaitGroup</code><a class="headerlink" href="#syncWaitGroup" title="Permanent link">#</a></h2>
+<h1 id="Goroutine">Goroutine<a class="headerlink" href="#Goroutine" title="Permanent link">#</a></h1>
+<h2 id="启动-Goroutine">启动 Goroutine<a class="headerlink" href="#启动-Goroutine" title="Permanent link">#</a></h2>
+<p>只要函数前添加 <code>go</code> 就可以了，没有具体看，应该是线程实现的</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;time&quot;</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;开始主进程&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">())</span><span class="w"></span>
+<span class="hll"><span class="w">    </span><span class="k">go</span><span class="w"> </span><span class="nx">TestFunc</span><span class="p">()</span><span class="w"></span>
+</span><span class="w">    </span><span class="nx">time</span><span class="p">.</span><span class="nx">Sleep</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;结束主进程&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">())</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">TestFunc</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;开始子进程&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">())</span><span class="w"></span>
+<span class="w">    </span><span class="nx">time</span><span class="p">.</span><span class="nx">Sleep</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;结束子进程&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">())</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h2 id="通道">通道<a class="headerlink" href="#通道" title="Permanent link">#</a></h2>
+<h3 id="基本使用">基本使用<a class="headerlink" href="#基本使用" title="Permanent link">#</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 创建通道，后面的数值不写默认是0</span><span class="w"></span>
+<span class="w">    </span><span class="nx">c</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">(</span><span class="kd">chan</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 向通道写入数据</span><span class="w"></span>
+<span class="w">    </span><span class="nx">c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;xxx&quot;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 从通道读取数据</span><span class="w"></span>
+<span class="w">    </span><span class="nx">value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&lt;-</span><span class="nx">c</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 关闭后可从chan读取，但是不能再写入chan</span><span class="w"></span>
+<span class="w">    </span><span class="nb">close</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h3 id="只读--只写">只读 / 只写<a class="headerlink" href="#只读--只写" title="Permanent link">#</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+
+<span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">c</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">(</span><span class="kd">chan</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w">    </span><span class="c1">// 可读写</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">cRead</span><span class="w"> </span><span class="o">&lt;-</span><span class="kd">chan</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">c</span><span class="w">  </span><span class="c1">// 只读</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">cWrite</span><span class="w"> </span><span class="kd">chan</span><span class="o">&lt;-</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">c</span><span class="w"> </span><span class="c1">// 只写</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">    </span><span class="nx">cWrite</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="o">&lt;-</span><span class="nx">cRead</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="o">&lt;-</span><span class="nx">c</span><span class="p">)</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h2 id="select">select<a class="headerlink" href="#select" title="Permanent link">#</a></h2>
+<ul>
+<li><code>select</code> 尝试从多个管道中获取信息，但是不会阻塞</li>
+<li>如果没有任何管道返回消息，就会跑出去了，所以很多时候 <code>select</code> 外面都会有一个循环</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+
+<span class="kn">import</span><span class="w"> </span><span class="s">&quot;time&quot;</span><span class="w"></span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">c1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">(</span><span class="kd">chan</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">c2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">(</span><span class="kd">chan</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">go</span><span class="w"> </span><span class="nx">myfun</span><span class="p">(</span><span class="nx">c1</span><span class="p">,</span><span class="w"> </span><span class="nx">c2</span><span class="p">)</span><span class="w"></span>
+
+<span class="hll"><span class="w">    </span><span class="c1">// 存在多个channel的情况下</span><span class="w"></span>
+</span><span class="hll"><span class="w">    </span><span class="c1">// 可以使用select获取最先收到消息的那个</span><span class="w"></span>
+</span><span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&lt;-</span><span class="nx">c1</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;c1 通道返回消息 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">value</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&lt;-</span><span class="nx">c2</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;c2 通道返回消息 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">value</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;end&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">myfun</span><span class="p">(</span><span class="nx">c1</span><span class="w"> </span><span class="kd">chan</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">c2</span><span class="w"> </span><span class="kd">chan</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;going to sleep 3s...&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">time</span><span class="p">.</span><span class="nx">Sleep</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">c2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;xx&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;xxxxx1&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">c1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;xxxxx&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;xxxxx2&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h2 id="context">context<a class="headerlink" href="#context" title="Permanent link">#</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;context&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;time&quot;</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;开始主进程&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">())</span><span class="w"></span>
+
+<span class="hll"><span class="w">    </span><span class="nx">ctx</span><span class="p">,</span><span class="w"> </span><span class="nx">cancelFunc</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">WithCancel</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">Background</span><span class="p">())</span><span class="w"></span>
+</span>
+<span class="hll"><span class="w">    </span><span class="c1">// 指定多少时间后超时退出</span><span class="w"></span>
+</span><span class="hll"><span class="w">    </span><span class="c1">// ctx, cancelFunc := context.WithTimeout(</span><span class="w"></span>
+</span><span class="hll"><span class="w">    </span><span class="c1">//  context.Background(),</span><span class="w"></span>
+</span><span class="hll"><span class="w">    </span><span class="c1">//  3*time.Second,</span><span class="w"></span>
+</span><span class="hll"><span class="w">    </span><span class="c1">// )</span><span class="w"></span>
+</span>
+<span class="hll"><span class="w">    </span><span class="c1">// 指定具体时间超时退出</span><span class="w"></span>
+</span><span class="hll"><span class="w">    </span><span class="c1">// ctx, cancelFunc := context.WithDeadline(</span><span class="w"></span>
+</span><span class="hll"><span class="w">    </span><span class="c1">//  context.Background(),</span><span class="w"></span>
+</span><span class="hll"><span class="w">    </span><span class="c1">//  time.Now().Add(3*time.Second),</span><span class="w"></span>
+</span><span class="hll"><span class="w">    </span><span class="c1">// )</span><span class="w"></span>
+</span>
+<span class="w">    </span><span class="k">go</span><span class="w"> </span><span class="nx">sub</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">cancelFunc</span><span class="p">)</span><span class="w"></span>
+<span class="hll"><span class="w">    </span><span class="o">&lt;-</span><span class="nx">ctx</span><span class="p">.</span><span class="nx">Done</span><span class="p">()</span><span class="w"></span>
+</span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="w"></span>
+<span class="w">        </span><span class="s">&quot;ctx.Err(): %v\n&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="hll"><span class="w">        </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">Err</span><span class="p">(),</span><span class="w"> </span><span class="c1">// 获取退出的原因</span><span class="w"></span>
+</span><span class="w">    </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">time</span><span class="p">.</span><span class="nx">Sleep</span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Millisecond</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;结束主进程&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">())</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">sub</span><span class="p">(</span><span class="nx">cancelFunc</span><span class="w"> </span><span class="o">*</span><span class="nx">context</span><span class="p">.</span><span class="nx">CancelFunc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;开始子进程&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">())</span><span class="w"></span>
+<span class="w">    </span><span class="nx">time</span><span class="p">.</span><span class="nx">Sleep</span><span class="p">(</span><span class="mi">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="o">*</span><span class="nx">cancelFunc</span><span class="p">)()</span><span class="w"></span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;结束子进程&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">())</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h2 id="sync">sync<a class="headerlink" href="#sync" title="Permanent link">#</a></h2>
+<h3 id="WaitGroup">WaitGroup<a class="headerlink" href="#WaitGroup" title="Permanent link">#</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1310,7 +1694,7 @@
 </span><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;结束子进程&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">())</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h2 id="syncMutex"><code>sync.Mutex</code><a class="headerlink" href="#syncMutex" title="Permanent link">#</a></h2>
+<h3 id="Mutex">Mutex<a class="headerlink" href="#Mutex" title="Permanent link">#</a></h3>
 <p>互斥锁，上锁后其他地方无法上锁就会阻塞等待</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1366,7 +1750,7 @@
 </span><span class="w">    </span><span class="nx">waitGroup</span><span class="p">.</span><span class="nx">Done</span><span class="p">()</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h2 id="syncRWMutex">sync.RWMutex<a class="headerlink" href="#syncRWMutex" title="Permanent link">#</a></h2>
+<h3 id="RWMutex">RWMutex<a class="headerlink" href="#RWMutex" title="Permanent link">#</a></h3>
 <p>读锁不会阻塞其他地方读锁，但是会阻塞写锁</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>

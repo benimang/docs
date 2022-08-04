@@ -1,6 +1,33 @@
 # Goroutine
 
 
+## 启动 Goroutine
+
+只要函数前添加 `go` 就可以了，没有具体看，应该是线程实现的
+
+```go hl_lines="10"
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	fmt.Println("开始主进程", time.Now())
+	go TestFunc()
+	time.Sleep(3 * time.Second)
+	fmt.Println("结束主进程", time.Now())
+}
+
+func TestFunc() {
+	fmt.Println("开始子进程", time.Now())
+	time.Sleep(1 * time.Second)
+	fmt.Println("结束子进程", time.Now())
+}
+```
+
+
 ## 通道
 
 
@@ -45,6 +72,94 @@ func main() {
 
 	fmt.Println(<-cRead)
 	fmt.Println(<-c)
+}
+```
+
+
+## select
+
+- `select` 尝试从多个管道中获取信息，但是不会阻塞
+- 如果没有任何管道返回消息，就会跑出去了，所以很多时候 `select` 外面都会有一个循环
+
+```go hl_lines="12-13"
+package main
+
+import "time"
+
+func main() {
+
+	c1 := make(chan string)
+	c2 := make(chan string)
+
+	go myfun(c1, c2)
+
+	// 存在多个channel的情况下
+	// 可以使用select获取最先收到消息的那个
+	select {
+	case value := <-c1:
+		println("c1 通道返回消息 " + value)
+	case value := <-c2:
+		println("c2 通道返回消息 " + value)
+	}
+	println("end")
+}
+
+func myfun(c1 chan string, c2 chan string) {
+	println("going to sleep 3s...")
+	time.Sleep(3 * time.Second)
+	c2 <- "xx"
+	println("xxxxx1")
+	c1 <- "xxxxx"
+	println("xxxxx2")
+}
+```
+
+
+## context
+
+```go hl_lines="12 14-18 20-24 27 31"
+package main
+
+import (
+	"context"
+	"fmt"
+	"time"
+)
+
+func main() {
+	fmt.Println("开始主进程", time.Now())
+
+	ctx, cancelFunc := context.WithCancel(context.Background())
+
+	// 指定多少时间后超时退出
+	// ctx, cancelFunc := context.WithTimeout(
+	// 	context.Background(),
+	// 	3*time.Second,
+	// )
+
+	// 指定具体时间超时退出
+	// ctx, cancelFunc := context.WithDeadline(
+	// 	context.Background(),
+	// 	time.Now().Add(3*time.Second),
+	// )
+
+	go sub(&cancelFunc)
+	<-ctx.Done()
+
+	fmt.Printf(
+		"ctx.Err(): %v\n",
+		ctx.Err(), // 获取退出的原因
+	)
+
+	time.Sleep(100 * time.Millisecond)
+	fmt.Println("结束主进程", time.Now())
+}
+
+func sub(cancelFunc *context.CancelFunc) {
+	fmt.Println("开始子进程", time.Now())
+	time.Sleep(5 * time.Second)
+	(*cancelFunc)()
+	fmt.Println("结束子进程", time.Now())
 }
 ```
 
