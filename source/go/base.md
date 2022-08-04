@@ -998,14 +998,12 @@ func httpCase() {
 
 ## 文件操作
 
-```go hl_lines="15-16 25-26 33-34 44-45 51 69-70 81-82 99-100 106-107"
+```go hl_lines="13-14 23-24 31-32 42-43 49 67-68 79-80 98-99 105-106"
 package main
 
 import (
 	"fmt"
 	"io"
-	"io/ioutil"
-	"log"
 	"os"
 )
 
@@ -1016,7 +1014,7 @@ func main() {
 		// 递归创建目录（如果要创建的目录已存在不会报错）
 		err := os.MkdirAll(testDir, 0644)
 		if err != nil {
-			log.Fatal(err)
+			panic(err)
 		}
 	}
 	{
@@ -1024,17 +1022,17 @@ func main() {
 		fileString := "一二三test"
 		fileBytes := []byte(fileString)
 		// 写入文件，如果文件不存在就创建文件
-		err := ioutil.WriteFile(file, fileBytes, 0644)
+		err := os.WriteFile(file, fileBytes, 0644)
 		if err != nil {
-			log.Fatal(err)
+			panic(err)
 		}
 	}
 	{
 		file := testDir + "/test_1.txt"
 		// 读取文件
-		fileBytes, err := ioutil.ReadFile(file)
+		fileBytes, err := os.ReadFile(file)
 		if err != nil {
-			log.Fatal(err)
+			panic(err)
 		}
 		fileString := string(fileBytes)
 		fmt.Println(fileString)
@@ -1045,7 +1043,7 @@ func main() {
 		// 文件重命名，也可以用于移动文件
 		err := os.Rename(fromFile, toFile)
 		if err != nil {
-			log.Fatal(err)
+			panic(err)
 		}
 	}
 	{
@@ -1053,7 +1051,7 @@ func main() {
 		copyFile := func(fromFilePath, toFilePath string) {
 			fromFile, err := os.Open(fromFilePath)
 			if err != nil {
-				log.Fatal(err)
+				panic(err)
 			}
 			defer fromFile.Close()
 
@@ -1063,14 +1061,14 @@ func main() {
 				0644,
 			)
 			if err != nil {
-				log.Fatal(err)
+				panic(err)
 			}
 			defer toFile.Close()
 
 			// 复制的关键代码
 			_, err = io.Copy(toFile, fromFile)
 			if err != nil {
-				log.Fatal(err)
+				panic(err)
 			}
 		}
 		copyFile(
@@ -1080,18 +1078,19 @@ func main() {
 	}
 	{
 		// 列出目录内容
-		fileList, err := ioutil.ReadDir(testDir)
+		fileList, err := os.ReadDir(testDir)
 		if err != nil {
-			log.Fatal(err)
+			panic(err)
 		}
 		for _, file := range fileList {
+			info, _ := file.Info()
 			fmt.Printf(
 				"Name=%v IsDir=%v Size=%v Mode=%v ModTime=%v\n",
 				file.Name(),
 				file.IsDir(),
-				file.Size(),
-				file.Mode(),
-				file.ModTime(),
+				info.Size(),
+				info.Mode(),
+				info.ModTime(),
 			)
 		}
 	}
@@ -1100,14 +1099,14 @@ func main() {
 		// 删除
 		err := os.Remove(file)
 		if err != nil {
-			log.Fatal(err)
+			panic(err)
 		}
 	}
 	{
 		// 递归删除
 		err := os.RemoveAll(testDir)
 		if err != nil {
-			log.Fatal(err)
+			panic(err)
 		}
 	}
 }
