@@ -884,6 +884,50 @@ func myfun(c1 chan string, c2 chan string) {
 ```
 
 
+## context
+
+- `context` 配合 `goroutine` 使用
+- `#!go context.WithDeadline(context.Background(), time.Now().Add(3*time.Second))`
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"time"
+)
+
+func main() {
+	{
+		fmt.Println("测试主动关闭子进程")
+		ctx, cancelFunc := context.WithCancel(context.Background())
+		go sub(ctx)
+		fmt.Println("主进程休眠5秒", time.Now())
+		time.Sleep(5 * time.Second)
+		cancelFunc()
+		time.Sleep(100 * time.Millisecond)
+		fmt.Println("主进程结束", time.Now())
+	}
+	{
+		fmt.Println("测试子进程3秒超时后退出")
+		ctx, cancelFunc := context.WithTimeout(context.Background(), 3*time.Second)
+		defer cancelFunc()
+		go sub(ctx)
+		fmt.Println("主进程休眠5秒", time.Now())
+		time.Sleep(5 * time.Second)
+		time.Sleep(100 * time.Millisecond)
+		fmt.Println("主进程结束", time.Now())
+	}
+}
+
+func sub(ctx context.Context) {
+	<-ctx.Done()
+	fmt.Println("子进程结束", time.Now())
+}
+```
+
+
 ## Assertion 断言
 
 这里的 `Assertion` 指的是将类型强制指定为某个类型
