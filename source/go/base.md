@@ -847,6 +847,10 @@ func Run(wg *sync.WaitGroup) {
 
 ## select
 
+- `select` 尝试从多个管道中获取信息，但是不会阻塞
+- 如果没有任何管道返回消息，就会跑出去了，所以很多时候 `select` 外面都会有一个循环
+
+
 ```go hl_lines="12-13"
 package main
 
