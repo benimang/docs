@@ -278,3 +278,29 @@ func TestFuncR(lock *sync.RWMutex, waitGroup *sync.WaitGroup, msg string) {
 	waitGroup.Done()
 }
 ```
+
+
+### Once
+
+```go
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+func main() {
+	once := sync.Once{}
+
+	// 只会执行第一个 once.Do 传进去的函数
+	once.Do(TestFunc(1))
+	once.Do(TestFunc(2))
+}
+
+func TestFunc(i int) func() {
+	return func() {
+		fmt.Println("TestFunc", i)
+	}
+}
+```
