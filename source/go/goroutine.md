@@ -337,3 +337,41 @@ func main() {
 	}
 }
 ```
+
+
+### Map
+
+```go hl_lines="9 20 22-24 30"
+package main
+
+import (
+	"fmt"
+	"sync"
+	"time"
+)
+
+var m = sync.Map{}
+
+func main() {
+	go WriteFunc()
+	go ReadFunc()
+	time.Sleep(100 * time.Millisecond)
+}
+
+func ReadFunc() {
+	for {
+		fmt.Println(
+			m.Load(0),
+		)
+		// m.Delete(0)
+		// m.LoadAndDelete(0)
+		// m.LoadOrStore(0, "store if not exists")
+	}
+}
+
+func WriteFunc() {
+	for {
+		m.Store(0, time.Now())
+	}
+}
+```
