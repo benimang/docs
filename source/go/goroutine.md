@@ -304,3 +304,36 @@ func TestFunc(i int) func() {
 	}
 }
 ```
+
+
+### Pool
+
+```go hl_lines="9 14 19"
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+func main() {
+	pool := sync.Pool{}
+	type Student struct {
+		id int
+	}
+	for i := 0; i < 5; i++ {
+		pool.Put(
+			&Student{i},
+		)
+	}
+	for {
+		p := pool.Get()
+		if p == nil {
+			break
+		}
+		fmt.Println(
+			p.(*Student).id,
+		)
+	}
+}
+```
