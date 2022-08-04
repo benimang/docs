@@ -745,51 +745,6 @@ func main() {
 ```
 
 
-## 通道
-
-```go
-package main
-
-func main() {
-	
-	// 创建通道，后面的数值不写默认是0
-	c := make(chan string, 1)
-
-	// 向通道写入数据
-	c <- "xxx"
-
-	// 从通道读取数据
-	value := <-c
-
-	// 关闭后可从chan读取，但是不能再写入chan
-	close(c)
-
-	println(value)
-}
-```
-
-
-## 通道（只读 / 只写）
-
-```go
-package main
-
-import "fmt"
-
-func main() {
-	c := make(chan int, 5)    // 可读写
-	var cRead <-chan int = c  // 只读
-	var cWrite chan<- int = c // 只写
-
-	c <- 1
-	cWrite <- 2
-
-	fmt.Println(<-cRead)
-	fmt.Println(<-c)
-}
-```
-
-
 ## Goroutine 与 通道
 
 ```go hl_lines="9-10"

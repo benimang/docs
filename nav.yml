@@ -16,7 +16,7 @@ nav:
                   - go/web.md
                   - go/test.md
                   - go/cmd.md
-                  - GORM:
+                  - Gorm:
                             - go/gorm/others.md
                             - go/gorm/base.md
                             - go/gorm/create.md
