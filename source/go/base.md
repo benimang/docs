@@ -992,7 +992,7 @@ func (s Student) Say(msg string, value int) {
 
 ## 时间控制（延迟和重复间隔）
 
-```go hl_lines="9-10 12-13 16-17 20 28-29"
+```go hl_lines="9-10 12-13 16-17 20 28-30"
 package main
 
 import (
@@ -1021,6 +1021,7 @@ func main() {
 	}
 	{
 		// 另外一种循环
+		// 特别注意：没有办法停止，所依赖的Ticker是没法被GC
 		for range time.Tick(1 * time.Second) {
 			println("...")
 		}

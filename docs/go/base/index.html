@@ -3354,7 +3354,8 @@
 <span class="normal">30</span>
 <span class="normal">31</span>
 <span class="normal">32</span>
-<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="normal">33</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
 
 <span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
 <span class="w">    </span><span class="s">&quot;time&quot;</span><span class="w"></span>
@@ -3382,6 +3383,7 @@
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="hll"><span class="w">        </span><span class="c1">// 另外一种循环</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="c1">// 特别注意：没有办法停止，所依赖的Ticker是没法被GC</span><span class="w"></span>
 </span><span class="hll"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Tick</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 </span><span class="w">            </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">)</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
