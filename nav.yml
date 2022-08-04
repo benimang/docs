@@ -12,7 +12,7 @@ nav:
         - GO:
                   - go/others.md
                   - go/base.md
-                  - go/sync.md
+                  - go/goroutine.md
                   - go/web.md
                   - go/test.md
                   - go/cmd.md

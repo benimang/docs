@@ -1,6 +1,10 @@
-# sync
+# Goroutine
 
-## `sync.WaitGroup`
+
+## sync
+
+
+### WaitGroup
 
 ```go hl_lines="11 12 14 22"
 package main
@@ -30,7 +34,7 @@ func TestFunc(wg *sync.WaitGroup) {
 ```
 
 
-## `sync.Mutex`
+### Mutex
 
 互斥锁，上锁后其他地方无法上锁就会阻塞等待
 
@@ -65,7 +69,7 @@ func TestFunc(lock *sync.Mutex, waitGroup *sync.WaitGroup, msg string) {
 ```
 
 
-## sync.RWMutex
+### RWMutex
 
 读锁不会阻塞其他地方读锁，但是会阻塞写锁
 
