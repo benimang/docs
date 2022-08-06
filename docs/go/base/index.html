@@ -1346,6 +1346,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../others/gva/" class="md-nav__link">
+        Gin-Vue-Admin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../others/url/" class="md-nav__link">
         常用网址
       </a>
@@ -3415,14 +3429,11 @@
 <span class="normal">108</span>
 <span class="normal">109</span>
 <span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
+<span class="normal">111</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w"></span>
 
 <span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
 <span class="w">    </span><span class="s">&quot;fmt&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="s">&quot;io&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;io/ioutil&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;log&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="s">&quot;os&quot;</span><span class="w"></span>
 <span class="p">)</span><span class="w"></span>
 
@@ -3433,7 +3444,7 @@
 <span class="hll"><span class="w">        </span><span class="c1">// 递归创建目录（如果要创建的目录已存在不会报错）</span><span class="w"></span>
 </span><span class="hll"><span class="w">        </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">MkdirAll</span><span class="p">(</span><span class="nx">testDir</span><span class="p">,</span><span class="w"> </span><span class="mo">0644</span><span class="p">)</span><span class="w"></span>
 </span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
@@ -3441,17 +3452,17 @@
 <span class="w">        </span><span class="nx">fileString</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;一二三test&quot;</span><span class="w"></span>
 <span class="w">        </span><span class="nx">fileBytes</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">fileString</span><span class="p">)</span><span class="w"></span>
 <span class="hll"><span class="w">        </span><span class="c1">// 写入文件，如果文件不存在就创建文件</span><span class="w"></span>
-</span><span class="hll"><span class="w">        </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ioutil</span><span class="p">.</span><span class="nx">WriteFile</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span><span class="w"> </span><span class="nx">fileBytes</span><span class="p">,</span><span class="w"> </span><span class="mo">0644</span><span class="p">)</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">WriteFile</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span><span class="w"> </span><span class="nx">fileBytes</span><span class="p">,</span><span class="w"> </span><span class="mo">0644</span><span class="p">)</span><span class="w"></span>
 </span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="nx">file</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">testDir</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/test_1.txt&quot;</span><span class="w"></span>
 <span class="hll"><span class="w">        </span><span class="c1">// 读取文件</span><span class="w"></span>
-</span><span class="hll"><span class="w">        </span><span class="nx">fileBytes</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadFile</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="nx">fileBytes</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">ReadFile</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span><span class="w"></span>
 </span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">        </span><span class="nx">fileString</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">string</span><span class="p">(</span><span class="nx">fileBytes</span><span class="p">)</span><span class="w"></span>
 <span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">fileString</span><span class="p">)</span><span class="w"></span>
@@ -3462,7 +3473,7 @@
 <span class="hll"><span class="w">        </span><span class="c1">// 文件重命名，也可以用于移动文件</span><span class="w"></span>
 </span><span class="hll"><span class="w">        </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Rename</span><span class="p">(</span><span class="nx">fromFile</span><span class="p">,</span><span class="w"> </span><span class="nx">toFile</span><span class="p">)</span><span class="w"></span>
 </span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
@@ -3470,7 +3481,7 @@
 </span><span class="w">        </span><span class="nx">copyFile</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">fromFilePath</span><span class="p">,</span><span class="w"> </span><span class="nx">toFilePath</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">            </span><span class="nx">fromFile</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Open</span><span class="p">(</span><span class="nx">fromFilePath</span><span class="p">)</span><span class="w"></span>
 <span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
 <span class="w">            </span><span class="p">}</span><span class="w"></span>
 <span class="w">            </span><span class="k">defer</span><span class="w"> </span><span class="nx">fromFile</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span><span class="w"></span>
 
@@ -3480,14 +3491,14 @@
 <span class="w">                </span><span class="mo">0644</span><span class="p">,</span><span class="w"></span>
 <span class="w">            </span><span class="p">)</span><span class="w"></span>
 <span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
 <span class="w">            </span><span class="p">}</span><span class="w"></span>
 <span class="w">            </span><span class="k">defer</span><span class="w"> </span><span class="nx">toFile</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span><span class="w"></span>
 
 <span class="hll"><span class="w">            </span><span class="c1">// 复制的关键代码</span><span class="w"></span>
 </span><span class="hll"><span class="w">            </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">io</span><span class="p">.</span><span class="nx">Copy</span><span class="p">(</span><span class="nx">toFile</span><span class="p">,</span><span class="w"> </span><span class="nx">fromFile</span><span class="p">)</span><span class="w"></span>
 </span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
 <span class="w">            </span><span class="p">}</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">        </span><span class="nx">copyFile</span><span class="p">(</span><span class="w"></span>
@@ -3497,18 +3508,19 @@
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="hll"><span class="w">        </span><span class="c1">// 列出目录内容</span><span class="w"></span>
-</span><span class="hll"><span class="w">        </span><span class="nx">fileList</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadDir</span><span class="p">(</span><span class="nx">testDir</span><span class="p">)</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="nx">fileList</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">ReadDir</span><span class="p">(</span><span class="nx">testDir</span><span class="p">)</span><span class="w"></span>
 </span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">fileList</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">info</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span><span class="nx">Info</span><span class="p">()</span><span class="w"></span>
 <span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="w"></span>
 <span class="w">                </span><span class="s">&quot;Name=%v IsDir=%v Size=%v Mode=%v ModTime=%v\n&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">                </span><span class="nx">file</span><span class="p">.</span><span class="nx">Name</span><span class="p">(),</span><span class="w"></span>
 <span class="w">                </span><span class="nx">file</span><span class="p">.</span><span class="nx">IsDir</span><span class="p">(),</span><span class="w"></span>
-<span class="w">                </span><span class="nx">file</span><span class="p">.</span><span class="nx">Size</span><span class="p">(),</span><span class="w"></span>
-<span class="w">                </span><span class="nx">file</span><span class="p">.</span><span class="nx">Mode</span><span class="p">(),</span><span class="w"></span>
-<span class="w">                </span><span class="nx">file</span><span class="p">.</span><span class="nx">ModTime</span><span class="p">(),</span><span class="w"></span>
+<span class="w">                </span><span class="nx">info</span><span class="p">.</span><span class="nx">Size</span><span class="p">(),</span><span class="w"></span>
+<span class="w">                </span><span class="nx">info</span><span class="p">.</span><span class="nx">Mode</span><span class="p">(),</span><span class="w"></span>
+<span class="w">                </span><span class="nx">info</span><span class="p">.</span><span class="nx">ModTime</span><span class="p">(),</span><span class="w"></span>
 <span class="w">            </span><span class="p">)</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
@@ -3517,14 +3529,14 @@
 <span class="hll"><span class="w">        </span><span class="c1">// 删除</span><span class="w"></span>
 </span><span class="hll"><span class="w">        </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Remove</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span><span class="w"></span>
 </span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="hll"><span class="w">        </span><span class="c1">// 递归删除</span><span class="w"></span>
 </span><span class="hll"><span class="w">        </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">RemoveAll</span><span class="p">(</span><span class="nx">testDir</span><span class="p">)</span><span class="w"></span>
 </span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
