@@ -2,6 +2,7 @@
     "workbench.editor.enablePreview": false,
     "breadcrumbs.enabled": false, // 代码顶部导航
     "explorer.autoReveal": false, // 取消文件自动定位跟踪
+    "editor.renderWhitespace": "none", // 不高亮显示空白
     "files.eol": "\n",
     "files.exclude": {
         ".gitignore": true,
