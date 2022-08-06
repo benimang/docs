@@ -6,6 +6,7 @@
 
 1. 文件重命名扩展名 `vite.config.ts`
 2. 新增两个文件（使用 `vite` 创建新的 `vue(ts)` 项目中复制过来改动）
+3. 处理完上面的两个步骤后记得要重启一下 `vscode`
 
 ```json title="tsconfig.json" hl_lines="18-24"
 {
