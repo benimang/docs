@@ -35,6 +35,8 @@ nav:
         - Linux:
                   - linux/centos.md
                   - linux/nginx.md
+                  - linux/ubuntu.md
+                  - linux/wsl2.md
         - Docker:
                   - docker/base.md
         - Eshop:
