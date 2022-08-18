@@ -4,7 +4,9 @@
 
 ## 安装
 
-命令默认会安装内核并安装 `Ubuntu` 
+命令默认会安装内核并安装 `Ubuntu` 如果想要其他版本可以使用 `wsl --list --online` 查看，然后安装的时候输入 `wsl --install -d xxxxxx`
+
+注意：必须要管理员身份才能执行，否则会提示中文，操作需要提升
 
 ```sh
 wsl --install
