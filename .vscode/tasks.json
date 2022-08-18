@@ -16,7 +16,7 @@
             "problemMatcher": []
         },
         {
-            "label": "pytask update",
+            "label": "upload",
             "type": "shell",
             "command": "TortoiseGitProc.exe /command:commit /path:./",
             "problemMatcher": [],
