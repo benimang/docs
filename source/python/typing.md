@@ -3,6 +3,37 @@
 
 ## TypeVar
 
+
+### 类型
+
+```py
+from typing import Type
+
+
+class AClass():
+
+    @classmethod
+    def myfunc(cls):
+        pass
+
+    def xx(self):
+        print('xxxxdd')
+
+
+def myfun(cls: Type[AClass]):
+    xx = cls()
+    xx.xx()
+
+
+def myfun2(cls: Type[object]):
+    pass
+
+
+myfun(AClass)
+```
+
+
+
 ### 泛型使用
 
 ``` py
