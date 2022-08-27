@@ -1,13 +1,6 @@
 # 欢迎光临
 
-欢迎光临巴山博客，这是一个生活和编程学习的个人博客网站。
-
-
-<!-- ## 域名出售（pytask.com）
-如果你喜欢这个域名，可以写上你认为合理的价格发邮件给我。
-
-## Domain For Sale (pytask.com)
-If you wanna take this domain, give me a email with your acceptable price. -->
+欢迎光临通途大麦，这是一个记录生活和编程学习的个人博客网站。
 
 ## Contact
 
