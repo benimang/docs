@@ -1,4 +1,4 @@
-# GO相关
+# 环境配置
 
 
 ## GO命令
@@ -10,10 +10,6 @@
 
 
 ## 安装以及使用第三方库
-
-!!! quote
-    <https://blog.csdn.net/qq_39611230/article/details/121232707>{:target="_blank"}
-    <https://blog.csdn.net/weixin_54707168/article/details/122658675>{:target="_blank"}
 
 1.  强制打开 `GO111MODULE` 可以使用命令行 `#!sh go env -w GO111MODULE=on`
 2.  设置代理 `#!sh go env -w GOPROXY=https://goproxy.cn,direct`

@@ -1,17 +1,16 @@
 nav:
-        - index.md
-        - Python:
+        # - index.md
+        # - Python:
                 #   - python/decorator.md
                 #   - python/typing.md
                 #   - python/pathlib.md
                 #   - python/fstring.md
                 #   - python/sqlite.md
                 #   - python/playwright.md
-                  - python/pip.md
-                  - python/tips.md
-        # - GO:
-        #           - go/others.md
-        #           - go/base.md
+                #   - python/pip.md
+                #   - python/tips.md
+        - go/others.md
+        - go/base.md
         #           - go/goroutine.md
         #           - go/web.md
         #           - go/test.md
