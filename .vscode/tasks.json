@@ -6,13 +6,13 @@
         {
             "label": "mkdocs serve",
             "type": "shell",
-            "command": "mkdocs serve",
+            "command": "${workspaceFolder}/venv/Scripts/mkdocs serve",
             "problemMatcher": []
         },
         {
             "label": "mkdocs build",
             "type": "shell",
-            "command": "mkdocs build",
+            "command": "${workspaceFolder}/venv/Scripts/mkdocs build",
             "problemMatcher": []
         },
         {
