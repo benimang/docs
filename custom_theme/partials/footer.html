@@ -42,22 +42,22 @@
   {% endif %}
   -->
   <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        {% if config.copyright %}
-          <div class="md-footer-copyright__highlight">
-            {{ config.copyright }}
-          </div>
-        {% endif %}
-        {% if not config.extra.generator == false %}
-          Made with
-          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-            Material for MkDocs
+    <div class="md-footer-meta__inner">
+        <span style="text-align: center; width: 100%; align-self: center; padding-top: 10px; font-size: .85em; text-decoration:none;">
+
+          <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011102003244" style="display:inline-block; margin: 0px 15px;">
+            <img src="/assets/img/beian.png" style="float:left; margin-right: 5px;"/>
+            <p style="float:left;margin: 0px 0px; ">粤公网安备 44011102003244号</p>
           </a>
-        {% endif %}
-        {{ extracopyright }}
-      </div>
-      {% include "partials/social.html" %}
+
+          <a target="_blank" href="https://beian.miit.gov.cn" style="display:inline-block; margin: 0px 15px;">
+            <p style="float:left;margin: 0px 0px; ">粤ICP备 2022109168号</p>
+          </a>
+
+        </span>
+        
+
+
     </div>
   </div>
 </footer>
