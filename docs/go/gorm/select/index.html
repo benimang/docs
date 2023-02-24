@@ -12,10 +12,16 @@
         <meta name="author" content="Beni Mang">
       
       
-        <link rel="canonical" href="https://pytask.com/go/gorm/select/">
+        <link rel="canonical" href="https://www.pytask.com/go/gorm/select/">
+      
+      
+        <link rel="prev" href="../create/">
+      
+      
+        <link rel="next" href="../update/">
       
       <link rel="icon" href="../../../img/favicon.svg">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
     
     
       
@@ -23,13 +29,13 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ffa9267a.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
-        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
+
     
     
     
@@ -42,10 +48,11 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -112,7 +119,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -120,7 +126,6 @@
             </label>
           
         
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -147,7 +152,7 @@
       </label>
       <nav class="md-search__options" aria-label="查找">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -159,7 +164,7 @@
           <div class="md-search-result__meta">
             正在初始化搜索引擎
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -227,17 +232,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
           Python
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Python" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Python
@@ -375,17 +381,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           GO
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="GO" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           GO
@@ -487,17 +494,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3_7">
+        <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
           Gorm
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Gorm" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3_7">
           <span class="md-nav__icon md-icon"></span>
           Gorm
@@ -555,7 +563,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -772,17 +780,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
           Database
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Database" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Database
@@ -862,17 +871,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
           Laya
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Laya" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Laya
@@ -938,17 +948,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
           Linux
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Linux" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Linux
@@ -1028,17 +1039,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_7">
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
           Docker
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Docker" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Docker
@@ -1076,17 +1088,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
           Eshop
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Eshop" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Eshop
@@ -1102,17 +1115,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_8_1">
+        <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
           Amazon
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Amazon" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_8_1">
           <span class="md-nav__icon md-icon"></span>
           Amazon
@@ -1227,17 +1241,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_9">
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
           Others
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Others" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Others
@@ -1508,10 +1523,11 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
 
 <h1 id="查询">查询<a class="headerlink" href="#查询" title="Permanent link">#</a></h1>
@@ -1528,24 +1544,24 @@
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">p</span><span class="w"> </span><span class="nx">product</span><span class="w"></span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">p</span><span class="w"> </span><span class="nx">product</span>
 
-<span class="nx">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="hll"><span class="c1">// 默认加上主键的升序，取第一个</span><span class="w"></span>
-</span><span class="hll"><span class="nx">db</span><span class="p">.</span><span class="nx">First</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span><span class="w"></span>
+<span class="nx">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">product</span><span class="p">{}</span>
+<span class="hll"><span class="c1">// 默认加上主键的升序，取第一个</span>
+</span><span class="hll"><span class="nx">db</span><span class="p">.</span><span class="nx">First</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span>
 </span>
-<span class="nx">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="hll"><span class="c1">// 默认加上主键的降序，取第一个</span><span class="w"></span>
-</span><span class="hll"><span class="nx">db</span><span class="p">.</span><span class="nx">Last</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span><span class="w"></span>
+<span class="nx">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">product</span><span class="p">{}</span>
+<span class="hll"><span class="c1">// 默认加上主键的降序，取第一个</span>
+</span><span class="hll"><span class="nx">db</span><span class="p">.</span><span class="nx">Last</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span>
 </span>
-<span class="nx">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="hll"><span class="c1">// 不会添加默认的任何排序，取第一个</span><span class="w"></span>
-</span><span class="hll"><span class="nx">db</span><span class="p">.</span><span class="nx">Take</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span><span class="w"></span>
+<span class="nx">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">product</span><span class="p">{}</span>
+<span class="hll"><span class="c1">// 不会添加默认的任何排序，取第一个</span>
+</span><span class="hll"><span class="nx">db</span><span class="p">.</span><span class="nx">Take</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="查询全部">查询全部<a class="headerlink" href="#查询全部" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="hll"><span class="nx">db</span><span class="p">.</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span><span class="w"></span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
+<span class="hll"><span class="nx">db</span><span class="p">.</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="内联条件">内联条件<a class="headerlink" href="#内联条件" title="Permanent link">#</a></h2>
 <p>提供给 <code>Find</code> <code>Take</code> <code>First</code> <code>Last</code> 便捷设置条件的方式</p>
@@ -1562,31 +1578,31 @@
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">p</span><span class="w"> </span><span class="nx">product</span><span class="w"></span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">p</span><span class="w"> </span><span class="nx">product</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
 
-<span class="nx">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Take</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="nx">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">product</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Take</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
 
-<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">,</span><span class="w"> </span><span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">})</span><span class="w"></span>
+<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">,</span><span class="w"> </span><span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">})</span>
 
-<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;price NOT IN (?)&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">77</span><span class="p">,</span><span class="w"> </span><span class="mi">73</span><span class="p">})</span><span class="w"></span>
+<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;price NOT IN (?)&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">77</span><span class="p">,</span><span class="w"> </span><span class="mi">73</span><span class="p">})</span>
 
-<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;price BETWEEN ? and ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w"> </span><span class="mi">95</span><span class="p">)</span><span class="w"></span>
+<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;price BETWEEN ? and ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w"> </span><span class="mi">95</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="Select--Omit">Select &amp; Omit<a class="headerlink" href="#Select--Omit" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">p</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Select</span><span class="p">(</span><span class="s">&quot;ID&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Name&quot;</span><span class="p">).</span><span class="nx">Take</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span><span class="w"></span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">p</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">product</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Select</span><span class="p">(</span><span class="s">&quot;ID&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Name&quot;</span><span class="p">).</span><span class="nx">Take</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span>
 
-<span class="nx">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Omit</span><span class="p">(</span><span class="s">&quot;Star&quot;</span><span class="p">).</span><span class="nx">Take</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span><span class="w"></span>
+<span class="nx">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">product</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Omit</span><span class="p">(</span><span class="s">&quot;Star&quot;</span><span class="p">).</span><span class="nx">Take</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="Where">Where<a class="headerlink" href="#Where" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1602,20 +1618,20 @@
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">p</span><span class="w"> </span><span class="nx">product</span><span class="w"></span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">p</span><span class="w"> </span><span class="nx">product</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
 
-<span class="nx">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="nx">Take</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span><span class="w"></span>
+<span class="nx">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">product</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="nx">Take</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span>
 
-<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">([]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">}).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span><span class="w"></span>
+<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">([]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">}).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span>
 
-<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="s">&quot;price Not in (?)&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">77</span><span class="p">,</span><span class="w"> </span><span class="mi">73</span><span class="p">}).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span><span class="w"></span>
+<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="s">&quot;price Not in (?)&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">77</span><span class="p">,</span><span class="w"> </span><span class="mi">73</span><span class="p">}).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span>
 
-<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="s">&quot;price BETWEEN ? AND ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w"> </span><span class="mi">95</span><span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span><span class="w"></span>
+<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="s">&quot;price BETWEEN ? AND ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w"> </span><span class="mi">95</span><span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="Or">Or<a class="headerlink" href="#Or" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1636,25 +1652,25 @@
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
 
-<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;ID &gt; ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"></span>
-<span class="p">).</span><span class="nx">Or</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;Price &gt; ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"></span>
-<span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">,</span><span class="w"></span>
-<span class="p">)</span><span class="w"></span>
+<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;ID &gt; ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="p">).</span><span class="nx">Or</span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;Price &gt; ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span>
+<span class="p">).</span><span class="nx">Find</span><span class="p">(</span>
+<span class="w">    </span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">,</span>
+<span class="p">)</span>
 
-<span class="c1">// 条件嵌套使用，可以写出复杂的查询条件</span><span class="w"></span>
-<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="s">&quot;ID &gt; ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">).</span><span class="nx">Where</span><span class="p">(</span><span class="s">&quot;Price &gt; ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">),</span><span class="w"></span>
-<span class="p">).</span><span class="nx">Or</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="s">&quot;ID &gt; ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">).</span><span class="nx">Or</span><span class="p">(</span><span class="s">&quot;Price &gt; ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">),</span><span class="w"></span>
-<span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span><span class="w"></span>
-<span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;productAry: %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">pAry</span><span class="p">)</span><span class="w"></span>
+<span class="c1">// 条件嵌套使用，可以写出复杂的查询条件</span>
+<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="s">&quot;ID &gt; ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">).</span><span class="nx">Where</span><span class="p">(</span><span class="s">&quot;Price &gt; ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">),</span>
+<span class="p">).</span><span class="nx">Or</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="s">&quot;ID &gt; ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">).</span><span class="nx">Or</span><span class="p">(</span><span class="s">&quot;Price &gt; ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">),</span>
+<span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;productAry: %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">pAry</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="Not">Not<a class="headerlink" href="#Not" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1663,18 +1679,18 @@
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
 
-<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Not</span><span class="p">([]</span><span class="kt">uint</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">}).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span><span class="w"></span>
+<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Not</span><span class="p">([]</span><span class="kt">uint</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">}).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span>
 
-<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Not</span><span class="p">(</span><span class="s">&quot;Price BETWEEN ? AND ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span><span class="w"></span>
+<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Not</span><span class="p">(</span><span class="s">&quot;Price BETWEEN ? AND ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="Count">Count<a class="headerlink" href="#Count" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">n</span><span class="w"> </span><span class="kt">int64</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">product</span><span class="p">{}).</span><span class="nx">Count</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">n</span><span class="p">)</span><span class="w"></span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">n</span><span class="w"> </span><span class="kt">int64</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">product</span><span class="p">{}).</span><span class="nx">Count</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">n</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="Order">Order<a class="headerlink" href="#Order" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1683,23 +1699,23 @@
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">pAry</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="w"></span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">pAry</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span>
 
-<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Order</span><span class="p">(</span><span class="s">&quot;Price Desc&quot;</span><span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span><span class="w"></span>
+<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Order</span><span class="p">(</span><span class="s">&quot;Price Desc&quot;</span><span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span>
 
-<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Order</span><span class="p">(</span><span class="s">&quot;Price Desc&quot;</span><span class="p">).</span><span class="nx">Order</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span><span class="w"></span>
+<span class="nx">pAry</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Order</span><span class="p">(</span><span class="s">&quot;Price Desc&quot;</span><span class="p">).</span><span class="nx">Order</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="Limit--Offset">Limit &amp; Offset<a class="headerlink" href="#Limit--Offset" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">pAry</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Offset</span><span class="p">(</span><span class="mi">5</span><span class="p">).</span><span class="nx">Limit</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span><span class="w"></span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">pAry</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Offset</span><span class="p">(</span><span class="mi">5</span><span class="p">).</span><span class="nx">Limit</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="Distinct">Distinct<a class="headerlink" href="#Distinct" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">pAry</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Distinct</span><span class="p">(</span><span class="s">&quot;Price&quot;</span><span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span><span class="w"></span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">pAry</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Distinct</span><span class="p">(</span><span class="s">&quot;Price&quot;</span><span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="Group--Having">Group &amp; Having<a class="headerlink" href="#Group--Having" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1715,20 +1731,20 @@
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">type</span><span class="w"> </span><span class="nx">pInfo</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">Star</span><span class="w">  </span><span class="kt">uint</span><span class="w"></span>
-<span class="w">    </span><span class="nx">Count</span><span class="w"> </span><span class="kt">uint</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">type</span><span class="w"> </span><span class="nx">pInfo</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Star</span><span class="w">  </span><span class="kt">uint</span>
+<span class="w">    </span><span class="nx">Count</span><span class="w"> </span><span class="kt">uint</span>
+<span class="p">}</span>
 
-<span class="nx">pInfoAry</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nx">pInfo</span><span class="p">{}</span><span class="w"></span>
+<span class="nx">pInfoAry</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nx">pInfo</span><span class="p">{}</span>
 
-<span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">product</span><span class="p">{}).</span><span class="nx">Select</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;Star, COUNT(*) as Count&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="p">).</span><span class="nx">Group</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;Star&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="p">).</span><span class="nx">Having</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;Count &gt;= ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"></span>
-<span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pInfoAry</span><span class="p">)</span><span class="w"></span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">product</span><span class="p">{}).</span><span class="nx">Select</span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;Star, COUNT(*) as Count&quot;</span><span class="p">,</span>
+<span class="p">).</span><span class="nx">Group</span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;Star&quot;</span><span class="p">,</span>
+<span class="p">).</span><span class="nx">Having</span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;Count &gt;= ?&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pInfoAry</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="Raw--Scan">Raw &amp; Scan<a class="headerlink" href="#Raw--Scan" title="Permanent link">#</a></h2>
 <p><code>Scan</code> 可以将查询结果赋值到结构体</p>
@@ -1743,40 +1759,40 @@
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">type</span><span class="w"> </span><span class="nx">pInfo</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">Star</span><span class="w">  </span><span class="kt">uint</span><span class="w"></span>
-<span class="w">    </span><span class="nx">Count</span><span class="w"> </span><span class="kt">uint</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">type</span><span class="w"> </span><span class="nx">pInfo</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Star</span><span class="w">  </span><span class="kt">uint</span>
+<span class="w">    </span><span class="nx">Count</span><span class="w"> </span><span class="kt">uint</span>
+<span class="p">}</span>
 
-<span class="nx">pInfoAry</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nx">pInfo</span><span class="p">{}</span><span class="w"></span>
+<span class="nx">pInfoAry</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nx">pInfo</span><span class="p">{}</span>
 
-<span class="nx">db</span><span class="p">.</span><span class="nx">Raw</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;SELECT Star, COUNT(*) as Count FROM products GROUP BY Star Having Count &gt;= 3&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="p">).</span><span class="nx">Scan</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="o">&amp;</span><span class="nx">pInfoAry</span><span class="p">,</span><span class="w"></span>
-<span class="p">)</span><span class="w"></span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Raw</span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;SELECT Star, COUNT(*) as Count FROM products GROUP BY Star Having Count &gt;= 3&quot;</span><span class="p">,</span>
+<span class="p">).</span><span class="nx">Scan</span><span class="p">(</span>
+<span class="w">    </span><span class="o">&amp;</span><span class="nx">pInfoAry</span><span class="p">,</span>
+<span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="查询结果解析到映射map">查询结果解析到映射（map）<a class="headerlink" href="#查询结果解析到映射map" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">product</span><span class="p">{}).</span><span class="nx">Take</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">m</span><span class="p">)</span><span class="w"></span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">product</span><span class="p">{}).</span><span class="nx">Take</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">m</span><span class="p">)</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">mAry</span><span class="w"> </span><span class="p">[]</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">product</span><span class="p">{}).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">mAry</span><span class="p">)</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">mAry</span><span class="w"> </span><span class="p">[]</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">product</span><span class="p">{}).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">mAry</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="子查询">子查询<a class="headerlink" href="#子查询" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">pAry</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;Price &gt; (?)&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">product</span><span class="p">{}).</span><span class="nx">Select</span><span class="p">(</span><span class="s">&quot;AVG(price)&quot;</span><span class="p">),</span><span class="w"></span>
-<span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span><span class="w"></span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">pAry</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nx">product</span><span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;Price &gt; (?)&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">product</span><span class="p">{}).</span><span class="nx">Select</span><span class="p">(</span><span class="s">&quot;AVG(price)&quot;</span><span class="p">),</span>
+<span class="p">).</span><span class="nx">Find</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pAry</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="FirstOrInit">FirstOrInit<a class="headerlink" href="#FirstOrInit" title="Permanent link">#</a></h2>
 <ul>
@@ -1787,10 +1803,10 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">p</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">product</span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">Name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;product_AA&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="nx">p</span><span class="p">).</span><span class="nx">Attrs</span><span class="p">(</span><span class="nx">product</span><span class="p">{</span><span class="nx">Star</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">}).</span><span class="nx">FirstOrInit</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span><span class="w"></span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">p</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">product</span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;product_AA&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="nx">p</span><span class="p">).</span><span class="nx">Attrs</span><span class="p">(</span><span class="nx">product</span><span class="p">{</span><span class="nx">Star</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">}).</span><span class="nx">FirstOrInit</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="FirstOrCreate">FirstOrCreate<a class="headerlink" href="#FirstOrCreate" title="Permanent link">#</a></h2>
 <ul>
@@ -1800,10 +1816,10 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">p</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">product</span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">Name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;product_AA&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="nx">p</span><span class="p">).</span><span class="nx">Attrs</span><span class="p">(</span><span class="nx">product</span><span class="p">{</span><span class="nx">Star</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">}).</span><span class="nx">FirstOrCreate</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span><span class="w"></span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">p</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">product</span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;product_AA&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Where</span><span class="p">(</span><span class="nx">p</span><span class="p">).</span><span class="nx">Attrs</span><span class="p">(</span><span class="nx">product</span><span class="p">{</span><span class="nx">Star</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">}).</span><span class="nx">FirstOrCreate</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="Pluck">Pluck<a class="headerlink" href="#Pluck" title="Permanent link">#</a></h2>
 <p>获取单列数据</p>
@@ -1811,17 +1827,22 @@
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">starAry</span><span class="w"> </span><span class="p">[]</span><span class="kt">uint</span><span class="w"></span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">starAry</span><span class="w"> </span><span class="p">[]</span><span class="kt">uint</span>
 
-<span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">product</span><span class="p">{}).</span><span class="nx">Pluck</span><span class="p">(</span><span class="s">&quot;Star&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">starAry</span><span class="p">)</span><span class="w"></span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">product</span><span class="p">{}).</span><span class="nx">Pluck</span><span class="p">(</span><span class="s">&quot;Star&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">starAry</span><span class="p">)</span>
 
-<span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">product</span><span class="p">{}).</span><span class="nx">Distinct</span><span class="p">(</span><span class="s">&quot;Star&quot;</span><span class="p">).</span><span class="nx">Order</span><span class="p">(</span><span class="s">&quot;Star DESC&quot;</span><span class="p">).</span><span class="nx">Pluck</span><span class="p">(</span><span class="s">&quot;Star&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">starAry</span><span class="p">)</span><span class="w"></span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">product</span><span class="p">{}).</span><span class="nx">Distinct</span><span class="p">(</span><span class="s">&quot;Star&quot;</span><span class="p">).</span><span class="nx">Order</span><span class="p">(</span><span class="s">&quot;Star DESC&quot;</span><span class="p">).</span><span class="nx">Pluck</span><span class="p">(</span><span class="s">&quot;Star&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">starAry</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 
-              
-            </article>
-            
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
           <a href="#" class="md-top md-icon" data-md-component="top" hidden>
@@ -1835,7 +1856,7 @@
 <footer class="md-footer">
   <!--
   
-    <nav class="md-footer__inner md-grid" aria-label="页脚">
+    <nav class="md-footer__inner md-grid" aria-label="">
       
         
         <a href="../create/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 创建" rel="prev">
@@ -1872,26 +1893,22 @@
   
   -->
   <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        
-          Made with
-          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-            Material for MkDocs
+    <div class="md-footer-meta__inner">
+        <span style="text-align: center; width: 100%; align-self: center; padding-top: 10px; font-size: .85em; text-decoration:none;">
+
+          <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011102003244" style="display:inline-block; margin: 0px 15px;">
+            <img src="/assets/img/beian.png" style="float:left; margin-right: 5px;"/>
+            <p style="float:left;margin: 0px 0px; ">粤公网安备 44011102003244号</p>
           </a>
+
+          <a target="_blank" href="https://beian.miit.gov.cn" style="display:inline-block; margin: 0px 15px;">
+            <p style="float:left;margin: 0px 0px; ">粤ICP备 2022109168号</p>
+          </a>
+
+        </span>
         
-        
-      </div>
-      <div class="md-social">
-  
-    
-    
-    <a href="mailto:<benimang@126.com>" target="_blank" rel="noopener" title="" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m511.6 36.86-64 415.1a32.008 32.008 0 0 1-31.65 27.147c-4.188 0-8.319-.815-12.29-2.472l-122.6-51.1-50.86 76.29C226.3 508.5 219.8 512 212.8 512c-11.5 0-20.8-9.3-20.8-20.8v-96.18c0-7.115 2.372-14.03 6.742-19.64L416 96 122.3 360.3 19.69 317.5C8.438 312.8.812 302.2.062 289.1s5.47-23.72 16.06-29.77l448-255.1c10.69-6.109 23.88-5.547 34 1.406S513.5 24.72 511.6 36.86z"/></svg>
-    </a>
-  
-</div>
+
+
     </div>
   </div>
 </footer>
@@ -1900,10 +1917,11 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "search.highlight", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "search.highlight", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
       
         <script src="../../../assets/js/tablesort.min.js"></script>
       

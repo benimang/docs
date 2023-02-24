@@ -12,10 +12,16 @@
         <meta name="author" content="Beni Mang">
       
       
-        <link rel="canonical" href="https://pytask.com/database/select/">
+        <link rel="canonical" href="https://www.pytask.com/database/select/">
+      
+      
+        <link rel="prev" href="../../go/gorm/delete/">
+      
+      
+        <link rel="next" href="../modify/">
       
       <link rel="icon" href="../../img/favicon.svg">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
     
     
       
@@ -23,13 +29,13 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ffa9267a.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
-        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
+
     
     
     
@@ -42,10 +48,11 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -112,7 +119,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -120,7 +126,6 @@
             </label>
           
         
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -147,7 +152,7 @@
       </label>
       <nav class="md-search__options" aria-label="查找">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -159,7 +164,7 @@
           <div class="md-search-result__meta">
             正在初始化搜索引擎
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -227,17 +232,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
           Python
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Python" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Python
@@ -373,17 +379,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           GO
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="GO" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           GO
@@ -483,17 +490,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3_7">
+        <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
           Gorm
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Gorm" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_7">
           <span class="md-nav__icon md-icon"></span>
           Gorm
@@ -610,17 +618,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
           Database
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Database" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Database
@@ -636,7 +645,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -927,17 +936,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
           Laya
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Laya" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Laya
@@ -1003,17 +1013,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
           Linux
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Linux" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Linux
@@ -1093,17 +1104,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_7">
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
           Docker
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Docker" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Docker
@@ -1141,17 +1153,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
           Eshop
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Eshop" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Eshop
@@ -1167,17 +1180,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_8_1">
+        <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
           Amazon
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Amazon" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_8_1">
           <span class="md-nav__icon md-icon"></span>
           Amazon
@@ -1292,17 +1306,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_9">
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
           Others
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Others" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Others
@@ -1640,10 +1655,11 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
 
 <h1 id="SQL-查询">SQL 查询<a class="headerlink" href="#SQL-查询" title="Permanent link">#</a></h1>
@@ -1652,11 +1668,11 @@
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"></span>
-<span class="w">    </span><span class="n">prod_id</span><span class="w"></span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span>
+<span class="w">    </span><span class="n">prod_id</span>
 <span class="w">    </span><span class="c1">-- 可以指定多个字段  </span>
-<span class="k">FROM</span><span class="w"></span>
-<span class="w">    </span><span class="n">Products</span><span class="p">;</span><span class="w"></span>
+<span class="k">FROM</span>
+<span class="w">    </span><span class="n">Products</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="LIMIT-OFFSET-限制返回结果">LIMIT OFFSET 限制返回结果<a class="headerlink" href="#LIMIT-OFFSET-限制返回结果" title="Permanent link">#</a></h2>
 <ul>
@@ -1670,10 +1686,10 @@
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span>
-<span class="w">    </span><span class="o">*</span><span class="w"></span>
-<span class="k">FROM</span><span class="w"></span>
-<span class="w">    </span><span class="n">Products</span><span class="w"></span>
-<span class="k">LIMIT</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="k">OFFSET</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="o">*</span>
+<span class="k">FROM</span>
+<span class="w">    </span><span class="n">Products</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="k">OFFSET</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="ORDER-BY-排序结果">ORDER BY 排序结果<a class="headerlink" href="#ORDER-BY-排序结果" title="Permanent link">#</a></h2>
 <ul>
@@ -1687,13 +1703,13 @@
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
 <span class="w">    </span><span class="o">*</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"></span>
+<span class="k">FROM</span>
 <span class="w">    </span><span class="n">Products</span><span class="w"> </span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"></span>
-<span class="w">    </span><span class="n">prod_name</span><span class="w"> </span><span class="k">ASC</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">prod_price</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span><span class="w"></span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span>
+<span class="w">    </span><span class="n">prod_name</span><span class="w"> </span><span class="k">ASC</span><span class="p">,</span>
+<span class="w">    </span><span class="n">prod_price</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="BETWEEN-AND-范围值检查">BETWEEN AND 范围值检查<a class="headerlink" href="#BETWEEN-AND-范围值检查" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1701,12 +1717,12 @@
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
 <span class="w">    </span><span class="o">*</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"></span>
+<span class="k">FROM</span>
 <span class="w">    </span><span class="n">Products</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"></span>
-<span class="w">    </span><span class="n">prod_price</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="k">WHERE</span>
+<span class="w">    </span><span class="n">prod_price</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="IS-NULL-检查空值">IS NULL 检查空值<a class="headerlink" href="#IS-NULL-检查空值" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1715,11 +1731,11 @@
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
 <span class="w">    </span><span class="o">*</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"></span>
+<span class="k">FROM</span>
 <span class="w">    </span><span class="n">Customers</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"></span>
+<span class="k">WHERE</span>
 <span class="w">    </span><span class="n">cust_email</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="w">            </span><span class="c1">-- IS NULL 检查空值</span>
 <span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">cust_contact</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span><span class="w"> </span><span class="c1">-- IS NOT NULL 检查非空值</span>
 </code></pre></div></td></tr></table></div>
@@ -1734,13 +1750,13 @@
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
-<span class="w">    </span><span class="n">prod_name</span><span class="p">,</span><span class="w"></span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
+<span class="w">    </span><span class="n">prod_name</span><span class="p">,</span>
 <span class="w">    </span><span class="n">prod_price</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"></span>
+<span class="k">FROM</span>
 <span class="w">    </span><span class="n">Products</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"></span>
-<span class="w">    </span><span class="n">vend_id</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;DLL01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;BRS01&#39;</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="k">WHERE</span>
+<span class="w">    </span><span class="n">vend_id</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;DLL01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;BRS01&#39;</span><span class="w"> </span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="LIKE-通配符匹配查询">LIKE 通配符匹配查询<a class="headerlink" href="#LIKE-通配符匹配查询" title="Permanent link">#</a></h2>
 <ul>
@@ -1755,12 +1771,12 @@
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
-<span class="w">    </span><span class="o">*</span><span class="w"></span>
-<span class="k">FROM</span><span class="w"></span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
+<span class="w">    </span><span class="o">*</span>
+<span class="k">FROM</span>
 <span class="w">    </span><span class="n">Products</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"></span>
-<span class="w">    </span><span class="n">prod_name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;Fish%&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="k">WHERE</span>
+<span class="w">    </span><span class="n">prod_name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;Fish%&#39;</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="拼接字段">拼接字段<a class="headerlink" href="#拼接字段" title="Permanent link">#</a></h2>
 <ul>
@@ -1773,12 +1789,12 @@
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
 <span class="w">    </span><span class="n">vend_name</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;(&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">vend_country</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;)&#39;</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"></span>
+<span class="k">FROM</span>
 <span class="w">    </span><span class="n">Vendors</span><span class="w"> </span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"></span>
-<span class="w">    </span><span class="n">vend_name</span><span class="p">;</span><span class="w"></span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span>
+<span class="w">    </span><span class="n">vend_name</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="常用函数">常用函数<a class="headerlink" href="#常用函数" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1792,18 +1808,18 @@
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
-<span class="w">    </span><span class="k">ABS</span><span class="p">(</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">123</span><span class="w"> </span><span class="p">),</span><span class="w"></span>
-<span class="w">    </span><span class="k">TRIM</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39; x &#39;</span><span class="w"> </span><span class="p">),</span><span class="w"></span>
-<span class="w">    </span><span class="n">LTRIM</span><span class="p">(</span><span class="s1">&#39; x &#39;</span><span class="p">),</span><span class="w"></span>
-<span class="w">    </span><span class="n">RTRIM</span><span class="p">(</span><span class="s1">&#39; x &#39;</span><span class="p">),</span><span class="w"></span>
-<span class="w">    </span><span class="k">LENGTH</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;aBc&#39;</span><span class="w"> </span><span class="p">),</span><span class="w"></span>
-<span class="w">    </span><span class="k">LOWER</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;aBc&#39;</span><span class="w"> </span><span class="p">),</span><span class="w"></span>
-<span class="w">    </span><span class="k">UPPER</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;aBc&#39;</span><span class="w"> </span><span class="p">),</span><span class="w"></span>
-<span class="w">    </span><span class="n">SUBSTR</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;abcdef&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">),</span><span class="w"></span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
+<span class="w">    </span><span class="k">ABS</span><span class="p">(</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">123</span><span class="w"> </span><span class="p">),</span>
+<span class="w">    </span><span class="k">TRIM</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39; x &#39;</span><span class="w"> </span><span class="p">),</span>
+<span class="w">    </span><span class="n">LTRIM</span><span class="p">(</span><span class="s1">&#39; x &#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="n">RTRIM</span><span class="p">(</span><span class="s1">&#39; x &#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="k">LENGTH</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;aBc&#39;</span><span class="w"> </span><span class="p">),</span>
+<span class="w">    </span><span class="k">LOWER</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;aBc&#39;</span><span class="w"> </span><span class="p">),</span>
+<span class="w">    </span><span class="k">UPPER</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;aBc&#39;</span><span class="w"> </span><span class="p">),</span>
+<span class="w">    </span><span class="n">SUBSTR</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;abcdef&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">),</span>
 <span class="w">    </span><span class="c1">-- 注意：时间相关的数据库都是使用了 UTC-0 为单位</span>
-<span class="w">    </span><span class="k">TIME</span><span class="p">(),</span><span class="w"> </span><span class="nb">DATE</span><span class="p">(),</span><span class="w"> </span><span class="n">DATETIME</span><span class="p">(),</span><span class="w"></span>
-<span class="w">    </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="p">,</span><span class="w"> </span><span class="k">CURRENT_TIME</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">TIME</span><span class="p">(),</span><span class="w"> </span><span class="nb">DATE</span><span class="p">(),</span><span class="w"> </span><span class="n">DATETIME</span><span class="p">(),</span>
+<span class="w">    </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="p">,</span><span class="w"> </span><span class="k">CURRENT_TIME</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="汇总数据聚集函数">汇总数据（聚集函数）<a class="headerlink" href="#汇总数据聚集函数" title="Permanent link">#</a></h2>
 <ul>
@@ -1819,12 +1835,12 @@
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
 <span class="w">    </span><span class="k">AVG</span><span class="p">(</span><span class="w"> </span><span class="n">prod_price</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">avg_price</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"></span>
+<span class="k">FROM</span>
 <span class="w">    </span><span class="n">Products</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"></span>
-<span class="w">    </span><span class="n">vend_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;DLL01&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="k">WHERE</span>
+<span class="w">    </span><span class="n">vend_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;DLL01&#39;</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="COUNT-计算行数">COUNT 计算行数<a class="headerlink" href="#COUNT-计算行数" title="Permanent link">#</a></h3>
 <ul>
@@ -1834,28 +1850,28 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
 <span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="w"> </span><span class="n">cust_email</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">num_cust</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"></span>
-<span class="w">    </span><span class="n">Customers</span><span class="p">;</span><span class="w"></span>
+<span class="k">FROM</span>
+<span class="w">    </span><span class="n">Customers</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="MAX-获取最大值">MAX 获取最大值<a class="headerlink" href="#MAX-获取最大值" title="Permanent link">#</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
 <span class="w">    </span><span class="k">MAX</span><span class="p">(</span><span class="w"> </span><span class="n">prod_price</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">max_price</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"></span>
-<span class="w">    </span><span class="n">Products</span><span class="p">;</span><span class="w"></span>
+<span class="k">FROM</span>
+<span class="w">    </span><span class="n">Products</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="MIN-获取最小值">MIN 获取最小值<a class="headerlink" href="#MIN-获取最小值" title="Permanent link">#</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
 <span class="w">    </span><span class="k">MIN</span><span class="p">(</span><span class="w"> </span><span class="n">prod_price</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">max_price</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"></span>
-<span class="w">    </span><span class="n">Products</span><span class="p">;</span><span class="w"></span>
+<span class="k">FROM</span>
+<span class="w">    </span><span class="n">Products</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="SUM-求和">SUM 求和<a class="headerlink" href="#SUM-求和" title="Permanent link">#</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1863,12 +1879,12 @@
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
 <span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="w"> </span><span class="n">quantity</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">items_ordered</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"></span>
+<span class="k">FROM</span>
 <span class="w">    </span><span class="n">OrderItems</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"></span>
-<span class="w">    </span><span class="n">order_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20005</span><span class="p">;</span><span class="w"></span>
+<span class="k">WHERE</span>
+<span class="w">    </span><span class="n">order_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20005</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="GROUP-BY-分组">GROUP BY 分组<a class="headerlink" href="#GROUP-BY-分组" title="Permanent link">#</a></h2>
 <ul>
@@ -1885,12 +1901,12 @@
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
 <span class="w">    </span><span class="o">*</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"></span>
+<span class="k">FROM</span>
 <span class="w">    </span><span class="n">Products</span><span class="w"> </span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"></span>
-<span class="w">    </span><span class="n">vend_id</span><span class="p">;</span><span class="w"></span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span>
+<span class="w">    </span><span class="n">vend_id</span><span class="p">;</span>
 <span class="w">    </span><span class="c1">-- 可以指定多个列</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="HAVING-分组过滤">HAVING 分组过滤<a class="headerlink" href="#HAVING-分组过滤" title="Permanent link">#</a></h2>
@@ -1906,14 +1922,14 @@
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
-<span class="w">    </span><span class="o">*</span><span class="w"></span>
-<span class="k">FROM</span><span class="w"></span>
-<span class="w">    </span><span class="n">Products</span><span class="w"></span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"></span>
-<span class="w">    </span><span class="n">vend_id</span><span class="w"></span>
-<span class="k">HAVING</span><span class="w"></span>
-<span class="w">    </span><span class="n">prod_name</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;F%&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
+<span class="w">    </span><span class="o">*</span>
+<span class="k">FROM</span>
+<span class="w">    </span><span class="n">Products</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span>
+<span class="w">    </span><span class="n">vend_id</span>
+<span class="k">HAVING</span>
+<span class="w">    </span><span class="n">prod_name</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;F%&#39;</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="子查询">子查询<a class="headerlink" href="#子查询" title="Permanent link">#</a></h2>
 <ul>
@@ -1927,13 +1943,13 @@
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
-<span class="w">    </span><span class="n">cust_name</span><span class="p">,</span><span class="w"></span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
+<span class="w">    </span><span class="n">cust_name</span><span class="p">,</span>
 <span class="w">    </span><span class="n">cust_contact</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"></span>
+<span class="k">FROM</span>
 <span class="w">    </span><span class="n">Customers</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"></span>
-<span class="w">    </span><span class="n">cust_id</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">cust_id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Orders</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">order_num</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">order_num</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">OrderItems</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">prod_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;RGAN01&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="k">WHERE</span>
+<span class="w">    </span><span class="n">cust_id</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">cust_id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Orders</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">order_num</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">order_num</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">OrderItems</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">prod_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;RGAN01&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="子查询作为计算字段">子查询作为计算字段<a class="headerlink" href="#子查询作为计算字段" title="Permanent link">#</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1943,14 +1959,14 @@
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
-<span class="w">    </span><span class="n">cust_name</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">cust_state</span><span class="p">,</span><span class="w"></span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
+<span class="w">    </span><span class="n">cust_name</span><span class="p">,</span>
+<span class="w">    </span><span class="n">cust_state</span><span class="p">,</span>
 <span class="w">    </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Orders</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Orders</span><span class="p">.</span><span class="n">cust_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"></span>
+<span class="k">FROM</span>
 <span class="w">    </span><span class="n">Customers</span><span class="w"> </span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"></span>
-<span class="w">    </span><span class="n">cust_name</span><span class="p">;</span><span class="w"></span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span>
+<span class="w">    </span><span class="n">cust_name</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="表联结">表联结<a class="headerlink" href="#表联结" title="Permanent link">#</a></h2>
 <h3 id="内联结">内联结<a class="headerlink" href="#内联结" title="Permanent link">#</a></h3>
@@ -1966,15 +1982,15 @@
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
-<span class="w">    </span><span class="n">vend_name</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">prod_name</span><span class="p">,</span><span class="w"></span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
+<span class="w">    </span><span class="n">vend_name</span><span class="p">,</span>
+<span class="w">    </span><span class="n">prod_name</span><span class="p">,</span>
 <span class="w">    </span><span class="n">prod_price</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"></span>
-<span class="w">    </span><span class="n">Vendors</span><span class="p">,</span><span class="w"></span>
+<span class="k">FROM</span>
+<span class="w">    </span><span class="n">Vendors</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Products</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"></span>
-<span class="w">    </span><span class="n">Vendors</span><span class="p">.</span><span class="n">vend_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Products</span><span class="p">.</span><span class="n">vend_id</span><span class="p">;</span><span class="w"></span>
+<span class="k">WHERE</span>
+<span class="w">    </span><span class="n">Vendors</span><span class="p">.</span><span class="n">vend_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Products</span><span class="p">.</span><span class="n">vend_id</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>等效写法，使用 <code>INNER JOIN</code>，在使用这种语法时，联结条件用特定的ON子句而不是WHERE子句给出。上面是简单写法，下面是规范写法，具体使用哪个取决于哪个更方便。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1983,13 +1999,13 @@
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
-<span class="w">    </span><span class="n">vend_name</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">prod_name</span><span class="p">,</span><span class="w"></span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
+<span class="w">    </span><span class="n">vend_name</span><span class="p">,</span>
+<span class="w">    </span><span class="n">prod_name</span><span class="p">,</span>
 <span class="w">    </span><span class="n">prod_price</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"></span>
-<span class="w">    </span><span class="n">Vendors</span><span class="w"></span>
-<span class="w">    </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Products</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Vendors</span><span class="p">.</span><span class="n">vend_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Products</span><span class="p">.</span><span class="n">vend_id</span><span class="p">;</span><span class="w"></span>
+<span class="k">FROM</span>
+<span class="w">    </span><span class="n">Vendors</span>
+<span class="w">    </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Products</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Vendors</span><span class="p">.</span><span class="n">vend_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Products</span><span class="p">.</span><span class="n">vend_id</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="自联结">自联结<a class="headerlink" href="#自联结" title="Permanent link">#</a></h3>
 <p>相当于是同一个表自己联结自己，许多DBMS处理联结远比处理子查询快得多。</p>
@@ -2002,16 +2018,16 @@
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
-<span class="w">    </span><span class="n">c1</span><span class="p">.</span><span class="n">cust_id</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">c1</span><span class="p">.</span><span class="n">cust_name</span><span class="p">,</span><span class="w"></span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
+<span class="w">    </span><span class="n">c1</span><span class="p">.</span><span class="n">cust_id</span><span class="p">,</span>
+<span class="w">    </span><span class="n">c1</span><span class="p">.</span><span class="n">cust_name</span><span class="p">,</span>
 <span class="w">    </span><span class="n">c1</span><span class="p">.</span><span class="n">cust_contact</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"></span>
-<span class="w">    </span><span class="n">Customers</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c1</span><span class="p">,</span><span class="w"></span>
+<span class="k">FROM</span>
+<span class="w">    </span><span class="n">Customers</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c1</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Customers</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c2</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"></span>
+<span class="k">WHERE</span>
 <span class="w">    </span><span class="n">c1</span><span class="p">.</span><span class="n">cust_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c2</span><span class="p">.</span><span class="n">cust_name</span><span class="w"> </span>
-<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">c2</span><span class="p">.</span><span class="n">cust_contact</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Jim Jones&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">c2</span><span class="p">.</span><span class="n">cust_contact</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Jim Jones&#39;</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="外联结">外联结<a class="headerlink" href="#外联结" title="Permanent link">#</a></h3>
 <ul>
@@ -2025,12 +2041,12 @@
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
-<span class="w">    </span><span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span><span class="p">,</span><span class="w"></span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
+<span class="w">    </span><span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Orders</span><span class="p">.</span><span class="n">order_num</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"></span>
-<span class="w">    </span><span class="n">Customers</span><span class="w"></span>
-<span class="w">    </span><span class="k">LEFT</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Orders</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Orders</span><span class="p">.</span><span class="n">cust_id</span><span class="p">;</span><span class="w"></span>
+<span class="k">FROM</span>
+<span class="w">    </span><span class="n">Customers</span>
+<span class="w">    </span><span class="k">LEFT</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Orders</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Customers</span><span class="p">.</span><span class="n">cust_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Orders</span><span class="p">.</span><span class="n">cust_id</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="UNION-组合查询">UNION 组合查询<a class="headerlink" href="#UNION-组合查询" title="Permanent link">#</a></h2>
 <ul>
@@ -2059,28 +2075,33 @@
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
-<span class="w">    </span><span class="n">cust_name</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">cust_contact</span><span class="p">,</span><span class="w"></span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span>
+<span class="w">    </span><span class="n">cust_name</span><span class="p">,</span>
+<span class="w">    </span><span class="n">cust_contact</span><span class="p">,</span>
 <span class="w">    </span><span class="n">cust_email</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"></span>
+<span class="k">FROM</span>
 <span class="w">    </span><span class="n">Customers</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"></span>
-<span class="w">    </span><span class="n">cust_state</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;IL&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;IN&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;MI&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">UNION</span><span class="w"></span>
-<span class="k">SELECT</span><span class="w"></span>
-<span class="w">    </span><span class="n">cust_name</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">cust_contact</span><span class="p">,</span><span class="w"></span>
+<span class="k">WHERE</span>
+<span class="w">    </span><span class="n">cust_state</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;IL&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;IN&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;MI&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">UNION</span>
+<span class="k">SELECT</span>
+<span class="w">    </span><span class="n">cust_name</span><span class="p">,</span>
+<span class="w">    </span><span class="n">cust_contact</span><span class="p">,</span>
 <span class="w">    </span><span class="n">cust_email</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"></span>
+<span class="k">FROM</span>
 <span class="w">    </span><span class="n">Customers</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"></span>
-<span class="w">    </span><span class="n">cust_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Fun4All&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="k">WHERE</span>
+<span class="w">    </span><span class="n">cust_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Fun4All&#39;</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 
-              
-            </article>
-            
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
           <a href="#" class="md-top md-icon" data-md-component="top" hidden>
@@ -2094,7 +2115,7 @@
 <footer class="md-footer">
   <!--
   
-    <nav class="md-footer__inner md-grid" aria-label="页脚">
+    <nav class="md-footer__inner md-grid" aria-label="">
       
         
         <a href="../../go/gorm/delete/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 删除" rel="prev">
@@ -2131,26 +2152,22 @@
   
   -->
   <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        
-          Made with
-          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-            Material for MkDocs
+    <div class="md-footer-meta__inner">
+        <span style="text-align: center; width: 100%; align-self: center; padding-top: 10px; font-size: .85em; text-decoration:none;">
+
+          <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011102003244" style="display:inline-block; margin: 0px 15px;">
+            <img src="/assets/img/beian.png" style="float:left; margin-right: 5px;"/>
+            <p style="float:left;margin: 0px 0px; ">粤公网安备 44011102003244号</p>
           </a>
+
+          <a target="_blank" href="https://beian.miit.gov.cn" style="display:inline-block; margin: 0px 15px;">
+            <p style="float:left;margin: 0px 0px; ">粤ICP备 2022109168号</p>
+          </a>
+
+        </span>
         
-        
-      </div>
-      <div class="md-social">
-  
-    
-    
-    <a href="mailto:<benimang@126.com>" target="_blank" rel="noopener" title="" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m511.6 36.86-64 415.1a32.008 32.008 0 0 1-31.65 27.147c-4.188 0-8.319-.815-12.29-2.472l-122.6-51.1-50.86 76.29C226.3 508.5 219.8 512 212.8 512c-11.5 0-20.8-9.3-20.8-20.8v-96.18c0-7.115 2.372-14.03 6.742-19.64L416 96 122.3 360.3 19.69 317.5C8.438 312.8.812 302.2.062 289.1s5.47-23.72 16.06-29.77l448-255.1c10.69-6.109 23.88-5.547 34 1.406S513.5 24.72 511.6 36.86z"/></svg>
-    </a>
-  
-</div>
+
+
     </div>
   </div>
 </footer>
@@ -2159,10 +2176,11 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.highlight", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.highlight", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
       
         <script src="../../assets/js/tablesort.min.js"></script>
       

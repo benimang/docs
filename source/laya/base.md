@@ -71,7 +71,7 @@ cnpm install layaair2-cmd -g
     还没确认如果是发布正式版本是否需要手动关闭 `sourceMap`
 
 
-## 自动编译
+## 自动编译...
 
 自动编译原来同样是要依赖 `layaair2-cmd compile` 借助 `gulp` 侦听目录文件发生变化去调用
 
