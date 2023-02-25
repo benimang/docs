@@ -10,6 +10,9 @@ site_description: Beni 个人博客网站
 docs_dir: source # 源文件（.md）路径
 site_dir: docs # 生成文件（.html/.css/...）路径
 
+watch:
+  - nav.yml
+
 extra_javascript:
   - assets/js/tablesort.min.js
   - assets/js/tablesort.js
