@@ -6,37 +6,42 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.pytask.com/amazon/ad/</loc>
+         <loc>https://www.pytask.com/temp/</loc>
          <lastmod>2023-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.pytask.com/amazon/listing/</loc>
-         <lastmod>2023-02-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.pytask.com/amazon/oneday/</loc>
-         <lastmod>2023-02-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.pytask.com/amazon/promotion/</loc>
-         <lastmod>2023-02-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.pytask.com/amazon/selection/</loc>
-         <lastmod>2023-02-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.pytask.com/amazon/storage/</loc>
+         <loc>https://www.pytask.com/bak/docker/</loc>
          <lastmod>2023-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/bak/text/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.pytask.com/bak/amazon/oneday/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.pytask.com/bak/amazon/selection/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.pytask.com/bak/laya/base/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.pytask.com/bak/laya/laya-promise/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.pytask.com/bak/laya/laya-zlib/</loc>
          <lastmod>2023-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -57,11 +62,6 @@
     </url>
     <url>
          <loc>https://www.pytask.com/database/select/</loc>
-         <lastmod>2023-02-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.pytask.com/docker/base/</loc>
          <lastmod>2023-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -122,21 +122,6 @@
     </url>
     <url>
          <loc>https://www.pytask.com/go/gorm/update/</loc>
-         <lastmod>2023-02-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.pytask.com/laya/base/</loc>
-         <lastmod>2023-02-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.pytask.com/laya/laya-promise/</loc>
-         <lastmod>2023-02-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.pytask.com/laya/laya-zlib/</loc>
          <lastmod>2023-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>

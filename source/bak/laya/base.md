@@ -56,7 +56,7 @@ cnpm install layaair2-cmd -g
 
 编译命令 `#!sh layaair2-cmd compile`
 
-[vscode tasks.json 使用参考](./../others/vscode.md#tasksjson)
+[vscode tasks.json 使用参考](./../../others/vscode.md#tasksjson)
 
 
 ## 断点调试
@@ -114,7 +114,7 @@ gulp.task("compile", function () {
 2. `#!sh cnpm install gulp@3.9.1`
    文档说本地环境不能安装 `gulp 4.x` 现在已经可以命令行执行 `#!sh gulp compile` 实现自动编译
    
-3. 可选 `vscode` 配置 `tasks.json` 实现快捷调用 [vscode tasks.json 使用参考](./../others/vscode.md#tasksjson)
+3. 可选 `vscode` 配置 `tasks.json` 实现快捷调用 [vscode tasks.json 使用参考](./../../others/vscode.md#tasksjson)
 
 !!! warning
     文档上提供的 `gulpfile.js` 不能正常执行，这里写的是经过稍微调整后的内容
