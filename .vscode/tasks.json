@@ -27,7 +27,7 @@
         {
             "label": "git commit",
             "type": "shell",
-            "command": "TortoiseGitProc.exe /command:commit /path:./",
+            "command": "TortoiseGitProc.exe /command:commit /path:./ /logmsg:\"update\"",
             "problemMatcher": [],
         },
         {
