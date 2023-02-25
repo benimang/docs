@@ -28,25 +28,11 @@ nav:
           - database/modify.md
           - database/concept.md
           - database/install.md
-    - Laya:
-          - laya/base.md
-          - laya/laya-zlib.md
-          - laya/laya-promise.md
     - Linux:
           - linux/centos.md
           - linux/nginx.md
           - linux/ubuntu.md
           - linux/wsl2.md
-    - Docker:
-          - docker/base.md
-    - Eshop:
-          - Amazon:
-                - amazon/selection.md
-                - amazon/listing.md
-                - amazon/promotion.md
-                - amazon/ad.md
-                - amazon/storage.md
-                - amazon/oneday.md
     - Others:
           - others/website.md
           - others/vscode.md
@@ -55,6 +41,14 @@ nav:
           - others/nodejs.md
           - others/gva.md
           - others/url.md
-    # - bak:
-    #     - bak/text.md
+    - 不再维护:
+          - bak/text.md
+          - bak/docker.md
+          - Amazon:
+                - bak/amazon/selection.md
+                - bak/amazon/oneday.md
+          - Laya:
+                - bak/laya/base.md
+                - bak/laya/laya-zlib.md
+                - bak/laya/laya-promise.md
     - temp.md
