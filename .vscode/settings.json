@@ -3,6 +3,7 @@
         ".gitignore": true,
         "venv": true,
         "venv.*": true,
+        "source/CNAME": true,
         "**/docs": true,
     },
 }
