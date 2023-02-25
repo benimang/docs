@@ -18,7 +18,7 @@
         {
             "label": "upload",
             "type": "shell",
-            "command": "TortoiseGitProc.exe /command:commit /path:./",
+            "command": "TortoiseGitProc.exe /command:commit /path:./ /logmsg:\"upload\"",
             "problemMatcher": [],
             "dependsOn": [
                 "mkdocs build",
