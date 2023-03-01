@@ -18,3 +18,12 @@ https://blog.csdn.net/hongc93/article/details/126281039
 # Python difflib 判断两个相似度
 
 difflib.SequenceMatcher(None, s, b).ratio()
+
+
+# Python bs4 基本用法
+
+pip install bs4 lxml
+
+from bs4 import BeautifulSoup
+xx = BeautifulSoup('.....', 'lxml')
+xx.select('td.code')[2].text
