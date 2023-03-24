@@ -27,3 +27,8 @@ pip install bs4 lxml
 from bs4 import BeautifulSoup
 xx = BeautifulSoup('.....', 'lxml')
 xx.select('td.code')[2].text
+
+
+# npm 升级（使用ncu）
+
+https://juejin.cn/post/6913833065647341581
