@@ -32,3 +32,8 @@ xx.select('td.code')[2].text
 # npm 升级（使用ncu）
 
 https://juejin.cn/post/6913833065647341581
+
+
+# vite 预编译
+
+https://blog.csdn.net/m0_67265464/article/details/125345620
