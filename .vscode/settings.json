@@ -6,6 +6,10 @@
         "source/CNAME": true,
         "**/docs": true,
     },
+    "[markdown]": {
+        "editor.wordWrap": "off",
+        "editor.wrappingColumn": 0
+    },
 }
 // 自定快捷键
 // 
