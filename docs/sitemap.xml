@@ -2,227 +2,232 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://www.pytask.com/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.pytask.com/temp/</loc>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/company/xcp/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/temp/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/bak/docker/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/bak/text/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/bak/amazon/oneday/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/bak/amazon/selection/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/bak/laya/base/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/bak/laya/laya-promise/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/bak/laya/laya-zlib/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/database/concept/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/database/install/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/database/modify/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/database/select/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/go/base/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/go/cmd/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/go/goroutine/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/go/others/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/go/test/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/go/web/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/go/gorm/base/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/go/gorm/create/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/go/gorm/delete/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/go/gorm/others/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/go/gorm/select/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/go/gorm/update/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/linux/centos/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/linux/nginx/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/linux/ubuntu/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/linux/wsl2/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/others/gva/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/others/ios/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/others/nodejs/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/others/proxy/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/others/url/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/others/vscode/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/others/website/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/python/decorator/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/python/fstring/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/python/pathlib/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/python/pip/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/python/playwright/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/python/sqlite/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/python/tips/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.pytask.com/old/python/typing/</loc>
-         <lastmod>2024-01-05</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
