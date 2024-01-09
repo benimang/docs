@@ -11,3 +11,7 @@
     - `xcp-api/**/*.yaml`
     - `xcp-dcs/local/classes/config.php`
 
+
+## Server DAO
+1. `xcp-server/config/config.yaml` 文件最下面的一段注释打开，修改服务器链接、表明、分组信息
+2. `gf gen dao` 执行命令行生成
