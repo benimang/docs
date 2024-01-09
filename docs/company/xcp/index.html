@@ -18,7 +18,7 @@
         <link rel="prev" href="../../old/temp/">
       
       
-        <link rel="next" href="../../temp/">
+        <link rel="next" href="../xcp_xcll/">
       
       
       <link rel="icon" href="../../img/favicon.svg">
@@ -1651,6 +1651,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    研发后台
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1661,6 +1672,55 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#更新注意事项" class="md-nav__link">
+    <span class="md-ellipsis">
+      更新注意事项
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xcp_xcll/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    研发后台（消除来了）
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1713,6 +1773,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#更新注意事项" class="md-nav__link">
+    <span class="md-ellipsis">
+      更新注意事项
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1727,6 +1804,20 @@
 
 
 <h1 id="研发后台">研发后台<a class="headerlink" href="#研发后台" title="Permanent link">#</a></h1>
+<h2 id="更新注意事项">更新注意事项<a class="headerlink" href="#更新注意事项" title="Permanent link">#</a></h2>
+<ul>
+<li>涉及到从 <code>kafka</code> 拉去数据的改动，需要修改数据表 <code>basic_config</code> 里面的字段 <code>is_stop_load_data_kafak=1</code> ，触发重启，否则更新无效果</li>
+<li>涉及到 <code>kafka</code> 里面用到的 <code>topic</code> 不能随意添加，需要 <code>kafka</code> 后台添加（目前在 <code>xcp-api</code> 项目里的 <code>setting.yaml</code> 配置有用到）</li>
+<li>新增其他游戏研发后台，前端项目需要新建环境变量文件（如： <code>.env.xcll</code> 和 <code>.env.xcll_demo</code> ），在 <code>package.json</code> 的 <code>scripts</code> 里添加对应的打包命令</li>
+<li>涉及到以下文件的改动，是不会同步到服务器上打包，需要在服务器上直接改动<ul>
+<li><code>xcp-vue/vue.config.js</code></li>
+<li><code>xcp-server/config/*</code></li>
+<li><code>xcp-server/**/*.yaml</code></li>
+<li><code>xcp-api/**/*.yaml</code></li>
+<li><code>xcp-dcs/local/classes/config.php</code></li>
+</ul>
+</li>
+</ul>
 
 
 
@@ -1778,13 +1869,13 @@
       
       
         
-        <a href="../../temp/" class="md-footer__link md-footer__link--next" aria-label="下一页: 待整理内容" rel="next">
+        <a href="../xcp_xcll/" class="md-footer__link md-footer__link--next" aria-label="下一页: 研发后台（消除来了）" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              待整理内容
+              研发后台（消除来了）
             </div>
           </div>
           <div class="md-footer__button md-icon">
