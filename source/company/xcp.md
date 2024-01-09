@@ -10,3 +10,4 @@
     - `xcp-server/**/*.yaml`
     - `xcp-api/**/*.yaml`
     - `xcp-dcs/local/classes/config.php`
+
