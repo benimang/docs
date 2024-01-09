@@ -10,6 +10,12 @@
 - DCS `sh /opt/www/scripts/game/ymxd/rsync_xcp_dcs.sh`
 
 
+## SVN
+- 前端和后端 `svn://192.168.1.148:11002/xcp_sdk/xcp-admin`
+- API（多项目通用） `svn://192.168.1.148:11002/xcp_sdk/xcp-api`
+- DCS（多项目通用） `svn://192.168.1.148:11002/xcp_sdk/xcp-dcs`
+
+
 ## 数据库链接
 | 测试后台      | 正式后台      |
 | ------------- | ------------- |
