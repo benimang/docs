@@ -2,7 +2,7 @@ INHERIT: ./nav.yml
 
 # 2个必填配置选项
 site_name: Beni Docs
-site_url: https://www.pytask.com
+site_url: https://docs.pytask.com
 site_author: Beni Mang
 site_description: Beni 个人博客网站
 # copyright: 粤ICP备17090505号
