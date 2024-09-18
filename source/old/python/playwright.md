@@ -4,7 +4,7 @@
 
 使用 `storage_state` 可以恢复登录状态
 
-``` py
+``` py linenums="1"
 # 登录后存储状态
 storage = context.storage_state(path="state.json")
 
@@ -27,7 +27,7 @@ context = browser.new_context(storage_state="state.json")
 
 默认使用 `Chromium` 但是某些特殊情况需要使用原生的 `Chrome` 替代，例如视频编码。
 
-``` py
+``` py linenums="1"
 playwright.chromium.launch(channel="chrome")
 ```
 
@@ -66,7 +66,7 @@ playwright.chromium.launch(channel="chrome")
 
 ### context.expect_page
 
-``` py
+``` py linenums="1"
 with context.expect_page() as new_page_info:
     page.click('a[target="_blank"]') # Opens a new tab
 new_page = new_page_info.value
@@ -77,7 +77,7 @@ print(new_page.title())
 
 ### context.on
 
-``` py
+``` py linenums="1"
 def handle_page(page):
     page.wait_for_load_state()
     print(page.title())

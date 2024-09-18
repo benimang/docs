@@ -2,7 +2,7 @@
 
 ## DISTINCT 查询不同的值
 
-``` sql
+``` sql linenums="1"
 SELECT DISTINCT
 	prod_id
     -- 可以指定多个字段  
@@ -17,7 +17,7 @@ FROM
 - `OFFSET` 可以不写，表示从第0行开始
 - `OFFSET` 不能没有 `LIMIT` 单独出现
 
-``` sql
+``` sql linenums="1"
 SELECT 
 	*
 FROM
@@ -32,7 +32,7 @@ LIMIT 3 OFFSET 3;
 - 使用 `DESC` 指定降序
 - 默认是升序，也可以明确指定 `ASC`
 
-``` sql
+``` sql linenums="1"
 SELECT
 	* 
 FROM
@@ -45,7 +45,7 @@ ORDER BY
 
 ## BETWEEN AND 范围值检查
 
-``` sql
+``` sql linenums="1"
 SELECT
 	* 
 FROM
@@ -57,7 +57,7 @@ WHERE
 
 ## IS NULL 检查空值
 
-``` sql
+``` sql linenums="1"
 SELECT
 	* 
 FROM
@@ -73,7 +73,7 @@ WHERE
 - `IN` 操作符比 `OR` 操作符更简洁，速度更快
 - `IN` 可以配合子查询而 `OR` 不好实现
 
-``` sql
+``` sql linenums="1"
 SELECT
 	prod_name,
 	prod_price 
@@ -92,7 +92,7 @@ WHERE
 - 不要过度使用通配符，如果其他操作符能达到相同的目的，应该使用其他操作符。
 - 在确实需要使用通配符时，也尽量不要把它们用在搜索模式的开始处。把通配符置于开始处，搜索起来是最慢的。
 
-``` sql
+``` sql linenums="1"
 SELECT
 	*
 FROM
@@ -109,7 +109,7 @@ WHERE
 - `MySQL` 或 `MariaDB` 使用语句 `Concat`
 
 
-``` sql
+``` sql linenums="1"
 SELECT
 	vend_name || '(' || vend_country || ')' 
 FROM
@@ -121,7 +121,7 @@ ORDER BY
 
 ## 常用函数
 
-``` sql
+``` sql linenums="1"
 SELECT
 	ABS( - 123 ),
 	TRIM( ' x ' ),
@@ -147,7 +147,7 @@ SELECT
 
 ### AVG 平均值
 
-``` sql
+``` sql linenums="1"
 SELECT
 	AVG( prod_price ) AS avg_price 
 FROM
@@ -162,7 +162,7 @@ WHERE
 - `COUNT(*)` 计算所有包括 `NULL` 在内的行数
 - `COUNT(column_name)` 指定列名则不会计算 `NULL`
 
-``` sql
+``` sql linenums="1"
 SELECT
 	COUNT( cust_email ) AS num_cust 
 FROM
@@ -172,7 +172,7 @@ FROM
 
 ### MAX 获取最大值
 
-``` sql
+``` sql linenums="1"
 SELECT
 	MAX( prod_price ) AS max_price 
 FROM
@@ -182,7 +182,7 @@ FROM
 
 ### MIN 获取最小值
 
-``` sql
+``` sql linenums="1"
 SELECT
 	MIN( prod_price ) AS max_price 
 FROM
@@ -192,7 +192,7 @@ FROM
 
 ### SUM 求和
 
-``` sql
+``` sql linenums="1"
 SELECT
 	SUM( quantity ) AS items_ordered 
 FROM
@@ -211,7 +211,7 @@ WHERE
 - 如果分组列中包含具有 `NULL` 值的行，则 `NULL` 将作为一个分组返回。如果列中有多行 `NULL` 值，它们将分为一组
 - GROUP BY子句必须出现在WHERE子句之后，ORDER BY子句之前
 
-``` sql
+``` sql linenums="1"
 SELECT
 	* 
 FROM
@@ -228,7 +228,7 @@ GROUP BY
 - `WHERE` 在数据分组前进行过滤，`HAVING` 在数据分组后进行过滤
 - 使用 `HAVING` 时应该结合 `GROUP BY` 子句，而 `WHERE` 子句用于标准的行级过滤
 
-``` sql
+``` sql linenums="1"
 SELECT
 	*
 FROM
@@ -247,7 +247,7 @@ HAVING
 
 ### 子查询作为条件
 
-``` sql
+``` sql linenums="1"
 SELECT
 	cust_name,
 	cust_contact 
@@ -259,7 +259,7 @@ WHERE
 
 ### 子查询作为计算字段
 
-``` sql
+``` sql linenums="1"
 SELECT
 	cust_name,
 	cust_state,
@@ -278,7 +278,7 @@ ORDER BY
 - 要保证所有联结都有WHERE子句，否则DBMS将返回比想要的数据多得多的数据
 - 笛卡儿积的联结，也称叉联结（cross join）
 
-``` sql
+``` sql linenums="1"
 SELECT
 	vend_name,
 	prod_name,
@@ -292,7 +292,7 @@ WHERE
 
 等效写法，使用 `INNER JOIN`，在使用这种语法时，联结条件用特定的ON子句而不是WHERE子句给出。上面是简单写法，下面是规范写法，具体使用哪个取决于哪个更方便。
 
-``` sql
+``` sql linenums="1"
 SELECT
 	vend_name,
 	prod_name,
@@ -306,7 +306,7 @@ FROM
 
 相当于是同一个表自己联结自己，许多DBMS处理联结远比处理子查询快得多。
 
-``` sql
+``` sql linenums="1"
 SELECT
 	c1.cust_id,
 	c1.cust_name,
@@ -326,7 +326,7 @@ WHERE
 - 左外联结和右外联结，它们之间的唯一差别是所关联的表的顺序
 - SQLite支持 `LEFT OUTER JOIN`，但不支持 `RIGHT OUTER JOIN`
 
-``` sql
+``` sql linenums="1"
 SELECT
 	Customers.cust_id,
 	Orders.order_num 
@@ -346,7 +346,7 @@ FROM
 - `UNION` 从查询结果集中自动去除了重复的行，除非使用 `UNION ALL` 则不取消重复的行
 - 只能使用一条 `ORDER BY` 子句，它必须位于最后一条 `SELECT` 语句之后
 
-``` sql
+``` sql linenums="1"
 SELECT
 	cust_name,
 	cust_contact,

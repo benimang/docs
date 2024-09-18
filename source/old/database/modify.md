@@ -8,7 +8,7 @@
 - 如果某列没有值则应该使用 `NULL`
 - 太过于依赖列的顺序，不易维护，建议少用
 
-``` sql
+``` sql linenums="1"
 INSERT INTO Customers
 VALUES
 	( 1000000006, 'Toy Land', '123 Any Street', 'New York', 'NY', '11111', 'USA', NULL, NULL );
@@ -21,7 +21,7 @@ VALUES
 - 允许忽略部分列（忽略的列允许 `NULL` 或有默认值）
 - 列名和 `VALUES` 顺序必须对应
 
-``` sql
+``` sql linenums="1"
 INSERT INTO Customers ( cust_id, cust_name, cust_address, cust_city, cust_state, cust_zip, cust_country )
 VALUES
 	( 1000000006, 'Toy Land', '123 Any Street', 'New York', 'NY', '11111', 'USA' );
@@ -33,7 +33,7 @@ VALUES
 - 允许同时插入多条数据
 - `INSERT` 和 `SELECT` 列数量、顺序以及类型必须对应，列名则无所谓
 
-``` sql
+``` sql linenums="1"
 INSERT INTO Customers ( cust_id, cust_contact, cust_email, cust_name, cust_address, cust_city, cust_state, cust_zip, cust_country ) SELECT
 cust_id,
 cust_contact,
@@ -56,7 +56,7 @@ FROM
 - 允许多表联结，但数据都只会生成到同一个表里
 - 创建出来新的表，只有数据而不包含其他表定义内容，主键 / 外键 / 索引 / 默认值 / 唯一索引等都不会有
 
-``` sql
+``` sql linenums="1"
 CREATE TABLE CustCopy AS SELECT
 * 
 FROM
@@ -66,7 +66,7 @@ FROM
 
 ## UPDATE
 
-``` sql
+``` sql linenums="1"
 UPDATE Customers 
 SET cust_email = 'kim@thetoystore.com' 
 WHERE
@@ -79,7 +79,7 @@ WHERE
 
 ## DELETE
 
-``` sql
+``` sql linenums="1"
 DELETE 
 FROM
 	Customers 

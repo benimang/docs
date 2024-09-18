@@ -8,7 +8,7 @@
 - 默认是通过索引访问，如果要使用名称，需要设置 `row_factory`
 - 使用名称时不区分大小写
 
-``` py hl_lines='4'
+``` py linenums="1" hl_lines='4'
 import sqlite3
 
 con = sqlite3.connect(":memory:")
@@ -30,7 +30,7 @@ con.close()
 - 如果执行完成，则最后会自动调用 `commit`
 - 如果执行发生异常，则会自动调用 `rollback`
 
-``` py
+``` py linenums="1"
 import sqlite3
 
 con = sqlite3.connect(":memory:")

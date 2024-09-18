@@ -3,7 +3,7 @@
 
 ## 装饰器无参数
 
-``` py
+``` py linenums="1"
 from typing import Any
 
 def decorator_a(func: Any):
@@ -29,7 +29,7 @@ def myfun_a():
 
 ## 装饰器有参数
 
-``` py hl_lines="3 12 14"
+``` py linenums="1" hl_lines="3 12 14"
 from typing import Any
 
 def decorator_b(value: str):
@@ -57,7 +57,7 @@ def myfun_b():
 
 ## 成员函数及叠加使用
 
-``` py hl_lines="24-25"
+``` py linenums="1" hl_lines="24-25"
 from typing import Any
 
 def decorator_a(func: Any):
@@ -96,7 +96,7 @@ class AClass():
 
 官方提供的方法，通过这个包装后，函数的名称不会改变
 
-``` py hl_lines="1 5"
+``` py linenums="1" hl_lines="1 5"
 from functools import wraps
 from typing import Any
 
@@ -124,7 +124,7 @@ def myfun_a():
 
 官方提供的方法，函数调用的结果将缓存起来，下次再调用则使用缓存直接返回
 
-``` py hl_lines="1 3"
+``` py linenums="1" hl_lines="1 3"
 from functools import cache
 
 @cache
@@ -137,7 +137,7 @@ def factorial(n: int):
 
 官方提供的方法，针对类成员函数，相当于是带缓存版本 `@property`
 
-``` py hl_lines="1 8"
+``` py linenums="1" hl_lines="1 8"
 from functools import cached_property
 
 class AClass:
@@ -155,7 +155,7 @@ class AClass:
 
 这个可以指定 `async` 函数的超时时间
 
-``` py hl_lines="6-13 15"
+``` py linenums="1" hl_lines="6-13 15"
 import asyncio
 from functools import wraps
 from typing import Any
@@ -185,7 +185,7 @@ async def myfun():
 
 ### 普通方法实现
 
-``` py
+``` py linenums="1"
 from functools import wraps
 from typing import Any, Callable, TypeVar, cast
 
@@ -210,7 +210,7 @@ def wrapper_retry(times: int):
 
 ### 异步方法实现
 
-``` py
+``` py linenums="1"
 from functools import wraps
 from typing import Any, Callable, Coroutine, TypeVar, cast
 

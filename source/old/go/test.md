@@ -5,7 +5,7 @@
 
 `#!sh go test`
 
-```go title="u_test.go" hl_lines="5-6 10 12"
+``` go linenums="1" title="u_test.go" hl_lines="5-6 10 12"
 package main
 
 import "testing"
@@ -28,7 +28,7 @@ func TestFunc(t *testing.T) {
 
 `#!sh go test -bench . -benchmem`
 
-```go title="b_test.go" hl_lines="8-13 33-34 39-40"
+``` go linenums="1" title="b_test.go" hl_lines="8-13 33-34 39-40"
 package main
 
 import (

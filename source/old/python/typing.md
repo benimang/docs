@@ -6,7 +6,7 @@
 
 ### 类型
 
-```py
+``` py linenums="1"
 from typing import Type
 
 
@@ -36,7 +36,7 @@ myfun(AClass)
 
 ### 泛型使用
 
-``` py
+``` py linenums="1"
 from typing import TypeVar
 
 TestType = TypeVar('TestType', int, str)
@@ -50,7 +50,7 @@ myfun(123, 456)  # 579
 
 ### decorator 类型定义
 
-``` py
+``` py linenums="1"
 from typing import TypeVar, Callable, Any, Coroutine
 
 WrappedFunc = TypeVar("WrappedFunc", bound=Callable[..., object])

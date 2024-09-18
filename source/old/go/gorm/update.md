@@ -5,7 +5,7 @@
 
 `Save` 会将全部字段更新，即便字段是零值
 
-```go
+``` go linenums="1"
 var p product
 p.ID = 1
 p.Name = "product_AAA"
@@ -17,7 +17,7 @@ db.Save(&p)
 
 `Update` 会更新指定某一字段
 
-```go
+``` go linenums="1"
 var p product
 p.ID = 1	
 db.Model(&p).Update("Name", "product_Axx3")
@@ -29,7 +29,7 @@ db.Model(&p).Update("Name", "product_Axx3")
 - 参数如果是结构体，结构体内零值不会更新
 - 参数如果是 `map`，零值也会被更新
 
-```go
+``` go linenums="1"
 var p product
 p.ID = 1
 // 以结构体形式调用 Updates 方法，结构体内零值不会更新
@@ -52,7 +52,7 @@ db.Model(&p).Updates(map[string]interface{}{
 
 可以结合 `Select` 和 `Omit` 指定或忽略某些字段更新
 
-```go
+``` go linenums="1"
 var p product
 p.ID = 1
 // 结构体的零值同样可以使用 Select 强制作为更新字段

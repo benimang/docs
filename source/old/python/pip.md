@@ -37,7 +37,7 @@ python setup.py install
 
 ### 配置文件
 
-``` py title="setup.py" hl_lines="32 33 44-46"
+``` py linenums="1" title="setup.py" hl_lines="32 33 44-46"
 version = "0.0.117"
 install_requires = [
     "aiohttp",

@@ -4,7 +4,7 @@
 
 参数定义最前面先放一个 `*` 后面再定义参数，函数调用时就必须指定参数名传参
 
-``` py
+``` py linenums="1"
 def myfun(*, par1:str, par2:str):
     pass
 ```
@@ -12,7 +12,7 @@ def myfun(*, par1:str, par2:str):
 
 ## 向下取整
 
-``` py
+``` py linenums="1"
 import math
 
 math.floor(5 / 2)  # 2
@@ -23,7 +23,7 @@ math.floor(5 / 2)  # 2
 
 ## 获取文件大小
 
-``` py
+``` py linenums="1"
 import os
 
 os.path.getsize("file")  # 单位是字节
@@ -32,7 +32,7 @@ os.path.getsize("file")  # 单位是字节
 
 ## dict 合并
 
-``` py
+``` py linenums="1"
 {"a": 123, "b": 456} | {"a": 567, "c": 999}
 
 # 生成新的 dict，如果 key 相同则后面的覆盖前面
@@ -41,7 +41,7 @@ os.path.getsize("file")  # 单位是字节
 
 ## for else
 
-``` py
+``` py linenums="1"
 for i in range(3):
     if i == 0:
         break
@@ -53,7 +53,7 @@ else:
 
 ## 获取图片尺寸
 
-``` py
+``` py linenums="1"
 # 需要第三方库支持 pillow
 
 from PIL import Image
@@ -65,7 +65,7 @@ image.size  # (width, height)
 
 ## 命令行显示二维码
 
-``` py
+``` py linenums="1"
 # 需要第三方库支持 qrcode
 # Windows 命令行窗口调整大小会导致二维码消失
 # 没找到如何设置二维码大小
@@ -81,7 +81,7 @@ qr.print_tty()
 
 ## 复制与粘贴
 
-``` py
+``` py linenums="1"
 # 需要第三方库支持 pyperclip
 
 import pyperclip
@@ -95,7 +95,7 @@ pyperclip.paste()
 
 其中一个使用场景是在 `ipython` 中使用 `playwright` 的异步接口就需要用到这个支持
 
-``` py hl_lines="3-4"
+``` py linenums="1" hl_lines="3-4"
 # 需要第三方库支持 nest_asyncio
 
 import nest_asyncio

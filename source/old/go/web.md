@@ -6,7 +6,7 @@
 
 ### 启动服务器
 
-```go hl_lines="6-8 10-11 16-17 20-21"
+``` go linenums="1" hl_lines="6-8 10-11 16-17 20-21"
 package main
 
 import "net/http"
@@ -42,7 +42,7 @@ func userFunc(w http.ResponseWriter, r *http.Request) {
 - `#!sh curl -i -H "Accept: application/xml" http://localhost:8001`
 - `#!sh curl -i http://localhost:8001`
 
-```go hl_lines="11-12 14-15"
+``` go linenums="1" hl_lines="11-12 14-15"
 package main
 
 import "net/http"
@@ -75,7 +75,7 @@ func helloFunc(w http.ResponseWriter, r *http.Request) {
 - `#!sh curl -i "http://localhost:8001/?abc=123&def=xxx"`
 - `#!sh curl -i -X POST -d "hello" "http://localhost:8001/?abc=123&def=xxx"`
 
-```go hl_lines="15-16 19-20 29-30"
+``` go linenums="1" hl_lines="15-16 19-20 29-30"
 package main
 
 import (
@@ -128,7 +128,7 @@ func helloFunc(w http.ResponseWriter, r *http.Request) {
 
 ### 简单 GET / POST 请求
 
-```go hl_lines="13-14 19-20 22-23 30-31 33-34 39-40 42-43"
+``` go linenums="1" hl_lines="13-14 19-20 22-23 30-31 33-34 39-40 42-43"
 package main
 
 import (
@@ -183,7 +183,7 @@ func main() {
 
 ### 标准 HTTP 请求
 
-```go hl_lines="14-17 19-20 26-27 34-35 39-40 43-44 51-52"
+``` go linenums="1" hl_lines="14-17 19-20 26-27 34-35 39-40 43-44 51-52"
 package main
 
 import (

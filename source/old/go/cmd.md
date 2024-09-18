@@ -3,7 +3,7 @@
 
 ## 获取命令行参数
 
-```go hl_lines="9-10"
+``` go linenums="1" hl_lines="9-10"
 package main
 
 import (
@@ -22,7 +22,7 @@ func main() {
 
 ## flag 参数使用
 
-```go hl_lines="11-14 16-20 22-23"
+``` go linenums="1" hl_lines="11-14 16-20 22-23"
 package main
 
 import (
@@ -56,7 +56,7 @@ func main() {
 
 ## 子命令
 
-```go hl_lines="11-20 25-32 36-42 47-48"
+``` go linenums="1" hl_lines="11-20 25-32 36-42 47-48"
 package main
 
 import (

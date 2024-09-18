@@ -3,7 +3,7 @@
 
 ## 创建单个记录
 
-```go hl_lines="5"
+``` go linenums="1" hl_lines="5"
 p := product{
 	Name:  "product_x",
 	Price: 99,
@@ -20,7 +20,7 @@ fmt.Println(
 
 ## 创建单个记录（指定字段）
 
-```go hl_lines="5-6 12-13"
+``` go linenums="1" hl_lines="5-6 12-13"
 p1 := product{
 	Name:  "product_1",
 	Price: 99,
@@ -39,7 +39,7 @@ db.Omit("Name").Create(&p2)
 
 ## 批量创建记录
 
-```go
+``` go linenums="1"
 productAry := [3]product{
 	{Name: "product_3", Price: 98},
 	{Name: "product_4", Price: 98},
@@ -51,7 +51,7 @@ db.Create(&productAry)
 
 ## 根据 Map 创建
 
-```go hl_lines="1-3 5 11"
+``` go linenums="1" hl_lines="1-3 5 11"
 // 只会添加指定的字段（created_at / update_at 都不会添加）
 // 官网文档介绍不会自动填充主键，但是 sqlite 试过自增主键可以
 // 官网文档介绍不会处理 association
@@ -75,7 +75,7 @@ db.Model(&product{}).Create(
 
 ## upsert
 
-```go hl_lines="8-14 20-24 30-37 43-51"
+``` go linenums="1" hl_lines="8-14 20-24 30-37 43-51"
 p := product{
 	Name:  "product_xx",
 	Price: 105,

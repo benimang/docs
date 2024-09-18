@@ -3,7 +3,7 @@
 
 ## Delete
 
-```go
+``` go linenums="1"
 var p product
 p.ID = 1
 db.Delete(&p)
@@ -18,7 +18,7 @@ db.Where("Price > ?", 80).Delete(&product{})
 
 针对支持 `Returning` 的数据库，可以实现删除并返回
 
-```go
+``` go linenums="1"
 var p product
 db.Clauses(clause.Returning{}).Delete(&p, 3)
 ```
@@ -32,7 +32,7 @@ db.Clauses(clause.Returning{}).Delete(&p, 3)
 
 使用 `Unscoped` 可以忽略软删除操作数据
 
-```go
+``` go linenums="1"
 var pAry []product
 
 db.Unscoped().Find(&pAry)

@@ -5,7 +5,7 @@
 
 只要函数前添加 `go` 就可以了，没有具体看，应该是线程实现的
 
-```go hl_lines="10"
+``` go linenums="1" hl_lines="10"
 package main
 
 import (
@@ -33,7 +33,7 @@ func TestFunc() {
 
 ### 基本使用
 
-```go
+``` go linenums="1"
 package main
 
 func main() {
@@ -57,7 +57,7 @@ func main() {
 
 ### 只读 / 只写
 
-```go
+``` go linenums="1"
 package main
 
 import "fmt"
@@ -81,7 +81,7 @@ func main() {
 - `select` 尝试从多个管道中获取信息，但是不会阻塞
 - 如果没有任何管道返回消息，就会跑出去了，所以很多时候 `select` 外面都会有一个循环
 
-```go hl_lines="12-13"
+``` go linenums="1" hl_lines="12-13"
 package main
 
 import "time"
@@ -117,7 +117,7 @@ func myfun(c1 chan string, c2 chan string) {
 
 ## context
 
-```go hl_lines="12 14-18 20-24 27 31"
+``` go linenums="1" hl_lines="12 14-18 20-24 27 31"
 package main
 
 import (
@@ -169,7 +169,7 @@ func sub(cancelFunc *context.CancelFunc) {
 
 ### WaitGroup
 
-```go hl_lines="11 12 14 22"
+``` go linenums="1" hl_lines="11 12 14 22"
 package main
 
 import (
@@ -201,7 +201,7 @@ func TestFunc(wg *sync.WaitGroup) {
 
 互斥锁，上锁后其他地方无法上锁就会阻塞等待
 
-```go hl_lines="10 22 25"
+``` go linenums="1" hl_lines="10 22 25"
 package main
 
 import (
@@ -236,7 +236,7 @@ func TestFunc(lock *sync.Mutex, waitGroup *sync.WaitGroup, msg string) {
 
 读锁不会阻塞其他地方读锁，但是会阻塞写锁
 
-```go hl_lines="10 35 38"
+``` go linenums="1" hl_lines="10 35 38"
 package main
 
 import (
@@ -282,7 +282,7 @@ func TestFuncR(lock *sync.RWMutex, waitGroup *sync.WaitGroup, msg string) {
 
 ### Once
 
-```go
+``` go linenums="1"
 package main
 
 import (
@@ -308,7 +308,7 @@ func TestFunc(i int) func() {
 
 ### Pool
 
-```go hl_lines="9 14 19"
+``` go linenums="1" hl_lines="9 14 19"
 package main
 
 import (
@@ -341,7 +341,7 @@ func main() {
 
 ### Map
 
-```go hl_lines="9 20 22-24 30"
+``` go linenums="1" hl_lines="9 20 22-24 30"
 package main
 
 import (

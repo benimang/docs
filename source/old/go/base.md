@@ -3,7 +3,7 @@
 
 ## 检查变量类型
 
-```go
+``` go linenums="1"
 package main
 
 import (
@@ -22,7 +22,7 @@ func main() {
 
 ## 类型转换
 
-```go
+``` go linenums="1"
 package main
 
 import (
@@ -50,7 +50,7 @@ func main() {
 
 ## 声明变量
 
-```go
+``` go linenums="1"
 package main
 
 func main() {
@@ -79,7 +79,7 @@ func main() {
 
 ## 常量定义
 
-```go
+``` go linenums="1"
 package main
 
 func main() {
@@ -96,7 +96,7 @@ func main() {
 
 ## fmt.Printf
 
-```go
+``` go linenums="1"
 package main
 
 import (
@@ -190,7 +190,7 @@ func main() {
 
 ## 指针
 
-```go hl_lines="6 12 15-16"
+``` go linenums="1" hl_lines="6 12 15-16"
 package main
 
 func main() {
@@ -215,7 +215,7 @@ func updateInt(value *int) {
 
 ## 结构体
 
-```go hl_lines="7-8 11-12 15-17 19-20 23-27 30-34 38-43"
+``` go linenums="1" hl_lines="7-8 11-12 15-17 19-20 23-27 30-34 38-43"
 package main
 
 import "fmt"
@@ -268,7 +268,7 @@ func print(name string, data interface{}) {
 
 ## 结构体和指针
 
-```go hl_lines="14 29-30"
+``` go linenums="1" hl_lines="14 29-30"
 package main
 
 import "fmt"
@@ -322,7 +322,7 @@ func print(name string, data interface{}) {
 
 ## 结构体方法
 
-```go hl_lines="18-24 26-27"
+``` go linenums="1" hl_lines="18-24 26-27"
 package main
 
 import "fmt"
@@ -357,7 +357,7 @@ func (m *movie) addRating(value float32) {
 
 ## 接口
 
-```go hl_lines="12-16 26"
+``` go linenums="1" hl_lines="12-16 26"
 package main
 
 func main() {
@@ -396,7 +396,7 @@ func (s student) play() {
 
 ## 函数
 
-```go hl_lines="11-13 26 27 31 32 36 37 45 46 52-57"
+``` go linenums="1" hl_lines="11-13 26 27 31 32 36 37 45 46 52-57"
 package main
 
 import "strconv"
@@ -461,7 +461,7 @@ func eFunc(
 
 ## for 循环
 
-```go hl_lines="7-8 18-19 24-25 30-31"
+``` go linenums="1" hl_lines="7-8 18-19 24-25 30-31"
 package main
 
 func main() {
@@ -502,7 +502,7 @@ func main() {
 
 ## switch 循环
 
-```go hl_lines="7"
+``` go linenums="1" hl_lines="7"
 a := 1
 switch a {
 case 0:
@@ -521,7 +521,7 @@ default:
 
 ## defer 延迟执行
 
-```go hl_lines="15-18"
+``` go linenums="1" hl_lines="15-18"
 package main
 
 func main() {
@@ -557,7 +557,7 @@ func cfunc() {
 
 ## 数组
 
-```go
+``` go linenums="1"
 package main
 
 import "fmt"
@@ -588,7 +588,7 @@ func main() {
 
 ## 切片
 
-```go hl_lines="7-9"
+``` go linenums="1" hl_lines="7-9"
 package main
 
 import "fmt"
@@ -635,7 +635,7 @@ func main() {
 
 ## map 映射
 
-```go
+``` go linenums="1"
 package main
 
 import "fmt"
@@ -662,7 +662,7 @@ func main() {
 
 ## 字符串
 
-```go
+``` go linenums="1"
 package main
 
 import (
@@ -714,7 +714,7 @@ func print(value ...interface{}) {
 
 ## 错误
 
-```go hl_lines="9-10 13-14 18-20 25-26"
+``` go linenums="1" hl_lines="9-10 13-14 18-20 25-26"
 package main
 
 import (
@@ -749,7 +749,7 @@ func main() {
 
 这里的 `Assertion` 指的是将类型强制指定为某个类型
 
-```go
+``` go linenums="1"
 package main
 
 func main() {
@@ -781,7 +781,7 @@ func (d *Dog) SayOhOh() {
 
 ## Reflect 反射
 
-```go
+``` go linenums="1"
 package main
 
 import (
@@ -853,7 +853,7 @@ func (s Student) Say(msg string, value int) {
 
 ## 时间控制（延迟和重复间隔）
 
-```go hl_lines="9-10 12-13 16-17 20 28-30"
+``` go linenums="1" hl_lines="9-10 12-13 16-17 20 28-30"
 package main
 
 import (
@@ -893,7 +893,7 @@ func main() {
 
 ## 日志
 
-```go hl_lines="17-19 21-23"
+``` go linenums="1" hl_lines="17-19 21-23"
 package main
 
 import (
@@ -923,7 +923,7 @@ func main() {
 
 ## JSON
 
-```go hl_lines="16-17 30-32 39-40 63-64"
+``` go linenums="1" hl_lines="16-17 30-32 39-40 63-64"
 package main
 
 import (
@@ -998,7 +998,7 @@ func httpCase() {
 
 ## 文件操作
 
-```go hl_lines="13-14 23-24 31-32 42-43 49 67-68 79-80 98-99 105-106"
+``` go linenums="1" hl_lines="13-14 23-24 31-32 42-43 49 67-68 79-80 98-99 105-106"
 package main
 
 import (
@@ -1115,7 +1115,7 @@ func main() {
 
 ## 正则表达式
 
-```go hl_lines="13-14 26-28 38-40 49-51"
+``` go linenums="1" hl_lines="13-14 26-28 38-40 49-51"
 package main
 
 import (

@@ -3,7 +3,7 @@
 
 ## 测试用例
 
-```go hl_lines="29-30 36-39 41-42"
+``` go linenums="1" hl_lines="29-30 36-39 41-42"
 package demoGorm
 
 import (
