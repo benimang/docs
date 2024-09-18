@@ -43,3 +43,9 @@ markdown_extensions:
   # 二级标题描点
   - toc:
       permalink: "#" # ⚓︎
+  # Formatting https://squidfunk.github.io/mkdocs-material/reference/formatting/
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
