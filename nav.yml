@@ -3,9 +3,9 @@ nav:
   - Home: aa.md
   - 公司资料:
     - 研发后台:
-      - 消除来了: company/xcp/xcll.md
-      - 消除01: company/xcp/xc01.md
-      - 横扫山河: company/xcp/hssh.md
-      - 夜幕行动: company/xcp/ymxd.md
-      - 屠龙仙缘: company/xcp/tlxy.md
+      - 消除来了 - xcll: company/xcp/xcll.md
+      - 消除01 - xc01: company/xcp/xc01.md
+      - 横扫山河 - hssh: company/xcp/hssh.md
+      - 夜幕行动 - ymxd: company/xcp/ymxd.md
+      - 屠龙仙缘 - tlxy（已废弃）: company/xcp/tlxy.md
       - 通用资料: company/xcp/common.md
