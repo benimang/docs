@@ -1,6 +1,7 @@
 nav:
   - xx: index.md
-  - Home: aa.md
+  - 个人资料:
+    - 证书文件: personal/certification.md
   - 公司资料:
     - 研发后台:
       - 消除来了 - xcll: company/xcp/xcll.md
