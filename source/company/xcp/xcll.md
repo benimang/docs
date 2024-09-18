@@ -59,7 +59,7 @@
 
 ## 数据库
 
-| 类型 | Host          | Port | data库        | log库        | site库        |
+| 类型 | Host          | Port | Data 库       | Log 库       | Site 库       |
 | ---- | ------------- | ---- | ------------- | ------------ | ------------- |
 | 测试 | 192.168.1.153 | 3306 | xcp_xcll_data | xcp_xcll_log | xcp_xcll_site |
 | 正式 | 192.168.2.101 | 3307 | xcp_xcll_data | xcp_xcll_log | xcp_xcll_site |
