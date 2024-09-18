@@ -1,6 +1,7 @@
 nav:
   - xx: index.md
   - 个人资料:
+    - vscode 配置: personal/vscode.md
     - 证书文件: personal/certification.md
   - 公司资料:
     - 研发后台:
