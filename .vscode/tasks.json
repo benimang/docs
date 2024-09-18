@@ -52,5 +52,14 @@
                 "localhost:8001",
             ],
         },
+        {
+            "label": "mkdocs build",
+            "type": "shell",
+            "problemMatcher": [],
+            "command": "venv/Scripts/mkdocs.exe",
+            "args": [
+                "build",
+            ],
+        },
     ],
 }
