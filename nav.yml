@@ -36,30 +36,30 @@ nav:
         - old/go/gorm/update.md
         - old/go/gorm/delete.md
     - Database:
-        - old/database/select.md
-        - old/database/modify.md
-        - old/database/concept.md
-        - old/database/install.md
+      - old/database/select.md
+      - old/database/modify.md
+      - old/database/concept.md
+      - old/database/install.md
     - Linux:
-        - old/linux/centos.md
-        - old/linux/nginx.md
-        - old/linux/ubuntu.md
-        - old/linux/wsl2.md
+      - old/linux/centos.md
+      - old/linux/nginx.md
+      - old/linux/ubuntu.md
+      - old/linux/wsl2.md
     - Others:
-        - old/others/website.md
-        - old/others/vscode.md
-        - old/others/ios.md
-        - old/others/proxy.md
-        - old/others/nodejs.md
-        - old/others/gva.md
-        - old/others/url.md
+      - old/others/website.md
+      - old/others/vscode.md
+      - old/others/ios.md
+      - old/others/proxy.md
+      - old/others/nodejs.md
+      - old/others/gva.md
+      - old/others/url.md
     - 不再维护:
-        - old/bak/text.md
-        - old/bak/docker.md
-        - Amazon:
-          - old/bak/amazon/selection.md
-          - old/bak/amazon/oneday.md
-        - Laya:
-          - old/bak/laya/base.md
-          - old/bak/laya/laya-zlib.md
-          - old/bak/laya/laya-promise.md
+      - old/bak/text.md
+      - old/bak/docker.md
+      - Amazon:
+        - old/bak/amazon/selection.md
+        - old/bak/amazon/oneday.md
+      - Laya:
+        - old/bak/laya/base.md
+        - old/bak/laya/laya-zlib.md
+        - old/bak/laya/laya-promise.md
