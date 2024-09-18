@@ -58,13 +58,11 @@
 
 
 ## 数据库
-| 测试          | 正式          |
-| ------------- | ------------- |
-| 192.168.1.153 | 192.168.1.154 |
-| 3306          | 3306          |
-| xcp_hssh_data | xcp_hssh_data |
-| xcp_hssh_log  | xcp_hssh_log  |
-| xcp_hssh_site | xcp_hssh_site |
+
+| 类型 | Host          | Port | Data 库       | Log 库       | Site 库       |
+| ---- | ------------- | ---- | ------------- | ------------ | ------------- |
+| 测试 | 192.168.1.153 | 3306 | xcp_hssh_data | xcp_hssh_log | xcp_hssh_site |
+| 正式 | 192.168.1.154 | 3306 | xcp_hssh_data | xcp_hssh_log | xcp_hssh_site |
 
 
 ## 敏感资源

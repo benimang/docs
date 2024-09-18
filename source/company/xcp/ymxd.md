@@ -37,13 +37,11 @@
 
 
 ## 数据库
-| 测试          | 正式          |
-| ------------- | ------------- |
-| 192.168.1.153 | 192.168.2.101 |
-| 3306          | 3307          |
-| xcp_ymxd_data | xcp_ymxd_data |
-| xcp_ymxd_log  | xcp_ymxd_log  |
-| xcp_ymxd_site | xcp_ymxd_site |
+
+| 类型 | Host          | Port | Data 库       | Log 库       | Site 库       |
+| ---- | ------------- | ---- | ------------- | ------------ | ------------- |
+| 测试 | 192.168.1.153 | 3306 | xcp_ymxd_data | xcp_ymxd_log | xcp_ymxd_site |
+| 正式 | 192.168.2.101 | 3307 | xcp_ymxd_data | xcp_ymxd_log | xcp_ymxd_site |
 
 
 ## 敏感资源
