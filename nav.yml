@@ -1,0 +1,9 @@
+nav:
+  - xx: index.md
+  - Home: aa.md
+  - 公司资料:
+    - 研发后台:
+      - 消除来了: company/xcp/xcll.md
+      - 消除01: company/xcp/xc01.md
+      - 横扫山河: company/xcp/hssh.md
+      - 夜幕行动: company/xcp/ymxd.md

@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "git commit",
+            "type": "shell",
+            "problemMatcher": [],
+            "command": "TortoiseGitProc.exe",
+            "args": [
+                "/command:commit",
+                "/path:${workspaceFolder}/..",
+            ],
+        },
+        {
+            "label": "git commit file",
+            "type": "shell",
+            "problemMatcher": [],
+            "command": "TortoiseGitProc.exe",
+            "args": [
+                "/command:commit",
+                "/path:${file}",
+            ],
+        },
+        {
+            "label": "git log",
+            "type": "shell",
+            "problemMatcher": [],
+            "command": "TortoiseGitProc.exe",
+            "args": [
+                "/command:log",
+                "/path:${workspaceFolder}/..",
+            ],
+        },
+        {
+            "label": "git log file",
+            "type": "shell",
+            "problemMatcher": [],
+            "command": "TortoiseGitProc.exe",
+            "args": [
+                "/command:log",
+                "/path:${file}",
+            ],
+        },
+        {
+            "label": "mkdocs serve",
+            "type": "shell",
+            "problemMatcher": [],
+            "command": "venv/Scripts/mkdocs.exe",
+            "args": [
+                "serve",
+                "-a",
+                "localhost:8001",
+            ],
+        },
+    ],
+}

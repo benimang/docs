@@ -1,0 +1,45 @@
+INHERIT: ./nav.yml
+watch:
+  - nav.yml
+
+site_name: Beni Docs
+site_url: https://docs.pytask.com
+site_author: Beni Mang
+site_description: Beni 个人博客网站
+
+docs_dir: source # 源文件（.md）路径
+site_dir: docs # 生成文件（.html/.css/...）路径
+
+plugins:
+  - search
+
+theme:
+  name: material
+  favicon: assets/favicon.svg
+  logo: assets/favicon.svg
+  language: zh
+  features:
+    - navigation.top # 返回顶部
+    - navigation.instant # 异步加载
+    - navigation.tabs # 顶部导航分类
+    - content.code.copy # 代码块复制
+    - content.code.annotate # 代码块内注释标签
+    - search.highlight # 搜索高亮
+    - search.suggest # 搜索时自动提示
+
+markdown_extensions:
+  # 代码块配置 https://squidfunk.github.io/mkdocs-material/reference/code-blocks/
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  # Admonitions https://squidfunk.github.io/mkdocs-material/reference/admonitions/
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  # 二级标题描点
+  - toc:
+      permalink: "#" # ⚓︎
