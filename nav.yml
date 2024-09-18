@@ -1,5 +1,5 @@
 nav:
-  - xx: index.md
+  - 首页: index.md
   - 个人资料:
     - vscode 配置: personal/vscode.md
     - 证书文件: personal/certification.md
@@ -11,3 +11,55 @@ nav:
       - 夜幕行动 - ymxd: company/xcp/ymxd.md
       - 屠龙仙缘 - tlxy（已废弃）: company/xcp/tlxy.md
       - 通用资料: company/xcp/common.md
+  - 旧资料:
+    - Python:
+      - old/python/decorator.md
+      - old/python/typing.md
+      - old/python/pathlib.md
+      - old/python/fstring.md
+      - old/python/sqlite.md
+      - old/python/playwright.md
+      - old/python/pip.md
+      - old/python/tips.md
+    - GO:
+      - old/go/others.md
+      - old/go/base.md
+      - old/go/goroutine.md
+      - old/go/web.md
+      - old/go/test.md
+      - old/go/cmd.md
+      - Gorm:
+        - old/go/gorm/others.md
+        - old/go/gorm/base.md
+        - old/go/gorm/create.md
+        - old/go/gorm/select.md
+        - old/go/gorm/update.md
+        - old/go/gorm/delete.md
+    - Database:
+        - old/database/select.md
+        - old/database/modify.md
+        - old/database/concept.md
+        - old/database/install.md
+    - Linux:
+        - old/linux/centos.md
+        - old/linux/nginx.md
+        - old/linux/ubuntu.md
+        - old/linux/wsl2.md
+    - Others:
+        - old/others/website.md
+        - old/others/vscode.md
+        - old/others/ios.md
+        - old/others/proxy.md
+        - old/others/nodejs.md
+        - old/others/gva.md
+        - old/others/url.md
+    - 不再维护:
+        - old/bak/text.md
+        - old/bak/docker.md
+        - Amazon:
+          - old/bak/amazon/selection.md
+          - old/bak/amazon/oneday.md
+        - Laya:
+          - old/bak/laya/base.md
+          - old/bak/laya/laya-zlib.md
+          - old/bak/laya/laya-promise.md
