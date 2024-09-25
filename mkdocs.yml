@@ -12,6 +12,7 @@ site_dir: docs # 生成文件（.html/.css/...）路径
 
 plugins:
   - search
+  - glightbox # 图片放大
 
 theme:
   name: material
