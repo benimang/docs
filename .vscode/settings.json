@@ -5,6 +5,7 @@
         ".gitignore": true,
         "venv.list": true,
         "venv.lock": true,
+        "source/CNAME": true,
     },
     "github.copilot.chat.localeOverride": "zh-CN",
     // "yaml.schemas": {
