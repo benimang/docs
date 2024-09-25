@@ -28,6 +28,9 @@ theme:
     - search.suggest # 搜索时自动提示
 
 markdown_extensions:
+  # 图片 https://squidfunk.github.io/mkdocs-material/reference/images/
+  - attr_list
+  - md_in_html
   # 代码块配置 https://squidfunk.github.io/mkdocs-material/reference/code-blocks/
   - pymdownx.highlight:
       anchor_linenums: true
