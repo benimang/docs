@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -191,7 +200,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../personal/vscode/" class="md-tabs__link">
+        <a href="../../../personal/debian/" class="md-tabs__link">
           
   
   个人资料
@@ -349,6 +358,27 @@
             个人资料
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../personal/debian/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debian 配置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2104,8 +2134,8 @@
 <h2 id="_1">安装以及使用第三方库<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
-<p><a href="https://blog.csdn.net/qq_39611230/article/details/121232707">https://blog.csdn.net/qq_39611230/article/details/121232707</a>{:target="_blank"}
-<a href="https://blog.csdn.net/weixin_54707168/article/details/122658675">https://blog.csdn.net/weixin_54707168/article/details/122658675</a>{:target="_blank"}</p>
+<p><a href="https://blog.csdn.net/qq_39611230/article/details/121232707" target="_blank">https://blog.csdn.net/qq_39611230/article/details/121232707</a>
+<a href="https://blog.csdn.net/weixin_54707168/article/details/122658675" target="_blank">https://blog.csdn.net/weixin_54707168/article/details/122658675</a></p>
 </div>
 <ol>
 <li>强制打开 <code>GO111MODULE</code> 可以使用命令行 <code class="language-sh highlight">go<span class="w"> </span>env<span class="w"> </span>-w<span class="w"> </span><span class="nv">GO111MODULE</span><span class="o">=</span>on</code></li>
@@ -2171,5 +2201,7 @@
       <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

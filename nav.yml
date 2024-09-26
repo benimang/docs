@@ -1,6 +1,7 @@
 nav:
   - 首页: index.md
   - 个人资料:
+    - Debian 配置: personal/debian.md
     - vscode 配置: personal/vscode.md
     - 证书文件: personal/certification.md
   - 公司资料:
