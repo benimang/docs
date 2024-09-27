@@ -23,7 +23,10 @@ ln -s /usr/local/bin/pip$PYTHON_VERSION /usr/local/bin/pip
 python --version
 pip --version
 pip install pipx
-pipx install bcmd
+pipx ensurepath
+source ~/.bashrc
+pipx install bcmd --index-url=https://mirrors.aliyun.com/pypi/simple
+beni mirror
 
 echo 安装 7z
 apt install p7zip-full -y
