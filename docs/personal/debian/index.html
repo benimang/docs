@@ -419,6 +419,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mariadb" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据库配置（MariaDB）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据库配置（MariaDB）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      安全脚本
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      远程账号
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2068,6 +2101,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mariadb" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据库配置（MariaDB）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据库配置（MariaDB）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      安全脚本
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      远程账号
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2086,84 +2152,96 @@
   <h1>Debian 配置</h1>
 
 <h2 id="_1">软件安装<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span>
-<span class="normal"><a href="#__codelineno-0-21">21</a></span>
-<span class="normal"><a href="#__codelineno-0-22">22</a></span>
-<span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span>
-<span class="normal"><a href="#__codelineno-0-25">25</a></span>
-<span class="normal"><a href="#__codelineno-0-26">26</a></span>
-<span class="normal"><a href="#__codelineno-0-27">27</a></span>
-<span class="normal"><a href="#__codelineno-0-28">28</a></span>
-<span class="normal"><a href="#__codelineno-0-29">29</a></span>
-<span class="normal"><a href="#__codelineno-0-30">30</a></span>
-<span class="normal"><a href="#__codelineno-0-31">31</a></span>
-<span class="normal"><a href="#__codelineno-0-32">32</a></span>
-<span class="normal"><a href="#__codelineno-0-33">33</a></span>
-<span class="normal"><a href="#__codelineno-0-34">34</a></span>
-<span class="normal"><a href="#__codelineno-0-35">35</a></span>
-<span class="normal"><a href="#__codelineno-0-36">36</a></span>
-<span class="normal"><a href="#__codelineno-0-37">37</a></span>
-<span class="normal"><a href="#__codelineno-0-38">38</a></span>
-<span class="normal"><a href="#__codelineno-0-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>apt<span class="w"> </span>update
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nb">echo</span><span class="w"> </span>安装<span class="w"> </span>python
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="nb">echo</span><span class="w"> </span>官网下载压缩包（tar.xz格式）并修改下面的变量名称<span class="w"> </span>https://www.python.org/downloads/source/
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nv">PYTHON_ZIP_NAME</span><span class="o">=</span><span class="s1">&#39;Python-3.12.6.tar.xz&#39;</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="nv">PYTHON_NAME</span><span class="o">=</span><span class="k">$(</span>basename<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PYTHON_ZIP_NAME</span><span class="s2">&quot;</span><span class="w"> </span>.tar.xz<span class="k">)</span><span class="w"> </span><span class="c1"># Python-3.12.6</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="nv">PYTHON_VERSION</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PYTHON_ZIP_NAME</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-E<span class="w"> </span><span class="s1">&#39;s/^Python-([0-9]+\.[0-9]+)\..*/\1/&#39;</span><span class="k">)</span><span class="w"> </span><span class="c1"># 3.12</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>apt<span class="w"> </span>install<span class="w"> </span>build-essential<span class="w"> </span>zlib1g-dev<span class="w"> </span>libncurses5-dev<span class="w"> </span>libgdbm-dev<span class="w"> </span>libnss3-dev<span class="w"> </span>libssl-dev<span class="w"> </span>libsqlite3-dev<span class="w"> </span>libreadline-dev<span class="w"> </span>libffi-dev<span class="w"> </span>libbz2-dev<span class="w"> </span>-y
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>tar<span class="w"> </span>-xf<span class="w"> </span><span class="nv">$PYTHON_ZIP_NAME</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="nb">cd</span><span class="w"> </span><span class="nv">$PYTHON_NAME</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>./configure<span class="w"> </span>--enable-optimizations<span class="w">  </span><span class="c1"># 配置编译选项</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>make<span class="w"> </span>-j<span class="w"> </span><span class="sb">`</span>nproc<span class="sb">`</span><span class="w">                     </span><span class="c1"># 编译源代码，`nproc` 会利用所有可用的 CPU 核心加快编译速度</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>make<span class="w"> </span>altinstall<span class="w">                     </span><span class="c1"># 安装 Python，altinstall 避免替换默认的 python 命令</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="nb">cd</span><span class="w"> </span>..
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$PYTHON_NAME</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>rm<span class="w"> </span>-rf<span class="w"> </span>/usr/local/bin/python
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>ln<span class="w"> </span>-s<span class="w"> </span>/usr/local/bin/python<span class="nv">$PYTHON_VERSION</span><span class="w"> </span>/usr/local/bin/python
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>rm<span class="w"> </span>-rf<span class="w"> </span>/usr/local/bin/pip
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a>ln<span class="w"> </span>-s<span class="w"> </span>/usr/local/bin/pip<span class="nv">$PYTHON_VERSION</span><span class="w"> </span>/usr/local/bin/pip
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a>python<span class="w"> </span>--version
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a>pip<span class="w"> </span>--version
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>pip<span class="w"> </span>install<span class="w"> </span>pipx
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>pipx<span class="w"> </span>install<span class="w"> </span>bcmd
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="nb">echo</span><span class="w"> </span>安装<span class="w"> </span>7z
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a>apt<span class="w"> </span>install<span class="w"> </span>p7zip-full<span class="w"> </span>-y
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="nb">echo</span><span class="w"> </span>安装<span class="w"> </span>nginx
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a>apt<span class="w"> </span>install<span class="w"> </span>nginx<span class="w"> </span>-y
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a>systemctl<span class="w"> </span>start<span class="w"> </span>nginx
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nginx
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a>systemctl<span class="w"> </span>status<span class="w"> </span>nginx
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="nb">echo</span><span class="w"> </span>安装<span class="w"> </span>MariaDB
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a>apt<span class="w"> </span>install<span class="w"> </span>mariadb-server<span class="w"> </span>-y
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/bind-address/# bind-address/&#39;</span><span class="w"> </span>/etc/mysql/mariadb.conf.d/50-server.cn
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37"></a>systemctl<span class="w"> </span>start<span class="w"> </span>mariadb
-</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>mariadb
-</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39"></a>systemctl<span class="w"> </span>status<span class="w"> </span>mariadb
-</span></code></pre></div></td></tr></table></div>
+<ol>
+<li><code>Python</code> <a href="https://www.python.org/downloads/source/">下载安装包</a>（tar.xz格式）</li>
+<li>将下载的安装包上传到服务器（如果服务器直接下载很慢）</li>
+<li>修改 <code>PYTHON_ZIP_NAME</code> 值，执行以下脚本</li>
+</ol>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>apt<span class="w"> </span>update
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">echo</span><span class="w"> </span>安装<span class="w"> </span>python
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nv">PYTHON_ZIP_NAME</span><span class="o">=</span><span class="s1">&#39;Python-3.12.6.tar.xz&#39;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nv">PYTHON_NAME</span><span class="o">=</span><span class="k">$(</span>basename<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PYTHON_ZIP_NAME</span><span class="s2">&quot;</span><span class="w"> </span>.tar.xz<span class="k">)</span><span class="w"> </span><span class="c1"># Python-3.12.6</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nv">PYTHON_VERSION</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PYTHON_ZIP_NAME</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-E<span class="w"> </span><span class="s1">&#39;s/^Python-([0-9]+\.[0-9]+)\..*/\1/&#39;</span><span class="k">)</span><span class="w"> </span><span class="c1"># 3.12</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>apt<span class="w"> </span>install<span class="w"> </span>build-essential<span class="w"> </span>zlib1g-dev<span class="w"> </span>libncurses5-dev<span class="w"> </span>libgdbm-dev<span class="w"> </span>libnss3-dev<span class="w"> </span>libssl-dev<span class="w"> </span>libsqlite3-dev<span class="w"> </span>libreadline-dev<span class="w"> </span>libffi-dev<span class="w"> </span>libbz2-dev<span class="w"> </span>-y
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>tar<span class="w"> </span>-xf<span class="w"> </span><span class="nv">$PYTHON_ZIP_NAME</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nb">cd</span><span class="w"> </span><span class="nv">$PYTHON_NAME</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>./configure<span class="w"> </span>--enable-optimizations<span class="w">  </span><span class="c1"># 配置编译选项</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>make<span class="w"> </span>-j<span class="w"> </span><span class="sb">`</span>nproc<span class="sb">`</span><span class="w">                     </span><span class="c1"># 编译源代码，`nproc` 会利用所有可用的 CPU 核心加快编译速度</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>make<span class="w"> </span>altinstall<span class="w">                     </span><span class="c1"># 安装 Python，altinstall 避免替换默认的 python 命令</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nb">cd</span><span class="w"> </span>..
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$PYTHON_NAME</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>rm<span class="w"> </span>-rf<span class="w"> </span>/usr/local/bin/python
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>ln<span class="w"> </span>-s<span class="w"> </span>/usr/local/bin/python<span class="nv">$PYTHON_VERSION</span><span class="w"> </span>/usr/local/bin/python
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>rm<span class="w"> </span>-rf<span class="w"> </span>/usr/local/bin/pip
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>ln<span class="w"> </span>-s<span class="w"> </span>/usr/local/bin/pip<span class="nv">$PYTHON_VERSION</span><span class="w"> </span>/usr/local/bin/pip
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>python<span class="w"> </span>--version
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>pip<span class="w"> </span>--version
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>pip<span class="w"> </span>install<span class="w"> </span>pipx
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>pipx<span class="w"> </span>ensurepath
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>pipx<span class="w"> </span>install<span class="w"> </span>bcmd<span class="w"> </span>--index-url<span class="o">=</span>https://mirrors.aliyun.com/pypi/simple<span class="w">  </span><span class="c1"># 指定镜像地址安装会比较快</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>beni<span class="w"> </span>mirror<span class="w">  </span><span class="c1"># 设置 PIP 镜像</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="nb">echo</span><span class="w"> </span>安装<span class="w"> </span>7z
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>apt<span class="w"> </span>install<span class="w"> </span>p7zip-full<span class="w"> </span>-y
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="nb">echo</span><span class="w"> </span>安装<span class="w"> </span>nginx
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>apt<span class="w"> </span>install<span class="w"> </span>nginx<span class="w"> </span>-y
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>systemctl<span class="w"> </span>start<span class="w"> </span>nginx
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nginx
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>systemctl<span class="w"> </span>status<span class="w"> </span>nginx
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="nb">echo</span><span class="w"> </span>安装<span class="w"> </span>MariaDB
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>apt<span class="w"> </span>install<span class="w"> </span>mariadb-server<span class="w"> </span>-y
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/bind-address/# bind-address/&#39;</span><span class="w"> </span>/etc/mysql/mariadb.conf.d/50-server.cnf<span class="w">           </span><span class="c1"># 允许远程登陆</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/#skip-name-resolve/skip-name-resolve/&#39;</span><span class="w"> </span>/etc/mysql/mariadb.conf.d/50-server.cnf<span class="w">  </span><span class="c1"># 尝试解决远程连接会断开的问题</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>systemctl<span class="w"> </span>start<span class="w"> </span>mariadb
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>mariadb
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>systemctl<span class="w"> </span>status<span class="w"> </span>mariadb
+</span></code></pre></div>
+<h2 id="mariadb">数据库配置（MariaDB）<a class="headerlink" href="#mariadb" title="Permanent link">#</a></h2>
+<h3 id="_2">安全脚本<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mysql_secure_installation
+</span></code></pre></div>
+<ol>
+<li>
+<p>Enter current password for root (enter for none):</p>
+<p>要求输入正确的原 <code>root</code> 密码，因为我们是新装，没有密码，所以直接回车</p>
+</li>
+<li>
+<p>Switch to unix_socket authentication [Y/n]</p>
+<p>是否切换到 <code>unix_socket</code> 权限验证，因为这个验证不需要密码不安全，所以输入n，回车</p>
+</li>
+<li>
+<p>Change the root password? [Y/n]</p>
+<p>是否修改 <code>root</code> 密码，参考其他文章说跟系统有联系所以不建议修改，输入n回车</p>
+</li>
+<li>
+<p>Remove anonymous users? [Y/n]</p>
+<p>删除匿名用户，y</p>
+</li>
+<li>
+<p>Disallow root login remotely? [Y/n]</p>
+<p>禁止 <code>root</code> 远程登录，y</p>
+</li>
+<li>
+<p>Remove test database and access to it? [Y/n]</p>
+<p>删除测试库，y</p>
+</li>
+<li>
+<p>Reload privilege tables now? [Y/n]</p>
+<p>刷新授权表，使设置立即生效，y</p>
+</li>
+</ol>
+<h3 id="_3">远程账号<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<div class="language-sh highlight"><span class="filename">1. 登录数据库</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p
+</span></code></pre></div>
+<div class="language-sql highlight"><span class="filename">2. 修改 your_user 和 your_password 为你自己的用户名和密码</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;your_user&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;your_password&#39;</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="k">GRANT</span><span class="w"> </span><span class="k">OPTION</span><span class="p">;</span>
+</span></code></pre></div>
+<div class="language-sql highlight"><span class="filename">3. 刷新权限</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="p">;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">EXIT</span><span class="p">;</span>
+</span></code></pre></div>
 
 
 
