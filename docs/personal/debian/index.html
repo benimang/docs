@@ -26,7 +26,7 @@
     
     
       
-        <title>Debian 配置 - Beni Docs</title>
+        <title>Debian - Beni Docs</title>
       
     
     
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Debian 配置
+              Debian
             
           </span>
         </div>
@@ -380,7 +380,7 @@
           
   
   <span class="md-ellipsis">
-    Debian 配置
+    Debian
   </span>
   
 
@@ -391,7 +391,7 @@
         
   
   <span class="md-ellipsis">
-    Debian 配置
+    Debian
   </span>
   
 
@@ -472,7 +472,7 @@
         
   
   <span class="md-ellipsis">
-    vscode 配置
+    vscode
   </span>
   
 
@@ -2149,7 +2149,7 @@
                   
 
 
-  <h1>Debian 配置</h1>
+  <h1>Debian</h1>
 
 <h2 id="_1">软件安装<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <ol>
@@ -2235,13 +2235,14 @@
 </li>
 </ol>
 <h3 id="_3">远程账号<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
-<div class="language-sh highlight"><span class="filename">1. 登录数据库</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p
-</span></code></pre></div>
-<div class="language-sql highlight"><span class="filename">2. 修改 your_user 和 your_password 为你自己的用户名和密码</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;your_user&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;your_password&#39;</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="k">GRANT</span><span class="w"> </span><span class="k">OPTION</span><span class="p">;</span>
-</span></code></pre></div>
-<div class="language-sql highlight"><span class="filename">3. 刷新权限</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="p">;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">EXIT</span><span class="p">;</span>
-</span></code></pre></div>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">登录数据库</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p
+</span></code></pre></div></td></tr></table></div>
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">修改 your_user 和 your_password 为你自己的用户名和密码</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;your_user&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;your_password&#39;</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="k">GRANT</span><span class="w"> </span><span class="k">OPTION</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">EXIT</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
 
 
 

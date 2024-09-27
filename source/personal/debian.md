@@ -88,15 +88,12 @@ mysql_secure_installation
 
 ### 远程账号
 
-``` sh title="1. 登录数据库"
+``` sh title="登录数据库" linenums="1"
 mysql -u root -p
 ``` 
 
-``` sql title="2. 修改 your_user 和 your_password 为你自己的用户名和密码"
+``` sql title="修改 your_user 和 your_password 为你自己的用户名和密码" linenums="1"
 GRANT ALL PRIVILEGES ON *.* TO 'your_user'@'%' IDENTIFIED BY 'your_password' WITH GRANT OPTION;
-``` 
-
-``` sql title="3. 刷新权限"
 FLUSH PRIVILEGES;
 EXIT;
-```
+``` 

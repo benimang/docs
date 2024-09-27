@@ -3,6 +3,7 @@
     "tasks": [
         {
             "label": "git commit",
+            "dependsOn": "mkdocs build",
             "type": "shell",
             "problemMatcher": [],
             "command": "TortoiseGitProc.exe",
