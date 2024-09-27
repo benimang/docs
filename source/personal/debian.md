@@ -39,7 +39,8 @@ systemctl status nginx
 
 echo 安装 MariaDB
 apt install mariadb-server -y
-sed -i 's/bind-address/# bind-address/' /etc/mysql/mariadb.conf.d/50-server.cn
+sed -i 's/bind-address/# bind-address/' /etc/mysql/mariadb.conf.d/50-server.cnf
+sed -i 's/#skip-name-resolve/skip-name-resolve/' /etc/mysql/mariadb.conf.d/50-server.cnf
 systemctl start mariadb
 systemctl enable mariadb
 systemctl status mariadb
