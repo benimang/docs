@@ -44,7 +44,8 @@ beni mirror  # 设置 PIP 镜像
 
 ``` sh
 apt update
-apt install p7zip-full -y
+apt install 7zip  -y         # version 23.01+dfsg-7  Ubuntu 说可以用这个来安装
+# apt install p7zip-full -y  # version 16.02+dfsg-8  以前都是用这个来安装
 ```
 
 ## 安装 Nginx
