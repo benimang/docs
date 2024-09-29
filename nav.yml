@@ -5,6 +5,7 @@ nav:
     - vscode 配置: developer/vscode.md
     - Ubuntu: 
       - 环境搭建: developer/ubuntu/setup.md
+      - WSL2: developer/ubuntu/wsl2.md
   - 公司资料:
     - 研发后台:
       - xcll - 消除来了: company/xcp/xcll.md

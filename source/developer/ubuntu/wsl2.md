@@ -1,0 +1,1 @@
+![Image title](/assets/images/bc525b4a.webp)
