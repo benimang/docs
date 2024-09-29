@@ -22,6 +22,7 @@ make -j `nproc`                     # 编译源代码，`nproc` 会利用所有�
 make altinstall                     # 安装 Python，altinstall 避免替换默认的 python 命令
 cd ..
 rm -rf $PYTHON_NAME
+rm -rf $PYTHON_ZIP_NAME
 
 # 设置软链接
 rm -rf /usr/local/bin/python
