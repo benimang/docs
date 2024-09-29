@@ -2,8 +2,18 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "git commit",
+            "label": "build commit",
             "dependsOn": "mkdocs build",
+            "type": "shell",
+            "problemMatcher": [],
+            "command": "TortoiseGitProc.exe",
+            "args": [
+                "/command:commit",
+                "/path:${workspaceFolder}/..",
+            ],
+        },
+        {
+            "label": "git commit",
             "type": "shell",
             "problemMatcher": [],
             "command": "TortoiseGitProc.exe",
