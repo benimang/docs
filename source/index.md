@@ -1,17 +1,13 @@
-# Welcome to MkDocs
+## 收藏网址
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+1. [软件破解下载](https://pesktop.com/en/)
+2. [CSS FLEX 布局](https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+3. [CSS FLEX 实例](https://www.ruanyifeng.com/blog/2015/07/flex-examples.html)
 
-## Commands
+## 常用软件
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+1. [VSCode](https://code.visualstudio.com/)
+2. [Beyond Compare](https://pesktop.com/en/windows/scooter-beyond-compare)
+3. [Balsamiq Wireframes](https://pesktop.com/en/windows/balsamiq_wireframes)
+4. [PuTTY](https://pesktop.com/en/windows/putty)
+5. [Notepad++](https://pesktop.com/en/windows/notepad)

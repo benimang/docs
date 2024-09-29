@@ -10,6 +10,7 @@
             "args": [
                 "/command:commit",
                 "/path:${workspaceFolder}/..",
+                "/logmsg:x",
             ],
         },
         {
@@ -70,6 +71,21 @@
             "command": "venv/Scripts/mkdocs.exe",
             "args": [
                 "build",
+            ],
+        },
+        {
+            "label": "images webp crc32",
+            "type": "shell",
+            "problemMatcher": [],
+            "command": "beni",
+            "args": [
+                "image",
+                "convert",
+                "--path",
+                "${workspaceFolder}/source/assets/images",
+                "--rgb",
+                "--output-type",
+                "2",
             ],
         },
     ],

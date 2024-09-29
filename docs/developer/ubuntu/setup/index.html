@@ -12,13 +12,13 @@
         <meta name="author" content="Beni Mang">
       
       
-        <link rel="canonical" href="https://docs.pytask.com/old/others/gva/">
+        <link rel="canonical" href="https://docs.pytask.com/developer/ubuntu/setup/">
       
       
-        <link rel="prev" href="../nodejs/">
+        <link rel="prev" href="../../vscode/">
       
       
-        <link rel="next" href="../url/">
+        <link rel="next" href="../wsl2/">
       
       
       <link rel="icon" href="../../../assets/favicon.svg">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Gin-Vue-Admin - Beni Docs</title>
+        <title>环境搭建 - Beni Docs</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gin-vue-admin" class="md-skip">
+        <a href="#python" class="md-skip">
           跳转至
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Gin-Vue-Admin
+              环境搭建
             
           </span>
         </div>
@@ -196,11 +196,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../developer/certification/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../certification/" class="md-tabs__link">
           
   
   技术资料
@@ -241,21 +243,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../python/decorator/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../old/python/decorator/" class="md-tabs__link">
           
   
   旧资料
@@ -325,23 +323,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -352,7 +355,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             技术资料
@@ -366,7 +369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../developer/certification/" class="md-nav__link">
+      <a href="../../certification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -387,7 +390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../developer/vscode/" class="md-nav__link">
+      <a href="../../vscode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -405,6 +408,8 @@
                 
   
   
+    
+  
   
   
     
@@ -414,11 +419,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -432,7 +437,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Ubuntu
@@ -443,10 +448,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../developer/ubuntu/setup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    环境搭建
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -455,6 +478,84 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装常用软件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 Nginx
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mariadb" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 MariaDB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装 MariaDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      执行安全脚本
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      设置远程登录账号
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -467,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../developer/ubuntu/wsl2/" class="md-nav__link">
+      <a href="../wsl2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -717,28 +818,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -749,7 +845,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             旧资料
@@ -801,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/decorator/" class="md-nav__link">
+      <a href="../../../old/python/decorator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -822,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/typing/" class="md-nav__link">
+      <a href="../../../old/python/typing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -843,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/pathlib/" class="md-nav__link">
+      <a href="../../../old/python/pathlib/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/fstring/" class="md-nav__link">
+      <a href="../../../old/python/fstring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -885,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/sqlite/" class="md-nav__link">
+      <a href="../../../old/python/sqlite/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -906,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/playwright/" class="md-nav__link">
+      <a href="../../../old/python/playwright/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -927,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/pip/" class="md-nav__link">
+      <a href="../../../old/python/pip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -948,7 +1044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/tips/" class="md-nav__link">
+      <a href="../../../old/python/tips/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1015,7 +1111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/others/" class="md-nav__link">
+      <a href="../../../old/go/others/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1036,7 +1132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/base/" class="md-nav__link">
+      <a href="../../../old/go/base/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1057,7 +1153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/goroutine/" class="md-nav__link">
+      <a href="../../../old/go/goroutine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1078,7 +1174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/web/" class="md-nav__link">
+      <a href="../../../old/go/web/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1099,7 +1195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/test/" class="md-nav__link">
+      <a href="../../../old/go/test/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1120,7 +1216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/cmd/" class="md-nav__link">
+      <a href="../../../old/go/cmd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1179,7 +1275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/gorm/others/" class="md-nav__link">
+      <a href="../../../old/go/gorm/others/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1200,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/gorm/base/" class="md-nav__link">
+      <a href="../../../old/go/gorm/base/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1221,7 +1317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/gorm/create/" class="md-nav__link">
+      <a href="../../../old/go/gorm/create/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1242,7 +1338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/gorm/select/" class="md-nav__link">
+      <a href="../../../old/go/gorm/select/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1263,7 +1359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/gorm/update/" class="md-nav__link">
+      <a href="../../../old/go/gorm/update/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1284,7 +1380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../go/gorm/delete/" class="md-nav__link">
+      <a href="../../../old/go/gorm/delete/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1359,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/select/" class="md-nav__link">
+      <a href="../../../old/database/select/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1380,7 +1476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/modify/" class="md-nav__link">
+      <a href="../../../old/database/modify/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1401,7 +1497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/concept/" class="md-nav__link">
+      <a href="../../../old/database/concept/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1422,7 +1518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/install/" class="md-nav__link">
+      <a href="../../../old/database/install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1489,7 +1585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/centos/" class="md-nav__link">
+      <a href="../../../old/linux/centos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1510,7 +1606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/nginx/" class="md-nav__link">
+      <a href="../../../old/linux/nginx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1531,7 +1627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/ubuntu/" class="md-nav__link">
+      <a href="../../../old/linux/ubuntu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1552,7 +1648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/wsl2/" class="md-nav__link">
+      <a href="../../../old/linux/wsl2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1578,8 +1674,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1589,11 +1683,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
         
           
           <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -1607,7 +1701,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
             Others
@@ -1621,7 +1715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../website/" class="md-nav__link">
+      <a href="../../../old/others/website/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1642,7 +1736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vscode/" class="md-nav__link">
+      <a href="../../../old/others/vscode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1663,7 +1757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ios/" class="md-nav__link">
+      <a href="../../../old/others/ios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1684,7 +1778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../proxy/" class="md-nav__link">
+      <a href="../../../old/others/proxy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1705,7 +1799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nodejs/" class="md-nav__link">
+      <a href="../../../old/others/nodejs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1723,30 +1817,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Gin-Vue-Admin
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../old/others/gva/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1755,35 +1829,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      环境配置补充
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1796,7 +1841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../url/" class="md-nav__link">
+      <a href="../../../old/others/url/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1863,7 +1908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bak/text/" class="md-nav__link">
+      <a href="../../../old/bak/text/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1884,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bak/docker/" class="md-nav__link">
+      <a href="../../../old/bak/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1943,7 +1988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bak/amazon/selection/" class="md-nav__link">
+      <a href="../../../old/bak/amazon/selection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1964,7 +2009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bak/amazon/oneday/" class="md-nav__link">
+      <a href="../../../old/bak/amazon/oneday/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2031,7 +2076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bak/laya/base/" class="md-nav__link">
+      <a href="../../../old/bak/laya/base/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2052,7 +2097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bak/laya/laya-zlib/" class="md-nav__link">
+      <a href="../../../old/bak/laya/laya-zlib/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2073,7 +2118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bak/laya/laya-promise/" class="md-nav__link">
+      <a href="../../../old/bak/laya/laya-promise/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2127,8 +2172,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2137,11 +2180,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#python" class="md-nav__link">
     <span class="md-ellipsis">
-      环境配置补充
+      安装 Python
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装常用软件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 Nginx
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mariadb" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 MariaDB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装 MariaDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      执行安全脚本
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      设置远程登录账号
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,62 +2254,111 @@
                   
 
 
-<h1 id="gin-vue-admin">Gin-Vue-Admin<a class="headerlink" href="#gin-vue-admin" title="Permanent link">#</a></h1>
-<h2 id="_1">环境配置补充<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
-<p>前端开发环境使用 <code>vscode</code> + <code>volar</code> 编辑器无法得到 <code>TS</code> 语法提示</p>
+  <h1>环境搭建</h1>
+
+<h2 id="python">安装 Python<a class="headerlink" href="#python" title="Permanent link">#</a></h2>
 <ol>
-<li>文件重命名扩展名 <code>vite.config.ts</code></li>
-<li>新增两个文件（使用 <code>vite</code> 创建新的 <code>vue(ts)</code> 项目中复制过来改动）</li>
-<li>处理完上面的两个步骤后记得要重启一下 <code>vscode</code></li>
+<li><code>Python</code> <a href="https://www.python.org/downloads/source/">下载安装包</a>（tar.xz格式）</li>
+<li>将下载的安装包上传到服务器（如果服务器直接下载很慢）</li>
+<li>修改 <code>PYTHON_ZIP_NAME</code> 值，执行以下脚本</li>
 </ol>
-<div class="language-json highlight"><span class="filename">tsconfig.json</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;compilerOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ESNext&quot;</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;useDefineForClassFields&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;module&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ESNext&quot;</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">&quot;moduleResolution&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Node&quot;</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">&quot;strict&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">&quot;jsx&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;preserve&quot;</span><span class="p">,</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">&quot;sourceMap&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nt">&quot;resolveJsonModule&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nt">&quot;isolatedModules&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nt">&quot;esModuleInterop&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="nt">&quot;lib&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="s2">&quot;ESNext&quot;</span><span class="p">,</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">      </span><span class="s2">&quot;DOM&quot;</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="p">],</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="nt">&quot;skipLibCheck&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="hll"><span class="w">    </span><span class="nt">&quot;allowJs&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span></span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="hll"><span class="w">    </span><span class="nt">&quot;baseUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;./&quot;</span><span class="p">,</span>
-</span></span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="hll"><span class="w">    </span><span class="nt">&quot;paths&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span></span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="hll"><span class="w">      </span><span class="nt">&quot;@/*&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span></span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="hll"><span class="w">        </span><span class="s2">&quot;./src/*&quot;</span>
-</span></span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="hll"><span class="w">      </span><span class="p">],</span>
-</span></span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="hll"><span class="w">    </span><span class="p">}</span>
-</span></span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">  </span><span class="nt">&quot;include&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">    </span><span class="s2">&quot;src/**/*.ts&quot;</span><span class="p">,</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="s2">&quot;src/**/*.d.ts&quot;</span><span class="p">,</span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="s2">&quot;src/**/*.tsx&quot;</span><span class="p">,</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="s2">&quot;src/**/*.vue&quot;</span>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">  </span><span class="p">],</span>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">  </span><span class="nt">&quot;references&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">      </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;./tsconfig.node.json&quot;</span>
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">  </span><span class="p">]</span>
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="p">}</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 设置临时变量</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nv">PYTHON_ZIP_NAME</span><span class="o">=</span><span class="s1">&#39;Python-3.12.6.tar.xz&#39;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nv">PYTHON_NAME</span><span class="o">=</span><span class="k">$(</span>basename<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PYTHON_ZIP_NAME</span><span class="s2">&quot;</span><span class="w"> </span>.tar.xz<span class="k">)</span><span class="w"> </span><span class="c1"># Python-3.12.6</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nv">PYTHON_VERSION</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PYTHON_ZIP_NAME</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-E<span class="w"> </span><span class="s1">&#39;s/^Python-([0-9]+\.[0-9]+)\..*/\1/&#39;</span><span class="k">)</span><span class="w"> </span><span class="c1"># 3.12</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># 安装必要的依赖</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>apt<span class="w"> </span>update
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>apt<span class="w"> </span>install<span class="w"> </span>build-essential<span class="w"> </span>zlib1g-dev<span class="w"> </span>libncurses5-dev<span class="w"> </span>libgdbm-dev<span class="w"> </span>libnss3-dev<span class="w"> </span>libssl-dev<span class="w"> </span>libsqlite3-dev<span class="w"> </span>libreadline-dev<span class="w"> </span>libffi-dev<span class="w"> </span>libbz2-dev<span class="w"> </span>-y
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># 安装</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>tar<span class="w"> </span>-xf<span class="w"> </span><span class="nv">$PYTHON_ZIP_NAME</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nb">cd</span><span class="w"> </span><span class="nv">$PYTHON_NAME</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>./configure<span class="w"> </span>--enable-optimizations<span class="w">  </span><span class="c1"># 配置编译选项</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>make<span class="w"> </span>-j<span class="w"> </span><span class="sb">`</span>nproc<span class="sb">`</span><span class="w">                     </span><span class="c1"># 编译源代码，`nproc` 会利用所有可用的 CPU 核心加快编译速度</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>make<span class="w"> </span>altinstall<span class="w">                     </span><span class="c1"># 安装 Python，altinstall 避免替换默认的 python 命令</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nb">cd</span><span class="w"> </span>..
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$PYTHON_NAME</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="c1"># 设置软链接</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>rm<span class="w"> </span>-rf<span class="w"> </span>/usr/local/bin/python
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>ln<span class="w"> </span>-s<span class="w"> </span>/usr/local/bin/python<span class="nv">$PYTHON_VERSION</span><span class="w"> </span>/usr/local/bin/python
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>rm<span class="w"> </span>-rf<span class="w"> </span>/usr/local/bin/pip
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>ln<span class="w"> </span>-s<span class="w"> </span>/usr/local/bin/pip<span class="nv">$PYTHON_VERSION</span><span class="w"> </span>/usr/local/bin/pip
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="c1"># 配置 pipx（隔离使用 python 提供的第三方工具）</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>pip<span class="w"> </span>install<span class="w"> </span>pipx<span class="w"> </span>--index-url<span class="o">=</span>https://mirrors.aliyun.com/pypi/simple<span class="w">  </span><span class="c1"># 指定镜像地址安装会比较快</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>pipx<span class="w"> </span>ensurepath
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="c1"># 安装 bcmd（命令行工具）</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>pipx<span class="w"> </span>install<span class="w"> </span>bcmd<span class="w"> </span>--index-url<span class="o">=</span>https://mirrors.aliyun.com/pypi/simple<span class="w">  </span><span class="c1"># 指定镜像地址安装会比较快</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>beni<span class="w"> </span>mirror<span class="w">  </span><span class="c1"># 设置 PIP 镜像</span>
 </span></code></pre></div>
-<div class="language-json highlight"><span class="filename">tsconfig.node.json</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;compilerOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;composite&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">&quot;module&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ESNext&quot;</span><span class="p">,</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">&quot;moduleResolution&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Node&quot;</span><span class="p">,</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">&quot;allowSyntheticDefaultImports&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="hll"><span class="w">  </span><span class="nt">&quot;include&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;vite.config.ts&quot;</span><span class="p">]</span>
-</span></span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
+<h2 id="_1">安装常用软件<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>apt<span class="w"> </span>update
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>apt<span class="w"> </span>install<span class="w"> </span>p7zip-full<span class="w"> </span>-y
 </span></code></pre></div>
+<h2 id="nginx">安装 Nginx<a class="headerlink" href="#nginx" title="Permanent link">#</a></h2>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">echo</span><span class="w"> </span>安装<span class="w"> </span>nginx
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>apt<span class="w"> </span>update
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>apt<span class="w"> </span>install<span class="w"> </span>nginx<span class="w"> </span>-y
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>systemctl<span class="w"> </span>start<span class="w"> </span>nginx
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nginx
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>systemctl<span class="w"> </span>status<span class="w"> </span>nginx
+</span></code></pre></div>
+<h2 id="mariadb">安装 MariaDB<a class="headerlink" href="#mariadb" title="Permanent link">#</a></h2>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">echo</span><span class="w"> </span>安装<span class="w"> </span>MariaDB
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>apt<span class="w"> </span>update
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>apt<span class="w"> </span>install<span class="w"> </span>mariadb-server<span class="w"> </span>-y
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/bind-address/# bind-address/&#39;</span><span class="w"> </span>/etc/mysql/mariadb.conf.d/50-server.cnf<span class="w">           </span><span class="c1"># 允许远程登陆</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/#skip-name-resolve/skip-name-resolve/&#39;</span><span class="w"> </span>/etc/mysql/mariadb.conf.d/50-server.cnf<span class="w">  </span><span class="c1"># 尝试解决远程连接会断开的问题</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>systemctl<span class="w"> </span>start<span class="w"> </span>mariadb
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>mariadb
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>systemctl<span class="w"> </span>status<span class="w"> </span>mariadb
+</span></code></pre></div>
+<h3 id="_2">执行安全脚本<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mysql_secure_installation
+</span></code></pre></div>
+<ol>
+<li>
+<p>Enter current password for root (enter for none):</p>
+<p>要求输入正确的原 <code>root</code> 密码，因为我们是新装，没有密码，所以直接回车</p>
+</li>
+<li>
+<p>Switch to unix_socket authentication [Y/n]</p>
+<p>是否切换到 <code>unix_socket</code> 权限验证，因为这个验证不需要密码不安全，所以输入n，回车</p>
+</li>
+<li>
+<p>Change the root password? [Y/n]</p>
+<p>是否修改 <code>root</code> 密码，参考其他文章说跟系统有联系所以不建议修改，输入n回车</p>
+</li>
+<li>
+<p>Remove anonymous users? [Y/n]</p>
+<p>删除匿名用户，y</p>
+</li>
+<li>
+<p>Disallow root login remotely? [Y/n]</p>
+<p>禁止 <code>root</code> 远程登录，y</p>
+</li>
+<li>
+<p>Remove test database and access to it? [Y/n]</p>
+<p>删除测试库，y</p>
+</li>
+<li>
+<p>Reload privilege tables now? [Y/n]</p>
+<p>刷新授权表，使设置立即生效，y</p>
+</li>
+</ol>
+<h3 id="_3">设置远程登录账号<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<div class="language-sh highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">登录数据库</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p
+</span></code></pre></div></td></tr></table></div>
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">修改 your_user 和 your_password 为你自己的用户名和密码</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;your_user&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;your_password&#39;</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="k">GRANT</span><span class="w"> </span><span class="k">OPTION</span><span class="p">;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="p">;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">EXIT</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
 
 
 
