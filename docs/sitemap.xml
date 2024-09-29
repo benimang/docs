@@ -29,6 +29,18 @@
          <lastmod>2024-09-29</lastmod>
     </url>
     <url>
+         <loc>https://docs.pytask.com/developer/certification/</loc>
+         <lastmod>2024-09-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.pytask.com/developer/vscode/</loc>
+         <lastmod>2024-09-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.pytask.com/developer/ubuntu/setup/</loc>
+         <lastmod>2024-09-29</lastmod>
+    </url>
+    <url>
          <loc>https://docs.pytask.com/old/bak/docker/</loc>
          <lastmod>2024-09-29</lastmod>
     </url>
@@ -194,18 +206,6 @@
     </url>
     <url>
          <loc>https://docs.pytask.com/old/python/typing/</loc>
-         <lastmod>2024-09-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.pytask.com/personal/certification/</loc>
-         <lastmod>2024-09-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.pytask.com/personal/debian/</loc>
-         <lastmod>2024-09-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.pytask.com/personal/vscode/</loc>
          <lastmod>2024-09-29</lastmod>
     </url>
 </urlset>

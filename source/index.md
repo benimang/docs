@@ -11,3 +11,4 @@
 2. [Beyond Compare](https://pesktop.com/en/windows/scooter-beyond-compare)
 3. [Balsamiq Wireframes](https://pesktop.com/en/windows/balsamiq_wireframes)
 4. [PuTTY](https://pesktop.com/en/windows/putty)
+5. [Notepad++](https://pesktop.com/en/windows/notepad)
