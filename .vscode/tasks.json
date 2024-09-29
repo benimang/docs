@@ -10,6 +10,7 @@
             "args": [
                 "/command:commit",
                 "/path:${workspaceFolder}/..",
+                "/logmsg:x",
             ],
         },
         {
