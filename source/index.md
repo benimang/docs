@@ -1,9 +1,8 @@
 ## 收藏网址
 
 1. [软件破解下载](https://pesktop.com/en/)
-2. [wsl.conf 配置](https://learn.microsoft.com/zh-cn/windows/wsl/wsl-config)
-3. [CSS FLEX 布局](https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
-4. [CSS FLEX 实例](https://www.ruanyifeng.com/blog/2015/07/flex-examples.html)
+2. [CSS FLEX 布局](https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+3. [CSS FLEX 实例](https://www.ruanyifeng.com/blog/2015/07/flex-examples.html)
 
 ## 常用软件
 
