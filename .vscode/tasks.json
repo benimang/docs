@@ -21,6 +21,7 @@
             "args": [
                 "/command:commit",
                 "/path:${workspaceFolder}/..",
+                "/logmsg:x",
             ],
         },
         {
@@ -31,6 +32,7 @@
             "args": [
                 "/command:commit",
                 "/path:${file}",
+                "/logmsg:x",
             ],
         },
         {
