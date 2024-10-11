@@ -58,4 +58,4 @@ WrappedAsyncFunc = TypeVar("WrappedAsyncFunc", bound=Callable[..., Coroutine[Any
 ```
 
 !!! tips
-    [详细使用方法参考 `decorator` 实现](./decorator.md#typing)
+    [详细使用方法参考 `decorator` 实现](./decorator.md#typing-类型返回)

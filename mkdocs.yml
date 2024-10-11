@@ -51,7 +51,7 @@ markdown_extensions:
   - toc:
       permalink: "#" # ⚓︎
       toc_depth: 6
-      # slugify: !!python/name:pymdownx.slugs.uslugify_cased
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {}
   # Formatting
   # https://squidfunk.github.io/mkdocs-material/reference/formatting/
   - pymdownx.critic
