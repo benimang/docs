@@ -29,10 +29,12 @@ theme:
     - search.suggest # 搜索时自动提示
 
 markdown_extensions:
-  # 图片 https://squidfunk.github.io/mkdocs-material/reference/images/
+  # 图片
+  # https://squidfunk.github.io/mkdocs-material/reference/images/
   - attr_list
   - md_in_html
-  # 代码块配置 https://squidfunk.github.io/mkdocs-material/reference/code-blocks/
+  # 代码块配置
+  # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -40,14 +42,18 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-  # Admonitions https://squidfunk.github.io/mkdocs-material/reference/admonitions/
+  # Admonitions
+  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
   - admonition
   - pymdownx.details
   - pymdownx.superfences
   # 二级标题描点
   - toc:
       permalink: "#" # ⚓︎
-  # Formatting https://squidfunk.github.io/mkdocs-material/reference/formatting/
+      toc_depth: 6
+      # slugify: !!python/name:pymdownx.slugs.uslugify_cased
+  # Formatting
+  # https://squidfunk.github.io/mkdocs-material/reference/formatting/
   - pymdownx.critic
   - pymdownx.caret
   - pymdownx.keys

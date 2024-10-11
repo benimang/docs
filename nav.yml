@@ -55,7 +55,6 @@ nav:
       - old/linux/centos.md
       - old/linux/nginx.md
       - old/linux/ubuntu.md
-      - old/linux/wsl2.md
     - Others:
       - old/others/website.md
       - old/others/vscode.md
