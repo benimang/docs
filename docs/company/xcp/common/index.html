@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#更新注意事项" class="md-skip">
           跳转至
         </a>
       
@@ -751,7 +751,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#更新注意事项" class="md-nav__link">
     <span class="md-ellipsis">
       更新注意事项
     </span>
@@ -760,7 +760,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#server-dao" class="md-nav__link">
+  <a href="#Server-DAO" class="md-nav__link">
     <span class="md-ellipsis">
       Server DAO
     </span>
@@ -769,7 +769,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#搭建步骤" class="md-nav__link">
     <span class="md-ellipsis">
       搭建步骤
     </span>
@@ -778,7 +778,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kafka" class="md-nav__link">
+  <a href="#查看-kafka-接收信息" class="md-nav__link">
     <span class="md-ellipsis">
       查看 kafka 接收信息
     </span>
@@ -1703,27 +1703,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../old/linux/wsl2.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    None
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2242,7 +2221,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#更新注意事项" class="md-nav__link">
     <span class="md-ellipsis">
       更新注意事项
     </span>
@@ -2251,7 +2230,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#server-dao" class="md-nav__link">
+  <a href="#Server-DAO" class="md-nav__link">
     <span class="md-ellipsis">
       Server DAO
     </span>
@@ -2260,7 +2239,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#搭建步骤" class="md-nav__link">
     <span class="md-ellipsis">
       搭建步骤
     </span>
@@ -2269,7 +2248,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kafka" class="md-nav__link">
+  <a href="#查看-kafka-接收信息" class="md-nav__link">
     <span class="md-ellipsis">
       查看 kafka 接收信息
     </span>
@@ -2294,7 +2273,7 @@
 
   <h1>通用资料</h1>
 
-<h2 id="_1">更新注意事项<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<h2 id="更新注意事项">更新注意事项<a class="headerlink" href="#更新注意事项" title="Permanent link">#</a></h2>
 <ul>
 <li>涉及到从 <code>kafka</code> 拉去数据的改动，需要修改数据表 <code>basic_config</code> 里面的字段 <code>is_stop_load_data_kafak=1</code> ，触发重启，否则更新无效果</li>
 <li>涉及到 <code>kafka</code> 里面用到的 <code>topic</code> 不能随意添加，需要 <code>kafka</code> 后台添加（目前在 <code>xcp-api</code> 项目里的 <code>setting.yaml</code> 配置有用到）</li>
@@ -2308,12 +2287,12 @@
 </ul>
 </li>
 </ul>
-<h2 id="server-dao">Server DAO<a class="headerlink" href="#server-dao" title="Permanent link">#</a></h2>
+<h2 id="Server-DAO">Server DAO<a class="headerlink" href="#Server-DAO" title="Permanent link">#</a></h2>
 <ol>
 <li><code>xcp-server/config/config.yaml</code> 文件最下面的一段注释打开，修改服务器链接、表明、分组信息</li>
 <li><code>gf gen dao</code> 执行命令行生成</li>
 </ol>
-<h2 id="_2">搭建步骤<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<h2 id="搭建步骤">搭建步骤<a class="headerlink" href="#搭建步骤" title="Permanent link">#</a></h2>
 <ol>
 <li>定义游戏名称（用在分支名称以及数据库名称）</li>
 <li>创建分支 <code>xcp-admin-xxx</code>（前后端代码）</li>
@@ -2336,7 +2315,7 @@
 <li>检查测试后台的前后端打包，以及 <code>dcs</code> 以及 <code>api</code> 打包是否正常</li>
 <li>检查正式后台的前后端打包，以及 <code>dcs</code> 以及 <code>api</code> 打包是否正常</li>
 </ol>
-<h2 id="kafka">查看 kafka 接收信息<a class="headerlink" href="#kafka" title="Permanent link">#</a></h2>
+<h2 id="查看-kafka-接收信息">查看 kafka 接收信息<a class="headerlink" href="#查看-kafka-接收信息" title="Permanent link">#</a></h2>
 <ol>
 <li>登录远程机器 <code>192.168.1.153</code></li>
 <li>进入目录 <code>/opt/www/kafka-test</code></li>

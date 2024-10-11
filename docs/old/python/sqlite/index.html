@@ -1017,7 +1017,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sqlite3_1" class="md-nav__link">
+  <a href="#sqlite3-标准库" class="md-nav__link">
     <span class="md-ellipsis">
       sqlite3 标准库
     </span>
@@ -1027,7 +1027,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#row" class="md-nav__link">
+  <a href="#Row-支持名称访问" class="md-nav__link">
     <span class="md-ellipsis">
       Row 支持名称访问
     </span>
@@ -1036,7 +1036,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#上下文管理器处理事务" class="md-nav__link">
     <span class="md-ellipsis">
       上下文管理器处理事务
     </span>
@@ -1050,7 +1050,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#aiosqlite" class="md-nav__link">
+  <a href="#aiosqlite-异步" class="md-nav__link">
     <span class="md-ellipsis">
       aiosqlite 异步
     </span>
@@ -1060,7 +1060,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#标准库差异" class="md-nav__link">
     <span class="md-ellipsis">
       标准库差异
     </span>
@@ -1728,27 +1728,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../linux/wsl2.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    None
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2269,7 +2248,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sqlite3_1" class="md-nav__link">
+  <a href="#sqlite3-标准库" class="md-nav__link">
     <span class="md-ellipsis">
       sqlite3 标准库
     </span>
@@ -2279,7 +2258,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#row" class="md-nav__link">
+  <a href="#Row-支持名称访问" class="md-nav__link">
     <span class="md-ellipsis">
       Row 支持名称访问
     </span>
@@ -2288,7 +2267,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#上下文管理器处理事务" class="md-nav__link">
     <span class="md-ellipsis">
       上下文管理器处理事务
     </span>
@@ -2302,7 +2281,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#aiosqlite" class="md-nav__link">
+  <a href="#aiosqlite-异步" class="md-nav__link">
     <span class="md-ellipsis">
       aiosqlite 异步
     </span>
@@ -2312,7 +2291,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#标准库差异" class="md-nav__link">
     <span class="md-ellipsis">
       标准库差异
     </span>
@@ -2341,8 +2320,8 @@
 
 
 <h1 id="sqlite3">sqlite3<a class="headerlink" href="#sqlite3" title="Permanent link">#</a></h1>
-<h2 id="sqlite3_1">sqlite3 标准库<a class="headerlink" href="#sqlite3_1" title="Permanent link">#</a></h2>
-<h3 id="row">Row 支持名称访问<a class="headerlink" href="#row" title="Permanent link">#</a></h3>
+<h2 id="sqlite3-标准库">sqlite3 标准库<a class="headerlink" href="#sqlite3-标准库" title="Permanent link">#</a></h2>
+<h3 id="Row-支持名称访问">Row 支持名称访问<a class="headerlink" href="#Row-支持名称访问" title="Permanent link">#</a></h3>
 <ul>
 <li>默认是通过索引访问，如果要使用名称，需要设置 <code>row_factory</code></li>
 <li>使用名称时不区分大小写</li>
@@ -2375,7 +2354,7 @@
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="n">con</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
-<h3 id="_1">上下文管理器处理事务<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<h3 id="上下文管理器处理事务">上下文管理器处理事务<a class="headerlink" href="#上下文管理器处理事务" title="Permanent link">#</a></h3>
 <ul>
 <li>如果执行完成，则最后会自动调用 <code>commit</code></li>
 <li>如果执行发生异常，则会自动调用 <code>rollback</code></li>
@@ -2406,8 +2385,8 @@
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="n">con</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
-<h2 id="aiosqlite">aiosqlite 异步<a class="headerlink" href="#aiosqlite" title="Permanent link">#</a></h2>
-<h3 id="_2">标准库差异<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<h2 id="aiosqlite-异步">aiosqlite 异步<a class="headerlink" href="#aiosqlite-异步" title="Permanent link">#</a></h2>
+<h3 id="标准库差异">标准库差异<a class="headerlink" href="#标准库差异" title="Permanent link">#</a></h3>
 <p><code>aiosqlite</code> 基于标准库设计，但是与标准库之前还是有不少差异</p>
 <ul>
 <li><code>Connection</code> 标准库允许先生成对象，然后再使用上下文管理器 <code>with</code> , <code>aiosqlite</code> 必须在构建的时候使用 <code>with</code> 语句</li>
