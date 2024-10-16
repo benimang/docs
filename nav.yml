@@ -6,6 +6,7 @@ nav:
     - Ubuntu: 
       - 环境搭建: developer/ubuntu/setup.md
       - WSL2搭建: developer/ubuntu/wsl2.md
+    - 临时脚本: developer/scripts.md
   - 公司资料:
     - 研发后台:
       - xcll - 消除来了: company/xcp/xcll.md
