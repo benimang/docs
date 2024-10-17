@@ -9,7 +9,7 @@
             "command": "TortoiseGitProc.exe",
             "args": [
                 "/command:commit",
-                "/path:${workspaceFolder}/..",
+                "/path:${workspaceFolder}/",
                 "/logmsg:x",
             ],
         },
@@ -20,7 +20,7 @@
             "command": "TortoiseGitProc.exe",
             "args": [
                 "/command:commit",
-                "/path:${workspaceFolder}/..",
+                "/path:${workspaceFolder}/",
                 "/logmsg:x",
             ],
         },
@@ -42,7 +42,7 @@
             "command": "TortoiseGitProc.exe",
             "args": [
                 "/command:log",
-                "/path:${workspaceFolder}/..",
+                "/path:${workspaceFolder}/",
             ],
         },
         {
@@ -84,7 +84,7 @@
                 "image",
                 "convert",
                 "--path",
-                "${workspaceFolder}/source/assets/images",
+                "${workspaceFolder}/source/assets/images/",
                 "--rgb",
                 "--output-type",
                 "2",
