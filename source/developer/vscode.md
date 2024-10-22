@@ -2,38 +2,41 @@
 
 ``` json
 {
-    // coommon ------------------------------------------------------------------------------------
+    // only user settings
     "window.menuBarVisibility": "classic", // 顶部中间
-    // "breadcrumbs.enabled": false, // 代码顶部导航
+    "window.restoreWindows": "none",
     // "http.proxy": "http://localhost:15236",
+    // common ------------------------------------------------------------------------------------
+    // "breadcrumbs.enabled": false, // 代码顶部导航
     "security.workspace.trust.enabled": false,
     "redhat.telemetry.enabled": false,
-    "window.restoreWindows": "none",
     "workbench.startupEditor": "none",
     "files.eol": "\n",
     "explorer.autoReveal": false, // 取消文件自动定位跟踪
     "editor.renderWhitespace": "none", // 不高亮显示空白
-    "editor.unicodeHighlight.allowedLocales": { // 注释里的全角符号不提示警告
+    "editor.unicodeHighlight.allowedLocales": { 
+        // 注释里的全角符号不提示警告
         "zh-hans": true,
         "zh-hant": true,
-    },
-    "github.copilot.enable": {
-        "*": true,
-        "plaintext": true,
-        "markdown": true,
-        "scminput": false,
-        "yaml": true
     },
     "git.openRepositoryInParentFolders": "never",
     "workbench.colorTheme": "Default Dark+",
     "editor.stickyScroll.enabled": false,
     "workbench.editor.enablePreview": false,
     "window.commandCenter": false,
-    "github.copilot.editor.enableAutoCompletions": true,
-    "github.copilot.chat.localeOverride": "zh-CN",
     "editor.inlineSuggest.enabled": true,
     "[markdown]": {
         "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    // github.copilot -----------------------------------------------------------------------------
+    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.chat.localeOverride": "zh-CN",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false,
+        "yaml": true
     },
     // python -------------------------------------------------------------------------------------
     "python.languageServer": "Pylance",
