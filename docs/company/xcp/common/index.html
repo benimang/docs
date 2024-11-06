@@ -807,6 +807,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#本地修改不提交文件" class="md-nav__link">
+    <span class="md-ellipsis">
+      本地修改不提交文件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="本地修改不提交文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xcp-dcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      xcp-dcs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xcp-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      xcp-server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xcp-vue" class="md-nav__link">
+    <span class="md-ellipsis">
+      xcp-vue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2277,6 +2319,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#本地修改不提交文件" class="md-nav__link">
+    <span class="md-ellipsis">
+      本地修改不提交文件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="本地修改不提交文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xcp-dcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      xcp-dcs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xcp-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      xcp-server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xcp-vue" class="md-nav__link">
+    <span class="md-ellipsis">
+      xcp-vue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2350,6 +2434,766 @@
 </li>
 <li>执行查询 <code>go run main.go</code></li>
 </ol>
+<h2 id="本地修改不提交文件">本地修改不提交文件<a class="headerlink" href="#本地修改不提交文件" title="Permanent link">#</a></h2>
+<h3 id="xcp-dcs">xcp-dcs<a class="headerlink" href="#xcp-dcs" title="Permanent link">#</a></h3>
+<div class="language-php highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">xcp-dcs/local/classes/config.php</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span>
+<span class="normal"><a href="#__codelineno-0-37">37</a></span>
+<span class="normal"><a href="#__codelineno-0-38">38</a></span>
+<span class="normal"><a href="#__codelineno-0-39">39</a></span>
+<span class="normal"><a href="#__codelineno-0-40">40</a></span>
+<span class="normal"><a href="#__codelineno-0-41">41</a></span>
+<span class="normal"><a href="#__codelineno-0-42">42</a></span>
+<span class="normal"><a href="#__codelineno-0-43">43</a></span>
+<span class="normal"><a href="#__codelineno-0-44">44</a></span>
+<span class="normal"><a href="#__codelineno-0-45">45</a></span>
+<span class="normal"><a href="#__codelineno-0-46">46</a></span>
+<span class="normal"><a href="#__codelineno-0-47">47</a></span>
+<span class="normal"><a href="#__codelineno-0-48">48</a></span>
+<span class="normal"><a href="#__codelineno-0-49">49</a></span>
+<span class="normal"><a href="#__codelineno-0-50">50</a></span>
+<span class="normal"><a href="#__codelineno-0-51">51</a></span>
+<span class="normal"><a href="#__codelineno-0-52">52</a></span>
+<span class="normal"><a href="#__codelineno-0-53">53</a></span>
+<span class="normal"><a href="#__codelineno-0-54">54</a></span>
+<span class="normal"><a href="#__codelineno-0-55">55</a></span>
+<span class="normal"><a href="#__codelineno-0-56">56</a></span>
+<span class="normal"><a href="#__codelineno-0-57">57</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cp">&lt;?php</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="hll"><span class="o">!</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;GAME_NAME&#39;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nb">define</span><span class="p">(</span><span class="s1">&#39;GAME_NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;测试横扫山河&#39;</span><span class="p">);</span> <span class="c1">//游戏名称</span>
+</span></span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="hll"><span class="o">!</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;GAME_KEY&#39;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nb">define</span><span class="p">(</span><span class="s1">&#39;GAME_KEY&#39;</span><span class="p">,</span> <span class="s1">&#39;test-xc01&#39;</span><span class="p">);</span> <span class="c1">//游戏名称</span>
+</span></span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="o">!</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;GAME_SECRET&#39;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nb">define</span><span class="p">(</span><span class="s1">&#39;GAME_SECRET&#39;</span><span class="p">,</span> <span class="s1">&#39;testsecret&#39;</span><span class="p">);</span> <span class="c1">//游戏名称</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="hll"><span class="o">!</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;DB_LOG&#39;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nb">define</span><span class="p">(</span><span class="s1">&#39;DB_LOG&#39;</span><span class="p">,</span> <span class="s1">&#39;xcp_xc01_log&#39;</span><span class="p">);</span> <span class="c1">//数据库log</span>
+</span></span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="hll"><span class="o">!</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;DB_DATA&#39;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nb">define</span><span class="p">(</span><span class="s1">&#39;DB_DATA&#39;</span><span class="p">,</span> <span class="s1">&#39;xcp_xc01_data&#39;</span><span class="p">);</span> <span class="c1">//数据库data</span>
+</span></span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="o">!</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;MYSQL_HOST&#39;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nb">define</span><span class="p">(</span><span class="s1">&#39;MYSQL_HOST&#39;</span><span class="p">,</span> <span class="s1">&#39;192.168.1.153&#39;</span><span class="p">);</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="o">!</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;MYSQL_USERNAME&#39;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nb">define</span><span class="p">(</span><span class="s1">&#39;MYSQL_USERNAME&#39;</span><span class="p">,</span> <span class="s1">&#39;cpdatamysqlu&#39;</span><span class="p">);</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="o">!</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;MYSQL_PASSWORD&#39;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nb">define</span><span class="p">(</span><span class="s1">&#39;MYSQL_PASSWORD&#39;</span><span class="p">,</span> <span class="s1">&#39;xcproot@lmy&#39;</span><span class="p">);</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="o">!</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;MYSQL_PORT&#39;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nb">define</span><span class="p">(</span><span class="s1">&#39;MYSQL_PORT&#39;</span><span class="p">,</span> <span class="s1">&#39;3306&#39;</span><span class="p">);</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="o">!</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;KAFKA_HOST&#39;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nb">define</span><span class="p">(</span><span class="s1">&#39;KAFKA_HOST&#39;</span><span class="p">,</span> <span class="s1">&#39;47.112.209.178&#39;</span><span class="p">);</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="o">!</span><span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;KAFKA_GROUP_ID&#39;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nb">define</span><span class="p">(</span><span class="s1">&#39;KAFKA_GROUP_ID&#39;</span><span class="p">,</span> <span class="s1">&#39;load_log_kafka&#39;</span><span class="p">);</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="c1">// !defined(&#39;DB_LOG&#39;) &amp;&amp; define(&#39;DB_LOG&#39;, &#39;xcp_log&#39;); //数据库log</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="c1">// !defined(&#39;DB_DATA&#39;) &amp;&amp; define(&#39;DB_DATA&#39;, &#39;xcp_data&#39;); //数据库data</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="c1">// !defined(&#39;MYSQL_HOST&#39;) &amp;&amp; define(&#39;MYSQL_HOST&#39;, &#39;120.78.223.213&#39;);</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="c1">// !defined(&#39;MYSQL_USERNAME&#39;) &amp;&amp; define(&#39;MYSQL_USERNAME&#39;, &#39;root&#39;);</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="c1">// !defined(&#39;MYSQL_PASSWORD&#39;) &amp;&amp; define(&#39;MYSQL_PASSWORD&#39;, &#39;hywltest01&#39;);</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="c1">// !defined(&#39;MYSQL_PORT&#39;) &amp;&amp; define(&#39;MYSQL_PORT&#39;, &#39;3306&#39;);</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a>    <span class="c1">//游戏数据库</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a>    <span class="s1">&#39;db_datapark&#39;</span><span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a>        <span class="s1">&#39;dbHost&#39;</span> <span class="o">=&gt;</span> <span class="nx">MYSQL_HOST</span><span class="p">,</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a>        <span class="s1">&#39;dbPort&#39;</span> <span class="o">=&gt;</span> <span class="nx">MYSQL_PORT</span><span class="p">,</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a>        <span class="s1">&#39;dbUser&#39;</span> <span class="o">=&gt;</span> <span class="nx">MYSQL_USERNAME</span><span class="p">,</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a>        <span class="s1">&#39;dbPwd&#39;</span> <span class="o">=&gt;</span> <span class="nx">MYSQL_PASSWORD</span><span class="p">,</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a>        <span class="s1">&#39;dbName&#39;</span> <span class="o">=&gt;</span> <span class="nx">DB_LOG</span><span class="p">,</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a>        <span class="s1">&#39;driverOptions&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a>        <span class="nx">PDO</span><span class="o">::</span><span class="na">MYSQL_ATTR_INIT_COMMAND</span><span class="o">=&gt;</span><span class="s1">&#39;SET character_set_client=binary, character_set_connection=\&#39;utf8\&#39;, character_set_results=\&#39;utf8\&#39;&#39;</span><span class="p">,</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a>        <span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_PERSISTENT</span><span class="o">=&gt;</span><span class="k">false</span><span class="p">,</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a>        <span class="p">)</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37"></a>    <span class="p">),</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38"></a>    <span class="c1">//游戏统计库</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39"></a>    <span class="s1">&#39;db_data&#39;</span><span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40"></a>        <span class="s1">&#39;dbHost&#39;</span> <span class="o">=&gt;</span> <span class="nx">MYSQL_HOST</span><span class="p">,</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41"></a>        <span class="s1">&#39;dbPort&#39;</span> <span class="o">=&gt;</span> <span class="nx">MYSQL_PORT</span><span class="p">,</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42"></a>        <span class="s1">&#39;dbUser&#39;</span> <span class="o">=&gt;</span> <span class="nx">MYSQL_USERNAME</span><span class="p">,</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43"></a>        <span class="s1">&#39;dbPwd&#39;</span> <span class="o">=&gt;</span> <span class="nx">MYSQL_PASSWORD</span><span class="p">,</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44"></a>        <span class="s1">&#39;dbName&#39;</span> <span class="o">=&gt;</span> <span class="nx">DB_DATA</span><span class="p">,</span>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45"></a>        <span class="s1">&#39;driverOptions&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46"></a>        <span class="nx">PDO</span><span class="o">::</span><span class="na">MYSQL_ATTR_INIT_COMMAND</span><span class="o">=&gt;</span><span class="s1">&#39;SET character_set_client=binary, character_set_connection=\&#39;utf8\&#39;, character_set_results=\&#39;utf8\&#39;&#39;</span><span class="p">,</span>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47"></a>        <span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_PERSISTENT</span><span class="o">=&gt;</span><span class="k">false</span><span class="p">,</span>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48"></a>        <span class="p">)</span>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49"></a>    <span class="p">),</span>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50"></a>    <span class="s1">&#39;log_config&#39;</span><span class="o">=&gt;</span><span class="k">array</span><span class="p">(</span>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51"></a>        <span class="s1">&#39;game_log_dir&#39;</span> <span class="o">=&gt;</span> <span class="s2">&quot;/opt/log/game_admin_log/logReady/&quot;</span><span class="p">,</span> <span class="c1">//未处理日志存放目录</span>
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52"></a>        <span class="s1">&#39;game_log_dir_error&#39;</span> <span class="o">=&gt;</span> <span class="s2">&quot;/opt/log/game_admin_log/logError/&quot;</span><span class="p">,</span> <span class="c1">//处理出错日志存放目录</span>
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53"></a>        <span class="s1">&#39;lock_dir&#39;</span> <span class="o">=&gt;</span> <span class="s2">&quot;/opt/log/game_admin_log/logLock/&quot;</span><span class="p">,</span> <span class="c1">//进程锁文件存放位置</span>
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54"></a>        <span class="s1">&#39;logDir&#39;</span> <span class="o">=&gt;</span> <span class="nb">dirname</span><span class="p">(</span><span class="nb">dirname</span><span class="p">(</span><span class="nb">dirname</span><span class="p">(</span><span class="no">__FILE__</span><span class="p">)))</span><span class="o">.</span><span class="s2">&quot;/log/&quot;</span><span class="p">,</span> <span class="c1">//执行日志</span>
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55"></a>        <span class="s1">&#39;log_server_arr&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;s1&#39;</span><span class="p">],</span> <span class="c1">//服务器id列表数组</span>
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56"></a>    <span class="p">),</span>
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="language-php highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">xcp-dcs/local/classes/loglock.php</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span>
+<span class="normal"><a href="#__codelineno-1-31">31</a></span>
+<span class="normal"><a href="#__codelineno-1-32">32</a></span>
+<span class="normal"><a href="#__codelineno-1-33">33</a></span>
+<span class="normal"><a href="#__codelineno-1-34">34</a></span>
+<span class="normal"><a href="#__codelineno-1-35">35</a></span>
+<span class="normal"><a href="#__codelineno-1-36">36</a></span>
+<span class="normal"><a href="#__codelineno-1-37">37</a></span>
+<span class="normal"><a href="#__codelineno-1-38">38</a></span>
+<span class="normal"><a href="#__codelineno-1-39">39</a></span>
+<span class="normal"><a href="#__codelineno-1-40">40</a></span>
+<span class="normal"><a href="#__codelineno-1-41">41</a></span>
+<span class="normal"><a href="#__codelineno-1-42">42</a></span>
+<span class="normal"><a href="#__codelineno-1-43">43</a></span>
+<span class="normal"><a href="#__codelineno-1-44">44</a></span>
+<span class="normal"><a href="#__codelineno-1-45">45</a></span>
+<span class="normal"><a href="#__codelineno-1-46">46</a></span>
+<span class="normal"><a href="#__codelineno-1-47">47</a></span>
+<span class="normal"><a href="#__codelineno-1-48">48</a></span>
+<span class="normal"><a href="#__codelineno-1-49">49</a></span>
+<span class="normal"><a href="#__codelineno-1-50">50</a></span>
+<span class="normal"><a href="#__codelineno-1-51">51</a></span>
+<span class="normal"><a href="#__codelineno-1-52">52</a></span>
+<span class="normal"><a href="#__codelineno-1-53">53</a></span>
+<span class="normal"><a href="#__codelineno-1-54">54</a></span>
+<span class="normal"><a href="#__codelineno-1-55">55</a></span>
+<span class="normal"><a href="#__codelineno-1-56">56</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cp">&lt;?php</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="cm">/*</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="cm">   检查进程是否存在，存在返回1，不存在返回0</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="cm"> */</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="k">class</span> <span class="nc">LogLock</span> <span class="p">{</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="k">private</span> <span class="k">static</span> <span class="nv">$_instance</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getlock</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>        <span class="nv">$lock</span> <span class="o">=</span> <span class="nv">$name</span><span class="o">.</span><span class="s2">&quot;.lock&quot;</span><span class="p">;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>        <span class="k">if</span> <span class="p">(</span><span class="nb">file_exists</span><span class="p">(</span><span class="nv">$lock</span><span class="p">))</span> <span class="p">{</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>            <span class="nv">$check_pid</span> <span class="o">=</span> <span class="nb">file_get_contents</span><span class="p">(</span><span class="nv">$lock</span><span class="p">);</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>            <span class="nb">system</span><span class="p">(</span><span class="s2">&quot;kill -CHLD &quot;</span> <span class="o">.</span> <span class="nv">$check_pid</span> <span class="o">.</span> <span class="s2">&quot; 1&gt; /dev/null 2&gt; /dev/null&quot;</span><span class="p">,</span> <span class="nv">$check_pid_return</span><span class="p">);</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>            <span class="k">if</span><span class="p">(</span><span class="nv">$check_pid_return</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a>            <span class="p">{</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a>                <span class="c1">//存在已经假死的进程,或进程不存在</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a>                <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a>            <span class="p">}</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a>            <span class="k">else</span> <span class="p">{</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a>                <span class="c1">//已存在正在运行的进程</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a>                <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20"></a>            <span class="p">}</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21"></a>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22"></a>            <span class="c1">//不存在锁文件</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23"></a>            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24"></a>        <span class="p">}</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25"></a>    <span class="p">}</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a>    <span class="cm">/*</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="cm">       给当前进程上锁</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="cm">     */</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29"></a>    <span class="k">public</span> <span class="k">function</span> <span class="nf">lockit</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30"></a>    <span class="p">{</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="hll">        <span class="c1">// todo 当前windows开发，屏蔽锁操作，代码提交前必须要还原</span>
+</span></span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="hll">        <span class="c1">// $lock = $name.&quot;.lock&quot;;</span>
+</span></span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="hll">        <span class="c1">// file_put_contents($lock,getmypid());</span>
+</span></span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34"></a>    <span class="p">}</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35"></a>    <span class="cm">/*</span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="cm">       删除进程锁</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37"></a><span class="cm">     */</span>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38"></a>    <span class="k">public</span> <span class="k">function</span> <span class="nf">unlock</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39"></a>    <span class="p">{</span>
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="hll">        <span class="c1">// todo 当前windows开发，屏蔽锁操作，代码提交前必须要还原</span>
+</span></span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41"></a><span class="hll">        <span class="c1">// $lock = $name.&quot;.lock&quot;;</span>
+</span></span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42"></a><span class="hll">        <span class="c1">// @unlink($lock);</span>
+</span></span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43"></a>    <span class="p">}</span>
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44"></a>    <span class="sd">/**</span>
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45"></a><span class="sd">     * 获取单例</span>
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46"></a><span class="sd">     *</span>
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47"></a><span class="sd">     * @return Sylogbase</span>
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48"></a><span class="sd">     */</span>
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49"></a>    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">getInstance</span><span class="p">()</span>
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50"></a>    <span class="p">{</span>
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51"></a>        <span class="k">if</span> <span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="nv">$_instance</span> <span class="nx">instanceof</span> <span class="nx">self</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52"></a>            <span class="k">return</span> <span class="nx">self</span><span class="o">::</span><span class="nv">$_instance</span><span class="p">;</span>
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53"></a>        <span class="p">}</span>
+</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54"></a>        <span class="k">return</span> <span class="k">new</span> <span class="nx">self</span><span class="p">();</span>
+</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55"></a>    <span class="p">}</span>
+</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="xcp-server">xcp-server<a class="headerlink" href="#xcp-server" title="Permanent link">#</a></h3>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">xcp-server/config/config.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">  1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">  2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">  3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">  4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">  5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">  6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">  7</a></span>
+<span class="normal"><a href="#__codelineno-2-8">  8</a></span>
+<span class="normal"><a href="#__codelineno-2-9">  9</a></span>
+<span class="normal"><a href="#__codelineno-2-10"> 10</a></span>
+<span class="normal"><a href="#__codelineno-2-11"> 11</a></span>
+<span class="normal"><a href="#__codelineno-2-12"> 12</a></span>
+<span class="normal"><a href="#__codelineno-2-13"> 13</a></span>
+<span class="normal"><a href="#__codelineno-2-14"> 14</a></span>
+<span class="normal"><a href="#__codelineno-2-15"> 15</a></span>
+<span class="normal"><a href="#__codelineno-2-16"> 16</a></span>
+<span class="normal"><a href="#__codelineno-2-17"> 17</a></span>
+<span class="normal"><a href="#__codelineno-2-18"> 18</a></span>
+<span class="normal"><a href="#__codelineno-2-19"> 19</a></span>
+<span class="normal"><a href="#__codelineno-2-20"> 20</a></span>
+<span class="normal"><a href="#__codelineno-2-21"> 21</a></span>
+<span class="normal"><a href="#__codelineno-2-22"> 22</a></span>
+<span class="normal"><a href="#__codelineno-2-23"> 23</a></span>
+<span class="normal"><a href="#__codelineno-2-24"> 24</a></span>
+<span class="normal"><a href="#__codelineno-2-25"> 25</a></span>
+<span class="normal"><a href="#__codelineno-2-26"> 26</a></span>
+<span class="normal"><a href="#__codelineno-2-27"> 27</a></span>
+<span class="normal"><a href="#__codelineno-2-28"> 28</a></span>
+<span class="normal"><a href="#__codelineno-2-29"> 29</a></span>
+<span class="normal"><a href="#__codelineno-2-30"> 30</a></span>
+<span class="normal"><a href="#__codelineno-2-31"> 31</a></span>
+<span class="normal"><a href="#__codelineno-2-32"> 32</a></span>
+<span class="normal"><a href="#__codelineno-2-33"> 33</a></span>
+<span class="normal"><a href="#__codelineno-2-34"> 34</a></span>
+<span class="normal"><a href="#__codelineno-2-35"> 35</a></span>
+<span class="normal"><a href="#__codelineno-2-36"> 36</a></span>
+<span class="normal"><a href="#__codelineno-2-37"> 37</a></span>
+<span class="normal"><a href="#__codelineno-2-38"> 38</a></span>
+<span class="normal"><a href="#__codelineno-2-39"> 39</a></span>
+<span class="normal"><a href="#__codelineno-2-40"> 40</a></span>
+<span class="normal"><a href="#__codelineno-2-41"> 41</a></span>
+<span class="normal"><a href="#__codelineno-2-42"> 42</a></span>
+<span class="normal"><a href="#__codelineno-2-43"> 43</a></span>
+<span class="normal"><a href="#__codelineno-2-44"> 44</a></span>
+<span class="normal"><a href="#__codelineno-2-45"> 45</a></span>
+<span class="normal"><a href="#__codelineno-2-46"> 46</a></span>
+<span class="normal"><a href="#__codelineno-2-47"> 47</a></span>
+<span class="normal"><a href="#__codelineno-2-48"> 48</a></span>
+<span class="normal"><a href="#__codelineno-2-49"> 49</a></span>
+<span class="normal"><a href="#__codelineno-2-50"> 50</a></span>
+<span class="normal"><a href="#__codelineno-2-51"> 51</a></span>
+<span class="normal"><a href="#__codelineno-2-52"> 52</a></span>
+<span class="normal"><a href="#__codelineno-2-53"> 53</a></span>
+<span class="normal"><a href="#__codelineno-2-54"> 54</a></span>
+<span class="normal"><a href="#__codelineno-2-55"> 55</a></span>
+<span class="normal"><a href="#__codelineno-2-56"> 56</a></span>
+<span class="normal"><a href="#__codelineno-2-57"> 57</a></span>
+<span class="normal"><a href="#__codelineno-2-58"> 58</a></span>
+<span class="normal"><a href="#__codelineno-2-59"> 59</a></span>
+<span class="normal"><a href="#__codelineno-2-60"> 60</a></span>
+<span class="normal"><a href="#__codelineno-2-61"> 61</a></span>
+<span class="normal"><a href="#__codelineno-2-62"> 62</a></span>
+<span class="normal"><a href="#__codelineno-2-63"> 63</a></span>
+<span class="normal"><a href="#__codelineno-2-64"> 64</a></span>
+<span class="normal"><a href="#__codelineno-2-65"> 65</a></span>
+<span class="normal"><a href="#__codelineno-2-66"> 66</a></span>
+<span class="normal"><a href="#__codelineno-2-67"> 67</a></span>
+<span class="normal"><a href="#__codelineno-2-68"> 68</a></span>
+<span class="normal"><a href="#__codelineno-2-69"> 69</a></span>
+<span class="normal"><a href="#__codelineno-2-70"> 70</a></span>
+<span class="normal"><a href="#__codelineno-2-71"> 71</a></span>
+<span class="normal"><a href="#__codelineno-2-72"> 72</a></span>
+<span class="normal"><a href="#__codelineno-2-73"> 73</a></span>
+<span class="normal"><a href="#__codelineno-2-74"> 74</a></span>
+<span class="normal"><a href="#__codelineno-2-75"> 75</a></span>
+<span class="normal"><a href="#__codelineno-2-76"> 76</a></span>
+<span class="normal"><a href="#__codelineno-2-77"> 77</a></span>
+<span class="normal"><a href="#__codelineno-2-78"> 78</a></span>
+<span class="normal"><a href="#__codelineno-2-79"> 79</a></span>
+<span class="normal"><a href="#__codelineno-2-80"> 80</a></span>
+<span class="normal"><a href="#__codelineno-2-81"> 81</a></span>
+<span class="normal"><a href="#__codelineno-2-82"> 82</a></span>
+<span class="normal"><a href="#__codelineno-2-83"> 83</a></span>
+<span class="normal"><a href="#__codelineno-2-84"> 84</a></span>
+<span class="normal"><a href="#__codelineno-2-85"> 85</a></span>
+<span class="normal"><a href="#__codelineno-2-86"> 86</a></span>
+<span class="normal"><a href="#__codelineno-2-87"> 87</a></span>
+<span class="normal"><a href="#__codelineno-2-88"> 88</a></span>
+<span class="normal"><a href="#__codelineno-2-89"> 89</a></span>
+<span class="normal"><a href="#__codelineno-2-90"> 90</a></span>
+<span class="normal"><a href="#__codelineno-2-91"> 91</a></span>
+<span class="normal"><a href="#__codelineno-2-92"> 92</a></span>
+<span class="normal"><a href="#__codelineno-2-93"> 93</a></span>
+<span class="normal"><a href="#__codelineno-2-94"> 94</a></span>
+<span class="normal"><a href="#__codelineno-2-95"> 95</a></span>
+<span class="normal"><a href="#__codelineno-2-96"> 96</a></span>
+<span class="normal"><a href="#__codelineno-2-97"> 97</a></span>
+<span class="normal"><a href="#__codelineno-2-98"> 98</a></span>
+<span class="normal"><a href="#__codelineno-2-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-2-100">100</a></span>
+<span class="normal"><a href="#__codelineno-2-101">101</a></span>
+<span class="normal"><a href="#__codelineno-2-102">102</a></span>
+<span class="normal"><a href="#__codelineno-2-103">103</a></span>
+<span class="normal"><a href="#__codelineno-2-104">104</a></span>
+<span class="normal"><a href="#__codelineno-2-105">105</a></span>
+<span class="normal"><a href="#__codelineno-2-106">106</a></span>
+<span class="normal"><a href="#__codelineno-2-107">107</a></span>
+<span class="normal"><a href="#__codelineno-2-108">108</a></span>
+<span class="normal"><a href="#__codelineno-2-109">109</a></span>
+<span class="normal"><a href="#__codelineno-2-110">110</a></span>
+<span class="normal"><a href="#__codelineno-2-111">111</a></span>
+<span class="normal"><a href="#__codelineno-2-112">112</a></span>
+<span class="normal"><a href="#__codelineno-2-113">113</a></span>
+<span class="normal"><a href="#__codelineno-2-114">114</a></span>
+<span class="normal"><a href="#__codelineno-2-115">115</a></span>
+<span class="normal"><a href="#__codelineno-2-116">116</a></span>
+<span class="normal"><a href="#__codelineno-2-117">117</a></span>
+<span class="normal"><a href="#__codelineno-2-118">118</a></span>
+<span class="normal"><a href="#__codelineno-2-119">119</a></span>
+<span class="normal"><a href="#__codelineno-2-120">120</a></span>
+<span class="normal"><a href="#__codelineno-2-121">121</a></span>
+<span class="normal"><a href="#__codelineno-2-122">122</a></span>
+<span class="normal"><a href="#__codelineno-2-123">123</a></span>
+<span class="normal"><a href="#__codelineno-2-124">124</a></span>
+<span class="normal"><a href="#__codelineno-2-125">125</a></span>
+<span class="normal"><a href="#__codelineno-2-126">126</a></span>
+<span class="normal"><a href="#__codelineno-2-127">127</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># HTTP Server</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nt">server</span><span class="p">:</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;:8888&#39;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="nt">log-path</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;./logs/server&#39;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">  </span><span class="nt">dump-router-map</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">  </span><span class="nt">access-log-enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">  </span><span class="nt">error-log-enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">  </span><span class="nt">graceful</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">  </span><span class="c1"># 是否开启平滑重启特性，开启时将会在本地增加10000的本地TCP端口用于进程间通信。默认false</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">  </span><span class="nt">gracefulTimeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span><span class="w">      </span><span class="c1"># 父进程在平滑重启后多少秒退出，默认2秒。若请求耗时大于该值，可能会导致请求中断</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">  </span><span class="nt">bin-name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;go_ops_admin&#39;</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="c1"># Logger</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="nt">logger</span><span class="p">:</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;./logs/log&#39;</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">  </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;info&#39;</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">  </span><span class="nt">stdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17"></a>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="c1"># 数据库连接信息</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="nt">dbInfo</span><span class="p">:</span><span class="w"> </span><span class="nl">&amp;dbInfo</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="hll"><span class="w">  </span><span class="c1"># 测试机器</span>
+</span></span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="hll"><span class="w">  </span><span class="c1"># host: 192.168.1.153</span>
+</span></span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="hll"><span class="w">  </span><span class="c1"># port: 3306</span>
+</span></span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="hll"><span class="w">  </span><span class="c1"># user: cpdatamysqlu</span>
+</span></span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="hll"><span class="w">  </span><span class="c1"># pass: xcproot@lmy</span>
+</span></span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="hll"><span class="w">  </span><span class="c1"># 横扫山河、屠龙仙缘（只读）</span>
+</span></span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">  </span><span class="c1"># host: 192.168.1.154</span>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">  </span><span class="c1"># port: 3306</span>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="hll"><span class="w">  </span><span class="c1"># user: xcpdataread</span>
+</span></span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">  </span><span class="c1"># pass: xcp@ihdic20a</span>
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="hll"><span class="w">  </span><span class="c1"># 消除（只读）</span>
+</span></span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="hll"><span class="w">  </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.2.101</span>
+</span></span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="hll"><span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3307</span>
+</span></span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="hll"><span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xcllmysqlread</span>
+</span></span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="hll"><span class="w">  </span><span class="nt">pass</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xcll@read1362</span>
+</span></span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="w">  </span><span class="nt">maxIdle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37"></a><span class="w">  </span><span class="nt">maxOpen</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38"></a><span class="w">  </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39"></a>
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40"></a><span class="c1"># 数据库列表</span>
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41"></a><span class="nt">dbList</span><span class="p">:</span>
+</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42"></a><span class="w">  </span><span class="c1"># site: &amp;site xcp_site</span>
+</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43"></a><span class="w">  </span><span class="c1"># data: &amp;data xcp_data</span>
+</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44"></a><span class="w">  </span><span class="c1"># log: &amp;log xcp_log</span>
+</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45"></a><span class="hll"><span class="w">  </span><span class="c1"># 消除来了</span>
+</span></span><span id="__span-2-46"><a id="__codelineno-2-46" name="__codelineno-2-46"></a><span class="hll"><span class="w">  </span><span class="nt">site</span><span class="p">:</span><span class="w"> </span><span class="nl">&amp;site</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xcp_xcll_site</span>
+</span></span><span id="__span-2-47"><a id="__codelineno-2-47" name="__codelineno-2-47"></a><span class="hll"><span class="w">  </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="nl">&amp;data</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xcp_xcll_data</span>
+</span></span><span id="__span-2-48"><a id="__codelineno-2-48" name="__codelineno-2-48"></a><span class="hll"><span class="w">  </span><span class="nt">log</span><span class="p">:</span><span class="w"> </span><span class="nl">&amp;log</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xcp_xcll_log</span>
+</span></span><span id="__span-2-49"><a id="__codelineno-2-49" name="__codelineno-2-49"></a><span class="hll"><span class="w">  </span><span class="c1"># 横扫山河</span>
+</span></span><span id="__span-2-50"><a id="__codelineno-2-50" name="__codelineno-2-50"></a><span class="hll"><span class="w">  </span><span class="c1"># site: &amp;site xcp_hssh_site</span>
+</span></span><span id="__span-2-51"><a id="__codelineno-2-51" name="__codelineno-2-51"></a><span class="hll"><span class="w">  </span><span class="c1"># data: &amp;data xcp_hssh_data</span>
+</span></span><span id="__span-2-52"><a id="__codelineno-2-52" name="__codelineno-2-52"></a><span class="hll"><span class="w">  </span><span class="c1"># log: &amp;log xcp_hssh_log</span>
+</span></span><span id="__span-2-53"><a id="__codelineno-2-53" name="__codelineno-2-53"></a><span class="hll"><span class="w">  </span><span class="c1"># 消除01</span>
+</span></span><span id="__span-2-54"><a id="__codelineno-2-54" name="__codelineno-2-54"></a><span class="hll"><span class="w">  </span><span class="c1"># site: &amp;site xcp_xc01_site</span>
+</span></span><span id="__span-2-55"><a id="__codelineno-2-55" name="__codelineno-2-55"></a><span class="hll"><span class="w">  </span><span class="c1"># data: &amp;data xcp_xc01_data</span>
+</span></span><span id="__span-2-56"><a id="__codelineno-2-56" name="__codelineno-2-56"></a><span class="hll"><span class="w">  </span><span class="c1"># log: &amp;log xcp_xc01_log</span>
+</span></span><span id="__span-2-57"><a id="__codelineno-2-57" name="__codelineno-2-57"></a><span class="hll">
+</span></span><span id="__span-2-58"><a id="__codelineno-2-58" name="__codelineno-2-58"></a>
+</span><span id="__span-2-59"><a id="__codelineno-2-59" name="__codelineno-2-59"></a><span class="c1"># database 配置(复用上面配置的信息)</span>
+</span><span id="__span-2-60"><a id="__codelineno-2-60" name="__codelineno-2-60"></a><span class="nt">database</span><span class="p">:</span>
+</span><span id="__span-2-61"><a id="__codelineno-2-61" name="__codelineno-2-61"></a><span class="w">  </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="c1"># 默认启动Mysql配置</span>
+</span><span id="__span-2-62"><a id="__codelineno-2-62" name="__codelineno-2-62"></a><span class="w">    </span><span class="c1">#link: &quot;mysql:root:hywltest01@tcp(120.78.223.213:3306)/xdgo_site&quot;</span>
+</span><span id="__span-2-63"><a id="__codelineno-2-63" name="__codelineno-2-63"></a><span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*dbInfo</span>
+</span><span id="__span-2-64"><a id="__codelineno-2-64" name="__codelineno-2-64"></a><span class="w">    </span><span class="c1"># maxIdle: 20 #可以覆盖dbExtInfo里的配置</span>
+</span><span id="__span-2-65"><a id="__codelineno-2-65" name="__codelineno-2-65"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="nv">*site</span>
+</span><span id="__span-2-66"><a id="__codelineno-2-66" name="__codelineno-2-66"></a><span class="w">    </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-2-67"><a id="__codelineno-2-67" name="__codelineno-2-67"></a><span class="w">  </span><span class="nt">site</span><span class="p">:</span><span class="w"> </span><span class="c1"># 默认启动Mysql配置</span>
+</span><span id="__span-2-68"><a id="__codelineno-2-68" name="__codelineno-2-68"></a><span class="w">    </span><span class="c1">#link: &quot;mysql:root:hywltest01@tcp(120.78.223.213:3306)/xdgo_site&quot;</span>
+</span><span id="__span-2-69"><a id="__codelineno-2-69" name="__codelineno-2-69"></a><span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*dbInfo</span>
+</span><span id="__span-2-70"><a id="__codelineno-2-70" name="__codelineno-2-70"></a><span class="w">    </span><span class="c1"># maxIdle: 20 #可以覆盖dbExtInfo里的配置</span>
+</span><span id="__span-2-71"><a id="__codelineno-2-71" name="__codelineno-2-71"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="nv">*site</span>
+</span><span id="__span-2-72"><a id="__codelineno-2-72" name="__codelineno-2-72"></a><span class="w">  </span><span class="nt">data</span><span class="p">:</span>
+</span><span id="__span-2-73"><a id="__codelineno-2-73" name="__codelineno-2-73"></a><span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*dbInfo</span>
+</span><span id="__span-2-74"><a id="__codelineno-2-74" name="__codelineno-2-74"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="nv">*data</span>
+</span><span id="__span-2-75"><a id="__codelineno-2-75" name="__codelineno-2-75"></a><span class="w">    </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-2-76"><a id="__codelineno-2-76" name="__codelineno-2-76"></a><span class="w">  </span><span class="nt">log</span><span class="p">:</span>
+</span><span id="__span-2-77"><a id="__codelineno-2-77" name="__codelineno-2-77"></a><span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*dbInfo</span>
+</span><span id="__span-2-78"><a id="__codelineno-2-78" name="__codelineno-2-78"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="nv">*log</span>
+</span><span id="__span-2-79"><a id="__codelineno-2-79" name="__codelineno-2-79"></a><span class="w">    </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-2-80"><a id="__codelineno-2-80" name="__codelineno-2-80"></a><span class="w">  </span><span class="nt">logger</span><span class="p">:</span><span class="w"> </span><span class="c1"># Database logger.</span>
+</span><span id="__span-2-81"><a id="__codelineno-2-81" name="__codelineno-2-81"></a><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;./logs/sql&#39;</span>
+</span><span id="__span-2-82"><a id="__codelineno-2-82" name="__codelineno-2-82"></a><span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;all&#39;</span>
+</span><span id="__span-2-83"><a id="__codelineno-2-83" name="__codelineno-2-83"></a><span class="w">    </span><span class="nt">stdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-2-84"><a id="__codelineno-2-84" name="__codelineno-2-84"></a>
+</span><span id="__span-2-85"><a id="__codelineno-2-85" name="__codelineno-2-85"></a><span class="c1"># host:port[,db,pass?maxIdle=x&amp;maxActive=x&amp;idleTimeout=x&amp;maxConnLifetime=x]</span>
+</span><span id="__span-2-86"><a id="__codelineno-2-86" name="__codelineno-2-86"></a><span class="c1"># maxIdl            允许闲置的连接数(0表示不限制)</span>
+</span><span id="__span-2-87"><a id="__codelineno-2-87" name="__codelineno-2-87"></a><span class="c1"># maxActive     最大连接数量限制(0表示不限制)</span>
+</span><span id="__span-2-88"><a id="__codelineno-2-88" name="__codelineno-2-88"></a><span class="c1"># idleTimeout   连接最大空闲时间(单位秒,不允许设置为0)</span>
+</span><span id="__span-2-89"><a id="__codelineno-2-89" name="__codelineno-2-89"></a><span class="c1"># maxConnLifetime 连接最长存活时间(单位秒,不允许设置为0)</span>
+</span><span id="__span-2-90"><a id="__codelineno-2-90" name="__codelineno-2-90"></a><span class="nt">redis</span><span class="p">:</span>
+</span><span id="__span-2-91"><a id="__codelineno-2-91" name="__codelineno-2-91"></a><span class="hll"><span class="w">  </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1:6379,0,?maxIdle=10&amp;maxActive=100</span>
+</span></span><span id="__span-2-92"><a id="__codelineno-2-92" name="__codelineno-2-92"></a>
+</span><span id="__span-2-93"><a id="__codelineno-2-93" name="__codelineno-2-93"></a><span class="nt">gToken</span><span class="p">:</span>
+</span><span id="__span-2-94"><a id="__codelineno-2-94" name="__codelineno-2-94"></a><span class="w">  </span><span class="nt">system</span><span class="p">:</span>
+</span><span id="__span-2-95"><a id="__codelineno-2-95" name="__codelineno-2-95"></a><span class="w">    </span><span class="nt">CacheMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+</span><span id="__span-2-96"><a id="__codelineno-2-96" name="__codelineno-2-96"></a><span class="w">    </span><span class="nt">CacheKey</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;GToken:&quot;</span>
+</span><span id="__span-2-97"><a id="__codelineno-2-97" name="__codelineno-2-97"></a><span class="w">    </span><span class="nt">Timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">86400</span>
+</span><span id="__span-2-98"><a id="__codelineno-2-98" name="__codelineno-2-98"></a><span class="w">    </span><span class="nt">MaxRefresh</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">604800</span>
+</span><span id="__span-2-99"><a id="__codelineno-2-99" name="__codelineno-2-99"></a><span class="w">    </span><span class="nt">TokenDelimiter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">_</span>
+</span><span id="__span-2-100"><a id="__codelineno-2-100" name="__codelineno-2-100"></a><span class="w">    </span><span class="nt">EncryptKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">koi29a83idakguqjq29asd9asd8a7jhq</span>
+</span><span id="__span-2-101"><a id="__codelineno-2-101" name="__codelineno-2-101"></a><span class="w">    </span><span class="nt">AuthFailMsg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">登录超时，请重新登录</span>
+</span><span id="__span-2-102"><a id="__codelineno-2-102" name="__codelineno-2-102"></a><span class="w">    </span><span class="nt">MultiLogin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span><span id="__span-2-103"><a id="__codelineno-2-103" name="__codelineno-2-103"></a>
+</span><span id="__span-2-104"><a id="__codelineno-2-104" name="__codelineno-2-104"></a><span class="c1"># 命令行工具（GoFrame CLI Tool v1.15.4）可以在svn上获取</span>
+</span><span id="__span-2-105"><a id="__codelineno-2-105" name="__codelineno-2-105"></a><span class="c1"># svn://192.168.1.148:11002/xcp_sdk/doc/tools/gf.exe.7z</span>
+</span><span id="__span-2-106"><a id="__codelineno-2-106" name="__codelineno-2-106"></a><span class="nt">gfcli</span><span class="p">:</span>
+</span><span id="__span-2-107"><a id="__codelineno-2-107" name="__codelineno-2-107"></a><span class="w">  </span><span class="nt">gen</span><span class="p">:</span>
+</span><span id="__span-2-108"><a id="__codelineno-2-108" name="__codelineno-2-108"></a><span class="w">    </span><span class="nt">dao</span><span class="p">:</span>
+</span><span id="__span-2-109"><a id="__codelineno-2-109" name="__codelineno-2-109"></a><span class="w">      </span><span class="c1">#- link: mysql:cpdatamysqlu:xcproot@lmy@tcp(192.168.1.153:3306)/xcp_demo_data</span>
+</span><span id="__span-2-110"><a id="__codelineno-2-110" name="__codelineno-2-110"></a><span class="w">      </span><span class="c1">#  group: data</span>
+</span><span id="__span-2-111"><a id="__codelineno-2-111" name="__codelineno-2-111"></a><span class="w">      </span><span class="c1">#  tables: &quot;c_first_pay_time_range&quot; #指定当前数据库中需要执行代码生成的数据表。如果为空，表示数据库的所有表都会生成</span>
+</span><span id="__span-2-112"><a id="__codelineno-2-112" name="__codelineno-2-112"></a><span class="w">      </span><span class="c1">#  tablesEx: &quot;&quot; #需要排除代码生成的数据表</span>
+</span><span id="__span-2-113"><a id="__codelineno-2-113" name="__codelineno-2-113"></a><span class="w">      </span><span class="c1"># -</span>
+</span><span id="__span-2-114"><a id="__codelineno-2-114" name="__codelineno-2-114"></a><span class="w">      </span><span class="c1">#   link: mysql:cpdatamysqlu:xcproot@lmy@tcp(192.168.1.153:3306)/xcp_demo_log</span>
+</span><span id="__span-2-115"><a id="__codelineno-2-115" name="__codelineno-2-115"></a><span class="w">      </span><span class="c1">#   group: log</span>
+</span><span id="__span-2-116"><a id="__codelineno-2-116" name="__codelineno-2-116"></a><span class="w">      </span><span class="c1">#   tables: &quot;log_enter_game,log_order_create,log_order_finish,log_coin_change,log_goods_change&quot; #指定当前数据库中需要执行代码生成的数据表。如果为空，表示数据库的所有表都会生成</span>
+</span><span id="__span-2-117"><a id="__codelineno-2-117" name="__codelineno-2-117"></a><span class="w">      </span><span class="c1">#   tablesEx: &quot;&quot; #需要排除代码生成的数据表</span>
+</span><span id="__span-2-118"><a id="__codelineno-2-118" name="__codelineno-2-118"></a><span class="w">      </span><span class="c1"># -</span>
+</span><span id="__span-2-119"><a id="__codelineno-2-119" name="__codelineno-2-119"></a><span class="w">      </span><span class="c1">#   link: mysql:cpdatamysqlu:xcproot@lmy@tcp(192.168.1.153:3306)/xcp_demo_site</span>
+</span><span id="__span-2-120"><a id="__codelineno-2-120" name="__codelineno-2-120"></a><span class="w">      </span><span class="c1">#   tables: &quot;admins&quot; #指定当前数据库中需要执行代码生成的数据表。如果为空，表示数据库的所有表都会生成</span>
+</span><span id="__span-2-121"><a id="__codelineno-2-121" name="__codelineno-2-121"></a><span class="w">      </span><span class="c1">#   tablesEx: &quot;&quot; #需要排除代码生成的数据表</span>
+</span><span id="__span-2-122"><a id="__codelineno-2-122" name="__codelineno-2-122"></a><span class="w">      </span><span class="p p-Indicator">-</span>
+</span><span id="__span-2-123"><a id="__codelineno-2-123" name="__codelineno-2-123"></a><span class="c1">#        link: mysql:cpdatamysqlu:xcproot@lmy@tcp(192.168.1.153:3306)/xcp_demo_data</span>
+</span><span id="__span-2-124"><a id="__codelineno-2-124" name="__codelineno-2-124"></a><span class="c1">#        group: data</span>
+</span><span id="__span-2-125"><a id="__codelineno-2-125" name="__codelineno-2-125"></a><span class="c1">#        jsonCase: Snake</span>
+</span><span id="__span-2-126"><a id="__codelineno-2-126" name="__codelineno-2-126"></a><span class="c1">#        tables: &quot;r_s_coin_day&quot; #指定当前数据库中需要执行代码生成的数据表。如果为空，表示数据库的所有表都会生成</span>
+</span><span id="__span-2-127"><a id="__codelineno-2-127" name="__codelineno-2-127"></a><span class="c1">#        tablesEx: &quot;&quot; #需要排除代码生成的数据表</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">xcp-server/config/setting.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">cpInfo</span><span class="p">:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="hll"><span class="w">  </span><span class="nt">secert</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">testxcll4bd7ef52f7b3dee68d4a6f11</span>
+</span></span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">  </span><span class="nt">isUeditor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="nt">siteInfo</span><span class="p">:</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">  </span><span class="nt">aeskey</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;7894651784ASDJKH&quot;</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="xcp-vue">xcp-vue<a class="headerlink" href="#xcp-vue" title="Permanent link">#</a></h3>
+<div class="language-js highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">xcp-vue/vue.config.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">  1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">  2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">  3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">  4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">  5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">  6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">  7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">  8</a></span>
+<span class="normal"><a href="#__codelineno-4-9">  9</a></span>
+<span class="normal"><a href="#__codelineno-4-10"> 10</a></span>
+<span class="normal"><a href="#__codelineno-4-11"> 11</a></span>
+<span class="normal"><a href="#__codelineno-4-12"> 12</a></span>
+<span class="normal"><a href="#__codelineno-4-13"> 13</a></span>
+<span class="normal"><a href="#__codelineno-4-14"> 14</a></span>
+<span class="normal"><a href="#__codelineno-4-15"> 15</a></span>
+<span class="normal"><a href="#__codelineno-4-16"> 16</a></span>
+<span class="normal"><a href="#__codelineno-4-17"> 17</a></span>
+<span class="normal"><a href="#__codelineno-4-18"> 18</a></span>
+<span class="normal"><a href="#__codelineno-4-19"> 19</a></span>
+<span class="normal"><a href="#__codelineno-4-20"> 20</a></span>
+<span class="normal"><a href="#__codelineno-4-21"> 21</a></span>
+<span class="normal"><a href="#__codelineno-4-22"> 22</a></span>
+<span class="normal"><a href="#__codelineno-4-23"> 23</a></span>
+<span class="normal"><a href="#__codelineno-4-24"> 24</a></span>
+<span class="normal"><a href="#__codelineno-4-25"> 25</a></span>
+<span class="normal"><a href="#__codelineno-4-26"> 26</a></span>
+<span class="normal"><a href="#__codelineno-4-27"> 27</a></span>
+<span class="normal"><a href="#__codelineno-4-28"> 28</a></span>
+<span class="normal"><a href="#__codelineno-4-29"> 29</a></span>
+<span class="normal"><a href="#__codelineno-4-30"> 30</a></span>
+<span class="normal"><a href="#__codelineno-4-31"> 31</a></span>
+<span class="normal"><a href="#__codelineno-4-32"> 32</a></span>
+<span class="normal"><a href="#__codelineno-4-33"> 33</a></span>
+<span class="normal"><a href="#__codelineno-4-34"> 34</a></span>
+<span class="normal"><a href="#__codelineno-4-35"> 35</a></span>
+<span class="normal"><a href="#__codelineno-4-36"> 36</a></span>
+<span class="normal"><a href="#__codelineno-4-37"> 37</a></span>
+<span class="normal"><a href="#__codelineno-4-38"> 38</a></span>
+<span class="normal"><a href="#__codelineno-4-39"> 39</a></span>
+<span class="normal"><a href="#__codelineno-4-40"> 40</a></span>
+<span class="normal"><a href="#__codelineno-4-41"> 41</a></span>
+<span class="normal"><a href="#__codelineno-4-42"> 42</a></span>
+<span class="normal"><a href="#__codelineno-4-43"> 43</a></span>
+<span class="normal"><a href="#__codelineno-4-44"> 44</a></span>
+<span class="normal"><a href="#__codelineno-4-45"> 45</a></span>
+<span class="normal"><a href="#__codelineno-4-46"> 46</a></span>
+<span class="normal"><a href="#__codelineno-4-47"> 47</a></span>
+<span class="normal"><a href="#__codelineno-4-48"> 48</a></span>
+<span class="normal"><a href="#__codelineno-4-49"> 49</a></span>
+<span class="normal"><a href="#__codelineno-4-50"> 50</a></span>
+<span class="normal"><a href="#__codelineno-4-51"> 51</a></span>
+<span class="normal"><a href="#__codelineno-4-52"> 52</a></span>
+<span class="normal"><a href="#__codelineno-4-53"> 53</a></span>
+<span class="normal"><a href="#__codelineno-4-54"> 54</a></span>
+<span class="normal"><a href="#__codelineno-4-55"> 55</a></span>
+<span class="normal"><a href="#__codelineno-4-56"> 56</a></span>
+<span class="normal"><a href="#__codelineno-4-57"> 57</a></span>
+<span class="normal"><a href="#__codelineno-4-58"> 58</a></span>
+<span class="normal"><a href="#__codelineno-4-59"> 59</a></span>
+<span class="normal"><a href="#__codelineno-4-60"> 60</a></span>
+<span class="normal"><a href="#__codelineno-4-61"> 61</a></span>
+<span class="normal"><a href="#__codelineno-4-62"> 62</a></span>
+<span class="normal"><a href="#__codelineno-4-63"> 63</a></span>
+<span class="normal"><a href="#__codelineno-4-64"> 64</a></span>
+<span class="normal"><a href="#__codelineno-4-65"> 65</a></span>
+<span class="normal"><a href="#__codelineno-4-66"> 66</a></span>
+<span class="normal"><a href="#__codelineno-4-67"> 67</a></span>
+<span class="normal"><a href="#__codelineno-4-68"> 68</a></span>
+<span class="normal"><a href="#__codelineno-4-69"> 69</a></span>
+<span class="normal"><a href="#__codelineno-4-70"> 70</a></span>
+<span class="normal"><a href="#__codelineno-4-71"> 71</a></span>
+<span class="normal"><a href="#__codelineno-4-72"> 72</a></span>
+<span class="normal"><a href="#__codelineno-4-73"> 73</a></span>
+<span class="normal"><a href="#__codelineno-4-74"> 74</a></span>
+<span class="normal"><a href="#__codelineno-4-75"> 75</a></span>
+<span class="normal"><a href="#__codelineno-4-76"> 76</a></span>
+<span class="normal"><a href="#__codelineno-4-77"> 77</a></span>
+<span class="normal"><a href="#__codelineno-4-78"> 78</a></span>
+<span class="normal"><a href="#__codelineno-4-79"> 79</a></span>
+<span class="normal"><a href="#__codelineno-4-80"> 80</a></span>
+<span class="normal"><a href="#__codelineno-4-81"> 81</a></span>
+<span class="normal"><a href="#__codelineno-4-82"> 82</a></span>
+<span class="normal"><a href="#__codelineno-4-83"> 83</a></span>
+<span class="normal"><a href="#__codelineno-4-84"> 84</a></span>
+<span class="normal"><a href="#__codelineno-4-85"> 85</a></span>
+<span class="normal"><a href="#__codelineno-4-86"> 86</a></span>
+<span class="normal"><a href="#__codelineno-4-87"> 87</a></span>
+<span class="normal"><a href="#__codelineno-4-88"> 88</a></span>
+<span class="normal"><a href="#__codelineno-4-89"> 89</a></span>
+<span class="normal"><a href="#__codelineno-4-90"> 90</a></span>
+<span class="normal"><a href="#__codelineno-4-91"> 91</a></span>
+<span class="normal"><a href="#__codelineno-4-92"> 92</a></span>
+<span class="normal"><a href="#__codelineno-4-93"> 93</a></span>
+<span class="normal"><a href="#__codelineno-4-94"> 94</a></span>
+<span class="normal"><a href="#__codelineno-4-95"> 95</a></span>
+<span class="normal"><a href="#__codelineno-4-96"> 96</a></span>
+<span class="normal"><a href="#__codelineno-4-97"> 97</a></span>
+<span class="normal"><a href="#__codelineno-4-98"> 98</a></span>
+<span class="normal"><a href="#__codelineno-4-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-4-100">100</a></span>
+<span class="normal"><a href="#__codelineno-4-101">101</a></span>
+<span class="normal"><a href="#__codelineno-4-102">102</a></span>
+<span class="normal"><a href="#__codelineno-4-103">103</a></span>
+<span class="normal"><a href="#__codelineno-4-104">104</a></span>
+<span class="normal"><a href="#__codelineno-4-105">105</a></span>
+<span class="normal"><a href="#__codelineno-4-106">106</a></span>
+<span class="normal"><a href="#__codelineno-4-107">107</a></span>
+<span class="normal"><a href="#__codelineno-4-108">108</a></span>
+<span class="normal"><a href="#__codelineno-4-109">109</a></span>
+<span class="normal"><a href="#__codelineno-4-110">110</a></span>
+<span class="normal"><a href="#__codelineno-4-111">111</a></span>
+<span class="normal"><a href="#__codelineno-4-112">112</a></span>
+<span class="normal"><a href="#__codelineno-4-113">113</a></span>
+<span class="normal"><a href="#__codelineno-4-114">114</a></span>
+<span class="normal"><a href="#__codelineno-4-115">115</a></span>
+<span class="normal"><a href="#__codelineno-4-116">116</a></span>
+<span class="normal"><a href="#__codelineno-4-117">117</a></span>
+<span class="normal"><a href="#__codelineno-4-118">118</a></span>
+<span class="normal"><a href="#__codelineno-4-119">119</a></span>
+<span class="normal"><a href="#__codelineno-4-120">120</a></span>
+<span class="normal"><a href="#__codelineno-4-121">121</a></span>
+<span class="normal"><a href="#__codelineno-4-122">122</a></span>
+<span class="normal"><a href="#__codelineno-4-123">123</a></span>
+<span class="normal"><a href="#__codelineno-4-124">124</a></span>
+<span class="normal"><a href="#__codelineno-4-125">125</a></span>
+<span class="normal"><a href="#__codelineno-4-126">126</a></span>
+<span class="normal"><a href="#__codelineno-4-127">127</a></span>
+<span class="normal"><a href="#__codelineno-4-128">128</a></span>
+<span class="normal"><a href="#__codelineno-4-129">129</a></span>
+<span class="normal"><a href="#__codelineno-4-130">130</a></span>
+<span class="normal"><a href="#__codelineno-4-131">131</a></span>
+<span class="normal"><a href="#__codelineno-4-132">132</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="s1">&#39;use strict&#39;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">buildConf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./build.config&#39;</span><span class="p">)</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">packageConf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./package.json&#39;</span><span class="p">)</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="kd">const</span><span class="w"> </span><span class="nx">Timestamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">().</span><span class="nx">getTime</span><span class="p">();</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="kd">function</span><span class="w"> </span><span class="nx">resolve</span><span class="p">(</span><span class="nx">dir</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="nx">dir</span><span class="p">)</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="p">}</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="c1">// 基础配置 详情看文档</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">    </span><span class="nx">publicPath</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;./&#39;</span><span class="p">,</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span><span class="nx">outputDir</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;dist&#39;</span><span class="p">,</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">    </span><span class="nx">assetsDir</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;static&#39;</span><span class="p">,</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">    </span><span class="nx">lintOnSave</span><span class="o">:</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_ENV</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;development&#39;</span><span class="p">,</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">    </span><span class="nx">productionSourceMap</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">    </span><span class="nx">devServer</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">        </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">8080</span><span class="p">,</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">        </span><span class="nx">open</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">        </span><span class="nx">overlay</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">            </span><span class="nx">warnings</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">            </span><span class="nx">errors</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">        </span><span class="nx">proxy</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">            </span><span class="c1">// 把key的路径代理到target位置</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">            </span><span class="c1">// detail: https://cli.vuejs.org/config/#devserver-proxy</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="w">            </span><span class="p">[</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">VUE_APP_BASE_API</span><span class="p">]</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//需要代理的路径   例如 &#39;/api&#39;</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="hll"><span class="w">                </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="sb">`http://127.0.0.1:8888/`</span><span class="p">,</span><span class="w"> </span><span class="c1">//代理到 目标路径</span>
+</span></span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="w">                </span><span class="c1">//target: `http://192.168.1.165:8888/`,</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="w">                </span><span class="nx">changeOrigin</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="w">                </span><span class="nx">pathRewrite</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 修改路径数据</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="w">                    </span><span class="p">[</span><span class="s1">&#39;^&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">VUE_APP_BASE_API</span><span class="p">]</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="c1">// 举例 &#39;^/api:&quot;&quot;&#39; 把路径中的/api字符串删除</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37"></a><span class="w">    </span><span class="nx">configureWebpack</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38"></a><span class="w">        </span><span class="c1">//    @路径走src文件夹</span>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="w">        </span><span class="nx">resolve</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40"></a><span class="w">            </span><span class="nx">alias</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41"></a><span class="w">                </span><span class="s1">&#39;@&#39;</span><span class="o">:</span><span class="w"> </span><span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;src&#39;</span><span class="p">)</span>
+</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-4-45"><a id="__codelineno-4-45" name="__codelineno-4-45"></a><span class="w">    </span><span class="nx">chainWebpack</span><span class="p">(</span><span class="nx">config</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-46"><a id="__codelineno-4-46" name="__codelineno-4-46"></a><span class="w">        </span><span class="nx">config</span><span class="p">.</span><span class="nx">output</span><span class="p">.</span><span class="nx">filename</span><span class="p">(</span><span class="s1">&#39;js/[name].&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">Timestamp</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;.js&#39;</span><span class="p">).</span><span class="nx">end</span><span class="p">();</span>
+</span><span id="__span-4-47"><a id="__codelineno-4-47" name="__codelineno-4-47"></a><span class="w">        </span><span class="nx">config</span><span class="p">.</span><span class="nx">output</span><span class="p">.</span><span class="nx">chunkFilename</span><span class="p">(</span><span class="s1">&#39;js/[name].&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">Timestamp</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;.js&#39;</span><span class="p">).</span><span class="nx">end</span><span class="p">();</span>
+</span><span id="__span-4-48"><a id="__codelineno-4-48" name="__codelineno-4-48"></a><span class="w">        </span><span class="c1">// set preserveWhitespace</span>
+</span><span id="__span-4-49"><a id="__codelineno-4-49" name="__codelineno-4-49"></a><span class="w">        </span><span class="nx">config</span><span class="p">.</span><span class="nx">module</span>
+</span><span id="__span-4-50"><a id="__codelineno-4-50" name="__codelineno-4-50"></a><span class="w">            </span><span class="p">.</span><span class="nx">rule</span><span class="p">(</span><span class="s1">&#39;vue&#39;</span><span class="p">)</span>
+</span><span id="__span-4-51"><a id="__codelineno-4-51" name="__codelineno-4-51"></a><span class="w">            </span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">&#39;vue-loader&#39;</span><span class="p">)</span>
+</span><span id="__span-4-52"><a id="__codelineno-4-52" name="__codelineno-4-52"></a><span class="w">            </span><span class="p">.</span><span class="nx">loader</span><span class="p">(</span><span class="s1">&#39;vue-loader&#39;</span><span class="p">)</span>
+</span><span id="__span-4-53"><a id="__codelineno-4-53" name="__codelineno-4-53"></a><span class="w">            </span><span class="p">.</span><span class="nx">tap</span><span class="p">(</span><span class="nx">options</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-54"><a id="__codelineno-4-54" name="__codelineno-4-54"></a><span class="w">                </span><span class="nx">options</span><span class="p">.</span><span class="nx">compilerOptions</span><span class="p">.</span><span class="nx">preserveWhitespace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-4-55"><a id="__codelineno-4-55" name="__codelineno-4-55"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nx">options</span>
+</span><span id="__span-4-56"><a id="__codelineno-4-56" name="__codelineno-4-56"></a><span class="w">            </span><span class="p">})</span>
+</span><span id="__span-4-57"><a id="__codelineno-4-57" name="__codelineno-4-57"></a><span class="w">            </span><span class="p">.</span><span class="nx">end</span><span class="p">()</span>
+</span><span id="__span-4-58"><a id="__codelineno-4-58" name="__codelineno-4-58"></a><span class="w">        </span><span class="nx">config</span>
+</span><span id="__span-4-59"><a id="__codelineno-4-59" name="__codelineno-4-59"></a><span class="w">            </span><span class="c1">// https://webpack.js.org/configuration/devtool/#development</span>
+</span><span id="__span-4-60"><a id="__codelineno-4-60" name="__codelineno-4-60"></a><span class="w">            </span><span class="p">.</span><span class="nx">when</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_ENV</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;development&#39;</span><span class="p">,</span>
+</span><span id="__span-4-61"><a id="__codelineno-4-61" name="__codelineno-4-61"></a><span class="w">                </span><span class="nx">config</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">config</span><span class="p">.</span><span class="nx">devtool</span><span class="p">(</span><span class="s1">&#39;cheap-source-map&#39;</span><span class="p">)</span>
+</span><span id="__span-4-62"><a id="__codelineno-4-62" name="__codelineno-4-62"></a><span class="w">            </span><span class="p">)</span>
+</span><span id="__span-4-63"><a id="__codelineno-4-63" name="__codelineno-4-63"></a>
+</span><span id="__span-4-64"><a id="__codelineno-4-64" name="__codelineno-4-64"></a><span class="w">        </span><span class="nx">config</span>
+</span><span id="__span-4-65"><a id="__codelineno-4-65" name="__codelineno-4-65"></a><span class="w">            </span><span class="p">.</span><span class="nx">when</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_ENV</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s1">&#39;development&#39;</span><span class="p">,</span>
+</span><span id="__span-4-66"><a id="__codelineno-4-66" name="__codelineno-4-66"></a><span class="w">                </span><span class="nx">config</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-67"><a id="__codelineno-4-67" name="__codelineno-4-67"></a>
+</span><span id="__span-4-68"><a id="__codelineno-4-68" name="__codelineno-4-68"></a><span class="w">                    </span><span class="c1">// 不打包 begin</span>
+</span><span id="__span-4-69"><a id="__codelineno-4-69" name="__codelineno-4-69"></a><span class="w">                    </span><span class="c1">// 1.目前已经测试通过[vue,axios,echarts]可以cdn引用，其它组件测试通过后可继续添加</span>
+</span><span id="__span-4-70"><a id="__codelineno-4-70" name="__codelineno-4-70"></a><span class="w">                    </span><span class="c1">// 2.此处添加不打包后，需在public/index.html head中添加相应cdn资源链接</span>
+</span><span id="__span-4-71"><a id="__codelineno-4-71" name="__codelineno-4-71"></a><span class="w">                    </span><span class="nx">config</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;externals&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">buildConf</span><span class="p">.</span><span class="nx">cdns</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">p</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-72"><a id="__codelineno-4-72" name="__codelineno-4-72"></a><span class="w">                        </span><span class="nx">p</span><span class="p">[</span><span class="nx">a</span><span class="p">.</span><span class="nx">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">a</span><span class="p">.</span><span class="nx">scope</span>
+</span><span id="__span-4-73"><a id="__codelineno-4-73" name="__codelineno-4-73"></a><span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="nx">p</span>
+</span><span id="__span-4-74"><a id="__codelineno-4-74" name="__codelineno-4-74"></a><span class="w">                    </span><span class="p">},</span><span class="w"> </span><span class="p">{}))</span>
+</span><span id="__span-4-75"><a id="__codelineno-4-75" name="__codelineno-4-75"></a><span class="w">                    </span><span class="c1">// 不打包 end</span>
+</span><span id="__span-4-76"><a id="__codelineno-4-76" name="__codelineno-4-76"></a>
+</span><span id="__span-4-77"><a id="__codelineno-4-77" name="__codelineno-4-77"></a><span class="w">                    </span><span class="nx">config</span><span class="p">.</span><span class="nx">plugin</span><span class="p">(</span><span class="s1">&#39;html&#39;</span><span class="p">)</span>
+</span><span id="__span-4-78"><a id="__codelineno-4-78" name="__codelineno-4-78"></a><span class="w">                        </span><span class="p">.</span><span class="nx">tap</span><span class="p">(</span><span class="nx">args</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-79"><a id="__codelineno-4-79" name="__codelineno-4-79"></a><span class="w">                            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">buildConf</span><span class="p">.</span><span class="nx">title</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-80"><a id="__codelineno-4-80" name="__codelineno-4-80"></a><span class="w">                                </span><span class="nx">args</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">buildConf</span><span class="p">.</span><span class="nx">title</span>
+</span><span id="__span-4-81"><a id="__codelineno-4-81" name="__codelineno-4-81"></a><span class="w">                            </span><span class="p">}</span>
+</span><span id="__span-4-82"><a id="__codelineno-4-82" name="__codelineno-4-82"></a><span class="w">                            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">buildConf</span><span class="p">.</span><span class="nx">cdns</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-83"><a id="__codelineno-4-83" name="__codelineno-4-83"></a><span class="w">                                </span><span class="nx">args</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">cdns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">buildConf</span><span class="p">.</span><span class="nx">cdns</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">conf</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-84"><a id="__codelineno-4-84" name="__codelineno-4-84"></a><span class="w">                                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">conf</span><span class="p">.</span><span class="nx">path</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-85"><a id="__codelineno-4-85" name="__codelineno-4-85"></a><span class="w">                                        </span><span class="nx">conf</span><span class="p">.</span><span class="nx">js</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">buildConf</span><span class="p">.</span><span class="nx">baseCdnUrl</span><span class="si">}${</span><span class="nx">conf</span><span class="p">.</span><span class="nx">path</span><span class="si">}</span><span class="sb">`</span>
+</span><span id="__span-4-86"><a id="__codelineno-4-86" name="__codelineno-4-86"></a><span class="w">                                    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-87"><a id="__codelineno-4-87" name="__codelineno-4-87"></a><span class="w">                                        </span><span class="nx">conf</span><span class="p">.</span><span class="nx">js</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">buildConf</span><span class="p">.</span><span class="nx">baseCdnUrl</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">conf</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">packageConf</span><span class="p">.</span><span class="nx">dependencies</span><span class="p">[</span><span class="nx">conf</span><span class="p">.</span><span class="nx">name</span><span class="p">].</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;^&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">conf</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">.min.js`</span>
+</span><span id="__span-4-88"><a id="__codelineno-4-88" name="__codelineno-4-88"></a><span class="w">                                    </span><span class="p">}</span>
+</span><span id="__span-4-89"><a id="__codelineno-4-89" name="__codelineno-4-89"></a>
+</span><span id="__span-4-90"><a id="__codelineno-4-90" name="__codelineno-4-90"></a><span class="w">                                    </span><span class="k">return</span><span class="w"> </span><span class="nx">conf</span>
+</span><span id="__span-4-91"><a id="__codelineno-4-91" name="__codelineno-4-91"></a><span class="w">                                </span><span class="p">})</span>
+</span><span id="__span-4-92"><a id="__codelineno-4-92" name="__codelineno-4-92"></a><span class="w">                            </span><span class="p">}</span>
+</span><span id="__span-4-93"><a id="__codelineno-4-93" name="__codelineno-4-93"></a><span class="w">                            </span><span class="k">return</span><span class="w"> </span><span class="nx">args</span>
+</span><span id="__span-4-94"><a id="__codelineno-4-94" name="__codelineno-4-94"></a><span class="w">                        </span><span class="p">})</span>
+</span><span id="__span-4-95"><a id="__codelineno-4-95" name="__codelineno-4-95"></a>
+</span><span id="__span-4-96"><a id="__codelineno-4-96" name="__codelineno-4-96"></a><span class="w">                    </span><span class="nx">config</span>
+</span><span id="__span-4-97"><a id="__codelineno-4-97" name="__codelineno-4-97"></a><span class="w">                        </span><span class="p">.</span><span class="nx">plugin</span><span class="p">(</span><span class="s1">&#39;ScriptExtHtmlWebpackPlugin&#39;</span><span class="p">)</span>
+</span><span id="__span-4-98"><a id="__codelineno-4-98" name="__codelineno-4-98"></a><span class="w">                        </span><span class="p">.</span><span class="nx">after</span><span class="p">(</span><span class="s1">&#39;html&#39;</span><span class="p">)</span>
+</span><span id="__span-4-99"><a id="__codelineno-4-99" name="__codelineno-4-99"></a><span class="w">                        </span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">&#39;script-ext-html-webpack-plugin&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[{</span>
+</span><span id="__span-4-100"><a id="__codelineno-4-100" name="__codelineno-4-100"></a><span class="w">                            </span><span class="c1">// `runtime` must same as runtimeChunk name. default is `runtime`</span>
+</span><span id="__span-4-101"><a id="__codelineno-4-101" name="__codelineno-4-101"></a><span class="w">                            </span><span class="nx">inline</span><span class="o">:</span><span class="w"> </span><span class="sr">/single\..*\.js$/</span>
+</span><span id="__span-4-102"><a id="__codelineno-4-102" name="__codelineno-4-102"></a><span class="w">                        </span><span class="p">}])</span>
+</span><span id="__span-4-103"><a id="__codelineno-4-103" name="__codelineno-4-103"></a><span class="w">                        </span><span class="p">.</span><span class="nx">end</span><span class="p">()</span>
+</span><span id="__span-4-104"><a id="__codelineno-4-104" name="__codelineno-4-104"></a><span class="w">                    </span><span class="nx">config</span>
+</span><span id="__span-4-105"><a id="__codelineno-4-105" name="__codelineno-4-105"></a><span class="w">                        </span><span class="p">.</span><span class="nx">optimization</span><span class="p">.</span><span class="nx">splitChunks</span><span class="p">({</span>
+</span><span id="__span-4-106"><a id="__codelineno-4-106" name="__codelineno-4-106"></a><span class="w">                            </span><span class="nx">chunks</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;all&#39;</span><span class="p">,</span>
+</span><span id="__span-4-107"><a id="__codelineno-4-107" name="__codelineno-4-107"></a><span class="w">                            </span><span class="nx">cacheGroups</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-108"><a id="__codelineno-4-108" name="__codelineno-4-108"></a><span class="w">                                </span><span class="nx">libs</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-109"><a id="__codelineno-4-109" name="__codelineno-4-109"></a><span class="w">                                    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;chunk-libs&#39;</span><span class="p">,</span>
+</span><span id="__span-4-110"><a id="__codelineno-4-110" name="__codelineno-4-110"></a><span class="w">                                    </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/[\\/]node_modules[\\/]/</span><span class="p">,</span>
+</span><span id="__span-4-111"><a id="__codelineno-4-111" name="__codelineno-4-111"></a><span class="w">                                    </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span>
+</span><span id="__span-4-112"><a id="__codelineno-4-112" name="__codelineno-4-112"></a><span class="w">                                    </span><span class="nx">chunks</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;initial&#39;</span><span class="w"> </span><span class="c1">// only package third parties that are initially dependent</span>
+</span><span id="__span-4-113"><a id="__codelineno-4-113" name="__codelineno-4-113"></a><span class="w">                                </span><span class="p">},</span>
+</span><span id="__span-4-114"><a id="__codelineno-4-114" name="__codelineno-4-114"></a><span class="w">                                </span><span class="nx">elementUI</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-115"><a id="__codelineno-4-115" name="__codelineno-4-115"></a><span class="w">                                    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;chunk-elementUI&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// split elementUI into a single package</span>
+</span><span id="__span-4-116"><a id="__codelineno-4-116" name="__codelineno-4-116"></a><span class="w">                                    </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="c1">// the weight needs to be larger than libs and app or it will be packaged into libs or app</span>
+</span><span id="__span-4-117"><a id="__codelineno-4-117" name="__codelineno-4-117"></a><span class="w">                                    </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/[\\/]node_modules[\\/]_?element-ui(.*)/</span><span class="w"> </span><span class="c1">// in order to adapt to cnpm</span>
+</span><span id="__span-4-118"><a id="__codelineno-4-118" name="__codelineno-4-118"></a><span class="w">                                </span><span class="p">},</span>
+</span><span id="__span-4-119"><a id="__codelineno-4-119" name="__codelineno-4-119"></a><span class="w">                                </span><span class="nx">commons</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-120"><a id="__codelineno-4-120" name="__codelineno-4-120"></a><span class="w">                                    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;chunk-commons&#39;</span><span class="p">,</span>
+</span><span id="__span-4-121"><a id="__codelineno-4-121" name="__codelineno-4-121"></a><span class="w">                                    </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;src/components&#39;</span><span class="p">),</span><span class="w"> </span><span class="c1">// can customize your rules</span>
+</span><span id="__span-4-122"><a id="__codelineno-4-122" name="__codelineno-4-122"></a><span class="w">                                    </span><span class="nx">minChunks</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="c1">//  minimum common number</span>
+</span><span id="__span-4-123"><a id="__codelineno-4-123" name="__codelineno-4-123"></a><span class="w">                                    </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span>
+</span><span id="__span-4-124"><a id="__codelineno-4-124" name="__codelineno-4-124"></a><span class="w">                                    </span><span class="nx">reuseExistingChunk</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-4-125"><a id="__codelineno-4-125" name="__codelineno-4-125"></a><span class="w">                                </span><span class="p">}</span>
+</span><span id="__span-4-126"><a id="__codelineno-4-126" name="__codelineno-4-126"></a><span class="w">                            </span><span class="p">}</span>
+</span><span id="__span-4-127"><a id="__codelineno-4-127" name="__codelineno-4-127"></a><span class="w">                        </span><span class="p">})</span>
+</span><span id="__span-4-128"><a id="__codelineno-4-128" name="__codelineno-4-128"></a><span class="w">                    </span><span class="nx">config</span><span class="p">.</span><span class="nx">optimization</span><span class="p">.</span><span class="nx">runtimeChunk</span><span class="p">(</span><span class="s1">&#39;single&#39;</span><span class="p">)</span>
+</span><span id="__span-4-129"><a id="__codelineno-4-129" name="__codelineno-4-129"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-4-130"><a id="__codelineno-4-130" name="__codelineno-4-130"></a><span class="w">            </span><span class="p">)</span>
+</span><span id="__span-4-131"><a id="__codelineno-4-131" name="__codelineno-4-131"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-132"><a id="__codelineno-4-132" name="__codelineno-4-132"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
 
 
 
