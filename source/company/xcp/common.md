@@ -11,7 +11,7 @@
     - `xcp-dcs/local/classes/config.php`
 
 
-## `xcp_api` 新增的日志表无法正常入库
+## `xcp_api` 新增日志表无法入库
 
 1. 检查 `setting.yaml` 配置，里面 `log-list` 需要配置表的名称，但不要包含 `log_` 前缀。
 2. 检查 `setting.yaml` 配置，里面 `kafka-log-topic` 需要配置表明对应的 `topic` 名称，但这里的 `topic` 名称是不能随便新增的。
