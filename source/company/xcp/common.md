@@ -11,6 +11,14 @@
     - `xcp-dcs/local/classes/config.php`
 
 
+## `xcp_api` 新增的日志表无法正常入库
+
+1. 检查 `setting.yaml` 配置，里面 `log-list` 需要配置表的名称，但不要包含 `log_` 前缀。
+2. 检查 `setting.yaml` 配置，里面 `kafka-log-topic` 需要配置表明对应的 `topic` 名称，但这里的 `topic` 名称是不能随便新增的。
+3. 检查 `setting.yaml` 是否有正常在服务器上面手动更新，因为这个文件在发布的时候是不会同步到服务器上的。
+5. 检查 `log.go` 文件里面配置的 `POST` 映射，映射的函数名称必须是跟表明相关联的，不要前缀 `log_` 而且后面下划线改为驼峰写法。
+
+
 ## Server DAO
 
 1. `xcp-server/config/config.yaml` 文件最下面的一段注释打开，修改服务器链接、表明、分组信息

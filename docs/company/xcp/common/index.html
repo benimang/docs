@@ -781,6 +781,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#xcp_api-新增的日志表无法正常入库" class="md-nav__link">
+    <span class="md-ellipsis">
+      xcp_api 新增的日志表无法正常入库
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#Server-DAO" class="md-nav__link">
     <span class="md-ellipsis">
       Server DAO
@@ -2293,6 +2302,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#xcp_api-新增的日志表无法正常入库" class="md-nav__link">
+    <span class="md-ellipsis">
+      xcp_api 新增的日志表无法正常入库
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#Server-DAO" class="md-nav__link">
     <span class="md-ellipsis">
       Server DAO
@@ -2392,6 +2410,13 @@
 </ul>
 </li>
 </ul>
+<h2 id="xcp_api-新增的日志表无法正常入库"><code>xcp_api</code> 新增的日志表无法正常入库<a class="headerlink" href="#xcp_api-新增的日志表无法正常入库" title="Permanent link">#</a></h2>
+<ol>
+<li>检查 <code>setting.yaml</code> 配置，里面 <code>log-list</code> 需要配置表的名称，但不要包含 <code>log_</code> 前缀。</li>
+<li>检查 <code>setting.yaml</code> 配置，里面 <code>kafka-log-topic</code> 需要配置表明对应的 <code>topic</code> 名称，但这里的 <code>topic</code> 名称是不能随便新增的。</li>
+<li>检查 <code>setting.yaml</code> 是否有正常在服务器上面手动更新，因为这个文件在发布的时候是不会同步到服务器上的。</li>
+<li>检查 <code>log.go</code> 文件里面配置的 <code>POST</code> 映射，映射的函数名称必须是跟表明相关联的，不要前缀 <code>log_</code> 而且后面下划线改为驼峰写法。</li>
+</ol>
 <h2 id="Server-DAO">Server DAO<a class="headerlink" href="#Server-DAO" title="Permanent link">#</a></h2>
 <ol>
 <li><code>xcp-server/config/config.yaml</code> 文件最下面的一段注释打开，修改服务器链接、表明、分组信息</li>
